@@ -64,6 +64,14 @@ class Config:
         "no_hallucination": 0.10,
     })
 
+    # ── vLLM (fast generation) ───────────────────────────────────────────────────
+    # vLLM runs the base model in BF16 for generation; training model stays NF4+LoRA.
+    # TRL syncs LoRA-merged weights to vLLM after each optimizer step.
+    use_vllm: bool = True
+    vllm_gpu_memory_utilization: float = 0.45   # ~35 GB on H100 79 GB; remaining ~44 GB for training
+    vllm_dtype: str = "bfloat16"                # explicit BF16 for H100
+    vllm_max_model_len: int = 2048              # prompt(512) + completion(1024) + safety margin
+
     # ── Weights & Biases ──────────────────────────────────────────────────────
     wandb_entity: str = "uq-unibot"     # W&B team/org (set via WANDB_ENTITY env var)
     wandb_project: str = "uni-bot"      # W&B project name (no slashes)

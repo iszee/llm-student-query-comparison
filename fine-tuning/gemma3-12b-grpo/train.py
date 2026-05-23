@@ -9,8 +9,9 @@ Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Updates LoRA adapters using relative reward advantage
 
 Quantisation: 4-bit NF4 (bitsandbytes) + LoRA (PEFT).
-Attention:    Flash Attention 2 (flash-attn) — ~4× faster than eager on H100.
+Attention:    Flash Attention 2 (flash-attn) — ~4× faster backward pass on H100.
 Optimiser:    Paged AdamW 8-bit (bitsandbytes) — ~30% less optimizer VRAM.
+Generation:   vLLM (PagedAttention) — ~10-20× faster generation than HF generate().
 
 NOTE: Unsloth was removed due to a bug in Unsloth 2025.11.1 (VARIANT_KWARG_KEYS
 undefined in compiled Linear_peft_forward.py). Vanilla HuggingFace PEFT + TRL
@@ -174,7 +175,11 @@ def main():
 
     # ── GRPOConfig ─────────────────────────────────────────────────────────────
     grpo_cfg = GRPOConfig(
-        # Generation
+        # Generation — vLLM handles forward pass; HF model does backward
+        use_vllm=cfg.use_vllm,
+        vllm_gpu_memory_utilization=cfg.vllm_gpu_memory_utilization,
+        vllm_dtype=cfg.vllm_dtype,
+        vllm_max_model_len=cfg.vllm_max_model_len,
         num_generations=cfg.num_generations,
         max_completion_length=cfg.max_completion_length,
         temperature=cfg.temperature,

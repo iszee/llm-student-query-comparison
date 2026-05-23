@@ -12,6 +12,7 @@ datasets>=3.0.0
 wandb
 openai>=1.40.0
 flash-attn>=2.6.0
+vllm>=0.6.0
 
 # Unsloth — install with the command matching your CUDA version (see README)
 # pip install "unsloth[cu121-torch240] @ git+https://github.com/unslothai/unsloth.git"
