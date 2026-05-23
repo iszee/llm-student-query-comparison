@@ -9,11 +9,16 @@ Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Updates LoRA adapters using relative reward advantage
 
 Quantisation: 4-bit NF4 (bitsandbytes) + LoRA (PEFT).
+Attention:    Flash Attention 2 (flash-attn) — ~4× faster than eager on H100.
+Optimiser:    Paged AdamW 8-bit (bitsandbytes) — ~30% less optimizer VRAM.
 
 NOTE: Unsloth was removed due to a bug in Unsloth 2025.11.1 (VARIANT_KWARG_KEYS
 undefined in compiled Linear_peft_forward.py). Vanilla HuggingFace PEFT + TRL
 works correctly once the CUDA 13.0 library path is set:
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<venv>/site-packages/nvidia/cu13/lib/
+
+Flash Attention 2 requires:
+  pip install flash-attn --no-build-isolation
 
 Usage:
     python fine-tuning/gemma3-12b-grpo/train.py
@@ -98,11 +103,13 @@ def load_model_and_tokenizer(cfg: Config):
         cfg.model_id,
         quantization_config=bnb_config,
         device_map="auto",
-        torch_dtype=torch.bfloat16,
-        attn_implementation="eager",
+        dtype=torch.bfloat16,               # renamed from torch_dtype (deprecated)
+        attn_implementation="flash_attention_2",
     )
     model = prepare_model_for_kbit_training(
-        model, use_gradient_checkpointing=cfg.gradient_checkpointing
+        model,
+        use_gradient_checkpointing=cfg.gradient_checkpointing,
+        gradient_checkpointing_kwargs={"use_reentrant": False},  # suppresses requires_grad warning
     )
 
     lora_cfg = LoraConfig(
@@ -183,6 +190,9 @@ def main():
         lr_scheduler_type=cfg.lr_scheduler_type,
         bf16=cfg.bf16,
         gradient_checkpointing=cfg.gradient_checkpointing,
+        gradient_checkpointing_kwargs={"use_reentrant": False},  # suppresses requires_grad warning
+        optim="paged_adamw_8bit",           # 8-bit paged optimizer — saves ~30% optimizer VRAM
+        top_p=0.95,                         # match Gemma 3 model default (suppresses generation_config warning)
         # Logging / saving
         output_dir=cfg.output_dir,
         logging_steps=cfg.logging_steps,
