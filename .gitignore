@@ -221,3 +221,5 @@ __marimo__/
 /CLAUDE.md
 /.claude/settings.local.json
 /.idea/.gitignore
+graphify-out/
+.claude/
