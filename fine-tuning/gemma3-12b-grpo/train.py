@@ -9,7 +9,6 @@ Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Updates LoRA adapters using relative reward advantage
 
 Quantisation: 4-bit NF4 (bitsandbytes) + LoRA (PEFT).
-Attention:    Flash Attention 2 (flash-attn) — ~4× faster backward pass on H100.
 Optimiser:    Paged AdamW 8-bit (bitsandbytes) — ~30% less optimizer VRAM.
 Generation:   vLLM (PagedAttention) — ~10-20× faster generation than HF generate().
 
@@ -105,7 +104,7 @@ def load_model_and_tokenizer(cfg: Config):
         quantization_config=bnb_config,
         device_map="auto",
         dtype=torch.bfloat16,               # renamed from torch_dtype (deprecated)
-        attn_implementation="flash_attention_2",
+        attn_implementation="eager",
     )
     model = prepare_model_for_kbit_training(
         model,
