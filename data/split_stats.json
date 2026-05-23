@@ -1,0 +1,28 @@
+{
+  "seed": 42,
+  "system_prompt": "You are a helpful information assistant for the UQ Bachelor of Information Technology program. Answer student questions accurately and concisely. Only provide information you are confident about. If you are not certain about a specific fact, say so and direct the student to study.uq.edu.au rather than guessing.",
+  "sources": {
+    "manual": 38,
+    "corrected": 183,
+    "generated": 2043
+  },
+  "few_shot": {
+    "total": 5,
+    "from_corrected": 4,
+    "from_manual": 1
+  },
+  "test": {
+    "total": 50,
+    "from_corrected": 41,
+    "from_manual": 9
+  },
+  "train": {
+    "total": 2209,
+    "from_generated": 2043,
+    "from_human_remaining": 166
+  },
+  "leakage_removed": {
+    "from_train_human": 0,
+    "from_generated": 0
+  }
+}

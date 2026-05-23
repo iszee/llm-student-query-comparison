@@ -1,0 +1,46 @@
+{
+  "description": "Held-out human-validated examples for inference-time few-shot prompting. Prepend these turns after the system message and before the user question.",
+  "system_prompt": "You are a helpful information assistant for the UQ Bachelor of Information Technology program. Answer student questions accurately and concisely. Only provide information you are confident about. If you are not certain about a specific fact, say so and direct the student to study.uq.edu.au rather than guessing.",
+  "turns": [
+    {
+      "role": "user",
+      "content": "What ATAR do I need for the Bachelors of Engineering (Honours) / Information Technology dual degree?"
+    },
+    {
+      "role": "assistant",
+      "content": "The minimum without adjusted score for Semester 1, 2026 was 84, with a median of 87.25 and a highest of 97.95.  Check study.uq.edu.au as scores are updated annually."
+    },
+    {
+      "role": "user",
+      "content": "Do I need to take a separate English language test if my previous study was conducted entirely in English?"
+    },
+    {
+      "role": "assistant",
+      "content": "Not necessarily. If you completed senior secondary schooling or at least one year of full-time post-secondary study at an institution in a designated English-speaking location, you may meet UQ's English requirements without a separate test. Designated locations include Australia, Canada, Ireland, New Zealand, the UK, and the USA. Check study.uq.edu.au for the full list."
+    },
+    {
+      "role": "user",
+      "content": "What is the UQ SafeZone app and when should I use it?"
+    },
+    {
+      "role": "assistant",
+      "content": "The UQ SafeZone app connects students directly with UQ security officers or emergency services from your mobile phone. It also provides a safety escort feature if you want someone to accompany you to public transport or your car. The Safety Bus also runs around the St Lucia campus."
+    },
+    {
+      "role": "user",
+      "content": "How do domestic students apply for the BIT at UQ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Domestic students apply through QTAC (Queensland Tertiary Admissions Centre) at qtac.edu.au. The QTAC code for the Bachelor of Information Technology is 733001. Interstate students also apply through QTAC."
+    },
+    {
+      "role": "user",
+      "content": "I have completed all Year 1 courses, failed no courses, and want to follow the suggested Year 2 sequence. Give me a next-step plan?"
+    },
+    {
+      "role": "assistant",
+      "content": "If you have completed all Year 1 courses and failed no courses, you may be ready to follow the suggested Year 2 sequence. However, I would still need your current academic plan, major, commencement semester, and intended semester of enrolment before giving a specific list of courses. You should also confirm course availability and prerequisites before enrolling."
+    }
+  ]
+}
