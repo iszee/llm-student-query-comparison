@@ -16,6 +16,7 @@ Standalone smoke test:
 import json
 import os
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from openai import OpenAI
 
@@ -121,15 +122,25 @@ def reward_fn(prompts: list[str], completions: list[str], **kwargs) -> list[floa
       - **kwargs:    dataset columns passed through (we use "reference" and "question")
 
     Returns a list of scalar rewards, one per completion.
+
+    Calls are parallelised with ThreadPoolExecutor (geval_max_workers threads) because
+    each geval_score call is I/O-bound (HTTPS to OpenAI). With 64 calls per step and
+    16 workers this reduces scoring from ~96 s to ~6 s per optimizer step.
     """
     cfg: Config = kwargs.get("cfg", Config())
     questions: list[str] = kwargs.get("question", [""] * len(completions))
     references: list[str] = kwargs.get("reference", [""] * len(completions))
 
-    rewards = []
-    for q, ref, pred in zip(questions, references, completions):
-        r = geval_score(q, ref, pred, cfg)
-        rewards.append(r)
+    with ThreadPoolExecutor(max_workers=cfg.geval_max_workers) as pool:
+        futures = {
+            pool.submit(geval_score, q, ref, pred, cfg): i
+            for i, (q, ref, pred) in enumerate(zip(questions, references, completions))
+        }
+        rewards: list[float] = [0.0] * len(completions)
+        for future in as_completed(futures):
+            idx = futures[future]
+            rewards[idx] = future.result()
+
     return rewards
 
 

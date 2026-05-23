@@ -58,6 +58,7 @@ class Config:
     geval_model: str = "gpt-4o-mini"    # cheap + capable enough for scoring
     geval_max_retries: int = 3
     geval_timeout: float = 30.0
+    geval_max_workers: int = 16         # parallel threads for OpenAI API calls
     # Dimension weights — must sum to 1.0
     geval_weights: dict = field(default_factory=lambda: {
         "factual_accuracy": 0.55,
