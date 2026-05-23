@@ -1,17 +1,19 @@
 """
 train.py
 --------
-GRPO + QLoRA fine-tuning of Gemma 3 12B using Unsloth for the UQ BIT
-information assistant.
+GRPO + QLoRA fine-tuning of Gemma 3 12B for the UQ BIT information assistant.
 
 Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Samples G=8 completions per prompt
   - Scores each with G-Eval (OpenAI GPT-4o-mini)
   - Updates LoRA adapters using relative reward advantage
 
-Unsloth replaces the manual BitsAndBytesConfig + PEFT setup with
-FastLanguageModel, giving ~2x faster training and ~30% less VRAM vs vanilla
-HuggingFace on A100.
+Quantisation: 4-bit NF4 (bitsandbytes) + LoRA (PEFT).
+
+NOTE: Unsloth was removed due to a bug in Unsloth 2025.11.1 (VARIANT_KWARG_KEYS
+undefined in compiled Linear_peft_forward.py). Vanilla HuggingFace PEFT + TRL
+works correctly once the CUDA 13.0 library path is set:
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<venv>/site-packages/nvidia/cu13/lib/
 
 Usage:
     python fine-tuning/gemma3-12b-grpo/train.py
@@ -30,9 +32,15 @@ import torch
 from pathlib import Path
 from functools import partial
 
+import huggingface_hub
 from datasets import load_dataset
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    BitsAndBytesConfig,
+)
 from trl import GRPOConfig, GRPOTrainer
-from unsloth import FastLanguageModel
 
 # Allow running from repo root
 sys.path.insert(0, str(Path(__file__).parent))
@@ -75,31 +83,40 @@ def prepare_example(example: dict, tokenizer) -> dict:
     return {"prompt": prompt, "question": question, "reference": answer}
 
 
-# ── Model loading (Unsloth) ───────────────────────────────────────────────────
+# ── Model loading ─────────────────────────────────────────────────────────────
 
 def load_model_and_tokenizer(cfg: Config):
-    dtype = getattr(torch, cfg.dtype) if cfg.dtype else None
-
-    print(f"Loading model with Unsloth: {cfg.model_id}")
-    model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name=cfg.model_id,
-        max_seq_length=cfg.max_seq_length,
-        dtype=dtype,
+    bnb_config = BitsAndBytesConfig(
         load_in_4bit=cfg.load_in_4bit,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+        bnb_4bit_use_double_quant=True,
     )
 
-    # Apply LoRA via Unsloth (fused kernels, optimised checkpointing)
-    model = FastLanguageModel.get_peft_model(
-        model,
+    print(f"Loading model: {cfg.model_id}")
+    model = AutoModelForCausalLM.from_pretrained(
+        cfg.model_id,
+        quantization_config=bnb_config,
+        device_map="auto",
+        torch_dtype=torch.bfloat16,
+        attn_implementation="eager",
+    )
+    model = prepare_model_for_kbit_training(
+        model, use_gradient_checkpointing=cfg.gradient_checkpointing
+    )
+
+    lora_cfg = LoraConfig(
         r=cfg.lora_r,
         lora_alpha=cfg.lora_alpha,
         lora_dropout=cfg.lora_dropout,
         target_modules=cfg.lora_target_modules,
         bias="none",
-        use_gradient_checkpointing=cfg.use_gradient_checkpointing,
-        random_state=42,
+        task_type="CAUSAL_LM",
     )
+    model = get_peft_model(model, lora_cfg)
+    model.print_trainable_parameters()
 
+    tokenizer = AutoTokenizer.from_pretrained(cfg.model_id)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "left"     # GRPO needs left-padding for generation
@@ -128,7 +145,11 @@ def main():
         print(f"ERROR: Missing environment variables: {', '.join(missing)}")
         sys.exit(1)
 
+    os.environ["WANDB_ENTITY"]  = cfg.wandb_entity
     os.environ["WANDB_PROJECT"] = cfg.wandb_project
+
+    # Log in to HuggingFace Hub (required for gated Gemma 3 weights)
+    huggingface_hub.login(token=os.environ["HF_TOKEN"])
 
     # ── Load dataset ───────────────────────────────────────────────────────────
     print("Loading dataset...")
@@ -137,7 +158,7 @@ def main():
         "test":  cfg.test_file,
     })
 
-    # ── Load model + tokenizer via Unsloth ────────────────────────────────────
+    # ── Load model + tokenizer ─────────────────────────────────────────────────
     model, tokenizer = load_model_and_tokenizer(cfg)
 
     # ── Prepare dataset columns ────────────────────────────────────────────────
@@ -148,10 +169,10 @@ def main():
     grpo_cfg = GRPOConfig(
         # Generation
         num_generations=cfg.num_generations,
-        max_new_tokens=cfg.max_new_tokens,
+        max_completion_length=cfg.max_completion_length,
         temperature=cfg.temperature,
-        # KL
-        kl_coeff=cfg.kl_coeff,
+        # KL penalty
+        beta=cfg.beta,
         # Optimiser
         learning_rate=cfg.learning_rate,
         per_device_train_batch_size=cfg.per_device_train_batch_size,
@@ -161,6 +182,7 @@ def main():
         warmup_ratio=cfg.warmup_ratio,
         lr_scheduler_type=cfg.lr_scheduler_type,
         bf16=cfg.bf16,
+        gradient_checkpointing=cfg.gradient_checkpointing,
         # Logging / saving
         output_dir=cfg.output_dir,
         logging_steps=cfg.logging_steps,
@@ -169,8 +191,6 @@ def main():
         save_total_limit=cfg.save_total_limit,
         report_to=cfg.report_to,
         run_name=cfg.run_name,
-        # Pass dataset columns through to reward_fn as kwargs
-        dataset_kwargs={"skip_prepare_dataset": True},
     )
 
     # ── GRPOTrainer ────────────────────────────────────────────────────────────

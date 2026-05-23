@@ -98,7 +98,7 @@ Edit `config.py` to adjust hyperparameters. Key knobs:
 
 ## Monitoring with Weights & Biases
 
-Training logs to the `uq-unibot/uni-bot` project on wandb.ai. Key metrics:
+Training logs to the `uq-unibot / uni-bot` project on wandb.ai. Key metrics:
 
 | Metric | What to watch for |
 |--------|------------------|

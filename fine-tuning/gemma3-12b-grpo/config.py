@@ -13,9 +13,7 @@ from typing import List
 class Config:
     # ── Model ─────────────────────────────────────────────────────────────────
     model_id: str = "google/gemma-3-12b-it"
-    max_seq_length: int = 2048          # Unsloth needs this at load time
-    load_in_4bit: bool = True           # NF4 QLoRA via Unsloth
-    dtype: str = "bfloat16"            # None = auto-detect; "bfloat16" for A100
+    load_in_4bit: bool = True           # NF4 QLoRA via bitsandbytes
 
     # ── LoRA ──────────────────────────────────────────────────────────────────
     lora_r: int = 64
@@ -25,20 +23,19 @@ class Config:
         "q_proj", "k_proj", "v_proj", "o_proj",
         "gate_proj", "up_proj", "down_proj",
     ])
-    # "unsloth" uses Unsloth's optimised gradient checkpointing (saves ~30% VRAM)
-    use_gradient_checkpointing: str = "unsloth"
+    gradient_checkpointing: bool = True
 
     # ── GRPO ──────────────────────────────────────────────────────────────────
-    num_generations: int = 8            # G completions sampled per prompt
-    max_new_tokens: int = 256           # max tokens per completion
+    num_generations: int = 4            # G completions sampled per prompt (was 8, halved for speed)
+    max_completion_length: int = 128    # max tokens per completion (was 256, halved for speed)
     temperature: float = 0.9            # sampling temperature for diverse completions
-    kl_coeff: float = 0.1              # β — KL penalty weight vs reference policy
+    beta: float = 0.1                   # KL penalty weight (was kl_coeff in TRL <0.15)
 
     # ── Training ──────────────────────────────────────────────────────────────
     learning_rate: float = 5e-5
-    per_device_train_batch_size: int = 2
-    gradient_accumulation_steps: int = 4    # effective batch = 8
-    num_train_epochs: int = 3
+    per_device_train_batch_size: int = 4    # was 2; larger batch → fewer steps
+    gradient_accumulation_steps: int = 4    # effective batch = 16
+    num_train_epochs: int = 1               # was 3; 1 epoch sufficient for GRPO
     max_steps: int = -1                     # set to small number (e.g. 5) for smoke test
     warmup_ratio: float = 0.05
     lr_scheduler_type: str = "cosine"
@@ -68,6 +65,7 @@ class Config:
     })
 
     # ── Weights & Biases ──────────────────────────────────────────────────────
-    wandb_project: str = "uq-unibot/uni-bot"
+    wandb_entity: str = "uq-unibot"     # W&B team/org (set via WANDB_ENTITY env var)
+    wandb_project: str = "uni-bot"      # W&B project name (no slashes)
     run_name: str = "gemma3-12b-grpo-geval"
     report_to: str = "wandb"            # set to "none" to disable W&B

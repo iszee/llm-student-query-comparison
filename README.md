@@ -137,7 +137,7 @@ Prepared splits live in `data/` — see [`data/README.md`](data/README.md) for f
 |-------|--------|-----------|
 | Gemma 3 12B | GRPO + QLoRA (Unsloth) + G-Eval reward | `fine-tuning/gemma3-12b-grpo/` |
 
-G-Eval scores completions via **OpenAI GPT-4o-mini** on four dimensions (factual accuracy 55%, relevance 25%, conciseness 10%, no-hallucination 10%). W&B project: `uq-unibot/uni-bot`.
+G-Eval scores completions via **OpenAI GPT-4o-mini** on four dimensions (factual accuracy 55%, relevance 25%, conciseness 10%, no-hallucination 10%). W&B project: `uq-unibot / uni-bot`.
 
 See [`fine-tuning/gemma3-12b-grpo/README.md`](fine-tuning/gemma3-12b-grpo/README.md) for setup and running instructions.
 
