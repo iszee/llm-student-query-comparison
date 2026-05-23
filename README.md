@@ -20,6 +20,13 @@ pip install -r requirements.txt
 
 ```
 llm-student-query-comparison/
+├── data/                                             # Fine-tuning splits (see data/README.md)
+│   ├── train.jsonl                                   # 2209 pairs (HF messages format)
+│   ├── test.jsonl                                    # 50 pairs  (human-validated only)
+│   ├── few_shot_examples.json                        # 5 held-out pairs for inference-time few-shot
+│   ├── split_stats.json                              # Seed, source counts, split metadata
+│   └── scripts/
+│       └── make_splits.py                            # Reproducible split script (seed=42)
 ├── data-collection/
 │   ├── manual/
 │   │   └── data-manual.xlsx                          # 38 human-authored baseline Q&A pairs
@@ -37,6 +44,11 @@ llm-student-query-comparison/
 │       ├── program-pages.txt                         # URLs to UQ BIT program pages
 │       ├── redit-pages.txt                           # Reddit/forum discussion URLs (placeholder)
 │       └── international-guide-undergraduate-postgraduate.pdf  # UQ International Guide 2026
+├── fine-tuning/
+│   └── gemma3-12b-grpo/                              # Gemma 3 12B GRPO+QLoRA (see README inside)
+│       ├── config.py                                 # All hyperparameters
+│       ├── reward.py                                 # G-Eval reward (OpenAI GPT-4o-mini)
+│       └── train.py                                  # Unsloth + TRL GRPOTrainer
 └── requirements.txt
 ```
 
@@ -116,6 +128,20 @@ python data-collection/generated/generate_qa_v2.py
 ```powershell
 python data-collection/generated/generate_qa.py
 ```
+
+## Fine-tuning
+
+Prepared splits live in `data/` — see [`data/README.md`](data/README.md) for format and usage.
+
+| Model | Method | Directory |
+|-------|--------|-----------|
+| Gemma 3 12B | GRPO + QLoRA (Unsloth) + G-Eval reward | `fine-tuning/gemma3-12b-grpo/` |
+
+G-Eval scores completions via **OpenAI GPT-4o-mini** on four dimensions (factual accuracy 55%, relevance 25%, conciseness 10%, no-hallucination 10%). W&B project: `uq-unibot/uni-bot`.
+
+See [`fine-tuning/gemma3-12b-grpo/README.md`](fine-tuning/gemma3-12b-grpo/README.md) for setup and running instructions.
+
+---
 
 ## Source Documents
 

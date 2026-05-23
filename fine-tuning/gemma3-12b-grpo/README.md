@@ -2,8 +2,9 @@
 
 Reinforcement learning fine-tuning of `google/gemma-3-12b-it` for the UQ BIT information assistant, using:
 
+- **Unsloth** `FastLanguageModel` — ~2× faster training, ~30% less VRAM vs vanilla HuggingFace
 - **GRPO** (Group Relative Policy Optimization) via TRL `GRPOTrainer`
-- **QLoRA** (4-bit NF4 + LoRA) for parameter-efficient training on a single A100 80 GB
+- **QLoRA** (4-bit NF4 + LoRA via Unsloth) for parameter-efficient training on a single A100 80 GB
 - **G-Eval** reward via OpenAI GPT-4o-mini — scores completions on factual accuracy, relevance, conciseness, and no-hallucination
 
 ---
@@ -22,6 +23,11 @@ Reinforcement learning fine-tuning of `google/gemma-3-12b-it` for the UQ BIT inf
 
 ```bash
 # Python 3.11+, CUDA 12.1+
+
+# Install Unsloth first (match your CUDA + torch version)
+pip install "unsloth[cu121-torch240] @ git+https://github.com/unslothai/unsloth.git"
+
+# Then the rest
 pip install -r requirements.txt
 ```
 
@@ -92,7 +98,7 @@ Edit `config.py` to adjust hyperparameters. Key knobs:
 
 ## Monitoring with Weights & Biases
 
-Training logs to the `uq-bit-grpo` project. Key metrics:
+Training logs to the `uq-unibot/uni-bot` project on wandb.ai. Key metrics:
 
 | Metric | What to watch for |
 |--------|------------------|
@@ -105,12 +111,14 @@ Training logs to the `uq-bit-grpo` project. Key metrics:
 ## Loading the Trained Adapter for Inference
 
 ```python
-from peft import PeftModel
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from unsloth import FastLanguageModel
 
-base_model = AutoModelForCausalLM.from_pretrained("google/gemma-3-12b-it")
-model = PeftModel.from_pretrained(base_model, "fine-tuning/gemma3-12b-grpo/checkpoints/final")
-tokenizer = AutoTokenizer.from_pretrained("fine-tuning/gemma3-12b-grpo/checkpoints/final")
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name="fine-tuning/gemma3-12b-grpo/checkpoints/final",
+    max_seq_length=2048,
+    load_in_4bit=True,
+)
+FastLanguageModel.for_inference(model)  # enable Unsloth's optimised inference kernel
 
 # Few-shot inference using held-out examples
 import json

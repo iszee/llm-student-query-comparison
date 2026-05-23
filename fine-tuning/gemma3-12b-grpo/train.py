@@ -1,16 +1,19 @@
 """
 train.py
 --------
-GRPO + QLoRA fine-tuning of Gemma 3 12B for the UQ BIT information assistant.
+GRPO + QLoRA fine-tuning of Gemma 3 12B using Unsloth for the UQ BIT
+information assistant.
 
 Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Samples G=8 completions per prompt
   - Scores each with G-Eval (OpenAI GPT-4o-mini)
   - Updates LoRA adapters using relative reward advantage
 
-Quantisation: 4-bit NF4 (bitsandbytes) + LoRA (PEFT) — fits in 1× A100 80GB.
+Unsloth replaces the manual BitsAndBytesConfig + PEFT setup with
+FastLanguageModel, giving ~2x faster training and ~30% less VRAM vs vanilla
+HuggingFace on A100.
 
-Usage (on Bunya):
+Usage:
     python fine-tuning/gemma3-12b-grpo/train.py
 
 For a 5-step smoke test, set max_steps=5 in config.py before running.
@@ -23,18 +26,13 @@ Requires env vars:
 
 import os
 import sys
+import torch
 from pathlib import Path
 from functools import partial
 
-import torch
 from datasets import load_dataset
-from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-from transformers import (
-    AutoModelForCausalLM,
-    AutoTokenizer,
-    BitsAndBytesConfig,
-)
 from trl import GRPOConfig, GRPOTrainer
+from unsloth import FastLanguageModel
 
 # Allow running from repo root
 sys.path.insert(0, str(Path(__file__).parent))
@@ -59,8 +57,8 @@ def prepare_example(example: dict, tokenizer) -> dict:
     """
     Convert a HF-messages-format example into:
       - "prompt":    formatted string (system + user turn, with generation prompt)
-      - "question":  raw question string (passed to G-Eval)
-      - "reference": reference answer string (passed to G-Eval)
+      - "question":  raw question string (passed through to G-Eval via kwargs)
+      - "reference": reference answer string (passed through to G-Eval via kwargs)
     """
     msgs = example["messages"]
     question = msgs[1]["content"]   # user turn
@@ -77,30 +75,31 @@ def prepare_example(example: dict, tokenizer) -> dict:
     return {"prompt": prompt, "question": question, "reference": answer}
 
 
-# ── Model loading ─────────────────────────────────────────────────────────────
+# ── Model loading (Unsloth) ───────────────────────────────────────────────────
 
 def load_model_and_tokenizer(cfg: Config):
-    compute_dtype = getattr(torch, cfg.bnb_compute_dtype)
+    dtype = getattr(torch, cfg.dtype) if cfg.dtype else None
 
-    bnb_config = BitsAndBytesConfig(
+    print(f"Loading model with Unsloth: {cfg.model_id}")
+    model, tokenizer = FastLanguageModel.from_pretrained(
+        model_name=cfg.model_id,
+        max_seq_length=cfg.max_seq_length,
+        dtype=dtype,
         load_in_4bit=cfg.load_in_4bit,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=compute_dtype,
-        bnb_4bit_use_double_quant=True,
     )
 
-    print(f"Loading model: {cfg.model_id}")
-    model = AutoModelForCausalLM.from_pretrained(
-        cfg.model_id,
-        quantization_config=bnb_config,
-        device_map="auto",
-        attn_implementation=cfg.attn_implementation,
-        torch_dtype=compute_dtype,
+    # Apply LoRA via Unsloth (fused kernels, optimised checkpointing)
+    model = FastLanguageModel.get_peft_model(
+        model,
+        r=cfg.lora_r,
+        lora_alpha=cfg.lora_alpha,
+        lora_dropout=cfg.lora_dropout,
+        target_modules=cfg.lora_target_modules,
+        bias="none",
+        use_gradient_checkpointing=cfg.use_gradient_checkpointing,
+        random_state=42,
     )
-    model = prepare_model_for_kbit_training(model,
-                                            use_gradient_checkpointing=cfg.gradient_checkpointing)
 
-    tokenizer = AutoTokenizer.from_pretrained(cfg.model_id)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "left"     # GRPO needs left-padding for generation
@@ -108,29 +107,10 @@ def load_model_and_tokenizer(cfg: Config):
     return model, tokenizer
 
 
-# ── LoRA setup ────────────────────────────────────────────────────────────────
-
-def apply_lora(model, cfg: Config):
-    lora_cfg = LoraConfig(
-        r=cfg.lora_r,
-        lora_alpha=cfg.lora_alpha,
-        lora_dropout=cfg.lora_dropout,
-        target_modules=cfg.lora_target_modules,
-        bias="none",
-        task_type="CAUSAL_LM",
-    )
-    model = get_peft_model(model, lora_cfg)
-    model.print_trainable_parameters()
-    return model
-
-
 # ── Reward wrapper ────────────────────────────────────────────────────────────
 
 def make_reward_fn(cfg: Config):
-    """
-    Wrap reward_fn with the config so GRPOTrainer can call it as:
-        reward_func(prompts, completions, **dataset_cols)
-    """
+    """Wrap reward_fn with config so GRPOTrainer can call it as a plain function."""
     def _reward(prompts, completions, **kwargs):
         return reward_fn(prompts, completions, cfg=cfg, **kwargs)
     return _reward
@@ -157,9 +137,8 @@ def main():
         "test":  cfg.test_file,
     })
 
-    # ── Load model + tokenizer ─────────────────────────────────────────────────
+    # ── Load model + tokenizer via Unsloth ────────────────────────────────────
     model, tokenizer = load_model_and_tokenizer(cfg)
-    model = apply_lora(model, cfg)
 
     # ── Prepare dataset columns ────────────────────────────────────────────────
     prep = partial(prepare_example, tokenizer=tokenizer)
@@ -182,7 +161,6 @@ def main():
         warmup_ratio=cfg.warmup_ratio,
         lr_scheduler_type=cfg.lr_scheduler_type,
         bf16=cfg.bf16,
-        gradient_checkpointing=cfg.gradient_checkpointing,
         # Logging / saving
         output_dir=cfg.output_dir,
         logging_steps=cfg.logging_steps,
@@ -191,7 +169,7 @@ def main():
         save_total_limit=cfg.save_total_limit,
         report_to=cfg.report_to,
         run_name=cfg.run_name,
-        # Dataset columns to pass through to reward_fn
+        # Pass dataset columns through to reward_fn as kwargs
         dataset_kwargs={"skip_prepare_dataset": True},
     )
 

@@ -13,9 +13,9 @@ from typing import List
 class Config:
     # ── Model ─────────────────────────────────────────────────────────────────
     model_id: str = "google/gemma-3-12b-it"
-    load_in_4bit: bool = True           # NF4 QLoRA
-    bnb_compute_dtype: str = "bfloat16"
-    attn_implementation: str = "eager"  # use "flash_attention_2" if installed
+    max_seq_length: int = 2048          # Unsloth needs this at load time
+    load_in_4bit: bool = True           # NF4 QLoRA via Unsloth
+    dtype: str = "bfloat16"            # None = auto-detect; "bfloat16" for A100
 
     # ── LoRA ──────────────────────────────────────────────────────────────────
     lora_r: int = 64
@@ -25,6 +25,8 @@ class Config:
         "q_proj", "k_proj", "v_proj", "o_proj",
         "gate_proj", "up_proj", "down_proj",
     ])
+    # "unsloth" uses Unsloth's optimised gradient checkpointing (saves ~30% VRAM)
+    use_gradient_checkpointing: str = "unsloth"
 
     # ── GRPO ──────────────────────────────────────────────────────────────────
     num_generations: int = 8            # G completions sampled per prompt
@@ -41,7 +43,6 @@ class Config:
     warmup_ratio: float = 0.05
     lr_scheduler_type: str = "cosine"
     bf16: bool = True
-    gradient_checkpointing: bool = True
     output_dir: str = "fine-tuning/gemma3-12b-grpo/checkpoints"
     logging_steps: int = 10
     save_steps: int = 100
@@ -66,6 +67,6 @@ class Config:
     })
 
     # ── Weights & Biases ──────────────────────────────────────────────────────
-    wandb_project: str = "uq-bit-grpo"
+    wandb_project: str = "uq-unibot/uni-bot"
     run_name: str = "gemma3-12b-grpo-geval"
     report_to: str = "wandb"            # set to "none" to disable W&B
