@@ -32,7 +32,7 @@ class Config:
     beta: float = 0.1                   # KL penalty weight (was kl_coeff in TRL <0.15)
 
     # ── Training ──────────────────────────────────────────────────────────────
-    learning_rate: float = 5e-5
+    learning_rate: float = 5e-6
     per_device_train_batch_size: int = 8    # 8 prompts × 8 generations = 64 seqs → fills H100 KV cache (~37 GB)
     gradient_accumulation_steps: int = 2    # effective batch = 8×2 = 16 prompts; more frequent optimizer steps
     num_train_epochs: int = 1               # was 3; 1 epoch sufficient for GRPO
