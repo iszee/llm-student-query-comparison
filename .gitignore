@@ -223,3 +223,4 @@ __marimo__/
 /.idea/.gitignore
 graphify-out/
 .claude/
+wandb/
