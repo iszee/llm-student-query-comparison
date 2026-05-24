@@ -1,9 +1,9 @@
-# Gemma 3 12B — GRPO + QLoRA Fine-tuning
+# Gemma 3 12B — GRPO Fine-tuning
 
 Reinforcement learning fine-tuning of `google/gemma-3-12b-it` for the UQ BIT information assistant, using:
 
 - **GRPO** (Group Relative Policy Optimization) via TRL `GRPOTrainer`
-- **QLoRA** (4-bit NF4 via bitsandbytes + LoRA via PEFT) — parameter-efficient training on a single H100 79 GB
+- **BF16 + LoRA** (full-precision BF16 base + LoRA via PEFT) — parameter-efficient training on a single H100 79 GB
 - **vLLM** (PagedAttention) for generation — ~10–20× faster than HuggingFace `generate()`
 - **G-Eval** reward via OpenAI GPT-4o-mini — scores completions on factual accuracy, relevance, conciseness, and no-hallucination
 
@@ -18,6 +18,7 @@ Reinforcement learning fine-tuning of `google/gemma-3-12b-it` for the UQ BIT inf
 | `config.py` | All hyperparameters — edit here before running |
 | `reward.py` | G-Eval reward function (OpenAI GPT-4o-mini scorer) |
 | `train.py` | Main GRPO training script |
+| `evaluate.py` | Evaluate a checkpoint on the test set — saves prompts, responses, and G-Eval metrics to CSV |
 
 ---
 
@@ -29,10 +30,7 @@ Reinforcement learning fine-tuning of `google/gemma-3-12b-it` for the UQ BIT inf
 # Set the CUDA 13.0 library path (required for bitsandbytes on Bunya)
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<venv>/lib/python3.11/site-packages/nvidia/cu13/lib/
 
-# Install vLLM
-pip install vllm
-
-# Install remaining dependencies
+# Install dependencies
 pip install -r requirements.txt
 ```
 
@@ -73,7 +71,7 @@ Set `max_steps = 5` in `config.py`, then:
 python fine-tuning/gemma3-12b-grpo/train.py
 ```
 
-Confirms the full pipeline — model loads, vLLM starts, G=8 completions generate, G-Eval scores, one update step — without OOM or API errors.
+Confirms the full pipeline — model loads, vLLM starts, G=4 completions generate, G-Eval scores, one update step — without OOM or API errors.
 
 ### Step 3: Full training run
 
@@ -83,6 +81,40 @@ Reset `max_steps = -1` in `config.py`, then:
 python fine-tuning/gemma3-12b-grpo/train.py
 ```
 
+### Step 4: Evaluate a checkpoint
+
+```bash
+# Evaluate the final checkpoint (default path: checkpoints/final)
+python fine-tuning/gemma3-12b-grpo/evaluate.py
+
+# Evaluate a specific mid-training checkpoint
+python fine-tuning/gemma3-12b-grpo/evaluate.py \
+    --checkpoint fine-tuning/gemma3-12b-grpo/checkpoints/checkpoint-50 \
+    --output fine-tuning/gemma3-12b-grpo/eval_ckpt50.csv
+
+# Dry run — generation only, no G-Eval cost
+python fine-tuning/gemma3-12b-grpo/evaluate.py --no-geval
+
+# Evaluate the base model (no adapter, for comparison)
+python fine-tuning/gemma3-12b-grpo/evaluate.py --checkpoint none
+```
+
+The script saves a CSV to `--output` (default: `fine-tuning/gemma3-12b-grpo/eval_results.csv`) with one row per test example plus a final MEAN row:
+
+| Column | Description |
+|--------|-------------|
+| `idx` | Row index |
+| `question` | Raw student question |
+| `reference` | Ground-truth answer |
+| `generated_response` | Model output |
+| `factual_accuracy` | G-Eval score 1–5 |
+| `relevance` | G-Eval score 1–5 |
+| `conciseness` | G-Eval score 1–5 |
+| `no_hallucination` | G-Eval score 1–5 |
+| `composite_score` | Weighted average scaled to [0, 1] |
+
+Requires: `HF_TOKEN` + `OPENAI_API_KEY` (unless `--no-geval`).
+
 ---
 
 ## Configuration
@@ -91,15 +123,15 @@ Edit `config.py` to adjust hyperparameters. Key knobs:
 
 | Parameter | Default | Notes |
 |-----------|---------|-------|
-| `num_generations` | 8 | G completions per prompt — reduce to 4 if OOM |
-| `per_device_train_batch_size` | 8 | Reduce to 4 if OOM |
-| `gradient_accumulation_steps` | 2 | Effective batch = 8 × 2 = 16 prompts |
+| `num_generations` | 4 | G completions per prompt — increase to 8 for stronger advantage signal (more VRAM) |
+| `per_device_train_batch_size` | 4 | Reduce to 2 if OOM |
+| `gradient_accumulation_steps` | 4 | Effective batch = 4 × 4 = 16 prompts |
 | `max_completion_length` | 1024 | Max tokens per completion |
 | `learning_rate` | 5e-6 | Conservative for GRPO stability |
 | `beta` | 0.1 | KL penalty — increase to 0.2 if KL diverges |
 | `lora_r` | 64 | LoRA rank — 32 saves memory |
 | `use_vllm` | `True` | Disable if vLLM install fails (slower but works) |
-| `vllm_gpu_memory_utilization` | 0.45 | ~35 GB on H100 79 GB; lower if OOM |
+| `vllm_gpu_memory_utilization` | 0.35 | ~28 GB on H100 79 GB; lower if OOM |
 | `geval_model` | `gpt-4o-mini` | Switch to `gpt-4o` for higher quality scores |
 | `max_steps` | -1 | Set to 5 for smoke test |
 
@@ -111,7 +143,7 @@ Edit `config.py` to adjust hyperparameters. Key knobs:
 Each optimizer step:
   1. Generation  → vLLM (Gemma 12B BF16, PagedAttention) — 10-20× faster
   2. G-Eval      → 16 parallel OpenAI API calls per mini-batch
-  3. Backward    → HF model (NF4 4-bit + LoRA, Flash Attention 2)
+  3. Backward    → HF model (BF16 + LoRA, eager attention)
   4. Weight sync → TRL merges LoRA → pushes updated weights to vLLM
 ```
 
@@ -172,13 +204,12 @@ print(tokenizer.decode(outputs[0][inputs.shape[-1]:], skip_special_tokens=True))
 
 | Component | Est. VRAM |
 |-----------|-----------|
-| vLLM — Gemma 12B BF16 (generation engine) | ~24 GB |
-| vLLM — KV cache (at 0.45 utilisation) | ~11 GB |
-| Training model — Gemma 12B NF4 4-bit | ~7 GB |
+| vLLM — Gemma 12B BF16 (generation engine + KV cache at 0.35 util) | ~28 GB |
+| Training model — Gemma 12B BF16 (full precision) | ~24 GB |
 | LoRA adapters (r=64) | ~0.5 GB |
 | Paged AdamW 8-bit optimizer states | ~1 GB |
 | Activations + overhead (gradient checkpointing ON) | ~3 GB |
-| **Total** | **~47 GB** — safe headroom in 79 GB |
+| **Total** | **~57 GB** — safe headroom in 79 GB |
 
 ---
 

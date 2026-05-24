@@ -13,7 +13,7 @@ from typing import List
 class Config:
     # ── Model ─────────────────────────────────────────────────────────────────
     model_id: str = "google/gemma-3-12b-it"
-    load_in_4bit: bool = True           # NF4 QLoRA via bitsandbytes
+    load_in_4bit: bool = False           # NF4 QLoRA via bitsandbytes
 
     # ── LoRA ──────────────────────────────────────────────────────────────────
     lora_r: int = 64
@@ -26,15 +26,15 @@ class Config:
     gradient_checkpointing: bool = True
 
     # ── GRPO ──────────────────────────────────────────────────────────────────
-    num_generations: int = 8             # G completions sampled per prompt (8 → better GRPO advantage signal + fills KV cache)
+    num_generations: int = 4             # G completions sampled per prompt (8 → better GRPO advantage signal + fills KV cache)
     max_completion_length: int = 1024    # max tokens per completion
     temperature: float = 0.9            # sampling temperature for diverse completions
     beta: float = 0.1                   # KL penalty weight (was kl_coeff in TRL <0.15)
 
     # ── Training ──────────────────────────────────────────────────────────────
     learning_rate: float = 5e-6
-    per_device_train_batch_size: int = 8    # 8 prompts × 8 generations = 64 seqs → fills H100 KV cache (~37 GB)
-    gradient_accumulation_steps: int = 2    # effective batch = 8×2 = 16 prompts; more frequent optimizer steps
+    per_device_train_batch_size: int = 4    # 8 prompts × 8 generations = 64 seqs → fills H100 KV cache (~37 GB)
+    gradient_accumulation_steps: int = 4    # effective batch = 8×2 = 16 prompts; more frequent optimizer steps
     num_train_epochs: int = 1               # was 3; 1 epoch sufficient for GRPO
     max_steps: int = -1                     # set to small number (e.g. 5) for smoke test
     warmup_ratio: float = 0.05
@@ -42,9 +42,9 @@ class Config:
     bf16: bool = True
     output_dir: str = "fine-tuning/gemma3-12b-grpo/checkpoints"
     logging_steps: int = 10
-    save_steps: int = 100
-    eval_steps: int = 100
-    save_total_limit: int = 3
+    save_steps: int = 50
+    eval_steps: int = 50
+    save_total_limit: int = 10
 
     # ── Data ──────────────────────────────────────────────────────────────────
     train_file: str = "data/train.jsonl"
@@ -68,7 +68,7 @@ class Config:
     # vLLM runs the base model in BF16 for generation; training model stays NF4+LoRA.
     # TRL syncs LoRA-merged weights to vLLM after each optimizer step.
     use_vllm: bool = True
-    vllm_gpu_memory_utilization: float = 0.45   # ~35 GB on H100 79 GB; remaining ~44 GB for training
+    vllm_gpu_memory_utilization: float = 0.35   # ~35 GB on H100 79 GB; remaining ~44 GB for training
     vllm_dtype: str = "bfloat16"                # explicit BF16 for H100
     vllm_max_model_len: int = 2048              # prompt(512) + completion(1024) + safety margin
 

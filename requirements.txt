@@ -9,8 +9,11 @@ trl>=0.15.0
 accelerate>=0.34.0
 bitsandbytes>=0.44.0
 datasets>=3.0.0
+huggingface_hub>=0.24.0
 wandb
 openai>=1.40.0
+pandas>=2.0.0
+tqdm>=4.66.0
 
 # vLLM — fast generation via PagedAttention (replaces HF generate in GRPO)
 vllm>=0.6.0

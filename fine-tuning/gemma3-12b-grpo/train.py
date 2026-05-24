@@ -101,15 +101,12 @@ def load_model_and_tokenizer(cfg: Config):
     print(f"Loading model: {cfg.model_id}")
     model = AutoModelForCausalLM.from_pretrained(
         cfg.model_id,
-        quantization_config=bnb_config,
         device_map="auto",
         dtype=torch.bfloat16,               # renamed from torch_dtype (deprecated)
         attn_implementation="eager",
     )
-    model = prepare_model_for_kbit_training(
-        model,
-        use_gradient_checkpointing=cfg.gradient_checkpointing,
-        gradient_checkpointing_kwargs={"use_reentrant": False},  # suppresses requires_grad warning
+    model.gradient_checkpointing_enable(
+        gradient_checkpointing_kwargs={"use_reentrant": False}
     )
 
     lora_cfg = LoraConfig(
@@ -177,8 +174,6 @@ def main():
         # Generation — vLLM handles forward pass; HF model does backward
         use_vllm=cfg.use_vllm,
         vllm_gpu_memory_utilization=cfg.vllm_gpu_memory_utilization,
-        vllm_dtype=cfg.vllm_dtype,
-        vllm_max_model_len=cfg.vllm_max_model_len,
         num_generations=cfg.num_generations,
         max_completion_length=cfg.max_completion_length,
         temperature=cfg.temperature,
@@ -218,7 +213,7 @@ def main():
     )
 
     print("Starting GRPO training...")
-    trainer.train()
+    trainer.train(resume_from_checkpoint=True)
 
     # ── Save final adapter ─────────────────────────────────────────────────────
     final_dir = Path(cfg.output_dir) / "final"
