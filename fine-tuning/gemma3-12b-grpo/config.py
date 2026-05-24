@@ -27,8 +27,8 @@ class Config:
 
     # ── GRPO ──────────────────────────────────────────────────────────────────
     num_generations: int = 4             # G completions sampled per prompt (8 → better GRPO advantage signal + fills KV cache)
-    max_completion_length: int = 1024    # max tokens per completion
-    temperature: float = 0.9            # sampling temperature for diverse completions
+    max_completion_length: int = 256     # max tokens per completion (eval avg ~150 tokens)
+    temperature: float = 0.2            # sampling temperature — low for factual consistency
     beta: float = 0.1                   # KL penalty weight (was kl_coeff in TRL <0.15)
 
     # ── Training ──────────────────────────────────────────────────────────────

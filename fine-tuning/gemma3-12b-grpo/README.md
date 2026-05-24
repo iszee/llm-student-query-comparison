@@ -126,7 +126,8 @@ Edit `config.py` to adjust hyperparameters. Key knobs:
 | `num_generations` | 4 | G completions per prompt — increase to 8 for stronger advantage signal (more VRAM) |
 | `per_device_train_batch_size` | 4 | Reduce to 2 if OOM |
 | `gradient_accumulation_steps` | 4 | Effective batch = 4 × 4 = 16 prompts |
-| `max_completion_length` | 1024 | Max tokens per completion |
+| `max_completion_length` | 256 | Max tokens per completion — set to match observed response length (~150 tokens) |
+| `temperature` | 0.2 | Sampling temp for G completions — low for factual consistency; raise to 0.4–0.5 if `train/reward_std` collapses |
 | `learning_rate` | 5e-6 | Conservative for GRPO stability |
 | `beta` | 0.1 | KL penalty — increase to 0.2 if KL diverges |
 | `lora_r` | 64 | LoRA rank — 32 saves memory |
