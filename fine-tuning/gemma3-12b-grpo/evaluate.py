@@ -372,8 +372,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output",
-        default="fine-tuning/gemma3-12b-grpo/eval_results.csv",
-        help="Output CSV path. (default: fine-tuning/gemma3-12b-grpo/eval_results.csv)",
+        default="fine-tuning/gemma3-12b-grpo/results/eval_results.csv",
+        help="Output CSV path. (default: fine-tuning/gemma3-12b-grpo/results/eval_results.csv)",
     )
     parser.add_argument(
         "--max-new-tokens",
