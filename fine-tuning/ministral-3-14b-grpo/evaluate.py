@@ -1,7 +1,7 @@
 """
 evaluate.py
 -----------
-Evaluate Gemma 3 12B across all 8 configurations by default:
+Evaluate Ministral 3 14B across all 8 configurations by default:
 
     base model        × { plain | sysprompt | fewshot | sysprompt_fewshot }
     fine-tuned model  × { plain | sysprompt | fewshot | sysprompt_fewshot }
@@ -11,20 +11,20 @@ Each model is loaded once and reused for all 4 of its prompt variants.
 
 Usage:
     # Full 8-config run (default)
-    python fine-tuning/gemma3-12b-grpo/evaluate.py
+    python fine-tuning/ministral-3-14b-grpo/evaluate.py
 
     # Specific checkpoint
-    python fine-tuning/gemma3-12b-grpo/evaluate.py \\
-        --checkpoint fine-tuning/gemma3-12b-grpo/checkpoints/checkpoint-100
+    python fine-tuning/ministral-3-14b-grpo/evaluate.py \\
+        --checkpoint fine-tuning/ministral-3-14b-grpo/checkpoints/checkpoint-100
 
     # Skip fine-tuned model — base model only (4 configs)
-    python fine-tuning/gemma3-12b-grpo/evaluate.py --checkpoint none
+    python fine-tuning/ministral-3-14b-grpo/evaluate.py --checkpoint none
 
     # Dry run — no G-Eval cost
-    python fine-tuning/gemma3-12b-grpo/evaluate.py --no-geval
+    python fine-tuning/ministral-3-14b-grpo/evaluate.py --no-geval
 
 Requires env vars:
-    HF_TOKEN        — gated Gemma 3 weights on HuggingFace Hub
+    HF_TOKEN        — gated Ministral 3 weights on HuggingFace Hub
     OPENAI_API_KEY  — G-Eval scoring via OpenAI (not needed with --no-geval)
 """
 
@@ -212,7 +212,7 @@ def score_all_parallel(rows: list[dict], cfg: Config) -> list[dict[str, float]]:
 
 def load_model_and_tokenizer(checkpoint: str | None, cfg: Config):
     """
-    Load base Gemma 3 12B in BF16 + optional LoRA adapter.
+    Load base Ministral 3 14B in BF16 + optional LoRA adapter.
 
     Args:
         checkpoint: path to a PEFT adapter directory, "none"/None for base model only.
@@ -441,15 +441,13 @@ def print_ablation_table(
     Args:
         results: {model_label: {variant_label: rows}}
     """
-    col_w = 12      # width of each score column
-    lbl_w = 22      # width of the row-label column
+    col_w = 12
+    lbl_w = 22
 
-    # Header rows
     model_labels   = list(results.keys())
     variant_labels = [v.label   for v in ALL_VARIANTS]
     variant_names  = [v.display for v in ALL_VARIANTS]
 
-    # ── composite_score summary (most important) ──────────────────────────────
     print("\n" + "═" * 80)
     print("  Ablation — composite_score (0–1)")
     print("═" * 80)
@@ -467,7 +465,6 @@ def print_ablation_table(
         print(row)
     print("═" * 80)
 
-    # ── full metrics per model × variant ─────────────────────────────────────
     for mlabel in model_labels:
         print(f"\n  {'─' * 60}")
         print(f"  Model: {mlabel}")
@@ -486,23 +483,56 @@ def print_ablation_table(
         print(f"  n = {len(next(iter(results[mlabel].values())))} examples")
 
 
+# ── Summary CSV ───────────────────────────────────────────────────────────────
+
+def save_summary_csv(
+    all_results: dict[str, dict[str, list[dict]]],
+    output_dir: str,
+) -> None:
+    """
+    Save one row per model × variant with mean metric values to eval_summary.csv.
+
+    Columns: model, variant, factual_accuracy, relevance, conciseness,
+             no_hallucination, composite_score
+    """
+    rows = []
+    for model_label, variant_results in all_results.items():
+        for vlabel, result_rows in variant_results.items():
+            row: dict = {"model": model_label, "variant": vlabel}
+            for col in METRIC_COLS:
+                row[col] = _mean(result_rows, col)
+            rows.append(row)
+
+    df = pd.DataFrame(rows)
+    out = Path(output_dir) / "eval_summary.csv"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(out, index=False)
+    print(f"  Summary saved → {out}")
+
+
+# ── CSV output path helper ────────────────────────────────────────────────────
+
+def result_path(output_dir: str, model_label: str, variant_label: str) -> str:
+    return str(Path(output_dir) / f"eval_{model_label}_{variant_label}.csv")
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Evaluate Gemma 3 12B across all 8 configurations: "
+            "Evaluate Ministral 3 14B across all 8 configurations: "
             "base + fine-tuned × 4 prompt variants "
             "(plain / sysprompt / fewshot / sysprompt_fewshot)."
         )
     )
     parser.add_argument(
         "--checkpoint",
-        default="fine-tuning/gemma3-12b-grpo/checkpoints/final",
+        default="fine-tuning/ministral-3-14b-grpo/checkpoints/final",
         help=(
             "Path to the LoRA adapter directory. "
             "Pass 'none' to skip the fine-tuned model and run base only. "
-            "(default: fine-tuning/gemma3-12b-grpo/checkpoints/final)"
+            "(default: fine-tuning/ministral-3-14b-grpo/checkpoints/final)"
         ),
     )
     parser.add_argument(
@@ -517,10 +547,10 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output-dir",
-        default="fine-tuning/gemma3-12b-grpo/results",
+        default="fine-tuning/ministral-3-14b-grpo/results",
         help=(
             "Directory for output CSVs. Files are named eval_{model}_{variant}.csv. "
-            "(default: fine-tuning/gemma3-12b-grpo/results)"
+            "(default: fine-tuning/ministral-3-14b-grpo/results)"
         ),
     )
     parser.add_argument(
@@ -558,39 +588,6 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-# ── Summary CSV ───────────────────────────────────────────────────────────────
-
-def save_summary_csv(
-    all_results: dict[str, dict[str, list[dict]]],
-    output_dir: str,
-) -> None:
-    """
-    Save one row per model × variant with mean metric values to eval_summary.csv.
-
-    Columns: model, variant, factual_accuracy, relevance, conciseness,
-             no_hallucination, composite_score
-    """
-    rows = []
-    for model_label, variant_results in all_results.items():
-        for vlabel, result_rows in variant_results.items():
-            row: dict = {"model": model_label, "variant": vlabel}
-            for col in METRIC_COLS:
-                row[col] = _mean(result_rows, col)   # None if G-Eval was skipped
-            rows.append(row)
-
-    df = pd.DataFrame(rows)
-    out = Path(output_dir) / "eval_summary.csv"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(out, index=False)
-    print(f"  Summary saved → {out}")
-
-
-# ── CSV output path helper ────────────────────────────────────────────────────
-
-def result_path(output_dir: str, model_label: str, variant_label: str) -> str:
-    return str(Path(output_dir) / f"eval_{model_label}_{variant_label}.csv")
-
-
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main() -> None:
@@ -619,7 +616,6 @@ def main() -> None:
     few_shot_turns = load_few_shot_turns(args.few_shot_file)
 
     # ── Models to evaluate ─────────────────────────────────────────────────────
-    # Always run base; add fine-tuned unless --checkpoint none
     models_to_run: list[tuple[str, str | None]] = [("base", None)]
     if args.checkpoint.lower() != "none":
         models_to_run.append(("finetuned", args.checkpoint))
