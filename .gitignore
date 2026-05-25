@@ -225,3 +225,5 @@ graphify-out/
 .claude/
 wandb/
 checkpoints/
+cache/
+old-checkpoints/
