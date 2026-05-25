@@ -8,7 +8,7 @@ Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Scores each with G-Eval (OpenAI GPT-4o-mini)
   - Updates LoRA adapters using relative reward advantage
 
-Precision:  BF16 full-precision base model + LoRA adapters via PEFT.
+Precision:  BF16 full-precision base model + LoRA adapters via PEFT (dtype=torch.bfloat16).
 Optimiser:  AdamW fused (torch) — fast, no bitsandbytes dependency.
 Generation: vLLM colocate mode (PagedAttention) — ~10-20× faster than HF generate().
 
@@ -91,7 +91,7 @@ def load_model_and_tokenizer(cfg: Config):
     print(f"Loading model: {cfg.model_id}")
     model = AutoModelForCausalLM.from_pretrained(
         cfg.model_id,
-        torch_dtype=torch.bfloat16,
+        dtype=torch.bfloat16,
         device_map="auto",
         attn_implementation="sdpa",    # PyTorch built-in SDPA — faster than "eager", no extra install
         # attn_implementation="flash_attention_2",  # fastest; requires: pip install flash-attn --no-build-isolation
