@@ -1,7 +1,7 @@
 """
 config.py
 ---------
-Central configuration for Gemma 3 12B GRPO + QLoRA fine-tuning.
+Central configuration for Gemma 3 12B GRPO + LoRA (BF16) fine-tuning.
 All hyperparameters live here — import Config from this module in train.py and reward.py.
 """
 
@@ -13,7 +13,6 @@ from typing import List
 class Config:
     # ── Model ─────────────────────────────────────────────────────────────────
     model_id: str = "google/gemma-3-12b-it"
-    load_in_4bit: bool = False           # NF4 QLoRA via bitsandbytes
 
     # ── LoRA ──────────────────────────────────────────────────────────────────
     lora_r: int = 64
@@ -26,30 +25,31 @@ class Config:
     gradient_checkpointing: bool = True
 
     # ── GRPO ──────────────────────────────────────────────────────────────────
-    num_generations: int = 4             # G completions sampled per prompt (8 → better GRPO advantage signal + fills KV cache)
+    num_generations: int = 4             # G completions sampled per prompt (increase to 8 for stronger advantage signal)
     max_completion_length: int = 256     # max tokens per completion (eval avg ~150 tokens)
     temperature: float = 0.2            # sampling temperature — low for factual consistency
-    beta: float = 0.1                   # KL penalty weight (was kl_coeff in TRL <0.15)
+    beta: float = 0.1                   # KL penalty weight (set to 0.0 to disable, per recent GRPO papers)
 
     # ── Training ──────────────────────────────────────────────────────────────
     learning_rate: float = 5e-6
-    per_device_train_batch_size: int = 4    # 8 prompts × 8 generations = 64 seqs → fills H100 KV cache (~37 GB)
-    gradient_accumulation_steps: int = 4    # effective batch = 8×2 = 16 prompts; more frequent optimizer steps
-    num_train_epochs: int = 1               # was 3; 1 epoch sufficient for GRPO
+    per_device_train_batch_size: int = 4    # 4 prompts × 4 generations = 16 seqs per step
+    gradient_accumulation_steps: int = 4    # effective batch = 4×4 = 16 prompts
+    num_train_epochs: int = 1               # 1 epoch sufficient for GRPO
     max_steps: int = -1                     # set to small number (e.g. 5) for smoke test
     warmup_ratio: float = 0.05
     lr_scheduler_type: str = "cosine"
     bf16: bool = True
+    optim: str = "adamw_torch_fused"        # fused AdamW — fast on CUDA, no bitsandbytes
     output_dir: str = "fine-tuning/gemma3-12b-grpo/checkpoints"
     logging_steps: int = 10
-    save_steps: int = 50
-    eval_steps: int = 50
+    save_steps: int = 100
+    eval_steps: int = 100
     save_total_limit: int = 10
 
     # ── Data ──────────────────────────────────────────────────────────────────
     train_file: str = "data/train.jsonl"
     test_file: str = "data/test.jsonl"
-    max_prompt_length: int = 512        # truncate formatted prompt if needed
+    max_prompt_length: int = 1024       # tokenizer truncation limit used in evaluate.py (not passed to GRPOConfig)
 
     # ── G-Eval (OpenAI) ───────────────────────────────────────────────────────
     geval_model: str = "gpt-4o-mini"    # cheap + capable enough for scoring
@@ -65,12 +65,12 @@ class Config:
     })
 
     # ── vLLM (fast generation) ───────────────────────────────────────────────────
-    # vLLM runs the base model in BF16 for generation; training model stays NF4+LoRA.
-    # TRL syncs LoRA-merged weights to vLLM after each optimizer step.
+    # vLLM runs in colocate mode: shares the training GPU, syncs LoRA weights after
+    # each optimizer step. TRL handles the weight sync automatically.
     use_vllm: bool = True
-    vllm_gpu_memory_utilization: float = 0.35   # ~35 GB on H100 79 GB; remaining ~44 GB for training
-    vllm_dtype: str = "bfloat16"                # explicit BF16 for H100
-    vllm_max_model_len: int = 2048              # prompt(512) + completion(1024) + safety margin
+    vllm_gpu_memory_utilization: float = 0.35   # ~28 GB on H100 79 GB; remaining ~51 GB for training
+    vllm_max_model_length: int = 2048           # prompt(512) + completion(256) + safety margin
+    vllm_cache_dir: str = "fine-tuning/gemma3-12b-grpo/cache/vllm"  # writable cache (VLLM_CACHE_ROOT + TRITON_CACHE_DIR)
 
     # ── Weights & Biases ──────────────────────────────────────────────────────
     wandb_entity: str = "uq-unibot"     # W&B team/org (set via WANDB_ENTITY env var)

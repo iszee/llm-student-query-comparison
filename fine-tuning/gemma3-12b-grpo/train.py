@@ -1,24 +1,24 @@
 """
 train.py
 --------
-GRPO + QLoRA fine-tuning of Gemma 3 12B for the UQ BIT information assistant.
+GRPO + LoRA fine-tuning of Gemma 3 12B for the UQ BIT information assistant.
 
 Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
-  - Samples G=8 completions per prompt
+  - Samples G=4 completions per prompt
   - Scores each with G-Eval (OpenAI GPT-4o-mini)
   - Updates LoRA adapters using relative reward advantage
 
-Quantisation: 4-bit NF4 (bitsandbytes) + LoRA (PEFT).
-Optimiser:    Paged AdamW 8-bit (bitsandbytes) — ~30% less optimizer VRAM.
-Generation:   vLLM (PagedAttention) — ~10-20× faster generation than HF generate().
+Precision:  BF16 full-precision base model + LoRA adapters via PEFT.
+Optimiser:  AdamW fused (torch) — fast, no bitsandbytes dependency.
+Generation: vLLM colocate mode (PagedAttention) — ~10-20× faster than HF generate().
 
-NOTE: Unsloth was removed due to a bug in Unsloth 2025.11.1 (VARIANT_KWARG_KEYS
-undefined in compiled Linear_peft_forward.py). Vanilla HuggingFace PEFT + TRL
-works correctly once the CUDA 13.0 library path is set:
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<venv>/site-packages/nvidia/cu13/lib/
+PEFT integration uses TRL v1.4+ native peft_config parameter — pass LoraConfig
+directly to GRPOTrainer; the trainer wraps the model and enables gradient
+checkpointing internally.
 
-Flash Attention 2 requires:
-  pip install flash-attn --no-build-isolation
+Attention backend (set in load_model_and_tokenizer):
+  "sdpa"              — default; PyTorch built-in SDPA, no extra install (torch >= 2.0)
+  "flash_attention_2" — fastest; requires: pip install flash-attn --no-build-isolation
 
 Usage:
     python fine-tuning/gemma3-12b-grpo/train.py
@@ -39,12 +39,8 @@ from functools import partial
 
 import huggingface_hub
 from datasets import load_dataset
-from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-from transformers import (
-    AutoModelForCausalLM,
-    AutoTokenizer,
-    BitsAndBytesConfig,
-)
+from peft import LoraConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from trl import GRPOConfig, GRPOTrainer
 
 # Allow running from repo root
@@ -91,34 +87,15 @@ def prepare_example(example: dict, tokenizer) -> dict:
 # ── Model loading ─────────────────────────────────────────────────────────────
 
 def load_model_and_tokenizer(cfg: Config):
-    bnb_config = BitsAndBytesConfig(
-        load_in_4bit=cfg.load_in_4bit,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-        bnb_4bit_use_double_quant=True,
-    )
-
+    """Load base model and tokenizer in BF16. PEFT wrapping is handled by GRPOTrainer."""
     print(f"Loading model: {cfg.model_id}")
     model = AutoModelForCausalLM.from_pretrained(
         cfg.model_id,
+        torch_dtype=torch.bfloat16,
         device_map="auto",
-        dtype=torch.bfloat16,               # renamed from torch_dtype (deprecated)
-        attn_implementation="eager",
+        attn_implementation="sdpa",    # PyTorch built-in SDPA — faster than "eager", no extra install
+        # attn_implementation="flash_attention_2",  # fastest; requires: pip install flash-attn --no-build-isolation
     )
-    model.gradient_checkpointing_enable(
-        gradient_checkpointing_kwargs={"use_reentrant": False}
-    )
-
-    lora_cfg = LoraConfig(
-        r=cfg.lora_r,
-        lora_alpha=cfg.lora_alpha,
-        lora_dropout=cfg.lora_dropout,
-        target_modules=cfg.lora_target_modules,
-        bias="none",
-        task_type="CAUSAL_LM",
-    )
-    model = get_peft_model(model, lora_cfg)
-    model.print_trainable_parameters()
 
     tokenizer = AutoTokenizer.from_pretrained(cfg.model_id)
     if tokenizer.pad_token is None:
@@ -141,6 +118,16 @@ def make_reward_fn(cfg: Config):
 
 def main():
     cfg = Config()
+
+    # ── vLLM / Triton cache ────────────────────────────────────────────────────
+    # Set before any vLLM import resolves its cache paths.  On HPC systems the
+    # default ~/.cache/vllm and ~/.triton/cache may not be writable; redirect
+    # both to a project-local directory the job always owns.
+    vllm_cache = Path(cfg.vllm_cache_dir).resolve()
+    vllm_cache.mkdir(parents=True, exist_ok=True)
+    (vllm_cache / "triton").mkdir(exist_ok=True)
+    os.environ.setdefault("VLLM_CACHE_ROOT",  str(vllm_cache))
+    os.environ.setdefault("TRITON_CACHE_DIR", str(vllm_cache / "triton"))
 
     # ── Validate env vars ──────────────────────────────────────────────────────
     missing = [v for v in ("OPENAI_API_KEY", "WANDB_API_KEY", "HF_TOKEN")
@@ -169,11 +156,23 @@ def main():
     prep = partial(prepare_example, tokenizer=tokenizer)
     ds = ds.map(prep, remove_columns=["messages"])
 
+    # ── LoRA config (passed to GRPOTrainer — trainer handles PEFT wrapping) ────
+    lora_cfg = LoraConfig(
+        r=cfg.lora_r,
+        lora_alpha=cfg.lora_alpha,
+        lora_dropout=cfg.lora_dropout,
+        target_modules=cfg.lora_target_modules,
+        bias="none",
+        task_type="CAUSAL_LM",
+    )
+
     # ── GRPOConfig ─────────────────────────────────────────────────────────────
     grpo_cfg = GRPOConfig(
-        # Generation — vLLM handles forward pass; HF model does backward
+        # Generation — vLLM colocate mode shares GPU memory with training model
         use_vllm=cfg.use_vllm,
+        vllm_mode="colocate",
         vllm_gpu_memory_utilization=cfg.vllm_gpu_memory_utilization,
+        vllm_max_model_length=cfg.vllm_max_model_length,
         num_generations=cfg.num_generations,
         max_completion_length=cfg.max_completion_length,
         temperature=cfg.temperature,
@@ -189,13 +188,14 @@ def main():
         lr_scheduler_type=cfg.lr_scheduler_type,
         bf16=cfg.bf16,
         gradient_checkpointing=cfg.gradient_checkpointing,
-        gradient_checkpointing_kwargs={"use_reentrant": False},  # suppresses requires_grad warning
-        optim="paged_adamw_8bit",           # 8-bit paged optimizer — saves ~30% optimizer VRAM
+        gradient_checkpointing_kwargs={"use_reentrant": False},
+        optim=cfg.optim,
         top_p=0.95,                         # match Gemma 3 model default (suppresses generation_config warning)
-        # Logging / saving
+        # Logging / saving / evaluation
         output_dir=cfg.output_dir,
         logging_steps=cfg.logging_steps,
         save_steps=cfg.save_steps,
+        eval_strategy="steps",              # required for eval_dataset + eval_steps to take effect
         eval_steps=cfg.eval_steps,
         save_total_limit=cfg.save_total_limit,
         report_to=cfg.report_to,
@@ -210,15 +210,19 @@ def main():
         train_dataset=ds["train"],
         eval_dataset=ds["test"],
         processing_class=tokenizer,
+        peft_config=lora_cfg,
     )
 
+    # Print trainable parameter count after trainer wraps the model with PEFT
+    trainer.model.print_trainable_parameters()
+
     print("Starting GRPO training...")
-    trainer.train(resume_from_checkpoint=True)
+    trainer.train()
 
     # ── Save final adapter ─────────────────────────────────────────────────────
     final_dir = Path(cfg.output_dir) / "final"
     print(f"Saving adapter to {final_dir}")
-    model.save_pretrained(final_dir)
+    trainer.save_model(str(final_dir))
     tokenizer.save_pretrained(final_dir)
     print("Done.")
 

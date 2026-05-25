@@ -45,10 +45,10 @@ llm-student-query-comparison/
 │       ├── redit-pages.txt                           # Reddit/forum discussion URLs (placeholder)
 │       └── international-guide-undergraduate-postgraduate.pdf  # UQ International Guide 2026
 ├── fine-tuning/
-│   └── gemma3-12b-grpo/                              # Gemma 3 12B GRPO+QLoRA (see README inside)
+│   └── gemma3-12b-grpo/                              # Gemma 3 12B GRPO + LoRA (see README inside)
 │       ├── config.py                                 # All hyperparameters
 │       ├── reward.py                                 # G-Eval reward (OpenAI GPT-4o-mini)
-│       └── train.py                                  # Unsloth + TRL GRPOTrainer
+│       └── train.py                                  # TRL GRPOTrainer (BF16 + LoRA + vLLM)
 └── requirements.txt
 ```
 
@@ -135,7 +135,7 @@ Prepared splits live in `data/` — see [`data/README.md`](data/README.md) for f
 
 | Model | Method | Directory |
 |-------|--------|-----------|
-| Gemma 3 12B | GRPO + QLoRA (Unsloth) + G-Eval reward | `fine-tuning/gemma3-12b-grpo/` |
+| Gemma 3 12B | GRPO + LoRA (BF16) + G-Eval reward | `fine-tuning/gemma3-12b-grpo/` |
 
 G-Eval scores completions via **OpenAI GPT-4o-mini** on four dimensions (factual accuracy 55%, relevance 25%, conciseness 10%, no-hallucination 10%). W&B project: `uq-unibot / uni-bot`.
 
