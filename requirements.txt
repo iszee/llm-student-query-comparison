@@ -16,3 +16,11 @@ tqdm>=4.66.0
 
 # vLLM — fast generation via PagedAttention (replaces HF generate in GRPO)
 vllm>=0.6.0
+
+# RAG dependencies (retrieval-augmented generation evaluation variant)
+pypdf>=4.0.0                  # PDF text extraction
+requests>=2.31.0              # URL fetching
+beautifulsoup4>=4.12.0        # HTML cleaning
+faiss-cpu>=1.8.0              # dense vector index (FAISS IndexFlatIP)
+rank_bm25>=0.2.2              # sparse BM25 retrieval
+sentence-transformers>=3.0.0  # BGE-M3 embedder + bge-reranker-v2-m3 cross-encoder

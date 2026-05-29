@@ -46,6 +46,10 @@ from tqdm import tqdm
 
 sys.path.insert(0, str(Path(__file__).parent))
 
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
 from config import Config
 from reward import GEVAL_TEMPLATE, _get_client
 
@@ -74,15 +78,18 @@ METRIC_COLS = [
 class PromptVariant:
     use_system_prompt: bool
     use_few_shot: bool
+    use_rag: bool = False
 
     @property
     def label(self) -> str:
         """Short snake_case label used in filenames and table rows."""
-        if not self.use_system_prompt and not self.use_few_shot:
+        if not self.use_system_prompt and not self.use_few_shot and not self.use_rag:
             return "plain"
         parts = []
         if self.use_system_prompt:
             parts.append("sysprompt")
+        if self.use_rag:
+            parts.append("rag")
         if self.use_few_shot:
             parts.append("fewshot")
         return "_".join(parts)
@@ -93,16 +100,22 @@ class PromptVariant:
         parts = []
         if self.use_system_prompt:
             parts.append("system prompt")
+        if self.use_rag:
+            parts.append("RAG")
         if self.use_few_shot:
             parts.append("few-shot")
         return " + ".join(parts) if parts else "plain"
 
 
 ALL_VARIANTS: list[PromptVariant] = [
-    PromptVariant(use_system_prompt=False, use_few_shot=False),
-    PromptVariant(use_system_prompt=True,  use_few_shot=False),
-    PromptVariant(use_system_prompt=False, use_few_shot=True),
-    PromptVariant(use_system_prompt=True,  use_few_shot=True),
+    PromptVariant(use_system_prompt=False, use_few_shot=False, use_rag=False),
+    PromptVariant(use_system_prompt=True,  use_few_shot=False, use_rag=False),
+    PromptVariant(use_system_prompt=False, use_few_shot=True,  use_rag=False),
+    PromptVariant(use_system_prompt=True,  use_few_shot=True,  use_rag=False),
+    PromptVariant(use_system_prompt=False, use_few_shot=False, use_rag=True),
+    PromptVariant(use_system_prompt=True,  use_few_shot=False, use_rag=True),
+    PromptVariant(use_system_prompt=False, use_few_shot=True,  use_rag=True),
+    PromptVariant(use_system_prompt=True,  use_few_shot=True,  use_rag=True),
 ]
 
 
@@ -123,10 +136,24 @@ def load_few_shot_turns(path: str) -> list[dict]:
     return turns
 
 
+def _format_reference_block(chunks: list) -> str:
+    """Format retrieved chunks as a numbered reference block prepended to the user message."""
+    lines = ["Reference material from UQ documents:"]
+    for i, chunk in enumerate(chunks, 1):
+        lines.append(f"[{i}] ({chunk.display_source}) {chunk.text}")
+    lines.append("")
+    lines.append(
+        "Use the references above to answer accurately. "
+        "If the references do not contain the answer, say so."
+    )
+    return "\n".join(lines)
+
+
 def build_messages(
     question: str,
     variant: PromptVariant,
     few_shot_turns: list[dict],
+    retrieved_chunks: list | None = None,
 ) -> list[dict]:
     """Build the messages list for a single question given a prompt variant."""
     messages: list[dict] = []
@@ -137,7 +164,12 @@ def build_messages(
     if variant.use_few_shot:
         messages.extend(few_shot_turns)
 
-    messages.append({"role": "user", "content": question})
+    if retrieved_chunks:
+        user_content = f"{_format_reference_block(retrieved_chunks)}\n\nQuestion: {question}"
+    else:
+        user_content = question
+
+    messages.append({"role": "user", "content": user_content})
     return messages
 
 
@@ -271,6 +303,7 @@ def generate_responses(
     batch_size: int,
     variant: PromptVariant,
     few_shot_turns: list[dict],
+    all_retrieved: list | None = None,
 ) -> list[str]:
     """Generate one response per example using the given prompt variant."""
     responses: list[str] = []
@@ -281,14 +314,19 @@ def generate_responses(
         unit="batch",
     ):
         batch = examples[i : i + batch_size]
+        batch_retrieved = (
+            all_retrieved[i : i + batch_size]
+            if all_retrieved is not None
+            else [None] * len(batch)
+        )
 
         prompts = [
             tokenizer.apply_chat_template(
-                build_messages(ex["question"], variant, few_shot_turns),
+                build_messages(ex["question"], variant, few_shot_turns, chunks),
                 tokenize=False,
                 add_generation_prompt=True,
             )
-            for ex in batch
+            for ex, chunks in zip(batch, batch_retrieved)
         ]
 
         inputs = tokenizer(
@@ -325,11 +363,23 @@ def evaluate_variant(
     run_geval: bool,
     variant: PromptVariant,
     few_shot_turns: list[dict],
+    retriever=None,
 ) -> list[dict]:
     """Run generation (+ optional G-Eval) for one model × one prompt variant."""
+    all_retrieved = None
+    if variant.use_rag and retriever is not None:
+        retrieval_cache: dict[str, list] = {}
+        all_retrieved = []
+        for ex in tqdm(examples, desc=f"Retrieving [{variant.display}]", unit="q"):
+            q = ex["question"]
+            if q not in retrieval_cache:
+                retrieval_cache[q] = retriever.search(q)
+            all_retrieved.append(retrieval_cache[q])
+
     responses = generate_responses(
         examples, model, tokenizer,
         max_new_tokens, batch_size, variant, few_shot_turns,
+        all_retrieved=all_retrieved,
     )
 
     rows: list[dict] = []
@@ -357,14 +407,18 @@ def evaluate_all_variants(
     batch_size: int,
     run_geval: bool,
     few_shot_turns: list[dict],
+    retriever=None,
+    active_variants: list | None = None,
 ) -> dict[str, list[dict]]:
-    """Run all 4 prompt variants for one loaded model. Returns {label: rows}."""
+    """Run prompt variants for one loaded model. Returns {label: rows}."""
+    variants = active_variants if active_variants is not None else ALL_VARIANTS
     return {
         v.label: evaluate_variant(
             model, tokenizer, examples, cfg,
             max_new_tokens, batch_size, run_geval, v, few_shot_turns,
+            retriever=retriever,
         )
-        for v in ALL_VARIANTS
+        for v in variants
     }
 
 
@@ -554,6 +608,16 @@ def parse_args() -> argparse.Namespace:
         help="Skip G-Eval scoring — no OpenAI cost; useful for generation-only checks.",
     )
     parser.add_argument(
+        "--no-rag",
+        action="store_true",
+        help="Skip all RAG variants — no retrieval cost. Runs only the 4 non-RAG configs.",
+    )
+    parser.add_argument(
+        "--index-dir",
+        default="rag/index",
+        help="Path to the RAG index directory. (default: rag/index)",
+    )
+    parser.add_argument(
         "--geval-workers",
         type=int,
         default=16,
@@ -595,6 +659,29 @@ def main() -> None:
 
     few_shot_turns = load_few_shot_turns(args.few_shot_file)
 
+    # ── RAG retriever ──────────────────────────────────────────────────────────
+    active_variants = [v for v in ALL_VARIANTS if not (v.use_rag and args.no_rag)]
+    retriever = None
+    if any(v.use_rag for v in active_variants):
+        try:
+            from rag import Retriever
+            retriever = Retriever(args.index_dir)
+            print(f"RAG index loaded from {args.index_dir}.")
+        except ImportError:
+            print(
+                "WARNING: RAG dependencies not installed. "
+                "Run: pip install sentence-transformers faiss-cpu rank_bm25\n"
+                "Skipping RAG variants for this run."
+            )
+            active_variants = [v for v in active_variants if not v.use_rag]
+        except FileNotFoundError:
+            print(
+                f"WARNING: RAG index not found at '{args.index_dir}'. "
+                "Run: python -m rag build\n"
+                "Skipping RAG variants for this run."
+            )
+            active_variants = [v for v in active_variants if not v.use_rag]
+
     # ── Models to evaluate ─────────────────────────────────────────────────────
     models_to_run: list[tuple[str, str | None]] = [("base", None)]
     if args.checkpoint.lower() != "none":
@@ -613,6 +700,7 @@ def main() -> None:
         all_results[model_label] = evaluate_all_variants(
             model, tokenizer, examples, cfg,
             max_new_tokens, args.batch_size, run_geval, few_shot_turns,
+            retriever=retriever, active_variants=active_variants,
         )
 
         unload_model(model)
