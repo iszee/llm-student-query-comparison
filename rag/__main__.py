@@ -25,7 +25,12 @@ def cmd_query(args: argparse.Namespace) -> None:
     from rag.retrieve import Retriever
 
     retriever = Retriever(args.index_dir)
-    results = retriever.search(args.question, top_k=args.top_k)
+    results = retriever.search(
+        args.question,
+        top_k=args.top_k,
+        min_score=args.min_score,
+        llm_filter=not args.no_llm_filter,
+    )
 
     if not results:
         print("No results found.")
@@ -65,7 +70,16 @@ def main() -> None:
     p_query.add_argument("question", help="Question to retrieve context for.")
     p_query.add_argument(
         "--top-k", type=int, default=5,
-        help="Number of chunks to return. (default: 5)",
+        help="Maximum chunks to return after filtering. (default: 5)",
+    )
+    p_query.add_argument(
+        "--min-score", type=float, default=0.30,
+        help="Minimum cross-encoder rerank score to keep a chunk (0–1). "
+             "Chunks below this are dropped; returns [] if none survive. (default: 0.30)",
+    )
+    p_query.add_argument(
+        "--no-llm-filter", action="store_true",
+        help="Disable the gpt-4o-mini relevance filter (score threshold still applies).",
     )
     p_query.add_argument(
         "--index-dir", default="rag/index",

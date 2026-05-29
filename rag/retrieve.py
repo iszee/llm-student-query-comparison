@@ -3,7 +3,8 @@ retrieve.py
 -----------
 Hybrid RAG retriever for the UQ BIT information assistant.
 
-Pipeline: dense (BGE-M3) + BM25 → Reciprocal Rank Fusion → cross-encoder rerank.
+Pipeline: dense (BGE-M3) + BM25 → Reciprocal Rank Fusion → cross-encoder rerank
+         → score threshold → LLM relevance filter (gpt-4o-mini).
 
 References:
   Embeddings : Chen et al. 2024, "BGE M3-Embedding" — arXiv:2402.03216
@@ -14,7 +15,9 @@ References:
 from __future__ import annotations
 
 import json
+import os
 import pickle
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -88,17 +91,47 @@ class Retriever:
 
     # ── Public API ──────────────────────────────────────────────────────────────
 
-    def search(self, query: str, top_k: int = 5) -> list[RetrievedChunk]:
+    def search(
+        self,
+        query: str,
+        top_k: int = 5,
+        min_score: float = 0.30,
+        llm_filter: bool = True,
+    ) -> list[RetrievedChunk]:
         """
-        Full pipeline: embed → dense FAISS → BM25 → RRF fusion → cross-encoder rerank.
-        Returns top_k RetrievedChunk objects ordered by rerank score (descending).
+        Full pipeline: embed → dense FAISS → BM25 → RRF fusion → cross-encoder rerank
+                       → score threshold → optional LLM relevance filter → top_k.
+
+        Args:
+            query:      The question to retrieve context for.
+            top_k:      Maximum chunks to return after all filtering.
+            min_score:  Minimum cross-encoder rerank score (0–1) to keep a chunk.
+                        Chunks below this threshold are dropped; if none survive,
+                        returns [] so callers fall back to unaugmented generation.
+                        Default 0.30 — tuned from observed probe data.
+            llm_filter: When True, a gpt-4o-mini call checks whether each surviving
+                        chunk actually contains information useful for answering the
+                        query, filtering out high-scoring but off-topic marketing text
+                        (Mode B failure).  Gracefully disabled if OPENAI_API_KEY is
+                        unset or the call fails.
         """
         n_candidates = max(top_k * 4, 20)
 
         dense_hits = self._dense_search(query, n_candidates)
         bm25_hits  = self._bm25_search(query, n_candidates)
         fused_ids  = self._rrf(dense_hits, bm25_hits, n_candidates)
-        return self._rerank(query, fused_ids, top_k)
+        reranked   = self._rerank(query, fused_ids)  # full sorted list, no cap yet
+
+        # ── Stage 1: score threshold (kills Mode A — corpus has no answer) ──────
+        kept = [c for c in reranked if c.score >= min_score]
+        if not kept:
+            return []
+
+        # ── Stage 2: LLM relevance filter (kills Mode B — marketing fluff) ──────
+        if llm_filter:
+            kept = self._llm_filter(query, kept)
+
+        return kept[:top_k]
 
     # ── Private ─────────────────────────────────────────────────────────────────
 
@@ -131,8 +164,11 @@ class Retriever:
             sorted(scores.items(), key=lambda x: x[1], reverse=True)[:k]
         ]
 
-    def _rerank(self, query: str, candidate_ids: list[int], top_k: int) -> list[RetrievedChunk]:
-        """Cross-encoder rerank with bge-reranker-v2-m3 (Li et al. 2023)."""
+    def _rerank(self, query: str, candidate_ids: list[int]) -> list[RetrievedChunk]:
+        """
+        Cross-encoder rerank with bge-reranker-v2-m3 (Li et al. 2023).
+        Returns ALL candidates sorted by score descending — caller caps to top_k.
+        """
         if not candidate_ids:
             return []
 
@@ -148,7 +184,7 @@ class Retriever:
         ranked = sorted(zip(candidate_ids, re_scores), key=lambda x: x[1], reverse=True)
 
         results: list[RetrievedChunk] = []
-        for chunk_id, score in ranked[:top_k]:
+        for chunk_id, score in ranked:
             c = self._chunks[chunk_id]
             results.append(RetrievedChunk(
                 text=c["text"],
@@ -158,3 +194,70 @@ class Retriever:
                 score=float(score),
             ))
         return results
+
+    def _llm_filter(
+        self, query: str, chunks: list[RetrievedChunk]
+    ) -> list[RetrievedChunk]:
+        """
+        Use gpt-4o-mini to keep only chunks that genuinely help answer the query.
+
+        One API call batches all candidates so cost is one request per unique query
+        (retrieval is cached per-question in evaluate.py, so this is called at most
+        once per question per run).
+
+        Gracefully falls back to returning `chunks` unfiltered when:
+          - OPENAI_API_KEY is not set
+          - the API call fails (after retries)
+          - the response cannot be parsed as valid JSON
+        Retrieval must never hard-fail.
+        """
+        if not os.environ.get("OPENAI_API_KEY"):
+            print("[rag] OPENAI_API_KEY not set — skipping LLM relevance filter.")
+            return chunks
+
+        # Build numbered candidate list using context_prefix for cheap signal
+        lines = [
+            f"[{i}] ({c.context_prefix.strip()})\n    {c.text[:300]}"
+            if c.context_prefix
+            else f"[{i}] {c.text[:300]}"
+            for i, c in enumerate(chunks)
+        ]
+        candidate_block = "\n\n".join(lines)
+
+        prompt = (
+            "You are a relevance filter for a retrieval-augmented QA system.\n"
+            "Given a question and a numbered list of retrieved passages, return ONLY\n"
+            "a JSON object {\"relevant\": [list of integer indices]} for the passages\n"
+            "that contain information DIRECTLY useful for answering the question.\n"
+            "Exclude passages that are generic, promotional, or unrelated.\n\n"
+            f"Question: {query}\n\n"
+            f"Passages:\n{candidate_block}"
+        )
+
+        from openai import OpenAI
+        client = OpenAI()
+
+        for attempt in range(3):
+            try:
+                resp = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=0,
+                    max_tokens=64,
+                    response_format={"type": "json_object"},
+                    timeout=30,
+                )
+                data = json.loads(resp.choices[0].message.content)
+                relevant_ids = [int(i) for i in data.get("relevant", [])]
+                kept = [chunks[i] for i in relevant_ids if 0 <= i < len(chunks)]
+                # Preserve rerank order (already sorted by score desc)
+                kept.sort(key=lambda c: chunks.index(c))
+                return kept if kept else chunks  # never return empty from filter
+            except Exception as exc:
+                wait = 2 ** attempt
+                print(f"[rag] LLM filter attempt {attempt + 1} failed: {exc}. "
+                      f"Retrying in {wait}s…")
+                time.sleep(wait)
+
+        print("[rag] LLM filter failed after 3 attempts — returning chunks unfiltered.")
+        return chunks
