@@ -1,7 +1,7 @@
 """
 train.py
 --------
-GRPO + LoRA fine-tuning of Gemma 3 12B for the UQ BIT information assistant.
+GRPO + LoRA fine-tuning of Ministral 3 14B for the UQ BIT information assistant.
 
 Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Samples G=4 completions per prompt
@@ -21,14 +21,14 @@ Attention backend (set in load_model_and_tokenizer):
   "flash_attention_2" — fastest; requires: pip install flash-attn --no-build-isolation
 
 Usage:
-    python fine-tuning/gemma3-12b-grpo/train.py
+    python fine-tuning/ministral-3-14b-grpo/train.py
 
 For a 5-step smoke test, set max_steps=5 in config.py before running.
 
 Requires env vars:
     OPENAI_API_KEY   — for G-Eval scoring
     WANDB_API_KEY    — for Weights & Biases logging
-    HF_TOKEN         — for gated Gemma 3 weights on HuggingFace Hub
+    HF_TOKEN         — for gated Ministral 3 weights on HuggingFace Hub
 """
 
 import os
@@ -126,11 +126,8 @@ def main():
     vllm_cache = Path(cfg.vllm_cache_dir).resolve()
     vllm_cache.mkdir(parents=True, exist_ok=True)
     (vllm_cache / "triton").mkdir(exist_ok=True)
-    (vllm_cache / "inductor").mkdir(exist_ok=True)
-    os.environ.setdefault("VLLM_CACHE_ROOT", str(vllm_cache))
+    os.environ.setdefault("VLLM_CACHE_ROOT",  str(vllm_cache))
     os.environ.setdefault("TRITON_CACHE_DIR", str(vllm_cache / "triton"))
-    os.environ.setdefault("TORCHINDUCTOR_CACHE_DIR", str(vllm_cache / "inductor"))
-    os.environ.setdefault("TORCHINDUCTOR_AUTOTUNE_REMOTE_CACHE", "0")
 
     # ── Validate env vars ──────────────────────────────────────────────────────
     missing = [v for v in ("OPENAI_API_KEY", "WANDB_API_KEY", "HF_TOKEN")
@@ -142,7 +139,6 @@ def main():
     os.environ["WANDB_ENTITY"]  = cfg.wandb_entity
     os.environ["WANDB_PROJECT"] = cfg.wandb_project
 
-    # Log in to HuggingFace Hub (required for gated Gemma 3 weights)
     huggingface_hub.login(token=os.environ["HF_TOKEN"])
 
     # ── Load dataset ───────────────────────────────────────────────────────────
@@ -193,12 +189,11 @@ def main():
         gradient_checkpointing=cfg.gradient_checkpointing,
         gradient_checkpointing_kwargs={"use_reentrant": False},
         optim=cfg.optim,
-        top_p=0.95,                         # match Gemma 3 model default (suppresses generation_config warning)
         # Logging / saving / evaluation
         output_dir=cfg.output_dir,
         logging_steps=cfg.logging_steps,
         save_steps=cfg.save_steps,
-        eval_strategy="steps",              # required for eval_dataset + eval_steps to take effect
+        eval_strategy="steps",
         eval_steps=cfg.eval_steps,
         save_total_limit=cfg.save_total_limit,
         report_to=cfg.report_to,
@@ -220,7 +215,7 @@ def main():
     trainer.model.print_trainable_parameters()
 
     print("Starting GRPO training...")
-    trainer.train(resume_from_checkpoint=True)
+    trainer.train()
 
     # ── Save final adapter ─────────────────────────────────────────────────────
     final_dir = Path(cfg.output_dir) / "final"

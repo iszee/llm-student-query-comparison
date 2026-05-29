@@ -1,7 +1,7 @@
 """
 config.py
 ---------
-Central configuration for Gemma 3 12B GRPO + LoRA (BF16) fine-tuning.
+Central configuration for Ministral 3 14B GRPO + LoRA (BF16) fine-tuning.
 All hyperparameters live here — import Config from this module in train.py and reward.py.
 """
 
@@ -12,7 +12,7 @@ from typing import List
 @dataclass
 class Config:
     # ── Model ─────────────────────────────────────────────────────────────────
-    model_id: str = "google/gemma-3-12b-it"
+    model_id: str = "Qwen/Qwen3-14B"
 
     # ── LoRA ──────────────────────────────────────────────────────────────────
     lora_r: int = 64
@@ -25,10 +25,10 @@ class Config:
     gradient_checkpointing: bool = True
 
     # ── GRPO ──────────────────────────────────────────────────────────────────
-    num_generations: int = 4             # G completions sampled per prompt (increase to 8 for stronger advantage signal)
+    num_generations: int = 4             # G completions sampled per prompt
     max_completion_length: int = 256     # max tokens per completion (eval avg ~150 tokens)
     temperature: float = 0.8            # sampling temperature — low for factual consistency
-    beta: float = 0.1                   # KL penalty weight (set to 0.0 to disable, per recent GRPO papers)
+    beta: float = 0.1                   # KL penalty weight (set to 0.0 to disable)
 
     # ── Training ──────────────────────────────────────────────────────────────
     learning_rate: float = 5e-6
@@ -40,11 +40,11 @@ class Config:
     lr_scheduler_type: str = "cosine"
     bf16: bool = True
     optim: str = "adamw_torch_fused"        # fused AdamW — fast on CUDA, no bitsandbytes
-    output_dir: str = "fine-tuning/gemma3-12b-grpo/checkpoints"
+    output_dir: str = "fine-tuning/qwen3-14B-grpo/checkpoints"
     logging_steps: int = 10
-    save_steps: int = 100
-    eval_steps: int = 100
-    save_total_limit: int = 10
+    save_steps: int = 300
+    eval_steps: int = 300
+    save_total_limit: int = 5
 
     # ── Data ──────────────────────────────────────────────────────────────────
     train_file: str = "data/train.jsonl"
@@ -64,16 +64,16 @@ class Config:
         "no_hallucination": 0.10,
     })
 
-    # ── vLLM (fast generation) ───────────────────────────────────────────────────
+    # ── vLLM (fast generation) ────────────────────────────────────────────────
     # vLLM runs in colocate mode: shares the training GPU, syncs LoRA weights after
     # each optimizer step. TRL handles the weight sync automatically.
     use_vllm: bool = True
-    vllm_gpu_memory_utilization: float = 0.35   # ~28 GB on H100 79 GB; remaining ~51 GB for training
-    vllm_max_model_length: int = 2048           # prompt(512) + completion(256) + safety margin
-    vllm_cache_dir: str = "fine-tuning/gemma3-12b-grpo/cache/vllm"  # writable cache (VLLM_CACHE_ROOT + TRITON_CACHE_DIR)
+    vllm_gpu_memory_utilization: float = 0.45   # ~35.5 GB on H100 79 GB; 14B needs more than 12B
+    vllm_max_model_length: int = 2048           # prompt(1024) + completion(256) + safety margin
+    vllm_cache_dir: str = "fine-tuning/qwen3-14B-grpo/cache/vllm"  # writable cache (VLLM_CACHE_ROOT + TRITON_CACHE_DIR)
 
     # ── Weights & Biases ──────────────────────────────────────────────────────
-    wandb_entity: str = "uq-unibot"     # W&B team/org (set via WANDB_ENTITY env var)
-    wandb_project: str = "uni-bot"      # W&B project name (no slashes)
-    run_name: str = "gemma3-12b-grpo-geval"
-    report_to: str = "wandb"            # set to "none" to disable W&B
+    wandb_entity: str = "uq-unibot"
+    wandb_project: str = "uni-bot"
+    run_name: str = "qwen3-14B-grpo-geval"
+    report_to: str = "wandb"

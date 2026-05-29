@@ -12,7 +12,7 @@ from typing import List
 @dataclass
 class Config:
     # ── Model ─────────────────────────────────────────────────────────────────
-    model_id: str = "mistralai/Ministral-3-14B-Instruct-2512-BF16"
+    model_id: str = "mistralai/Mistral-Nemo-Instruct-2407"
 
     # ── LoRA ──────────────────────────────────────────────────────────────────
     lora_r: int = 64
@@ -27,14 +27,14 @@ class Config:
     # ── GRPO ──────────────────────────────────────────────────────────────────
     num_generations: int = 4             # G completions sampled per prompt
     max_completion_length: int = 256     # max tokens per completion (eval avg ~150 tokens)
-    temperature: float = 0.2            # sampling temperature — low for factual consistency
+    temperature: float = 0.8            # sampling temperature — low for factual consistency
     beta: float = 0.1                   # KL penalty weight (set to 0.0 to disable)
 
     # ── Training ──────────────────────────────────────────────────────────────
     learning_rate: float = 5e-6
     per_device_train_batch_size: int = 4    # 4 prompts × 4 generations = 16 seqs per step
     gradient_accumulation_steps: int = 4    # effective batch = 4×4 = 16 prompts
-    num_train_epochs: int = 1               # 1 epoch sufficient for GRPO
+    num_train_epochs: int = 3               # 1 epoch sufficient for GRPO
     max_steps: int = -1                     # set to small number (e.g. 5) for smoke test
     warmup_ratio: float = 0.05
     lr_scheduler_type: str = "cosine"
@@ -42,9 +42,9 @@ class Config:
     optim: str = "adamw_torch_fused"        # fused AdamW — fast on CUDA, no bitsandbytes
     output_dir: str = "fine-tuning/ministral-3-14b-grpo/checkpoints"
     logging_steps: int = 10
-    save_steps: int = 100
-    eval_steps: int = 100
-    save_total_limit: int = 10
+    save_steps: int = 300
+    eval_steps: int = 300
+    save_total_limit: int = 5
 
     # ── Data ──────────────────────────────────────────────────────────────────
     train_file: str = "data/train.jsonl"

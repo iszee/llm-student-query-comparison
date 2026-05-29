@@ -1,0 +1,9 @@
+model,variant,factual_accuracy,relevance,conciseness,no_hallucination,composite_score
+base,plain,3.76,4.14,3.16,4.2,0.7097500000000002
+base,sysprompt,3.9,4.94,4.54,4.56,0.8225000000000002
+base,fewshot,4.26,5.0,3.94,4.6,0.8617500000000007
+base,sysprompt_fewshot,3.66,4.9,4.7,4.36,0.7860000000000003
+finetuned,plain,3.62,4.34,3.06,4.24,0.7015000000000002
+finetuned,sysprompt,3.84,4.94,4.58,4.68,0.8182500000000001
+finetuned,fewshot,4.22,5.0,3.92,4.6,0.8557500000000006
+finetuned,sysprompt_fewshot,3.62,4.88,4.68,4.54,0.78325

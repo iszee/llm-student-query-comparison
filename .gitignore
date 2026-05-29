@@ -227,3 +227,4 @@ wandb/
 checkpoints/
 cache/
 old-checkpoints/
+env_mistral/
