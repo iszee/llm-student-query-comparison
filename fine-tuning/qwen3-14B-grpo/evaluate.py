@@ -1,7 +1,7 @@
 """
 evaluate.py
 -----------
-Evaluate Ministral 3 14B across all 8 configurations by default:
+Evaluate Qwen3 14B across all 8 configurations by default:
 
     base model        × { plain | sysprompt | fewshot | sysprompt_fewshot }
     fine-tuned model  × { plain | sysprompt | fewshot | sysprompt_fewshot }
@@ -11,20 +11,20 @@ Each model is loaded once and reused for all 4 of its prompt variants.
 
 Usage:
     # Full 8-config run (default)
-    python fine-tuning/ministral-3-14b-grpo/evaluate.py
+    python fine-tuning/qwen3-14B-grpo/evaluate.py
 
     # Specific checkpoint
-    python fine-tuning/ministral-3-14b-grpo/evaluate.py \\
-        --checkpoint fine-tuning/ministral-3-14b-grpo/checkpoints/checkpoint-100
+    python fine-tuning/qwen3-14B-grpo/evaluate.py \\
+        --checkpoint fine-tuning/qwen3-14B-grpo/checkpoints/checkpoint-100
 
     # Skip fine-tuned model — base model only (4 configs)
-    python fine-tuning/ministral-3-14b-grpo/evaluate.py --checkpoint none
+    python fine-tuning/qwen3-14B-grpo/evaluate.py --checkpoint none
 
     # Dry run — no G-Eval cost
-    python fine-tuning/ministral-3-14b-grpo/evaluate.py --no-geval
+    python fine-tuning/qwen3-14B-grpo/evaluate.py --no-geval
 
 Requires env vars:
-    HF_TOKEN        — gated Ministral 3 weights on HuggingFace Hub
+    HF_TOKEN        — HuggingFace token (Qwen3-14B is an open model; needed for rate-limited Hub API)
     OPENAI_API_KEY  — G-Eval scoring via OpenAI (not needed with --no-geval)
 """
 
@@ -187,7 +187,7 @@ def score_detailed(
                   f"Retrying in {wait}s...")
             time.sleep(wait)
 
-    print("[evaluate] All G-Eval retries exhausted — recording zeros.")
+    print("[evaluate] All G-Eval retries exhausted — recording floor scores (dim=1, composite=0).")
     return {d: 1.0 for d in cfg.geval_weights} | {"composite_score": 0.0}
 
 
@@ -212,7 +212,7 @@ def score_all_parallel(rows: list[dict], cfg: Config) -> list[dict[str, float]]:
 
 def load_model_and_tokenizer(checkpoint: str | None, cfg: Config):
     """
-    Load base Ministral 3 14B in BF16 + optional LoRA adapter.
+    Load base Qwen3 14B in BF16 + optional LoRA adapter.
 
     Args:
         checkpoint: path to a PEFT adapter directory, "none"/None for base model only.
@@ -267,7 +267,6 @@ def generate_responses(
     examples: list[dict],
     model,
     tokenizer,
-    cfg: Config,
     max_new_tokens: int,
     batch_size: int,
     variant: PromptVariant,
@@ -296,8 +295,6 @@ def generate_responses(
             prompts,
             return_tensors="pt",
             padding=True,
-            truncation=True,
-            max_length=cfg.max_prompt_length,
         ).to(model.device)
 
         with torch.inference_mode():
@@ -331,7 +328,7 @@ def evaluate_variant(
 ) -> list[dict]:
     """Run generation (+ optional G-Eval) for one model × one prompt variant."""
     responses = generate_responses(
-        examples, model, tokenizer, cfg,
+        examples, model, tokenizer,
         max_new_tokens, batch_size, variant, few_shot_turns,
     )
 
@@ -406,30 +403,13 @@ def save_results(rows: list[dict], output_path: str) -> None:
     df = pd.concat([df, pd.DataFrame([mean_row])], ignore_index=True)
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(out, index=False)
+    df.to_csv(out, index=False, encoding="utf-8")
     print(f"  Saved → {out}")
 
 
 def _mean(rows: list[dict], col: str) -> float | None:
     vals = [r[col] for r in rows if col in r]
     return sum(vals) / len(vals) if vals else None
-
-
-def print_single_summary(rows: list[dict], label: str = "") -> None:
-    """Print aggregate metrics for one run."""
-    width = 50
-    header = f"  Evaluation Summary{' — ' + label if label else ''}"
-    print("\n" + "═" * width)
-    print(header)
-    print("═" * width)
-    for col in METRIC_COLS:
-        m = _mean(rows, col)
-        if m is not None:
-            scale = "(0–1)" if col == "composite_score" else "(1–5)"
-            print(f"  {col:<22} {m:.4f}  {scale}")
-    print("═" * width)
-    print(f"  n = {len(rows)}")
-    print("═" * width)
 
 
 def print_ablation_table(
@@ -506,7 +486,7 @@ def save_summary_csv(
     df = pd.DataFrame(rows)
     out = Path(output_dir) / "eval_summary.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(out, index=False)
+    df.to_csv(out, index=False, encoding="utf-8")
     print(f"  Summary saved → {out}")
 
 
@@ -521,18 +501,18 @@ def result_path(output_dir: str, model_label: str, variant_label: str) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Evaluate Ministral 3 14B across all 8 configurations: "
+            "Evaluate Qwen3 14B across all 8 configurations: "
             "base + fine-tuned × 4 prompt variants "
             "(plain / sysprompt / fewshot / sysprompt_fewshot)."
         )
     )
     parser.add_argument(
         "--checkpoint",
-        default="fine-tuning/ministral-3-14b-grpo/checkpoints/final",
+        default="fine-tuning/qwen3-14B-grpo/checkpoints/final",
         help=(
             "Path to the LoRA adapter directory. "
             "Pass 'none' to skip the fine-tuned model and run base only. "
-            "(default: fine-tuning/ministral-3-14b-grpo/checkpoints/final)"
+            "(default: fine-tuning/qwen3-14B-grpo/checkpoints/final)"
         ),
     )
     parser.add_argument(
@@ -547,10 +527,10 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output-dir",
-        default="fine-tuning/ministral-3-14b-grpo/results",
+        default="fine-tuning/qwen3-14B-grpo/results",
         help=(
             "Directory for output CSVs. Files are named eval_{model}_{variant}.csv. "
-            "(default: fine-tuning/ministral-3-14b-grpo/results)"
+            "(default: fine-tuning/qwen3-14B-grpo/results)"
         ),
     )
     parser.add_argument(

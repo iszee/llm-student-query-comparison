@@ -1,7 +1,7 @@
 """
 train.py
 --------
-GRPO + LoRA fine-tuning of Ministral 3 14B for the UQ BIT information assistant.
+GRPO + LoRA fine-tuning of Qwen3 14B for the UQ BIT information assistant.
 
 Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Samples G=4 completions per prompt
@@ -21,14 +21,14 @@ Attention backend (set in load_model_and_tokenizer):
   "flash_attention_2" — fastest; requires: pip install flash-attn --no-build-isolation
 
 Usage:
-    python fine-tuning/ministral-3-14b-grpo/train.py
+    python fine-tuning/qwen3-14B-grpo/train.py
 
 For a 5-step smoke test, set max_steps=5 in config.py before running.
 
 Requires env vars:
     OPENAI_API_KEY   — for G-Eval scoring
     WANDB_API_KEY    — for Weights & Biases logging
-    HF_TOKEN         — for gated Ministral 3 weights on HuggingFace Hub
+    HF_TOKEN         — HuggingFace token (Qwen3-14B is an open model; needed for Hub API access)
 """
 
 import os

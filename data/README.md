@@ -1,6 +1,6 @@
 # data/
 
-Fine-tuning data for the UQ BIT information assistant. All files here are ready to use with Unsloth (Qwen2.5-14B, Gemma latest) or any HuggingFace-compatible trainer.
+Fine-tuning data for the UQ BIT information assistant. All files here are ready to use with any HuggingFace-compatible trainer.
 
 ## Files
 

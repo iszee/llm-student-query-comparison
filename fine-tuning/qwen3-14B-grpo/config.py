@@ -1,7 +1,7 @@
 """
 config.py
 ---------
-Central configuration for Ministral 3 14B GRPO + LoRA (BF16) fine-tuning.
+Central configuration for Qwen3 14B GRPO + LoRA (BF16) fine-tuning.
 All hyperparameters live here — import Config from this module in train.py and reward.py.
 """
 
@@ -49,8 +49,6 @@ class Config:
     # ── Data ──────────────────────────────────────────────────────────────────
     train_file: str = "data/train.jsonl"
     test_file: str = "data/test.jsonl"
-    max_prompt_length: int = 1024       # tokenizer truncation limit used in evaluate.py (not passed to GRPOConfig)
-
     # ── G-Eval (OpenAI) ───────────────────────────────────────────────────────
     geval_model: str = "gpt-4o-mini"    # cheap + capable enough for scoring
     geval_max_retries: int = 3

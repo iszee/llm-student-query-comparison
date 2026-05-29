@@ -45,10 +45,21 @@ llm-student-query-comparison/
 │       ├── redit-pages.txt                           # Reddit/forum discussion URLs (placeholder)
 │       └── international-guide-undergraduate-postgraduate.pdf  # UQ International Guide 2026
 ├── fine-tuning/
-│   └── gemma3-12b-grpo/                              # Gemma 3 12B GRPO + LoRA (see README inside)
-│       ├── config.py                                 # All hyperparameters
-│       ├── reward.py                                 # G-Eval reward (OpenAI GPT-4o-mini)
-│       └── train.py                                  # TRL GRPOTrainer (BF16 + LoRA + vLLM)
+│   ├── gemma3-12b-grpo/                              # Gemma 3 12B GRPO + LoRA (see README inside)
+│   │   ├── config.py                                 # All hyperparameters
+│   │   ├── reward.py                                 # G-Eval reward (OpenAI GPT-4o-mini)
+│   │   ├── train.py                                  # TRL GRPOTrainer (BF16 + LoRA + vLLM)
+│   │   └── evaluate.py                               # 8-config ablation evaluator
+│   ├── mistral-nemo-12b-grpo/                         # Mistral Nemo 12B GRPO + LoRA (see README inside)
+│   │   ├── config.py
+│   │   ├── reward.py
+│   │   ├── train.py
+│   │   └── evaluate.py
+│   └── qwen3-14B-grpo/                               # Qwen3 14B GRPO + LoRA (see README inside)
+│       ├── config.py
+│       ├── reward.py
+│       ├── train.py
+│       └── evaluate.py
 └── requirements.txt
 ```
 
@@ -136,10 +147,12 @@ Prepared splits live in `data/` — see [`data/README.md`](data/README.md) for f
 | Model | Method | Directory |
 |-------|--------|-----------|
 | Gemma 3 12B | GRPO + LoRA (BF16) + G-Eval reward | `fine-tuning/gemma3-12b-grpo/` |
+| Mistral Nemo 12B | GRPO + LoRA (BF16) + G-Eval reward | `fine-tuning/mistral-nemo-12b-grpo/` |
+| Qwen3 14B | GRPO + LoRA (BF16) + G-Eval reward | `fine-tuning/qwen3-14B-grpo/` |
 
-G-Eval scores completions via **OpenAI GPT-4o-mini** on four dimensions (factual accuracy 55%, relevance 25%, conciseness 10%, no-hallucination 10%). W&B project: `uq-unibot / uni-bot`.
+Each model is evaluated across **8 configurations**: base + fine-tuned × 4 prompt variants (plain / system prompt / few-shot / both). G-Eval scores completions via **OpenAI GPT-4o-mini** on four dimensions (factual accuracy 55%, relevance 25%, conciseness 10%, no-hallucination 10%). W&B project: `uq-unibot / uni-bot`.
 
-See [`fine-tuning/gemma3-12b-grpo/README.md`](fine-tuning/gemma3-12b-grpo/README.md) for setup and running instructions.
+See the README inside each fine-tuning directory for setup and running instructions.
 
 ---
 

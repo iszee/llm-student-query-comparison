@@ -187,7 +187,7 @@ def score_detailed(
                   f"Retrying in {wait}s...")
             time.sleep(wait)
 
-    print("[evaluate] All G-Eval retries exhausted — recording zeros.")
+    print("[evaluate] All G-Eval retries exhausted — recording floor scores (dim=1, composite=0).")
     return {d: 1.0 for d in cfg.geval_weights} | {"composite_score": 0.0}
 
 
@@ -267,7 +267,6 @@ def generate_responses(
     examples: list[dict],
     model,
     tokenizer,
-    cfg: Config,
     max_new_tokens: int,
     batch_size: int,
     variant: PromptVariant,
@@ -296,8 +295,6 @@ def generate_responses(
             prompts,
             return_tensors="pt",
             padding=True,
-            truncation=True,
-            max_length=cfg.max_prompt_length,
         ).to(model.device)
 
         with torch.inference_mode():
@@ -331,7 +328,7 @@ def evaluate_variant(
 ) -> list[dict]:
     """Run generation (+ optional G-Eval) for one model × one prompt variant."""
     responses = generate_responses(
-        examples, model, tokenizer, cfg,
+        examples, model, tokenizer,
         max_new_tokens, batch_size, variant, few_shot_turns,
     )
 
@@ -406,30 +403,13 @@ def save_results(rows: list[dict], output_path: str) -> None:
     df = pd.concat([df, pd.DataFrame([mean_row])], ignore_index=True)
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(out, index=False)
+    df.to_csv(out, index=False, encoding="utf-8")
     print(f"  Saved → {out}")
 
 
 def _mean(rows: list[dict], col: str) -> float | None:
     vals = [r[col] for r in rows if col in r]
     return sum(vals) / len(vals) if vals else None
-
-
-def print_single_summary(rows: list[dict], label: str = "") -> None:
-    """Print aggregate metrics for one run."""
-    width = 50
-    header = f"  Evaluation Summary{' — ' + label if label else ''}"
-    print("\n" + "═" * width)
-    print(header)
-    print("═" * width)
-    for col in METRIC_COLS:
-        m = _mean(rows, col)
-        if m is not None:
-            scale = "(0–1)" if col == "composite_score" else "(1–5)"
-            print(f"  {col:<22} {m:.4f}  {scale}")
-    print("═" * width)
-    print(f"  n = {len(rows)}")
-    print("═" * width)
 
 
 def print_ablation_table(
@@ -581,7 +561,7 @@ def save_summary_csv(
     df = pd.DataFrame(rows)
     out = Path(output_dir) / "eval_summary.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(out, index=False)
+    df.to_csv(out, index=False, encoding="utf-8")
     print(f"  Summary saved → {out}")
 
 

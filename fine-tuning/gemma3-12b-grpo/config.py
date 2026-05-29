@@ -49,8 +49,6 @@ class Config:
     # ── Data ──────────────────────────────────────────────────────────────────
     train_file: str = "data/train.jsonl"
     test_file: str = "data/test.jsonl"
-    max_prompt_length: int = 1024       # tokenizer truncation limit used in evaluate.py (not passed to GRPOConfig)
-
     # ── G-Eval (OpenAI) ───────────────────────────────────────────────────────
     geval_model: str = "gpt-4o-mini"    # cheap + capable enough for scoring
     geval_max_retries: int = 3
@@ -69,7 +67,7 @@ class Config:
     # each optimizer step. TRL handles the weight sync automatically.
     use_vllm: bool = True
     vllm_gpu_memory_utilization: float = 0.35   # ~28 GB on H100 79 GB; remaining ~51 GB for training
-    vllm_max_model_length: int = 2048           # prompt(512) + completion(256) + safety margin
+    vllm_max_model_length: int = 2048           # generous headroom for chat-format prompts + completions
     vllm_cache_dir: str = "fine-tuning/gemma3-12b-grpo/cache/vllm"  # writable cache (VLLM_CACHE_ROOT + TRITON_CACHE_DIR)
 
     # ── Weights & Biases ──────────────────────────────────────────────────────

@@ -1,6 +1,6 @@
-# Ministral 3 14B — GRPO Fine-tuning
+# Qwen3 14B — GRPO Fine-tuning
 
-Reinforcement learning fine-tuning of `mistralai/Ministral-3-14B-Instruct-2512-BF16` for the UQ BIT information assistant, using:
+Reinforcement learning fine-tuning of `Qwen/Qwen3-14B` for the UQ BIT information assistant, using:
 
 - **GRPO** (Group Relative Policy Optimization) via TRL `GRPOTrainer`
 - **BF16 + LoRA** (full-precision BF16 base + LoRA via PEFT) — parameter-efficient training on a single H100 79 GB
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 | Variable | Purpose |
 |----------|---------|
-| `HF_TOKEN` | HuggingFace token — accept licence at hf.co/mistralai/Ministral-3-14B-Instruct-2512-BF16 |
+| `HF_TOKEN` | HuggingFace token — Qwen3-14B is an open model; needed for Hub API access |
 | `OPENAI_API_KEY` | OpenAI API key for G-Eval scoring (GPT-4o-mini) |
 | `WANDB_API_KEY` | Weights & Biases API key for experiment tracking |
 
@@ -48,7 +48,7 @@ export WANDB_API_KEY="..."
 ### Step 1: Test G-Eval connectivity (no GPU needed)
 
 ```bash
-python fine-tuning/ministral-3-14b-grpo/reward.py
+python fine-tuning/qwen3-14B-grpo/reward.py
 ```
 
 Expected output — three cases with clearly separated rewards:
@@ -61,7 +61,7 @@ Expected output — three cases with clearly separated rewards:
 Set `max_steps = 5` in `config.py`, then:
 
 ```bash
-python fine-tuning/ministral-3-14b-grpo/train.py
+python fine-tuning/qwen3-14B-grpo/train.py
 ```
 
 ### Step 3: Full training run
@@ -69,27 +69,27 @@ python fine-tuning/ministral-3-14b-grpo/train.py
 Reset `max_steps = -1` in `config.py`, then:
 
 ```bash
-python fine-tuning/ministral-3-14b-grpo/train.py
+python fine-tuning/qwen3-14B-grpo/train.py
 ```
 
 ### Step 4: Evaluate (all 8 configurations by default)
 
 ```bash
 # Full 8-config run: base + fine-tuned × 4 prompt variants
-python fine-tuning/ministral-3-14b-grpo/evaluate.py
+python fine-tuning/qwen3-14B-grpo/evaluate.py
 
 # Skip fine-tuned model — base model only (4 configs)
-python fine-tuning/ministral-3-14b-grpo/evaluate.py --checkpoint none
+python fine-tuning/qwen3-14B-grpo/evaluate.py --checkpoint none
 
 # Specific mid-training checkpoint
-python fine-tuning/ministral-3-14b-grpo/evaluate.py \
-    --checkpoint fine-tuning/ministral-3-14b-grpo/checkpoints/checkpoint-50
+python fine-tuning/qwen3-14B-grpo/evaluate.py \
+    --checkpoint fine-tuning/qwen3-14B-grpo/checkpoints/checkpoint-50
 
 # Dry run — generation only, no G-Eval cost
-python fine-tuning/ministral-3-14b-grpo/evaluate.py --no-geval
+python fine-tuning/qwen3-14B-grpo/evaluate.py --no-geval
 ```
 
-Saves to `fine-tuning/ministral-3-14b-grpo/results/`:
+Saves to `fine-tuning/qwen3-14B-grpo/results/`:
 
 | File | Contents |
 |------|----------|
@@ -115,14 +115,14 @@ Edit `config.py` to adjust hyperparameters. Key knobs:
 | `per_device_train_batch_size` | 4 | Reduce to 2 if OOM |
 | `gradient_accumulation_steps` | 4 | Effective batch = 4 × 4 = 16 prompts |
 | `max_completion_length` | 256 | Max tokens per completion |
-| `temperature` | 0.2 | Sampling temp for G completions |
+| `temperature` | 0.8 | Sampling temp for G completions |
 | `learning_rate` | 5e-6 | Conservative for GRPO stability |
 | `beta` | 0.1 | KL penalty — set to 0.0 to disable |
 | `optim` | `adamw_torch_fused` | Fused AdamW (torch); no bitsandbytes |
 | `lora_r` | 64 | LoRA rank — 32 saves memory |
 | `use_vllm` | `True` | Disable if vLLM install fails (slower but works) |
 | `vllm_gpu_memory_utilization` | 0.45 | ~35.5 GB on H100 79 GB (higher than Gemma 12B due to larger model) |
-| `vllm_cache_dir` | `fine-tuning/ministral-3-14b-grpo/cache/vllm` | Writable cache for HPC systems |
+| `vllm_cache_dir` | `fine-tuning/qwen3-14B-grpo/cache/vllm` | Writable cache for HPC systems |
 | `geval_model` | `gpt-4o-mini` | Switch to `gpt-4o` for higher quality scores |
 | `max_steps` | -1 | Set to 5 for smoke test |
 
@@ -132,8 +132,8 @@ Edit `config.py` to adjust hyperparameters. Key knobs:
 
 | Component | Est. VRAM |
 |-----------|-----------|
-| vLLM — Ministral 14B BF16 (colocate, KV cache at 0.45 util) | ~35.5 GB |
-| Training model — Ministral 14B BF16 (full precision) | ~28 GB |
+| vLLM — Qwen3 14B BF16 (colocate, KV cache at 0.45 util) | ~35.5 GB |
+| Training model — Qwen3 14B BF16 (full precision) | ~28 GB |
 | LoRA adapters (r=64) | ~0.5 GB |
 | AdamW fused optimizer states | ~3 GB |
 | Activations + overhead (gradient checkpointing ON) | ~3 GB |

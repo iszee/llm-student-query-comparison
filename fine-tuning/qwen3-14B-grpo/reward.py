@@ -10,7 +10,7 @@ no-hallucination), returning a scalar reward in [0, 1].
 Requires: OPENAI_API_KEY environment variable.
 
 Standalone smoke test:
-    python fine-tuning/ministral-3-14b-grpo/reward.py
+    python fine-tuning/qwen3-14B-grpo/reward.py
 """
 
 import json

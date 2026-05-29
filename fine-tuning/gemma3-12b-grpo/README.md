@@ -18,7 +18,7 @@ Reinforcement learning fine-tuning of `google/gemma-3-12b-it` for the UQ BIT inf
 | `config.py` | All hyperparameters — edit here before running |
 | `reward.py` | G-Eval reward function (OpenAI GPT-4o-mini scorer) |
 | `train.py` | Main GRPO training script |
-| `evaluate.py` | Evaluate a checkpoint on the test set — saves prompts, responses, and G-Eval metrics to CSV |
+| `evaluate.py` | Evaluate a checkpoint across all 8 prompt configurations — saves one CSV per config + a summary |
 
 ---
 
@@ -76,37 +76,36 @@ Reset `max_steps = -1` in `config.py`, then:
 python fine-tuning/gemma3-12b-grpo/train.py
 ```
 
-### Step 4: Evaluate a checkpoint
+### Step 4: Evaluate (all 8 configurations by default)
 
 ```bash
-# Evaluate the final checkpoint (default path: checkpoints/final)
+# Full 8-config run: base + fine-tuned × 4 prompt variants
 python fine-tuning/gemma3-12b-grpo/evaluate.py
 
-# Evaluate a specific mid-training checkpoint
+# Skip fine-tuned model — base model only (4 configs)
+python fine-tuning/gemma3-12b-grpo/evaluate.py --checkpoint none
+
+# Specific mid-training checkpoint
 python fine-tuning/gemma3-12b-grpo/evaluate.py \
-    --checkpoint fine-tuning/gemma3-12b-grpo/checkpoints/checkpoint-50 \
-    --output fine-tuning/gemma3-12b-grpo/eval_ckpt50.csv
+    --checkpoint fine-tuning/gemma3-12b-grpo/checkpoints/checkpoint-50
 
 # Dry run — generation only, no G-Eval cost
 python fine-tuning/gemma3-12b-grpo/evaluate.py --no-geval
-
-# Evaluate the base model (no adapter, for comparison)
-python fine-tuning/gemma3-12b-grpo/evaluate.py --checkpoint none
 ```
 
-The script saves a CSV to `--output` (default: `fine-tuning/gemma3-12b-grpo/eval_results.csv`) with one row per test example plus a final MEAN row:
+Saves to `fine-tuning/gemma3-12b-grpo/results/`:
 
-| Column | Description |
-|--------|-------------|
-| `idx` | Row index |
-| `question` | Raw student question |
-| `reference` | Ground-truth answer |
-| `generated_response` | Model output |
-| `factual_accuracy` | G-Eval score 1–5 |
-| `relevance` | G-Eval score 1–5 |
-| `conciseness` | G-Eval score 1–5 |
-| `no_hallucination` | G-Eval score 1–5 |
-| `composite_score` | Weighted average scaled to [0, 1] |
+| File | Contents |
+|------|----------|
+| `eval_base_plain.csv` | Base model, no system prompt, no few-shot |
+| `eval_base_sysprompt.csv` | Base model + system prompt |
+| `eval_base_fewshot.csv` | Base model + few-shot examples |
+| `eval_base_sysprompt_fewshot.csv` | Base model + system prompt + few-shot |
+| `eval_finetuned_plain.csv` | Fine-tuned model, no system prompt, no few-shot |
+| `eval_finetuned_sysprompt.csv` | Fine-tuned model + system prompt |
+| `eval_finetuned_fewshot.csv` | Fine-tuned model + few-shot examples |
+| `eval_finetuned_sysprompt_fewshot.csv` | Fine-tuned model + system prompt + few-shot |
+| `eval_summary.csv` | **One row per config — mean metrics across all 8** |
 
 Requires: `HF_TOKEN` + `OPENAI_API_KEY` (unless `--no-geval`).
 
@@ -121,8 +120,8 @@ Edit `config.py` to adjust hyperparameters. Key knobs:
 | `num_generations` | 4 | G completions per prompt — increase to 8 for stronger advantage signal (more VRAM) |
 | `per_device_train_batch_size` | 4 | Reduce to 2 if OOM |
 | `gradient_accumulation_steps` | 4 | Effective batch = 4 × 4 = 16 prompts |
-| `max_completion_length` | 256 | Max tokens per completion — set to match observed response length (~150 tokens) |
-| `temperature` | 0.2 | Sampling temp for G completions — low for factual consistency; raise to 0.4–0.5 if `train/reward_std` collapses |
+| `max_completion_length` | 256 | Max tokens per completion |
+| `temperature` | 0.8 | Sampling temp for G completions — low for factual consistency; raise to 0.4–0.5 if `train/reward_std` collapses |
 | `learning_rate` | 5e-6 | Conservative for GRPO stability |
 | `beta` | 0.1 | KL penalty — set to 0.0 to disable (common in recent GRPO work); increase to 0.2 if KL diverges |
 | `optim` | `adamw_torch_fused` | Fused AdamW (torch); no quantisation, fast on CUDA |
