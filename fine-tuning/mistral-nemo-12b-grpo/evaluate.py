@@ -182,8 +182,8 @@ def score_detailed(
     cfg: Config,
 ) -> dict[str, float]:
     """
-    Score one completion with G-Eval (GPT-4o-mini).
-    Returns per-dimension scores (1–5) and a composite score (0–1).
+    Score one completion with G-Eval (GPT-4o).
+    Returns per-dimension scores (0–5 float) and a composite score (0–1).
     Falls back to zeros after all retries fail.
     """
     prompt = GEVAL_TEMPLATE.format(
@@ -193,34 +193,44 @@ def score_detailed(
     )
     client = _get_client()
 
-    for attempt in range(cfg.geval_max_retries):
-        try:
-            resp = client.chat.completions.create(
-                model=cfg.geval_model,
-                messages=[{"role": "user", "content": prompt}],
-                timeout=cfg.geval_timeout,
-                response_format={"type": "json_object"},
-                temperature=0.0,
-                max_tokens=64,
-            )
-            raw = json.loads(resp.choices[0].message.content)
-            dims: dict[str, float] = {}
-            weighted = 0.0
-            for dim, weight in cfg.geval_weights.items():
-                val = max(1.0, min(5.0, float(raw.get(dim, 1))))
-                dims[dim] = val
-                weighted += weight * val
-            dims["composite_score"] = (weighted - 1.0) / 4.0
-            return dims
+    n_samples = getattr(cfg, "geval_samples", 1)
+    temperature = 0.0 if n_samples <= 1 else getattr(cfg, "geval_sample_temperature", 0.5)
 
-        except Exception as exc:
-            wait = 2 ** attempt
-            print(f"[evaluate] G-Eval attempt {attempt + 1} failed: {exc}. "
-                  f"Retrying in {wait}s...")
-            time.sleep(wait)
+    dim_accum = {dim: 0.0 for dim in cfg.geval_weights}
+    successful = 0
 
-    print("[evaluate] All G-Eval retries exhausted — recording floor scores (dim=1, composite=0).")
-    return {d: 1.0 for d in cfg.geval_weights} | {"composite_score": 0.0}
+    for s in range(n_samples):
+        for attempt in range(cfg.geval_max_retries):
+            try:
+                resp = client.chat.completions.create(
+                    model=cfg.geval_model,
+                    messages=[{"role": "user", "content": prompt}],
+                    timeout=cfg.geval_timeout,
+                    response_format={"type": "json_object"},
+                    temperature=temperature,
+                    max_tokens=400,
+                )
+                raw = json.loads(resp.choices[0].message.content)
+                for dim in cfg.geval_weights:
+                    val = max(0.0, min(5.0, float(raw.get(dim, 0))))
+                    dim_accum[dim] += val
+                successful += 1
+                break   # sample succeeded — move to next sample
+            except Exception as exc:
+                wait = 2 ** attempt
+                print(f"[evaluate] G-Eval sample {s+1}/{n_samples} attempt {attempt+1} failed: {exc}. "
+                      f"Retrying in {wait}s...")
+                time.sleep(wait)
+
+    if successful == 0:
+        print("[evaluate] All G-Eval samples exhausted — recording floor scores (dim=0, composite=0).")
+        return {d: 0.0 for d in cfg.geval_weights} | {"composite_score": 0.0}
+
+    # Average dims across successful samples, then compute composite
+    dims: dict[str, float] = {dim: dim_accum[dim] / successful for dim in cfg.geval_weights}
+    weighted = sum(dims[dim] * w for dim, w in cfg.geval_weights.items())
+    dims["composite_score"] = weighted / 5.0
+    return dims
 
 
 def score_all_parallel(rows: list[dict], cfg: Config) -> list[dict[str, float]]:
@@ -266,7 +276,7 @@ def load_model_and_tokenizer(checkpoint: str | None, cfg: Config):
     )
     model.eval()
 
-    tokenizer = AutoTokenizer.from_pretrained(cfg.model_id)
+    tokenizer = AutoTokenizer.from_pretrained(cfg.model_id, fix_mistral_regex=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "left"
@@ -506,7 +516,7 @@ def print_ablation_table(
         print(f"  {'Metric':<22}  " + "  ".join(f"{v.display:>{col_w}}" for v in ALL_VARIANTS))
         print(f"  {'─' * 60}")
         for col in METRIC_COLS:
-            scale = "(0–1)" if col == "composite_score" else "(1–5)"
+            scale = "(0–1)" if col == "composite_score" else "(0–5)"
             row = f"  {col:<22}"
             for vlabel in variant_labels:
                 rows = results[mlabel].get(vlabel, [])
@@ -629,7 +639,82 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Truncate test set to N examples (useful for quick checks).",
     )
+    parser.add_argument(
+        "--geval-samples",
+        type=int,
+        default=None,
+        help=(
+            "Number of judge samples to average per example (G-Eval paper). "
+            "1 = single deterministic call; ≥2 = sampling at --geval-sample-temp. "
+            "Defaults to cfg.geval_samples (3)."
+        ),
+    )
+    parser.add_argument(
+        "--geval-sample-temp",
+        type=float,
+        default=None,
+        help="Sampling temperature when --geval-samples > 1. Defaults to cfg.geval_sample_temperature (0.5).",
+    )
+    parser.add_argument(
+        "--rescore",
+        action="store_true",
+        help=(
+            "Re-score existing result CSVs without loading any model. "
+            "Reads eval_base_<v>.csv and eval_finetuned_<v>.csv from --output-dir, "
+            "rescores with the improved judge, and writes eval_summary_v2.csv."
+        ),
+    )
     return parser.parse_args()
+
+
+# ── Rescore mode ──────────────────────────────────────────────────────────────
+
+def rescore_from_csvs(args, cfg: Config) -> None:
+    """
+    Re-score existing result CSVs without loading any model.
+
+    Reads eval_base_<v>.csv and eval_finetuned_<v>.csv from --output-dir,
+    rescores each generated_response with the improved judge (float 0–5, reasoning),
+    and writes eval_summary_v2.csv alongside the originals.
+    Run with: python evaluate.py --rescore [--geval-workers N]
+    """
+    if not os.environ.get("OPENAI_API_KEY"):
+        print("ERROR: OPENAI_API_KEY is required for --rescore.")
+        sys.exit(1)
+
+    output_dir = args.output_dir
+    all_results: dict[str, dict[str, list[dict]]] = {}
+
+    for model_label in ("base", "finetuned"):
+        model_results: dict[str, list[dict]] = {}
+        for v in ALL_VARIANTS:
+            csv_path = result_path(output_dir, model_label, v.label)
+            if not Path(csv_path).exists():
+                print(f"  Skipping {csv_path} (not found)")
+                continue
+            df = pd.read_csv(csv_path)
+            rows = df[df["idx"] != "MEAN"].to_dict("records")
+            print(f"\n  Rescoring {model_label}/{v.label} ({len(rows)} examples)…")
+            for row, new_scores in zip(rows, score_all_parallel(rows, cfg)):
+                row.update(new_scores)
+            out_path = csv_path.replace(".csv", "_v2.csv")
+            save_results(rows, out_path)
+            model_results[v.label] = rows
+        all_results[model_label] = model_results
+
+    rows_summary = []
+    for model_label, variant_results in all_results.items():
+        for vlabel, result_rows in variant_results.items():
+            row: dict = {"model": model_label, "variant": vlabel}
+            for col in METRIC_COLS:
+                row[col] = _mean(result_rows, col)
+            rows_summary.append(row)
+
+    df_summary = pd.DataFrame(rows_summary)
+    out = Path(output_dir) / "eval_summary_v2.csv"
+    df_summary.to_csv(out, index=False, encoding="utf-8")
+    print(f"\n  Summary saved → {out}")
+    print_ablation_table(all_results)
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -639,6 +724,16 @@ def main() -> None:
 
     cfg = Config()
     cfg.geval_max_workers = args.geval_workers
+    if getattr(args, "geval_samples", None) is not None:
+        cfg.geval_samples = args.geval_samples
+    if getattr(args, "geval_sample_temp", None) is not None:
+        cfg.geval_sample_temperature = args.geval_sample_temp
+
+    # ── Rescore mode: re-score existing CSVs, no model load ───────────────────
+    if getattr(args, "rescore", False):
+        rescore_from_csvs(args, cfg)
+        return
+
     run_geval = not args.no_geval
 
     # Default max_new_tokens to match training's max_completion_length

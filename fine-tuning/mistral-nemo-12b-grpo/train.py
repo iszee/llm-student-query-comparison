@@ -97,7 +97,7 @@ def load_model_and_tokenizer(cfg: Config):
         # attn_implementation="flash_attention_2",  # fastest; requires: pip install flash-attn --no-build-isolation
     )
 
-    tokenizer = AutoTokenizer.from_pretrained(cfg.model_id)
+    tokenizer = AutoTokenizer.from_pretrained(cfg.model_id, fix_mistral_regex=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "left"     # GRPO needs left-padding for generation

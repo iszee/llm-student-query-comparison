@@ -28,24 +28,28 @@ GEVAL_TEMPLATE = """\
 You are an impartial evaluator assessing the quality of an AI assistant's answer \
 to a student question about the UQ Bachelor of Information Technology program.
 
-Score the model answer on FOUR criteria, each on a scale of 1 to 5:
+Score the model answer on FOUR criteria, each on an integer scale from 0 to 5.
 
 Question:         {question}
 Reference answer: {reference}
 Model answer:     {prediction}
 
 Criteria:
-1. Factual accuracy    — Does the model answer match the reference factually?
-   (1 = completely wrong or contradicts reference, 5 = fully accurate)
+1. Factual accuracy    — Is the model answer factually correct about the UQ BIT program?
+   The reference shows ONE acceptable answer — do NOT penalise correct information that is
+   phrased differently from or goes beyond the reference. Only penalise claims that are
+   factually wrong or directly contradict the reference/question.
+   (0.0 = clearly wrong or contradicts facts, 5.0 = fully correct)
 2. Relevance           — Does the answer directly address the question asked?
-   (1 = off-topic or ignores the question, 5 = precisely on-point)
-3. Conciseness         — Is the length appropriate — brief without being unhelpful?
-   (1 = excessively long/padded or truncated, 5 = just right)
+   (0.0 = off-topic or ignores the question entirely, 5.0 = precisely on-point)
+3. Conciseness         — Is the length appropriate for the question? A detailed answer to a
+   broad question should not be penalised. Penalise only unnecessary repetition or padding.
+   (0.0 = grossly padded/repetitive or severely truncated, 5.0 = just right)
 4. No hallucination    — Does the answer avoid stating uncertain facts as certain?
-   (1 = fabricates details not in the reference, 5 = never invents information)
+   (0.0 = fabricates details not supported by the reference, 5.0 = never invents information)
 
-Reply ONLY with a valid JSON object on a single line, no extra text:
-{{"factual_accuracy": <int 1-5>, "relevance": <int 1-5>, "conciseness": <int 1-5>, "no_hallucination": <int 1-5>}}
+Reply ONLY with a valid JSON object containing a brief reasoning note and the four scores:
+{{"reasoning": "<one sentence>", "factual_accuracy": <int 0-5>, "relevance": <int 0-5>, "conciseness": <int 0-5>, "no_hallucination": <int 0-5>}}
 """
 
 # ── Scorer ────────────────────────────────────────────────────────────────────
@@ -62,13 +66,13 @@ def _get_client() -> OpenAI:
 
 def geval_score(question: str, reference: str, prediction: str, cfg: Config) -> float:
     """
-    Call OpenAI GPT to score a single completion.
+    Call OpenAI GPT to score a single completion, optionally averaging N samples.
 
-    Returns a scalar reward in [0, 1]:
-        weighted average of the four dimension scores (each 1–5),
-        then linearly scaled from [1, 5] → [0, 1].
+    When cfg.geval_samples == 1 (default): single deterministic call (temperature=0).
+    When cfg.geval_samples > 1: N calls at cfg.geval_sample_temperature; per-dimension
+    scores are averaged before computing the composite (follows Liu et al. 2023 G-Eval).
 
-    Returns 0.0 if all retries fail (safe fallback — don't crash training).
+    Returns a scalar reward in [0, 1]. Returns 0.0 if all samples fail.
     """
     prompt = GEVAL_TEMPLATE.format(
         question=question,
@@ -76,38 +80,42 @@ def geval_score(question: str, reference: str, prediction: str, cfg: Config) -> 
         prediction=prediction,
     )
     client = _get_client()
+    n_samples = getattr(cfg, "geval_samples", 1)
+    temperature = 0.0 if n_samples <= 1 else getattr(cfg, "geval_sample_temperature", 0.5)
 
-    for attempt in range(cfg.geval_max_retries):
-        try:
-            resp = client.chat.completions.create(
-                model=cfg.geval_model,
-                messages=[{"role": "user", "content": prompt}],
-                timeout=cfg.geval_timeout,
-                response_format={"type": "json_object"},
-                temperature=0.0,    # deterministic scoring
-                max_tokens=64,
-            )
-            raw_json = resp.choices[0].message.content
-            scores = json.loads(raw_json)
+    dim_accum = {dim: 0.0 for dim in cfg.geval_weights}
+    successful = 0
 
-            # Validate keys and clamp values
-            weighted = 0.0
-            for dim, weight in cfg.geval_weights.items():
-                val = float(scores.get(dim, 1))
-                val = max(1.0, min(5.0, val))   # clamp to [1, 5]
-                weighted += weight * val
+    for s in range(n_samples):
+        for attempt in range(cfg.geval_max_retries):
+            try:
+                resp = client.chat.completions.create(
+                    model=cfg.geval_model,
+                    messages=[{"role": "user", "content": prompt}],
+                    timeout=cfg.geval_timeout,
+                    response_format={"type": "json_object"},
+                    temperature=temperature,
+                    max_tokens=400,
+                )
+                scores = json.loads(resp.choices[0].message.content)
+                for dim in cfg.geval_weights:
+                    val = max(0.0, min(5.0, float(scores.get(dim, 0))))
+                    dim_accum[dim] += val
+                successful += 1
+                break   # sample succeeded — move to next sample
+            except Exception as exc:
+                wait = 2 ** attempt
+                print(f"[reward] G-Eval sample {s+1}/{n_samples} attempt {attempt+1} failed: {exc}. "
+                      f"Retrying in {wait}s...")
+                time.sleep(wait)
 
-            # Scale [1, 5] → [0, 1]
-            return (weighted - 1.0) / 4.0
+    if successful == 0:
+        print("[reward] All G-Eval samples exhausted — returning 0.0")
+        return 0.0
 
-        except Exception as exc:
-            wait = 2 ** attempt
-            print(f"[reward] G-Eval attempt {attempt + 1} failed: {exc}. "
-                  f"Retrying in {wait}s...")
-            time.sleep(wait)
-
-    print("[reward] All G-Eval retries exhausted — returning 0.0")
-    return 0.0
+    # Average dims across successful samples, then compute composite
+    weighted = sum((dim_accum[dim] / successful) * w for dim, w in cfg.geval_weights.items())
+    return weighted / 5.0
 
 
 # ── Batch reward function (called by GRPOTrainer) ────────────────────────────

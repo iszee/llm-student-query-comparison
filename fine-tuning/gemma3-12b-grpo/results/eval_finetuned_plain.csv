@@ -7,7 +7,7 @@ idx,question,reference,generated_response,factual_accuracy,relevance,conciseness
     *   **Essay Writing:** Structure, argumentation, grammar, clarity, citation (MLA, APA, Chicago - important for academic integrity).
     *   **Report Writing:**  Technical reports, lab reports, project documentation – they can help you organize information logically and write clearly.
     *   **Presentation Skills:**  Outlining, delivery, visual aids.
-    *   **Research Skills:** Finding and evaluating sources, paraphrasing, summarizing",4.0,5.0,3.0,5.0,0.8125
+    *   **Research Skills:** Finding and evaluating sources, paraphrasing, summarizing",2.0,2.3333333333333335,3.0,2.6666666666666665,0.45000000000000007
 1,I am a BIT student interested in entrepreneurship. What opportunities does UQ offer?,"UQ actively supports entrepreneurship through free programs, clubs, and the UQ entrepreneurial ecosystem. Enrichment programs including internships, global study, research projects, and industry events contribute to entrepreneurial development. The University also supports entrepreneurs at every stage of their journey through industry networks.","Okay, that's fantastic! UQ (University of Queensland) has a surprisingly robust ecosystem for student entrepreneurs, especially for BIT (Bachelor of Information Technology) students who bring valuable technical skills to the table. Here's a breakdown of opportunities, categorized for clarity, with details and links where possible.  I'll also include some tips specific to BIT students.
 
 **1. UQ's Entrepreneurship Hub: UQ Ventures**
@@ -16,7 +16,7 @@ idx,question,reference,generated_response,factual_accuracy,relevance,conciseness
 *   **Key Programs & Services:**
     *   **UQ Accelerator Program:** A flagship program (usually 12 weeks) providing intensive mentoring, workshops, funding opportunities (up to $20,000), and access to a co-working space.  Highly competitive, but worth applying.  They often have specific streams (e.g., deep tech, social impact).  *Crucial for serious startups.*
         *   [https://uqventures.uq.edu.au/accelerator-program](https://uqventures.uq.edu.au/accelerator-program)
-    *   **Ign",5.0,5.0,4.0,5.0,0.9750000000000001
+    *   **Ign",5.0,4.666666666666667,3.6666666666666665,5.0,0.9566666666666667
 2,What is the CRICOS code for the Bachelor of Information Technology?,The CRICOS code for the Bachelor of Information Technology is 001952K.,"The CRICOS code for a Bachelor of Information Technology can vary depending on the specific university and program. Here's a breakdown and how to find the correct one:
 
 **Why it varies:**
@@ -32,7 +32,7 @@ idx,question,reference,generated_response,factual_accuracy,relevance,conciseness
 
 2.  **Use the CRICOS Website:** You can search the official CRICOS register:
     *   Go to the CRICOS website: [https://www.cricos.education/](https://www.cricos.education/)
-    *   Use the ""Search for a course",1.0,2.0,2.0,5.0,0.1875
+    *   Use the ""Search for a course",0.6666666666666666,1.3333333333333333,2.6666666666666665,4.0,0.2733333333333333
 3,What healthcare facilities are available at the St Lucia campus for BIT students?,"The St Lucia campus has a UQ Health Care clinic, UQ Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the UQ SafeZone app connecting students to security officers or emergency services.","Okay, let's break down the healthcare facilities available to BIT (Bahamas Institute of Technology) students at their St. Lucia campus. It's a bit of a nuanced situation, as BIT St. Lucia doesn't have a full-fledged, on-campus medical clinic like some universities. Here's a comprehensive overview, combining what BIT provides directly, and what's accessible nearby, along with important considerations:
 
 **1. BIT's Direct Healthcare Provisions (Limited):**
@@ -40,7 +40,7 @@ idx,question,reference,generated_response,factual_accuracy,relevance,conciseness
 *   **First Aid:** BIT St. Lucia *does* have a designated First Aid Officer and a First Aid Kit on campus. This is the primary immediate response for minor injuries or illnesses.  The First Aid Officer is trained to handle basic emergencies and provide initial care.
 *   **Emergency Contact & Referral:** BIT has protocols in place for handling medical emergencies. They will contact emergency services (ambulance) and provide necessary information. They also have a list of local healthcare providers they can refer students to.
 *   **Health and Safety Officer:** BIT has a Health and Safety Officer who is responsible for ensuring a safe environment on campus and can provide guidance on health-related matters.
-*   **Wellness Initiatives (Occasional):** BIT sometimes organizes health awareness campaigns",1.0,2.0,2.0,3.0,0.1375
+*   **Wellness Initiatives (Occasional):** BIT sometimes organizes health awareness campaigns",0.0,0.0,2.3333333333333335,0.0,0.046666666666666676
 4,What academic support services are available to BIT students who are falling behind?,"Peer Assisted Study Sessions (PASS) - facilitated by second- and third-year students who have achieved top grades in your course. They can provide advice on coursework and content, and suggest effective study habits that will help you make the most of your time.  
 Academic workshops - to gain new skills and prepare for exams by attending free workshops held by our Student Support and Wellbeing Services team.
 Student Advisers - Student Advice Team can help you with a wide range of professional and confidential services. This includes support for welfare and wellbeing, diversity and inclusion, career development, counselling, and more.","Okay, let's break down the academic support services available to BIT (Bachelor of Information Technology) students who are falling behind. I'll organize this into categories (Tutoring, Academic Skills, Faculty/Advising, and Tech-Specific Resources) and provide details.  I'll also include how to *access* these services, as that's often a key hurdle.  **Please read the ""Important Notes at the End"" section - it's crucial for getting the most out of these resources.**
@@ -50,7 +50,7 @@ Student Advisers - Student Advice Team can help you with a wide range of profess
 *   **General Tutoring Centers/Labs:** Many colleges and universities have general tutoring centers that cover a wide range of subjects. These are often staffed by peer tutors (students who have excelled in the courses) and sometimes professional tutors.
     *   **Subjects Commonly Helpful for BIT:** Math (Calculus, Discrete Math, Statistics), Programming (Python, Java, C++ - depending on the curriculum), Data Structures and Algorithms, Database Management.
     *   **How to Access:** Check your college's website for ""Tutoring Services,"" ""Academic Support Center,"" or ""Learning Center.""  Often, you can register online or drop in.
-*   **Course-Specific Tutoring",4.0,5.0,3.0,5.0,0.8125
+*   **Course-Specific Tutoring",2.0,2.6666666666666665,3.0,2.0,0.4533333333333333
 5,What IB score is needed for the IT dual degrees such as Commerce/IT or Business Management/IT?,"A minimum International Baccalaureate (IB) score of 32 is required for most IT dual degrees at UQ, including BCom/IT and BBusMgt/IT. You should also ensure your IB subjects meet the English and mathematics prerequisites for the specific program.","Okay, let's break down the IB score requirements for IT dual degree programs (like Commerce/IT or Business Management/IT) at various universities. It's a bit tricky because requirements vary *significantly* depending on the university's prestige, location, and the specific program.  I'll give you a tiered overview, with examples, and then some important caveats.
 
 **Understanding the Landscape**
@@ -58,7 +58,7 @@ Student Advisers - Student Advice Team can help you with a wide range of profess
 *   **Highly Competitive (Top Universities - e.g., LSE, Oxford, Cambridge, Imperial, top US universities):** These universities are *extremely* competitive for *any* program, and IT dual degrees are no exception. They'll be looking for near-perfect scores.
 *   **Competitive (Good Universities - e.g., University of Toronto, McGill, University of Melbourne, many Russell Group universities in the UK):**  These universities have strong reputations and attract many applicants.  Good scores are needed, but there's a bit more flexibility than the top tier.
 *   **Moderately Competitive (Solid Universities - e.g., many regional universities, newer universities):** These universities still have good programs but are less selective.  A reasonable score will get you in.
-*   **Less Competitive (",1.0,2.0,2.0,3.0,0.1375
+*   **Less Competitive (",0.0,1.0,1.0,1.3333333333333333,0.09666666666666665
 6,I received an offer for the BIT from UQ. What do I need to do to accept it?,"Follow the instructions in your offer letter, which typically include: accepting the offer through the apply.uq.edu.au portal, paying any required tuition fee deposit, and arranging OSHC if you are an international student. Then apply for your student visa if required. Contact UQ Admissions if you are unsure about any step.","Okay, congratulations on receiving an offer for the Bachelor of Information Technology (BIT) from the University of Queensland (UQ)! Here's a breakdown of what you need to do to accept your offer, broken down into steps and with important links.  **Please read the entire response carefully, as deadlines and specific instructions are crucial.**
 
 **1. Understand Your Offer Details**
@@ -67,7 +67,7 @@ Student Advisers - Student Advice Team can help you with a wide range of profess
 *   **Review Your Offer Letter:**  Carefully read the offer letter you received (likely via email and also available in my.UQ).  Pay attention to:
     *   **Offer Type:** Is it a standard offer, conditional offer (requiring you to meet certain criteria like ATAR/rank, English language proficiency, etc.), or a guaranteed entry offer?
     *   **Offer Conditions:**  If it's a conditional offer, *clearly* understand what you need to do to fulfill the conditions.  This is the most common reason for offers not being finalized.
-    *   **Acceptance Deadline:**",5.0,5.0,4.0,5.0,0.9750000000000001
+    *   **Acceptance Deadline:**",5.0,5.0,3.6666666666666665,5.0,0.9733333333333334
 7,I have a Malaysian STPM result. Am I eligible to apply for the BIT at UQ?,The Malaysian STPM or Unified Examination Certificate (UEC) is accepted as a Queensland Year 12 equivalent.,"Okay, let's break down your eligibility for the Bachelor of Information Technology (BIT) at the University of Queensland (UQ) with your Malaysian STPM results.
 
 **Generally, Yes, you are likely eligible, but it depends on your specific STPM grades.** UQ has specific requirements for STPM, and you need to meet them. Here's a detailed breakdown:
@@ -83,7 +83,7 @@ Student Advisers - Student Advice Team can help you with a wide range of profess
 
 **2.  UQ's Specific Page for STPM:**
 
-*   **This is",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **This is",3.0,5.0,4.0,3.0,0.7200000000000001
 8,Is there a Semester 2 intake for the Bachelors of Engineering (Honours) / IT dual degree?,Yes. The Bachelors of Engineering (Honours) / Information Technology is available for both Semester 1 and 2 intakes.,"Okay, let's break down whether there's a Semester 2 intake for the Bachelor of Engineering (Honours) / IT dual degree. This is a common question, and the answer **highly depends on the specific university offering the program.**
 
 Here's a comprehensive guide, covering the general situation and how to find the definitive answer for your target university:
@@ -96,7 +96,7 @@ Here's a comprehensive guide, covering the general situation and how to find the
 **2. Why Semester 2 Intakes are Less Common for Dual Degrees:**
 
 *   **Course Sequencing:** Dual degrees often have a carefully planned sequence of subjects across multiple years. A Semester 2 intake can disrupt this sequencing and make it harder to coordinate the two disciplines (Engineering and IT).
-*   **Resource Allocation:** Universities allocate staff and resources based on the primary",1.0,2.0,2.0,3.0,0.1375
+*   **Resource Allocation:** Universities allocate staff and resources based on the primary",2.0,2.0,2.6666666666666665,3.3333333333333335,0.44000000000000006
 9,"What is a Genuine Student (GS) Assessment, and do I need to complete one?",A Genuine Student Assessment is required by the Australian Government for international applicants. You may be asked to complete a GS Assessment and provide a GS Agent Checklist (if using an agent) as part of your UQ application.,"Okay, let's break down the Genuine Student (GS) Assessment and whether you likely need to take it. This is a relatively new requirement for international students in Australia, and it's causing a lot of questions.
 
 **What is the Genuine Student (GS) Assessment?**
@@ -111,7 +111,7 @@ The GS Assessment isn't a single test or exam. It's a combination of factors and
 
 *   **Statement of Purpose (SOP):** This is *crucial*. You'll need to write a detailed statement explaining:
     *   Why you want to study in Australia specifically.
-    *   Why you chose",5.0,5.0,4.0,5.0,0.9750000000000001
+    *   Why you chose",4.666666666666667,4.0,3.0,5.0,0.8733333333333334
 10,What is the Jump Start Academic Preparation Program (JSAPP) at UQ?,"JSAPP is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","The Jump Start Academic Preparation Program (JSAPP) at the University of Queensland (UQ) is a **pre-sessional English and academic skills program designed to help international students transition successfully to university study in Australia.** It's essentially a bridge program to help students meet the English language and academic requirements for direct entry into UQ degrees.
 
 Here's a breakdown of key aspects of JSAPP:
@@ -121,7 +121,7 @@ Here's a breakdown of key aspects of JSAPP:
 *   **For students who meet UQ's academic requirements for a degree but don't quite meet the required English language proficiency.**  It's *not* for students who need to significantly improve their overall English level. It's for those who are close to the required score but need a little extra support.
 *   **To improve academic English skills:** Focuses on the specific language skills needed for university study, such as reading, writing, listening, and speaking in an academic context.
 *   **To develop academic skills:**  Covers essential study skills like note-taking, critical thinking, research, essay writing, presentation skills, and referencing.
-*   **To familiarise students with the Australian university environment:**  Provides an introduction to UQ's systems,",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **To familiarise students with the Australian university environment:**  Provides an introduction to UQ's systems,",2.0,2.0,3.0,2.0,0.42000000000000004
 11,Does the BIT include an integrated honours year?,"No. The standalone Bachelor of Information Technology (3 years) does not include an integrated honours year. After completing the BIT with a sufficient GPA (5.0/7.0 minimum), you can apply separately for the Bachelor of Information Technology (Honours), a one-year program.","Whether the Bachelor of Information Technology (BIT) program includes an integrated honours year depends on the specific university offering the program. Here's a breakdown of how it generally works across different institutions in Australia, where the BIT is commonly offered:
 
 **Generally, the answer is: It's often *optional* or a *separate pathway*, rather than fully integrated.**
@@ -132,7 +132,7 @@ Here's a more detailed explanation:
 *   **Some Universities Have a ""Honours Stream"" within the BIT:** A few universities might offer a stream within the BIT program that allows you to undertake honours-level work throughout your degree. This might involve taking some honours-level subjects alongside your regular coursework.
 *   **Not All BIT Programs Offer Honours:** Some universities simply don't offer an honours program associated with their BIT degree.
 *   **Examples (as of late 2023/early 2024 - *always check the university's current website*):**
-    *   **University",2.0,3.0,3.0,3.0,0.36250000000000004
+    *   **University",2.0,2.0,2.0,2.6666666666666665,0.4133333333333334
 12,Can work experience be counted as prior learning credit when applying for the BIT as an international student?,"Credit for work experience alone is not typically granted for undergraduate programs at UQ. Credit is assessed based on formal prior learning that is equivalent in level, standard, and content to UQ courses.","Okay, let's break down whether work experience can be counted as prior learning credit (PLC) for the Bachelor of IT (BIT) degree, specifically for international students. The answer is **potentially, but it's complex and highly dependent on the university's policies and the nature of your work experience.**
 
 Here's a detailed explanation, covering the key aspects and potential hurdles:
@@ -145,7 +145,7 @@ Here's a detailed explanation, covering the key aspects and potential hurdles:
 
 **2. How Work Experience *Could* Qualify for PLC in a BIT Degree:**
 
-*   **Directly Relevant Roles:** The most likely",2.0,4.0,3.0,3.0,0.42500000000000004
+*   **Directly Relevant Roles:** The most likely",2.0,3.6666666666666665,3.0,3.3333333333333335,0.53
 13,What is INFS2200 and what are its prerequisites?,INFS2200 is Relational Database Systems. Prerequisite is INFS1200.,"Okay, let's break down INFS2200 at the University of Colorado Boulder.
 
 **What is INFS2200?**
@@ -159,7 +159,7 @@ Here's a more detailed description of what the course covers:
     *   **Relational Database Model:**  This is a *major* focus. You'll learn about tables, relationships, keys, and how to design relational databases.
     *   **SQL (Structured Query Language):**  You'll learn to write SQL queries to retrieve, insert, update, and delete data in relational databases.  This is a *very* practical skill.
     *   **Database Design:**  You'll learn principles of good database design, including normalization (reducing data redundancy and improving data integrity).
-    *   **Database Administration Basics:**  Some exposure",1.0,2.0,2.0,2.0,0.11249999999999999
+    *   **Database Administration Basics:**  Some exposure",0.0,0.0,2.6666666666666665,0.0,0.05333333333333333
 14,Does Brisbane have a strong tech industry for IT graduates from UQ?,"Yes. Brisbane is one of Australia's fastest-growing capital cities (ABS 2023) and one of the top 30 best student cities in the world (QS 2025). It is a thriving centre in Asia-Pacific for technology, investment, and major events. With 82.5% of UQ IT graduates in full-time employment, the local and regional job market is strong.","Okay, let's break down the tech industry in Brisbane and how it looks for UQ IT graduates. The short answer is: **Yes, Brisbane's tech industry is growing and offers increasing opportunities for UQ IT graduates, but it's still evolving and has some nuances.**
 
 Here's a more detailed look, divided into sections:
@@ -170,7 +170,7 @@ Here's a more detailed look, divided into sections:
     *   **Government Investment:** Both the Queensland and Federal governments are actively investing in the tech sector, with initiatives to attract businesses and foster innovation.
     *   **Olympic Games 2032:** The upcoming Olympics are a *huge* catalyst.  There's massive demand for tech solutions across infrastructure, security, event management, and more. This is creating a lot of short-term and long-term opportunities.
     *   **Relatively Lower Costs:** Compared to Sydney and Melbourne, Brisbane offers lower office space costs and a generally more affordable lifestyle, attracting companies and talent.
-    *   **Talent Pool:**  UQ and other universities (QUT, Griffith) are producing a steady stream",5.0,5.0,4.0,5.0,0.9750000000000001
+    *   **Talent Pool:**  UQ and other universities (QUT, Griffith) are producing a steady stream",5.0,5.0,4.333333333333333,4.666666666666667,0.9800000000000001
 15,Can I do a study abroad or exchange semester as a BIT student at UQ?,Yes. UQ encourages students to participate in exchange programs through the UQ Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact UQ Abroad (uqabroad.uq.edu.au) early - applications typically open 9–12 months before the planned exchange semester.,"Yes, absolutely! As a Bachelor of Information Technology (BIT) student at the University of Queensland (UQ), you have several opportunities to participate in a study abroad or exchange semester. Here's a breakdown of the options and key things to know:
 
 **1. UQ Global Experiences Program (GEP):**
@@ -181,7 +181,7 @@ Here's a more detailed look, divided into sections:
 
 **2. Specific Options for BIT Students:**
 
-*   **Strong IT Partnerships:** UQ has a good range of partner universities with strong IT programs.  Some popular choices for BIT students include",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **Strong IT Partnerships:** UQ has a good range of partner universities with strong IT programs.  Some popular choices for BIT students include",4.666666666666667,4.333333333333333,3.6666666666666665,4.333333333333333,0.8900000000000002
 16,Does the BIT include courses on social media and mobile computing?,Yes. Social and Mobile Computing is listed as one of the key areas of study in the BIT curriculum.,"Yes, the Birla Institute of Technology & Science (BITS), Pilani, and its associated campuses (Birla Institute of Technology Mesra, Birla Institute of Technology Dubai) **definitely** includes courses related to social media and mobile computing within its various programs. However, the specific courses and depth of coverage vary depending on the program and specialization.
 
 Here's a breakdown of how these topics are integrated:
@@ -195,7 +195,7 @@ Here's a breakdown of how these topics are integrated:
     *   **Networking:**  Fundamental for mobile communication and social media connectivity.
     *   **Software Engineering:**  Important for building robust and scalable mobile and social media applications.
 *   **Electives & Specializations:**  This is where you'll find more direct courses:
-    *   **Mobile Computing:**",1.0,2.0,2.0,2.0,0.11249999999999999
+    *   **Mobile Computing:**",0.0,0.0,0.6666666666666666,0.0,0.013333333333333332
 17,I am an international student studying Year 12 in Australia. How do I apply for the BIT?,"If you are an international student currently studying Year 12 in Australia, you can apply through QTAC, the same as domestic students.","Okay, let's break down how you, as an international student in Year 12 Australia, can apply for the Bachelor of Information Technology (BIT) degree. It's a bit more involved than for domestic students, but definitely achievable. Here's a comprehensive guide, covering everything from eligibility to application processes and important considerations.
 
 **1. Understanding the BIT Degree & Choosing a University**
@@ -207,7 +207,7 @@ Here's a breakdown of how these topics are integrated:
     *   **University of New South Wales (UNSW):**  Excellent for tech-focused careers.
     *   **Monash University:**  Large, well-respected, good industry connections.
     *   **Queensland University of Technology (QUT):**  Strong focus on practical application and industry collaboration.
-    *   **RMIT University:**",3.0,3.0,2.0,4.0,0.5000000000000001
+    *   **RMIT University:**",1.3333333333333333,1.6666666666666667,2.0,2.3333333333333335,0.3166666666666667
 18,What is INFS1200 and why is it important in the BIT?,"INFS1200 is Introduction to Information Systems - Information systems analysis, design and implementation, relational database technology, data modelling, data querying using SQL, building a small scale information systems using a relational database management system.","Okay, let's break down INFS1200 and its significance within the Bachelor of Information Technology (BIT) program at the University of Queensland (UQ).
 
 **What is INFS1200?**
@@ -221,7 +221,7 @@ INFS1200 is a foundational course titled **""Information Systems Fundamentals.""
     *   **Databases:**  Basic database principles, including data modeling and querying (often using SQL).
     *   **Systems Development Life Cycle (SDLC):**  An overview of the process used to design, develop, and implement information systems.
     *   **Information Security:**  Basic security threats and controls.
-    *   **Business Processes:** How information",4.0,5.0,3.0,5.0,0.8125
+    *   **Business Processes:** How information",4.0,5.0,4.0,4.0,0.85
 19,Can I study the BIT part-time as a domestic student?,"Yes, the BIT can be studied part-time by domestic students.","Okay, let's break down whether you can study at the British International School of Toronto (BIT) part-time as a domestic student. The answer is **complicated and largely depends on the program you're interested in.**
 
 Here's a detailed explanation, covering different program types and the general situation:
@@ -233,7 +233,7 @@ Here's a detailed explanation, covering different program types and the general 
 
 **2. Part-Time Options & Domestic Students (Ontario Curriculum Courses)**
 
-*   **Yes, Possible for Ontario Curriculum Courses:** BIT *does* allow domestic students (Canadian citizens or permanent residents) to enroll in individual Ontario curriculum courses on a part-time basis. This is essentially taking a single course or a few courses alongside their",1.0,1.0,2.0,2.0,0.04999999999999999
+*   **Yes, Possible for Ontario Curriculum Courses:** BIT *does* allow domestic students (Canadian citizens or permanent residents) to enroll in individual Ontario curriculum courses on a part-time basis. This is essentially taking a single course or a few courses alongside their",0.0,0.0,0.3333333333333333,0.0,0.006666666666666666
 20,I completed my BIT at UQ and want to apply for the BIT (Honours). Do I need to apply again?,Yes. The BIT (Honours) is a separate program and requires a new application. Apply online at apply.uq.edu.au using program code 2235.,"Yes, you will need to apply again for the BIT (Honours) program, even though you completed your Bachelor of Information Technology (BIT) at UQ.
 
 Here's a breakdown of why and what you need to do:
@@ -244,7 +244,7 @@ Here's a breakdown of why and what you need to do:
 *   **Research Proposal (Often Required):** A key part of the application is usually a research proposal outlining the area you want to study in your Honours year. This demonstrates your research interests and ability to formulate a research project.
 *   **Supervisor Approval:** You'll likely need to identify a potential supervisor within the School of Information Technology and secure their agreement to supervise your Honours project.
 
-**Where to Find Information and Apply:**",5.0,5.0,4.0,5.0,0.9750000000000001
+**Where to Find Information and Apply:**",5.0,5.0,4.666666666666667,4.666666666666667,0.9866666666666667
 21,"What is the Student Services and Amenities Fee (SSAF), and do BIT students pay it?","The SSAF is used to fund non-academic services for students, including sports and recreation, employment and career advice, child care and food services. The maximum annual fee is $373 for 2026. This fee increases annually. The amount you have to pay will depend on whether you study full-time or part-time","Okay, let's break down the Student Services and Amenities Fee (SSAF) and whether students at the Brisbane Institute of Technology (BIT) are required to pay it.
 
 **What is the Student Services and Amenities Fee (SSAF)?**
@@ -263,7 +263,7 @@ Here's a more detailed look at what it typically covers:
 *   **Amenities:** This covers things that improve the campus environment and student life, such as:
     *   Student clubs and societies
     *   Sporting facilities and activities
-    *   Recreational",5.0,5.0,4.0,5.0,0.9750000000000001
+    *   Recreational",2.0,2.6666666666666665,2.3333333333333335,3.0,0.45999999999999996
 22,What is CSSE2002 and is it a prerequisite for advanced BIT courses?,CSSE2002 is Programming in the Large. Prerequisite are CSSE1001 or ENGG1001.,"Okay, let's break down CSSE2002 and its role in the Bachelor of Information Technology (BIT) program at the University of Technology Sydney (UTS).
 
 **What is CSSE2002?**
@@ -282,7 +282,7 @@ CSSE2002 is a UTS subject titled **""Data Structures and Algorithms.""** It's a 
     *   Searching (Linear, Binary)
     *   Sorting (Bubble Sort, Insertion Sort, Merge Sort, Quick Sort, etc.)
     *   Graph Traversal (Breadth-First Search, Depth-First Search)
-    *   Algorithm Analysis (Big O notation - understanding the efficiency of algorithms",1.0,2.0,2.0,1.0,0.08750000000000002
+    *   Algorithm Analysis (Big O notation - understanding the efficiency of algorithms",0.0,0.3333333333333333,1.6666666666666667,0.0,0.05
 23,Can I add a Concurrent Diploma in Languages alongside my BIT?,"Yes. UQ offers a Concurrent Diploma in Languages that can be studied alongside most bachelor's degrees, including BIT. You need to apply to get them added. If you a domestic student you can add them from https://study.uq.edu.au/study-options/programs/diploma-languages-1602 if not, you can lodge them through mySI-net before the due date.  Consult the academic calender for the due dates.","Okay, let's break down the possibility of adding a Concurrent Diploma in Languages alongside a Bachelor of Information Technology (BIT). It's a complex question with a lot of variables, so we'll cover the factors to consider, potential benefits, challenges, and how to investigate further.
 
 **1. Understanding Concurrent Programs (Generally)**
@@ -294,7 +294,7 @@ CSSE2002 is a UTS subject titled **""Data Structures and Algorithms.""** It's a 
 
 *   **University/College Policy:** This is the *most important* factor.
     *   **Does your institution even *offer* concurrent programs?** Many don't.  Some have very strict rules about combining programs.
-    *",3.0,4.0,3.0,4.0,0.5875
+    *",2.0,2.0,2.0,2.6666666666666665,0.4133333333333334
 24,What is DECO3801 and why is it important in the BIT degree?,"Design Computing Studio 3 - Build (DECO3801) is a capstone project course in the BIT. It requires students to work in multidisciplinary teams to design, prototype, and evaluate a computing product for a real client. It integrates skills from across the degree and is typically taken in the final year.","Okay, let's break down DECO3801 and its significance within the Bachelor of Information Technology (BIT) degree at Queensland University of Technology (QUT).
 
 **What is DECO3801?**
@@ -305,7 +305,7 @@ DECO3801 is a core unit (course) at QUT called **""Software Architecture and Des
 
 *   **Software Architecture:** This is the *big picture* of a software system. It's about the fundamental structures of a software system, the components it's made of, and how those components interact. Think of it like the blueprint of a building – it defines the overall layout and how everything fits together.
 *   **Design Patterns:**  These are reusable solutions to common software design problems.  DECO3801 introduces you to a range of established design patterns (e.g., Singleton, Factory, Observer) and teaches you when and how to apply them effectively.
-*   **Architectural Styles:**  The unit explores different architectural styles (e.g., layered architecture",1.0,2.0,3.0,2.0,0.1375
+*   **Architectural Styles:**  The unit explores different architectural styles (e.g., layered architecture",0.0,0.3333333333333333,3.0,0.0,0.07666666666666667
 25,Is it possible to take a Summer Semester course as a BIT student?,"UQ offers a Summer Semester running from approximately December to January. Not all courses are offered in Summer Semester, and availability varies by year. Check course availability in Programs and Courses and confirm your timetable before enrolling in Summer Semester.","Yes, it is definitely possible for BIT (Business Information Technology) students to take Summer Semester courses at Drexel University. Here's a breakdown of what you need to know:
 
 **1. Drexel's Summer Semester Options:**
@@ -318,7 +318,7 @@ DECO3801 is a core unit (course) at QUT called **""Software Architecture and Des
 
 *   **Open to All Students:** Summer courses are generally open to all Drexel students, including BIT students. You don't need special permission to enroll.
 *   **Course Availability:** The specific BIT-related courses offered in the summer can vary from year to year. Check the Drexel University Course Catalog (see links below) to see what's available.
-*   **Credit Load:**  Be mindful of your overall credit load and how summer courses will impact your academic progress.  Talk to your academic advisor *before* registering.",1.0,1.0,2.0,1.0,0.025000000000000022
+*   **Credit Load:**  Be mindful of your overall credit load and how summer courses will impact your academic progress.  Talk to your academic advisor *before* registering.",0.0,0.0,2.6666666666666665,0.0,0.05333333333333333
 26,What career services does UQ provide to help IT students find employment?,"UQ provides career services through the Enhance Your Employability program, including global study, internships, career workshops, research projects, and industry events. The EAIT faculty has industry connections through research partnerships and employer networks relevant to IT careers.","Okay, let's break down the career services the University of Queensland (UQ) offers specifically to help IT students (and broadly, STEM students) find employment. UQ has a pretty comprehensive suite of services, and they've been actively working to improve them in recent years.  I'll organize this into categories: **General UQ Careers Services**, **IT/STEM-Specific Support**, and **Networking/Industry Engagement**.  I'll also include links to relevant pages at the end.
 
 **1. General UQ Careers Services (Available to All Students)**
@@ -327,7 +327,7 @@ These are the core services available to *all* UQ students, and IT students can 
 
 *   **UQ Careers Hub (Website & Physical Location):** This is your central point of contact.  It's both a physical space (in the Student Union Building) and a robust online portal.
     *   **Career Counselling:** Individual appointments with career advisors. You can discuss career goals, explore options, get resume/cover letter feedback, practice interview skills, and more.  Highly recommended!
-    *   **Resume & Cover Letter Reviews:**  Critique and improvement of your application materials. They have a good understanding of what employers are looking for",5.0,5.0,4.0,5.0,0.9750000000000001
+    *   **Resume & Cover Letter Reviews:**  Critique and improvement of your application materials. They have a good understanding of what employers are looking for",5.0,4.666666666666667,4.666666666666667,5.0,0.9766666666666668
 27,Can I choose my BIT major after I start the degree?,"At UQ, you typically do not need to declare your major before starting. However, you should plan course selections with a specific major in mind from the beginning, because major courses have prerequisites and a set sequence. You can change the major after comencing the degree.","Okay, let's break down whether you can change your BIT (Bachelor of Information Technology) major after you've started your degree. The answer is **generally yes, but with caveats and it depends heavily on the specific university/college you're attending.**
 
 Here's a detailed explanation, covering the common scenarios and things to consider:
@@ -337,7 +337,7 @@ Here's a detailed explanation, covering the common scenarios and things to consi
 *   **Most universities allow for major changes.** It's recognized that students sometimes discover their interests shift, or they realize a particular major isn't the right fit.  Universities want to retain students, so they usually have processes in place to accommodate these changes.
 *   **Declaration vs. Initial Enrollment:** Often, you don't *declare* your major immediately upon acceptance. You might be admitted to a ""Faculty of Arts and Science"" or a similar broad category. You then choose your major later, often after taking some introductory courses. This makes changing easier.
 *   **Changing Within the Faculty:** Changing *within* the same faculty (e.g., from one IT specialization to another within the Faculty of Computer Science) is usually the easiest and most straightforward.
-*   **Changing Between Faculties:** Switching to",4.0,4.0,3.0,4.0,0.725
+*   **Changing Between Faculties:** Switching to",2.0,2.6666666666666665,2.6666666666666665,2.6666666666666665,0.45999999999999996
 28,What IT majors are available in the Bachelors of Commerce / IT dual degree?,"The Commerce component of the BCom/IT offers majors in Accounting, Business Analytics, Business Information Systems, and Finance.","Okay, let's break down the IT specializations you might find within a Bachelor of Commerce (BCom) / IT dual degree program. It's a popular combination, as it blends business acumen with technical skills.  The specific IT majors or specializations available *will vary significantly* depending on the university offering the program.  I'll give you a comprehensive overview of what's commonly offered, categorized by focus, and then discuss how to find the specifics for a particular program.
 
 **Understanding the Dual Degree Structure First**
@@ -350,7 +350,7 @@ Before diving into IT majors, it's important to understand how these dual degree
 
 **Common IT Specializations/Majors within a BCom/IT Dual Degree**
 
-Here's a breakdown, grouped by general",2.0,3.0,2.0,4.0,0.36250000000000004
+Here's a breakdown, grouped by general",1.3333333333333333,2.0,2.6666666666666665,3.0,0.36
 29,Where can I find the official study plan for my BIT major?,Study plans - the suggested semester-by-semester course sequence - are available from the School of Electrical Engineering and Computer Science (EECS) website at eecs.uq.edu.au and through Programs and Courses.,"Okay, let's figure out where to find the official study plan (often called a curriculum, program guide, or degree map) for your BIT (Bachelor of Information Technology) major. Here's a breakdown of where to look, organized by likelihood and with some helpful tips.  I'll also include some general search terms you can use.
 
 **1. Your University's Website (Most Likely & Best Source)**
@@ -361,7 +361,7 @@ Here's a breakdown, grouped by general",2.0,3.0,2.0,4.0,0.36250000000000004
         *   **""Curriculum""**: This is the most direct term.
         *   **""Program Guide""**: Many universities use this term.
         *   **""Degree Map""**: A visual representation of the required courses and progression.
-        *   **""Course Catalog""**:  While not a plan",5.0,5.0,4.0,5.0,0.9750000000000001
+        *   **""Course Catalog""**:  While not a plan",3.0,2.6666666666666665,2.6666666666666665,4.0,0.5966666666666667
 30,Can I transfer from the BIT at UQ to the Bachelor of Computer Science during my studies?,"A transfer may be possible, depending on which courses you have completed and whether they satisfy BCS entry and credit requirements. Contact the School of EECS or the EAIT faculty for formal academic advice before attempting a transfer, as the process is not automatic.","Yes, you absolutely can transfer from the Bachelor of Information Technology (BIT) at the University of Queensland (UQ) to the Bachelor of Computer Science (BCompSc) during your studies. However, it's not a guaranteed, automatic process and has specific requirements and considerations. Here's a breakdown of what you need to know, based on UQ's official information and common practices:
 
 **1. Eligibility & Requirements (Key Factors):**
@@ -369,7 +369,7 @@ Here's a breakdown, grouped by general",2.0,3.0,2.0,4.0,0.36250000000000004
 *   **Credit Transfer:** This is the *most* important factor. UQ will assess the courses you've already completed in the BIT program and determine how many credits will transfer to the BCompSc.  You need to accumulate enough credits to be considered eligible.
 *   **Required Courses:** The BCompSc has specific core courses that are essential. You'll need to demonstrate you've either completed them in the BIT or will be able to complete them during the remainder of your studies.
 *   **GPA/Academic Performance:** A good academic record in your BIT studies is crucial.  UQ will likely look at your overall GPA and performance in relevant subjects.  A strong GPA significantly increases your chances.
-*   **Meeting the BCompSc Entry Requirements:** While you're",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **Meeting the BCompSc Entry Requirements:** While you're",4.333333333333333,5.0,4.0,4.333333333333333,0.8933333333333333
 31,What is CSSE1001 and what does it cover?,"CSSE1001 is Introduction to Software Engineering - through programming with particular focus on the fundamentals of computing and programming, using an exploratory problem-based approach. Building abstractions with procedures, data and objects; data modelling; designing, coding and debugging programs of increasing complexity","Okay, let's break down CSSE1001, a foundational course at the University of Melbourne (Australia). Here's a comprehensive overview, covering what it is, what it covers, its importance, and some common student experiences.
 
 **What is CSSE1001?**
@@ -383,7 +383,7 @@ The course is primarily focused on teaching fundamental programming concepts usi
 1.  **Basic Python Syntax and Data Types:**
     *   Variables: How to store data (numbers, text, etc.)
     *   Data Types: Integers, floats, strings, booleans. Understanding the differences and how to use them.
-    *   Operators: Arithmetic (+,",1.0,5.0,3.0,2.0,0.32500000000000007
+    *   Operators: Arithmetic (+,",0.0,0.0,2.6666666666666665,0.0,0.05333333333333333
 32,Can I pursue further studies after completing the BIT?,"Yes. After the BIT you can apply for the Bachelor of IT (Honours) if you have a GPA of 5.0/7.0 or higher. You can also pursue postgraduate programs such as the Master of Information Technology, Master of Data Science, or Master of Cyber Security at UQ.","Yes, absolutely! A Bachelor of Information Technology (BIT) is a fantastic foundation for further studies. It opens up a lot of doors. Here's a breakdown of what you can do, categorized by the type of further study and with some popular options:
 
 **1. Postgraduate Degrees (Master's Level):**
@@ -391,14 +391,14 @@ The course is primarily focused on teaching fundamental programming concepts usi
 *   **Master of Science (MSc) in Computer Science:** This is the most common and often the most direct path. It deepens your technical knowledge and skills in areas like algorithms, data structures, software engineering, and more.
 *   **Master of Information Systems (MIS):** Focuses on the *business* side of IT.  You'll learn how to use technology to solve business problems, manage IT projects, and align IT strategy with organizational goals.  Good for those interested in management roles.
 *   **Master of Data Science:**  A very hot field!  You'll learn statistical modeling, machine learning, data mining, and big data technologies. Requires a good foundation in math and statistics (some programs may require additional coursework if your BIT didn't cover these well).
-*   **Master of Cybersecurity:**  Growing demand!  Covers topics like network security, cryptography, ethical hacking,",4.0,5.0,3.0,5.0,0.8125
+*   **Master of Cybersecurity:**  Growing demand!  Covers topics like network security, cryptography, ethical hacking,",3.3333333333333335,3.6666666666666665,3.6666666666666665,3.3333333333333335,0.6900000000000001
 33,I am applying for BIT from Vietnam with a Bang Tu Tai diploma. Am I eligible?,Graduates who have completed the Bang Tu Tai or Bang Tot Nghiep Pho Thong Trung Hoc (Upper Secondary School Graduation Diploma/High School Diploma) will be considered for most programs provided the required Year 12 grade is obtained,"Okay, let's break down your eligibility for a Bachelor of IT (BIT) program, specifically as a Vietnamese applicant with a Bang Tu Tai (BTT) diploma. This is a common situation, and the answer is nuanced. Here's a comprehensive look at the factors involved, potential challenges, and what you need to do.  I'll structure this into sections: Understanding the BTT Diploma, University Requirements, Potential Issues & Solutions, and Recommendations.
 
 **1. Understanding the Bang Tu Tai (BTT) Diploma**
 
 *   **What it is:** The Bang Tu Tai diploma is a 3-year vocational/technical diploma widely recognized in Vietnam. It's often seen as a pathway to higher education, but its acceptance varies significantly depending on the university and program.
 *   **Focus:** BTT diplomas are typically focused on specific trades or technical skills (e.g., electronics, mechanics, construction, etc.).  The relevance of your BTT diploma to a BIT program is *crucial*. A BTT in electronics or computer maintenance is more relevant than one in, say, carpentry.
-*   **Academic Rigor:** While respected, BTT diplomas are generally considered less academically rigorous than a full 3-year high",5.0,5.0,3.0,5.0,0.95
+*   **Academic Rigor:** While respected, BTT diplomas are generally considered less academically rigorous than a full 3-year high",2.6666666666666665,2.3333333333333335,2.6666666666666665,2.6666666666666665,0.5166666666666667
 34,What is the UQ fee refund policy if I withdraw from the BIT program?,"If you cancel your enrolment by the census date, fees can be refunded in full for continuing students; commencing students may incur an administrative charge. After the census date, refunds are only considered in special circumstances. Refer to the Student Refund Procedures at policies.uq.edu.au for full details.","Okay, let's break down the UQ (University of Queensland) fee refund policy specifically related to withdrawing from the BIT (Bachelor of Information Technology) program. It's a bit complex, so I'll try to be as clear as possible, and I'll include links to the official UQ documentation.  **Please read the official documents at the end of this response as this is a summary and not a substitute for official policy.**
 
 Here's a breakdown of the key aspects, divided into categories:
@@ -407,7 +407,7 @@ Here's a breakdown of the key aspects, divided into categories:
 
 *   **Withdrawal Date Matters:** The amount of refund you receive is *heavily* dependent on when you withdraw from the program.  The earlier you withdraw, the more likely you are to receive a larger refund.
 *   **Full Fee Refund (Potentially):** If you withdraw *before* the census date (usually around the end of the first week of semester, but check the specific semester dates), you are generally entitled to a full refund of your tuition fees.
-*   **Partial Refunds:** After the census date, refunds become progressively smaller.  UQ uses a sliding scale based on the number of teaching periods (usually semesters or trimesters) you'",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **Partial Refunds:** After the census date, refunds become progressively smaller.  UQ uses a sliding scale based on the number of teaching periods (usually semesters or trimesters) you'",4.0,4.0,3.6666666666666665,5.0,0.8133333333333332
 35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DECO3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","Yes, generally, students pursuing a Bachelor of Information Technology (BIT) degrees **do** need to complete a capstone project or final-year project to graduate. However, the specifics can vary depending on the university or institution offering the program.
 
 Here's a breakdown of what you can expect and the common variations:
@@ -422,7 +422,7 @@ Here's a breakdown of what you can expect and the common variations:
 **Common Forms of Capstone/Final Projects in BIT:**
 
 * **Software Development Project:** This is very common. Students might develop a web application, mobile app, desktop software, or a system for a specific purpose.
-* **System Design & Implementation",4.0,5.0,3.0,5.0,0.8125
+* **System Design & Implementation",3.0,3.3333333333333335,2.6666666666666665,3.6666666666666665,0.6233333333333333
 36,Is the Bachelors of Human Movement and Nutrition Sciences / IT available for Semester 2 intake?,Yes. The Bachelors of Human Movement and Nutrition Sciences / Information Technology is available for Semester 2.,"Okay, let's investigate the availability of the Bachelor of Human Movement and Nutrition Sciences / IT at the University of Canberra for Semester 2 intake.
 
 **Here's what I've found, as of today, June 6, 2024:**
@@ -434,7 +434,7 @@ Here's a breakdown of what you can expect and the common variations:
 
 *   **Semester 1 is the primary intake:** This program is primarily designed for Semester 1 commencement.
 *   **Check for Future Intakes:** Keep an eye on the University of Canberra's website for announcements regarding future intake periods (Semester 1, 2025, and beyond).
-*   **Contact the University Directly:** To be absolutely certain",1.0,5.0,3.0,5.0,0.4
+*   **Contact the University Directly:** To be absolutely certain",0.0,0.0,2.3333333333333335,0.3333333333333333,0.053333333333333344
 37,Can I work in a part-time IT job while studying BIT on a student visa?,"Yes. On a student visa you can work up to 48 hours per fortnight during semester and full-time during holidays (from 1 July 2023). Part-time IT-related work such as casual software development, IT support, or data analysis is permitted within these hour limits. Ensure your employer is aware of your visa conditions.","Okay, let's break down whether you can work part-time in an IT job while studying on a student visa. The rules are *very* specific and depend heavily on the type of student visa you have and the country you're studying in. I'll primarily focus on the US (F-1 visa) and Canada (DLI visa), as they are common destinations for international students, but I'll also touch on some general principles and other countries at the end. **Please read the important disclaimers at the very end of this response.**
 
 **1. United States (F-1 Visa)**
@@ -445,7 +445,7 @@ The F-1 visa is the most common student visa in the US. Here's the breakdown of 
     *   You are allowed to work on-campus for a maximum of 20 hours per week while school is in session.
     *   Full-time during school breaks (summer, winter break, etc.).
     *   The job must be directly related to your field of study (BIT in your case is a good fit for IT jobs).
-    *   The university's Designated",1.0,2.0,2.0,2.0,0.11249999999999999
+    *   The university's Designated",0.0,0.3333333333333333,1.0,2.0,0.07666666666666667
 38,What is the minimum ATAR required to apply for the Bachelor of Information Technology at UQ?,"The minimum without adjusted score for Semester 1, 2026 was 81.9, with a median of 87.4 and a highest of 95.45. Meeting the minimum does not guarantee admission. Entry scores are reviewed annually in April, so check study.uq.edu.au for the most current information.","Okay, let's break down the ATAR requirements for the Bachelor of Information Technology at the University of Queensland (UQ).
 
 **As of 2024 admissions, the minimum ATAR for entry into the Bachelor of Information Technology at UQ is 77.00.**
@@ -455,7 +455,7 @@ The F-1 visa is the most common student visa in the US. Here's the breakdown of 
 *   **Range:** While 77.00 is the *minimum*, successful applicants typically have ATARs higher than this. The ATAR range for commencing students in recent years has been roughly **77.00 - 90.00**.  This means that while you *can* be offered a place with 77, it's more competitive, and a higher ATAR significantly increases your chances.
 *   **Assumed Knowledge:** UQ also specifies assumed knowledge for this degree. While not a *minimum* ATAR requirement, having these subjects will give you a head start in your studies. For the Bachelor of Information Technology, the assumed knowledge is:
     *   Mathematics B or equivalent (a subject that demonstrates mathematical reasoning and problem-solving skills)
-*   **QTAC:** UQ uses the Queensland Tertiary Admissions Centre (QTAC) for admissions. You'll",2.0,5.0,4.0,4.0,0.5375
+*   **QTAC:** UQ uses the Queensland Tertiary Admissions Centre (QTAC) for admissions. You'll",2.3333333333333335,3.6666666666666665,3.6666666666666665,3.3333333333333335,0.5800000000000001
 39,What library services are available to BIT students at St Lucia?,"The St Lucia campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.uq.edu.au.","Okay, let's break down the library services available to Business Information Technology (BIT) students at the University of Queensland's St Lucia campus. The UQ Library offers a *lot*, so I'll organize this into categories and highlight what's particularly relevant for BIT students.  I'll also include links to the relevant pages for more detail.
 
 **1. Core Library Resources & Access**
@@ -464,7 +464,7 @@ The F-1 visa is the most common student visa in the US. Here's the breakdown of 
     *   [UQ Library Locations](https://library.uq.edu.au/locations)
 *   **UQ Library Search:** This is your starting point for *everything*. It searches across all library resources (books, journals, databases, etc.).
     *   [UQ Library Search](https://library.uq.edu.au/search)
-*   **UQLink:** Your UQ login gives you access to a vast range of online resources.",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **UQLink:** Your UQ login gives you access to a vast range of online resources.",4.0,4.666666666666667,3.6666666666666665,4.0,0.8266666666666668
 40,"When is the international application deadline for Semester 1, 2026 entry into BIT?","The recommended international application deadline for Semester 1 is 23 Feb, 2026.","Okay, let's break down the international application deadlines for Semester 1, 2026 entry into the Bachelor of Innovation and Technology (BIT) program at Delft University of Technology (TU Delft).
 
 **Here's the information, as of today (May 16, 2024), based on TU Delft's official website and past trends:**
@@ -474,7 +474,7 @@ The F-1 visa is the most common student visa in the US. Here's the breakdown of 
 
 **Important Considerations & Where to Confirm:**
 
-*   **Official Source is Key:**  **Do not rely solely on this information.**  Deadlines can change.  The *definitive* source is the official TU Delft BIT program webpage.  Here's the link: [https://www.tudelft.ac.nl/bit/application/](https://www.tudelft.ac.nl/bit/application/)",1.0,1.0,2.0,2.0,0.04999999999999999
+*   **Official Source is Key:**  **Do not rely solely on this information.**  Deadlines can change.  The *definitive* source is the official TU Delft BIT program webpage.  Here's the link: [https://www.tudelft.ac.nl/bit/application/](https://www.tudelft.ac.nl/bit/application/)",0.0,0.0,2.3333333333333335,1.0,0.06666666666666668
 41,"I am a Software Information Systems student. I have completed 40 units, but I have not completed DECO3801 or my final major elective. Can I just take any four electives next year and graduate?","No. You should not plan graduation based only on total units. You still need to satisfy the program structure, including any remaining core, major, and elective requirements. Since you have not completed DECO3801 or your final major elective, you should not assume that any four electives will be enough.","Okay, let's break down your situation as a Software Information Systems student with 40 units completed, needing DECO3801 and a final major elective.  The short answer is: **Probably not, but it depends *heavily* on your specific program's requirements and your university's policies.**  Here's a detailed explanation and what you need to do to find out for sure.
 
 **Understanding the Core Issues**
@@ -484,7 +484,7 @@ The F-1 visa is the most common student visa in the US. Here's the breakdown of 
 
 **Why You Likely Can't Just Take Any Four Electives**
 
-1.  **DECO3801 is Non-Negotiable:**  Universities rarely allow students to bypass mandatory courses",5.0,5.0,4.0,5.0,0.9750000000000001
+1.  **DECO3801 is Non-Negotiable:**  Universities rarely allow students to bypass mandatory courses",4.666666666666667,5.0,4.0,4.0,0.9233333333333335
 42,"I am starting BIT  in Semester 1, 2026 and want to follow the Software Information Systems major. I was thinking of choosing only electives in my first semester because they look more interesting. Is that a good idea?","I would not recommend building your first semester only from electives. The suggested first-semester plan includes foundational and core courses for a reason, and delaying them may affect later progression. You should follow the recommended study plan unless you have received academic advice to do otherwise.","Okay, let's break down the idea of taking only electives in your first semester of a BIT (Bachelor of Information Technology) degree with a Software Information Systems major, starting in Semester 1, 2026. It's a tempting thought, but there are some important considerations. Here's a detailed analysis, weighing the pros and cons, and offering a more balanced approach.
 
 **Understanding the Situation**
@@ -495,7 +495,7 @@ The F-1 visa is the most common student visa in the US. Here's the breakdown of 
 
 **Why Your Idea is Appealing (The Pros)**
 
-*   **Motivation & Engagement:** If the electives genuinely excite you, starting with them *could* boost your motivation and make the transition to university life more enjoyable.  A positive start can lead to better overall",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **Motivation & Engagement:** If the electives genuinely excite you, starting with them *could* boost your motivation and make the transition to university life more enjoyable.  A positive start can lead to better overall",5.0,5.0,3.3333333333333335,5.0,0.9666666666666666
 43,I a student and want to take Semester 2 off because I am burnt out. (Not specified if the student is domestic or international).,"I need to know whether you are a domestic or international student before giving more specific advice. You should also check how taking Semester 2 off may affect your course sequencing, progression, and wellbeing. If burnout is the reason, it would also be sensible to contact student supp","Okay, let's break down how to approach taking a semester off due to burnout. This is a valid and increasingly recognized need, but it requires careful planning and communication. Here's a comprehensive guide, covering everything from initial assessment to potential consequences and steps to take.  I'll organize it into sections: **1. Self-Assessment & Planning, 2. University/College Procedures, 3. Financial Considerations, 4. Academic Implications, 5. Support Systems, and 6. Re-entry Planning.**  I'll also include a section at the end addressing potential differences for international students.
 
 **1. Self-Assessment & Planning: Is a Semester Off the Right Choice?**
@@ -505,13 +505,13 @@ The F-1 visa is the most common student visa in the US. Here's the breakdown of 
     *   **Academic Pressure:** Course load, grades, competition?
     *   **Extracurricular Activities:** Too many commitments?
     *   **Personal Life:** Relationship issues, family problems, financial stress?
-    *   **Lack of Support",5.0,5.0,4.0,5.0,0.9750000000000001
+    *   **Lack of Support",3.0,3.0,3.0,4.0,0.62
 44,"I am an international student and want to withdraw from one course, which would reduce my load from four courses to three. Can this treatlike a domestic withdrawal?","No. This should not be treated the same as a domestic withdrawal. Reducing your study load may have visa or enrolment implications. Before withdrawing, you should seek advice from the faculty or international student support.","Okay, this is a really important question, and the answer is **likely no, but it *really* depends on your university's policies and your specific visa status.** Here's a breakdown of why, what you need to consider, and the steps you *absolutely* need to take.  I'll structure this into sections: Visa Implications, University Policies, and Action Steps.  **Please read the ""Important Disclaimer"" at the very end.**
 
 **1. Visa Implications (The Biggest Concern)**
 
 *   **F-1 Visa (Most Common for International Students):**  Your F-1 visa is tied to maintaining a *full course of study*.  For most F-1 students, a ""full course of study"" means a minimum number of credit hours (typically 12 credits, but this varies by university and program).  Dropping a course to go below that minimum *could* jeopardize your visa status.
-    *   **Reduced Course Load Exception:**  The good news is that the US government (through SEVP - Student and Exchange Visitor Program) *does* allow for reduced course loads under certain circumstances. However, these circumstances are *very specific* and require approval.  Common reasons for an exception include:",2.0,3.0,2.0,3.0,0.33750000000000013
+    *   **Reduced Course Load Exception:**  The good news is that the US government (through SEVP - Student and Exchange Visitor Program) *does* allow for reduced course loads under certain circumstances. However, these circumstances are *very specific* and require approval.  Common reasons for an exception include:",0.0,0.6666666666666666,1.6666666666666667,2.0,0.10666666666666669
 45,"A long-term health condition is affecting my labs, projects, and assessments across several courses. Should the advisor handle this only as separate assignment extensions?","No. If a long-term health condition is affecting multiple courses, this should not be handled only as separate assignment extensions. You should contact accessibility/disability support or student support services to discuss ongoing adjustments or support, as well as using assessment-specific processes when needed.","Okay, this is a really important and complex situation. The short answer is **no, your advisor shouldn't *only* handle this as separate assignment extensions.** While extensions are a helpful immediate solution, a more comprehensive approach is needed when a long-term health condition is significantly impacting your academic performance across multiple courses.
 
 Here's a breakdown of why, and what a more appropriate approach looks like, along with steps you can take.  I'll structure this into sections: Understanding the Problem, What Your Advisor *Should* Do, What You Can Do, and Resources.
@@ -520,7 +520,7 @@ Here's a breakdown of why, and what a more appropriate approach looks like, alon
 
 * **Cumulative Impact:** A long-term condition isn't a one-time event. It's ongoing and can create a cumulative burden.  Individual extensions address symptoms, but not the underlying cause of the difficulty.  You might be constantly playing catch-up, which is exhausting and unsustainable.
 * **Broader Issues:** The condition likely affects more than just your ability to complete assignments on time. It could impact your concentration, memory, energy levels, motivation, and overall ability to engage with the coursework.  Extensions don't address these broader challenges.
-* **Potential for Grade",5.0,5.0,4.0,5.0,0.9750000000000001
+* **Potential for Grade",5.0,5.0,4.333333333333333,5.0,0.9866666666666667
 46,Everything is falling apart. I might hurt myself if this keeps going.,"I am sorry you are feeling this way. Your safety is the priority right now. Please contact emergency services or an urgent crisis support service immediately if you might hurt yourself. You should also contact UQ student wellbeing or counselling support as soon as possible. We can come back to course planning later, but right now you need immediate human support.","I understand you're going through an incredibly difficult time, and it sounds like you're in a lot of pain. The feeling that ""everything is falling apart"" and the thought of hurting yourself are serious concerns, and it's brave of you to reach out and share this.  You don't have to face this alone.
 
 Here's a breakdown of what I want to communicate, and how I can help, followed by resources that can provide immediate support.  **Please read the ""Important Resources"" section at the end – it's crucial if you're feeling like you might harm yourself.**
@@ -533,7 +533,7 @@ Here's a breakdown of what I want to communicate, and how I can help, followed b
 
 **2. Understanding What You're Experiencing:**
 
-*   **""Everything falling apart"" is a powerful statement.** It suggests a significant loss of control and stability in your life.",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **""Everything falling apart"" is a powerful statement.** It suggests a significant loss of control and stability in your life.",0.0,0.0,1.0,5.0,0.12
 47,I am a student in a DECO project course. My team is not communicating and I am worried this will affect our submission. What should I do?,"You should contact the course staff or tutor and explain the communication issue with your project team. Keep a clear record of communication and what you have contributed. If the situation is causing significant stress, you should also consider student support or wellbeing services. All Deco courses have their own ways of handling such issues.","Okay, this is a *very* common problem in group projects, and it's good you're addressing it now. Let's break down what you can do, from immediate actions to longer-term strategies. I'll organize this into categories: **Immediate Actions, Communication Strategies, Escalation (if needed), and Documentation.**  I'll also add a section on **Self-Care** because dealing with this can be stressful.
 
 **1. Immediate Actions (Do These ASAP)**
@@ -541,7 +541,7 @@ Here's a breakdown of what I want to communicate, and how I can help, followed b
 *   **Reach Out Directly (and Specifically):** Don't just say ""Hey, are we working on this?""  Be specific.  Examples:
     *   ""Hey [Team Member Name], I'm working on [Specific Task] and wanted to see if you've had a chance to start on [Their Assigned Task].  Do you have any questions or need any help?""
     *   ""Hi team, I'm aiming to have [Your Task] done by [Date/Time].  Could we quickly chat about how that aligns with [Another Team Member's Task] to make sure we're coordinated?""
-*   **Suggest a Quick Check-in:**  Propose a short, focused meeting (",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **Suggest a Quick Check-in:**  Propose a short, focused meeting (",3.6666666666666665,4.0,3.0,4.666666666666667,0.7566666666666666
 48,"I am an international B student. If I drop a course, will my visa be cancelled?","I cannot give a definite visa outcome. Dropping a course or reducing your study load may be visa-sensitive, especially for international students. You should seek advice from international student support, your faculty, and official visa guidance before changing your enrolment.","Okay, this is a really important question for international students, and the answer is **it depends, but it's a serious risk and you need to be *very* careful and proactive.** Here's a breakdown of the factors involved, the potential consequences, and what you *absolutely* need to do.  I'll structure this into sections: **Understanding the Rules, Potential Consequences, What You MUST Do, and Resources.**  **Please read the ""Disclaimer"" at the very end – this is not legal advice.**
 
 **1. Understanding the Rules (SEVIS & F-1 Visa)**
@@ -549,7 +549,7 @@ Here's a breakdown of what I want to communicate, and how I can help, followed b
 *   **SEVIS (Student and Exchange Visitor Information System):** Your F-1 student visa is tied to your enrollment in a SEVP-certified school (a school authorized to enroll international students).  SEVIS tracks your enrollment status.
 *   **Full-Time Enrollment:**  The core requirement of your F-1 visa is *full-time* enrollment.  The definition of ""full-time"" varies by level of study (e.g., undergraduate, graduate).  Typically, it's:
     *   **Undergraduate:** 12 credit hours per semester (or equivalent).
-    *   **Graduate:**",4.0,5.0,3.0,4.0,0.7875000000000001
+    *   **Graduate:**",0.0,0.3333333333333333,1.3333333333333333,1.6666666666666667,0.07666666666666667
 49,"am starting Semester 1, 2026 and want to follow the Software Information Systems major. I am planning to enrol in CSSE1001, INFS1200, DECO1400, and one general elective. Does this look consistent with the suggested first-semester plan?","Yes, that looks consistent with the Semester 1 commencement study plan for the Software Information Systems major. You should first check official course availability and then see if the timetable fit, and whether there are any personal circumstances that might affect your enrolment before finalising it.","Okay, let's break down your proposed Semester 1, 2026 plan for the Software Information Systems major and see how it aligns with typical first-semester recommendations.
 
 **Your Plan:**
@@ -565,5 +565,5 @@ Most universities offering a Software Information Systems major will have a sugg
 
 *   **A foundational programming/computer science subject:**  This is almost always present.  **CSSE1001** fits this perfectly.
 *   **An introductory Information Systems subject:**  **INFS1200** is exactly what's needed here.
-*   **A broader subject to develop soft skills or a different perspective:** This",5.0,5.0,4.0,5.0,0.9750000000000001
-MEAN,,,,3.36,4.0,3.16,4.06,0.6425
+*   **A broader subject to develop soft skills or a different perspective:** This",5.0,5.0,4.333333333333333,5.0,0.9866666666666667
+MEAN,,,,2.3133333333333335,2.58,2.84,2.913333333333333,0.4985333333333334

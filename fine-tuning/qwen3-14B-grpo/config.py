@@ -50,7 +50,9 @@ class Config:
     train_file: str = "data/train.jsonl"
     test_file: str = "data/test.jsonl"
     # ── G-Eval (OpenAI) ───────────────────────────────────────────────────────
-    geval_model: str = "gpt-4o-mini"    # cheap + capable enough for scoring
+    geval_model: str = "gpt-4o"          # stronger discrimination (was gpt-4o-mini)
+    geval_samples: int = 3              # judge calls per example to average (G-Eval paper; 1 = deterministic)
+    geval_sample_temperature: float = 0.5  # sampling temperature when geval_samples > 1
     geval_max_retries: int = 3
     geval_timeout: float = 30.0
     geval_max_workers: int = 16         # parallel threads for OpenAI API calls
