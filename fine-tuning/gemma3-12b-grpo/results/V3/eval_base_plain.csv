@@ -296,7 +296,7 @@ DECO3801 dives deep into the principles and practices of designing large, comple
 Here's a more detailed breakdown of the topics typically covered:
 
 *   **Architectural Patterns:**  You'll learn about common architectural patterns like:
-    *   **Layered Architecture:**  Organizing the system into distinct layers (presentation, business",1.0,3.0,3.0,2.0,0.2
+    *   **Layered Architecture:**  Organizing the system into distinct layers (presentation, business",1.0,5.0,3.0,1.0,0.30000000000000004
 25,Is it possible to take a Summer Semester course as a BIT student?,"UQ offers a Summer Semester running from approximately December to January. Not all courses are offered in Summer Semester, and availability varies by year. Check course availability in Programs and Courses and confirm your timetable before enrolling in Summer Semester.","Yes, it is definitely possible for BIT (Bachelor of Information Technology) students to take Summer Semester courses at most universities that offer BIT programs. However, there are a few things to consider:
 
 **1. University Policy:**
@@ -336,7 +336,7 @@ Before diving into IT majors, it's important to understand how these dual degree
 
 *   **Balanced Curriculum:** You'll split your coursework roughly equally between Commerce and IT.  Expect a significant portion of your courses to be core business subjects (accounting, finance, marketing, management, economics) and core IT subjects (programming, data structures, networking, databases).
 *   **Specialization Options:**  The IT portion is where you'll have the most choice.  The degree might offer a ""major"" or a set of ""specializations"" within the IT component.  Sometimes, it's a more flexible concentration.
-*   **Integration:**  Good programs will try to integrate the",2.0,3.0,2.0,3.0,0.33750000000000013
+*   **Integration:**  Good programs will try to integrate the",2.0,3.0,2.0,4.0,0.36250000000000004
 29,Where can I find the official study plan for my BIT major?,Study plans - the suggested semester-by-semester course sequence - are available from the School of Electrical Engineering and Computer Science (EECS) website at eecs.uq.edu.au and through Programs and Courses.,"Okay, let's figure out where to find the official study plan (often called a curriculum, program guide, or degree map) for your BIT (Bachelor of Information Technology) major. Here's a breakdown of where to look, organized by likelihood and with some helpful tips.  I'll also include some general advice at the end.
 
 **1. Your University's Website (Most Likely & Best Source)**
@@ -348,7 +348,7 @@ Before diving into IT majors, it's important to understand how these dual degree
         *   Look for a ""Academics,"" ""Programs,"" ""Undergraduate,"" or ""Degree Programs"" section.
     *   **What to look for *within* the department website:**
         *   **Curriculum:** This is the most direct term.
-        *   **Program Guide:**  Often a PDF document",3.0,4.0,3.0,5.0,0.6125
+        *   **Program Guide:**  Often a PDF document",3.0,4.0,3.0,4.0,0.5875
 30,Can I transfer from the BIT at UQ to the Bachelor of Computer Science during my studies?,"A transfer may be possible, depending on which courses you have completed and whether they satisfy BCS entry and credit requirements. Contact the School of EECS or the EAIT faculty for formal academic advice before attempting a transfer, as the process is not automatic.","Yes, you absolutely can transfer from the Bachelor of Information Technology (BIT) at the University of Queensland (UQ) to the Bachelor of Computer Science (BCompSc) during your studies. However, it's not a simple, guaranteed process and there are requirements you need to meet. Here's a breakdown of the process, requirements, and important considerations:
 
 **1. Understanding the Transfer Process & Key Information**
@@ -373,7 +373,7 @@ The course is primarily focused on teaching fundamental programming concepts usi
 
 1.  **Basic Programming Concepts:**
     *   **Variables and Data Types:**  Understanding how to store and manipulate data (integers, floats, strings, booleans).
-    *   **Operators:**",2.0,4.0,3.0,3.0,0.42500000000000004
+    *   **Operators:**",1.0,5.0,3.0,1.0,0.30000000000000004
 32,Can I pursue further studies after completing the BIT?,"Yes. After the BIT you can apply for the Bachelor of IT (Honours) if you have a GPA of 5.0/7.0 or higher. You can also pursue postgraduate programs such as the Master of Information Technology, Master of Data Science, or Master of Cyber Security at UQ.","Yes, absolutely! A Bachelor of Information Technology (BIT) is a fantastic foundation for further studies. It opens up a lot of doors. Here's a breakdown of what you can do, categorized by the type of further study and with some popular options:
 
 **1. Postgraduate Degrees (Master's Level):**
@@ -392,7 +392,7 @@ The course is primarily focused on teaching fundamental programming concepts usi
 
 *   **What is it?** The Bang Tu Tai diploma is a vocational/technical diploma awarded in Vietnam, often focused on specific trades or skills. It's *not* a general high school diploma like the Vietnamese General Secondary Education Diploma (BGD).  It's more akin to a trade school or technical college certificate.
 *   **Academic Level:** BTT diplomas typically represent completion of a 2-3 year program *after* completing lower secondary education (equivalent to junior high). They don't usually cover the same breadth of academic subjects as a full high school curriculum.
-*   **Subject Focus:** BTT programs are highly specialized.  For example, you might",4.0,4.0,3.0,5.0,0.75
+*   **Subject Focus:** BTT programs are highly specialized.  For example, you might",4.0,5.0,3.0,5.0,0.8125
 34,What is the UQ fee refund policy if I withdraw from the BIT program?,"If you cancel your enrolment by the census date, fees can be refunded in full for continuing students; commencing students may incur an administrative charge. After the census date, refunds are only considered in special circumstances. Refer to the Student Refund Procedures at policies.uq.edu.au for full details.","Okay, let's break down the UQ (University of Queensland) fee refund policy specifically related to withdrawing from the BIT (Bachelor of Information Technology) program. It's a bit complex, so I'll try to be as clear as possible, and I'll include links to the official UQ documentation for you to review.  **Please read the official documents carefully as they are the definitive source.**
 
 Here's a breakdown, divided into stages of the semester and the likely refund amounts.  **Important: These are general guidelines. Your specific situation might vary, so always check your personalized Student Account and the official policy documents.**
@@ -553,4 +553,4 @@ Most universities offering a Software Information Systems major will have a sugg
 
 *   **A foundational programming/computer science subject:**  This is almost always present.  **CSSE1001 fits this perfectly.**  It's the right level and covers essential concepts.
 *   **An introductory Information Systems subject:**  **INFS1200 is exactly what you need here.**  It provides the IS context.",5.0,5.0,4.0,5.0,0.9750000000000001
-MEAN,,,,3.46,4.14,3.24,4.22,0.671
+MEAN,,,,3.44,4.22,3.24,4.16,0.6717500000000001

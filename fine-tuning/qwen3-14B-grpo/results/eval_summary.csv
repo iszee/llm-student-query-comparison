@@ -1,0 +1,17 @@
+model,variant,factual_accuracy,relevance,conciseness,no_hallucination,composite_score
+base,plain,2.6,3.28,2.46,3.32,0.4570000000000001
+base,sysprompt,3.78,4.38,3.04,3.84,0.7155000000000001
+base,fewshot,3.48,4.02,2.84,3.64,0.6417500000000004
+base,sysprompt_fewshot,3.76,4.36,3.14,3.84,0.7140000000000002
+base,rag,3.54,4.06,2.98,4.24,0.671
+base,sysprompt_rag,4.08,4.52,3.34,4.34,0.7855000000000004
+base,rag_fewshot,4.06,4.46,3.28,4.28,0.7760000000000004
+base,sysprompt_rag_fewshot,4.1,4.46,3.4,4.38,0.7870000000000005
+finetuned,plain,2.88,3.52,2.72,3.44,0.5200000000000002
+finetuned,sysprompt,3.94,4.58,3.24,3.98,0.7585000000000004
+finetuned,fewshot,3.56,4.14,2.98,3.84,0.6687500000000002
+finetuned,sysprompt_fewshot,3.96,4.6,3.24,4.18,0.7675000000000004
+finetuned,rag,3.66,4.18,3.1,4.16,0.696
+finetuned,sysprompt_rag,4.32,4.74,3.58,4.54,0.8432500000000005
+finetuned,rag_fewshot,4.06,4.54,3.4,4.38,0.7865000000000003
+finetuned,sysprompt_rag_fewshot,4.26,4.72,3.46,4.52,0.8302500000000005

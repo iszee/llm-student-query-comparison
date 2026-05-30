@@ -21,7 +21,7 @@ idx,question,reference,generated_response,factual_accuracy,relevance,conciseness
 **2. Relevant Courses (Within your BIT Degree & Electives",5.0,5.0,4.0,5.0,0.9750000000000001
 2,What is the CRICOS code for the Bachelor of Information Technology?,The CRICOS code for the Bachelor of Information Technology is 001952K.,"The CRICOS code for the Bachelor of Information Technology at UQ is **093862J**.
 
-This code is important for international students as it verifies that the course is registered to operate in Australia.",1.0,5.0,5.0,5.0,0.44999999999999996
+This code is important for international students as it verifies that the course is registered to operate in Australia.",1.0,5.0,5.0,1.0,0.35
 3,What healthcare facilities are available at the St Lucia campus for BIT students?,"The St Lucia campus has a UQ Health Care clinic, UQ Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the UQ SafeZone app connecting students to security officers or emergency services.","Okay, let's break down the healthcare facilities available at UQ's St Lucia campus that are relevant for BIT students. Here's a comprehensive overview:
 
 **1. The University Medical and Counselling Centre (UMCC):** This is your primary resource.
@@ -60,7 +60,7 @@ Here's the information, as of the most recent data (always double-check the UQ w
 
 **Specific Dual Degree Considerations:**
 
-*   **Commerce/IT:**  While not mandatory, a good score in a business-related subject (e.g., Economics, Business Management) can",2.0,5.0,4.0,3.0,0.5125
+*   **Commerce/IT:**  While not mandatory, a good score in a business-related subject (e.g., Economics, Business Management) can",1.0,5.0,3.0,2.0,0.32500000000000007
 6,I received an offer for the BIT from UQ. What do I need to do to accept it?,"Follow the instructions in your offer letter, which typically include: accepting the offer through the apply.uq.edu.au portal, paying any required tuition fee deposit, and arranging OSHC if you are an international student. Then apply for your student visa if required. Contact UQ Admissions if you are unsure about any step.","Okay, congratulations on your offer! Here's a breakdown of what you need to do to accept your offer for the Bachelor of Information Technology (BIT) at UQ:
 
 **1. Respond to Your Offer via QTAC:**
@@ -109,7 +109,7 @@ The GS Assessment typically involves:
 
 **Do *you* need to complete one?**
 
-**As a domestic student, you do",4.0,5.0,3.0,5.0,0.8125
+**As a domestic student, you do",5.0,5.0,4.0,5.0,0.9750000000000001
 10,What is the Jump Start Academic Preparation Program (JSAPP) at UQ?,"JSAPP is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","The Jump Start Academic Preparation Program (JSAPP) at UQ is a fantastic initiative designed to help new, commencing undergraduate students transition smoothly into university life and succeed in their studies. Here's a breakdown of what it is and what it offers:
 
 **What it is:**
@@ -278,7 +278,7 @@ Here's a breakdown:
 *   **Advanced BIT Courses:** Many advanced courses in the BIT program *require* CSSE2002 as a prerequisite. Examples include (but are not limited to):
     *   CSSE3001 - Software Engineering
     *   CSSE3010 - Database Systems
-    *   CSSE3020 - Computer Networks",3.0,5.0,4.0,3.0,0.6500000000000001
+    *   CSSE3020 - Computer Networks",3.0,5.0,4.0,4.0,0.675
 23,Can I add a Concurrent Diploma in Languages alongside my BIT?,"Yes. UQ offers a Concurrent Diploma in Languages that can be studied alongside most bachelor's degrees, including BIT. You need to apply to get them added. If you a domestic student you can add them from https://study.uq.edu.au/study-options/programs/diploma-languages-1602 if not, you can lodge them through mySI-net before the due date.  Consult the academic calender for the due dates.","Yes, you absolutely can! UQ allows students in the Bachelor of Information Technology (BIT) to pursue a Concurrent Diploma in Languages. It's a popular and valuable combination.
 
 Here's a breakdown of what you need to know and the steps to take:
@@ -433,7 +433,7 @@ Here's a breakdown of what it covers:
 
 **Important Considerations & Other Fees:**
 
-*   **Non-Commonwealth Supported Places (e.g., International Students, some Postgraduate Programs):** The refund policy",5.0,5.0,4.0,5.0,0.9750000000000001
+*   **Non-Commonwealth Supported Places (e.g., International Students, some Postgraduate Programs):** The refund policy",4.0,5.0,4.0,5.0,0.8374999999999999
 35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DECO3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","Yes, BIT students *do* need to complete a capstone project to graduate. It's a significant component of the degree.
 
 Here's a breakdown of what you need to know:
@@ -602,4 +602,4 @@ The suggested first semester plan for Software Information Systems typically inc
 
 *   **CSSE1001: Programming and Software Development** (Required)
 *   **INFS1200: Information Systems Foundations** (Required)",5.0,5.0,4.0,5.0,0.9750000000000001
-MEAN,,,,4.12,5.0,3.92,4.54,0.8405000000000001
+MEAN,,,,4.1,5.0,3.92,4.46,0.83575
