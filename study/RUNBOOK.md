@@ -47,14 +47,14 @@ Open `study/questionnaire.xlsx` and check:
 
 **Suggested email text:**
 
-> Please use the attached Excel file to complete the UQ BIT expert questionnaire (~40–60 minutes).
+> Please use the attached Excel file to complete the University BIT expert questionnaire (~40–60 minutes).
 >
 > **Instructions:**
 > - Fill in your name and email on the **Start here** tab.
 > - Work through tabs **Q01–Q10** (one student question per tab).
 > - For each of the 5 AI-generated answers (A–E), enter a score from **0–5** in each yellow cell.
 >   0 = lowest quality, 5 = highest quality.
-> - A reference answer from official UQ sources is shown at the top of each tab as a quality benchmark.
+> - A reference answer from official the University sources is shown at the top of each tab as a quality benchmark.
 > - Save the file and **reply with the filled workbook attached**.
 >
 > All responses are anonymous. Model names and system identifiers are not shown.

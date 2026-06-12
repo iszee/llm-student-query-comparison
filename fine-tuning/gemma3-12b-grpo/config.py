@@ -73,7 +73,7 @@ class Config:
     vllm_cache_dir: str = "fine-tuning/gemma3-12b-grpo/cache/vllm"  # writable cache (VLLM_CACHE_ROOT + TRITON_CACHE_DIR)
 
     # ── Weights & Biases ──────────────────────────────────────────────────────
-    wandb_entity: str = "uq-unibot"     # W&B team/org (set via WANDB_ENTITY env var)
-    wandb_project: str = "uni-bot"      # W&B project name (no slashes)
+    wandb_entity: str = "anon-org"     # W&B team/org (set via WANDB_ENTITY env var)
+    wandb_project: str = "anon-project"      # W&B project name (no slashes)
     run_name: str = "gemma3-12b-grpo-geval"
     report_to: str = "wandb"            # set to "none" to disable W&B

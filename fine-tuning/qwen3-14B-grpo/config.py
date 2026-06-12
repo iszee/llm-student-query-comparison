@@ -73,7 +73,7 @@ class Config:
     vllm_cache_dir: str = "fine-tuning/qwen3-14B-grpo/cache/vllm"  # writable cache (VLLM_CACHE_ROOT + TRITON_CACHE_DIR)
 
     # ── Weights & Biases ──────────────────────────────────────────────────────
-    wandb_entity: str = "uq-unibot"
-    wandb_project: str = "uni-bot"
+    wandb_entity: str = "anon-org"
+    wandb_project: str = "anon-project"
     run_name: str = "qwen3-14B-grpo-geval"
     report_to: str = "wandb"

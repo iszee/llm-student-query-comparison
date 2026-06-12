@@ -3,18 +3,18 @@
 
 ## 1. Study Overview
 
-Three UQ academic experts rated 50 AI-generated answers (10 student questions × 5 answers each) on four dimensions using a 0–5 integer scale. The same four dimensions and scale were used by the GPT-4o judge (G-Eval). This report quantifies (a) inter-rater reliability among the experts and (b) agreement between the expert consensus and the automated GPT-4o judge.
+Three the University academic experts rated 50 AI-generated answers (10 student questions × 5 answers each) on four dimensions using a 0–5 integer scale. The same four dimensions and scale were used by the GPT-4o judge (G-Eval). This report quantifies (a) inter-rater reliability among the experts and (b) agreement between the expert consensus and the automated GPT-4o judge.
 
 **Raters:**
-- c.wijenayake@uq.edu.au
-- t.halloluwa@uq.edu.au
-- u.rathnayakemudiyanselage@uq.edu.au
+- rater1@example.edu
+- rater2@example.edu
+- rater3@example.edu
 
 | Rater | Ratings filled / 200 |
 |-------|----------------------|
-| c.wijenayake@uq.edu.au | 200 / 200 |
-| t.halloluwa@uq.edu.au | 200 / 200 |
-| u.rathnayakemudiyanselage@uq.edu.au | 200 / 200 |
+| rater1@example.edu | 200 / 200 |
+| rater2@example.edu | 200 / 200 |
+| rater3@example.edu | 200 / 200 |
 
 Missing scores (4 items from one rater) are excluded from aggregations on a per-metric basis; they do not affect other raters' scores.
 
@@ -60,7 +60,7 @@ Mean scores across the 50 rated items per dimension:
 
 ### 3.3 Pairwise Spearman (per dimension)
 
-| Dimension | c.wijenayake vs t.halloluwa | c.wijenayake vs u.rathnayakemudiyanselage | t.halloluwa vs u.rathnayakemudiyanselage |
+| Dimension | rater1 vs rater2 | rater1 vs rater3 | rater2 vs rater3 |
 |-----------|---------|---------|---------|
 | Factual accuracy | 0.604 | 0.476 | 0.630 |
 | Relevance | 0.589 | 0.508 | 0.558 |
@@ -94,9 +94,9 @@ Mean scores across the 50 rated items per dimension:
 
 | Rater | Spearman ρ vs G-Eval |
 |-------|---------------------|
-| c.wijenayake@uq.edu.au | 0.665 |
-| t.halloluwa@uq.edu.au | 0.669 |
-| u.rathnayakemudiyanselage@uq.edu.au | 0.748 |
+| rater1@example.edu | 0.665 |
+| rater2@example.edu | 0.669 |
+| rater3@example.edu | 0.748 |
 
 > Human–human mean pairwise ρ (pooled) = **0.589**. If each rater's ρ against G-Eval exceeds this value, the judge agrees with each expert *more strongly* than the experts agree with each other — a key indicator that the automated judge is performing at or above inter-human level.
 

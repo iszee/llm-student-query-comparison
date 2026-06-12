@@ -1,7 +1,7 @@
 """
 retrieve.py
 -----------
-Hybrid RAG retriever for the UQ BIT information assistant.
+Hybrid RAG retriever for the University BIT information assistant.
 
 Pipeline: dense (BGE-M3) + BM25 → Reciprocal Rank Fusion → cross-encoder rerank
          → score threshold → LLM relevance filter (gpt-4o-mini).

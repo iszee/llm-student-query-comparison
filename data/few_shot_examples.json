@@ -1,6 +1,6 @@
 {
   "description": "Held-out human-validated examples for inference-time few-shot prompting. Prepend these turns after the system message and before the user question.",
-  "system_prompt": "You are a helpful information assistant for the UQ Bachelor of Information Technology program. Answer student questions accurately and concisely. Only provide information you are confident about. If you are not certain about a specific fact, say so and direct the student to study.uq.edu.au rather than guessing.",
+  "system_prompt": "You are a helpful information assistant for the University Bachelor of Information Technology program. Answer student questions accurately and concisely. Only provide information you are confident about. If you are not certain about a specific fact, say so and direct the student to study.example.edu rather than guessing.",
   "turns": [
     {
       "role": "user",
@@ -8,7 +8,7 @@
     },
     {
       "role": "assistant",
-      "content": "The minimum without adjusted score for Semester 1, 2026 was 84, with a median of 87.25 and a highest of 97.95.  Check study.uq.edu.au as scores are updated annually."
+      "content": "The minimum without adjusted score for Semester 1, 2026 was 84, with a median of 87.25 and a highest of 97.95.  Check study.example.edu as scores are updated annually."
     },
     {
       "role": "user",
@@ -16,23 +16,23 @@
     },
     {
       "role": "assistant",
-      "content": "Not necessarily. If you completed senior secondary schooling or at least one year of full-time post-secondary study at an institution in a designated English-speaking location, you may meet UQ's English requirements without a separate test. Designated locations include Australia, Canada, Ireland, New Zealand, the UK, and the USA. Check study.uq.edu.au for the full list."
+      "content": "Not necessarily. If you completed senior secondary schooling or at least one year of full-time post-secondary study at an institution in a designated English-speaking location, you may meet the University's English requirements without a separate test. Designated locations include Australia, Canada, Ireland, New Zealand, the UK, and the USA. Check study.example.edu for the full list."
     },
     {
       "role": "user",
-      "content": "What is the UQ SafeZone app and when should I use it?"
+      "content": "What is the University SafeZone app and when should I use it?"
     },
     {
       "role": "assistant",
-      "content": "The UQ SafeZone app connects students directly with UQ security officers or emergency services from your mobile phone. It also provides a safety escort feature if you want someone to accompany you to public transport or your car. The Safety Bus also runs around the St Lucia campus."
+      "content": "The the University SafeZone app connects students directly with the University security officers or emergency services from your mobile phone. It also provides a safety escort feature if you want someone to accompany you to public transport or your car. The Safety Bus also runs around the the main campus campus."
     },
     {
       "role": "user",
-      "content": "How do domestic students apply for the BIT at UQ?"
+      "content": "How do domestic students apply for the BIT at the University?"
     },
     {
       "role": "assistant",
-      "content": "Domestic students apply through QTAC (Queensland Tertiary Admissions Centre) at qtac.edu.au. The QTAC code for the Bachelor of Information Technology is 733001. Interstate students also apply through QTAC."
+      "content": "Domestic students apply through the state admissions centre (the state Tertiary Admissions Centre) at qtac.edu.au. The the state admissions centre code for the Bachelor of Information Technology is 733001. Interstate students also apply through the state admissions centre."
     },
     {
       "role": "user",

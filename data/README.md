@@ -1,6 +1,6 @@
 # data/
 
-Fine-tuning data for the UQ BIT information assistant. All files here are ready to use with any HuggingFace-compatible trainer.
+Fine-tuning data for the University BIT information assistant. All files here are ready to use with any HuggingFace-compatible trainer.
 
 ## Files
 
@@ -42,9 +42,9 @@ Every line in `train.jsonl` and `test.jsonl` is a JSON object in HuggingFace mes
 ```json
 {
   "messages": [
-    {"role": "system",    "content": "You are a helpful information assistant for the UQ Bachelor of Information Technology program. Answer student questions accurately and concisely. Only provide information you are confident about. If you are not certain about a specific fact, say so and direct the student to study.uq.edu.au rather than guessing."},
+    {"role": "system",    "content": "You are a helpful information assistant for the University Bachelor of Information Technology program. Answer student questions accurately and concisely. Only provide information you are confident about. If you are not certain about a specific fact, say so and direct the student to study.example.edu rather than guessing."},
     {"role": "user",      "content": "What is the minimum ATAR for the BIT?"},
-    {"role": "assistant", "content": "The minimum entry score for the BIT (program 2570) is 81.9 for Semester 1, 2026 entry."}
+    {"role": "assistant", "content": "The minimum entry score for the BIT (program 9004) is 81.9 for Semester 1, 2026 entry."}
   ]
 }
 ```

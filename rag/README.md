@@ -1,8 +1,8 @@
 # RAG Module
 
-Retrieval-Augmented Generation for the UQ BIT evaluation pipeline.
+Retrieval-Augmented Generation for the University BIT evaluation pipeline.
 
-The module builds a hybrid search index over UQ source documents and exposes a `Retriever` class that the evaluation scripts use to inject relevant passages into model prompts.
+The module builds a hybrid search index over the University source documents and exposes a `Retriever` class that the evaluation scripts use to inject relevant passages into model prompts.
 
 ## Prerequisites
 
@@ -29,12 +29,12 @@ An `OPENAI_API_KEY` is required for the Contextual Retrieval step (GPT-4o-mini w
 The index is built from two sources:
 
 **PDFs** - all `*.pdf` files in `data-collection/sources/`:
-- `international-guide-undergraduate-postgraduate.pdf` - UQ International Student Guide 2026
-- `domestic-guide-undergraduate.pdf` - UQ Domestic Undergraduate Guide 2026
+- `international-guide-undergraduate-postgraduate.pdf` - the University International Student Guide 2026
+- `domestic-guide-undergraduate.pdf` - the University Domestic Undergraduate Guide 2026
 
 Adding a new PDF is automatic: drop it into `data-collection/sources/` and re-run `python -m rag build --force`.
 
-**Program pages** - all URLs listed in `data-collection/sources/program-pages.txt` (8 UQ BIT program pages).
+**Program pages** - all URLs listed in `data-collection/sources/program-pages.txt` (8 the University BIT program pages).
 
 ## Building the index
 

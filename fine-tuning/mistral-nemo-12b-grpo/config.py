@@ -73,7 +73,7 @@ class Config:
     vllm_cache_dir: str = "fine-tuning/mistral-nemo-12b-grpo/cache/vllm"  # writable cache (VLLM_CACHE_ROOT + TRITON_CACHE_DIR)
 
     # ── Weights & Biases ──────────────────────────────────────────────────────
-    wandb_entity: str = "uq-unibot"
-    wandb_project: str = "uni-bot"
+    wandb_entity: str = "anon-org"
+    wandb_project: str = "anon-project"
     run_name: str = "mistral-nemo-12b-grpo-geval"
     report_to: str = "wandb"

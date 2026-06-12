@@ -1,31 +1,31 @@
 idx,question,reference,generated_response,factual_accuracy,relevance,conciseness,no_hallucination,composite_score
-0,I need academic English support as a BIT student. What resources are available?,"UQ offers a free English for Academic Communication (EAC) program through UQ College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services.","Okay, that's great you're proactively seeking support! UQ offers a range of resources to help BIT students with their academic English skills. Here's a breakdown, categorized by intensity and cost:
+0,I need academic English support as a BIT student. What resources are available?,"the University offers a free English for Academic Communication (EAC) program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services.","Okay, that's great you're proactively seeking support! the University offers a range of resources to help BIT students with their academic English skills. Here's a breakdown, categorized by intensity and cost:
 
-**1. UQ Academic Skills Unit (Free & Highly Recommended):**
+**1. the University Academic Skills Unit (Free & Highly Recommended):**
 
-*   **Workshops:** The Academic Skills Unit (ASU) offers a wide range of free workshops covering various aspects of academic writing, reading, and communication. Look for workshops specifically geared towards technical writing or report writing, which are crucial for BIT.  Check their website regularly for schedules: [https://students.uq.edu.au/academic-skills](https://students.uq.edu.au/academic-skills)
+*   **Workshops:** The Academic Skills Unit (ASU) offers a wide range of free workshops covering various aspects of academic writing, reading, and communication. Look for workshops specifically geared towards technical writing or report writing, which are crucial for BIT.  Check their website regularly for schedules: [https://students.example.edu/academic-skills](https://students.example.edu/academic-skills)
 *   **Online Resources:** The ASU website has a wealth of guides, videos, and templates on topics like essay structure, referencing, grammar, and paraphrasing. This is a great starting point.
 *   **Drop-in Support:** They offer drop-in sessions where you can get quick advice on specific writing or study challenges.
 *   **One-to-One Consultations (Limited Availability):**  You can book a one-on-one consultation with an academic skills advisor. These are very helpful for personalized feedback",4.333333333333333,5.0,4.0,4.333333333333333,0.8933333333333333
-1,I am a BIT student interested in entrepreneurship. What opportunities does UQ offer?,"UQ actively supports entrepreneurship through free programs, clubs, and the UQ entrepreneurial ecosystem. Enrichment programs including internships, global study, research projects, and industry events contribute to entrepreneurial development. The University also supports entrepreneurs at every stage of their journey through industry networks.","That's fantastic! UQ has a growing ecosystem for entrepreneurship, and there are several opportunities for BIT students interested in that field. Here's a breakdown of what UQ offers, categorized for clarity:
+1,I am a BIT student interested in entrepreneurship. What opportunities does the University offer?,"the University actively supports entrepreneurship through free programs, clubs, and the University entrepreneurial ecosystem. Enrichment programs including internships, global study, research projects, and industry events contribute to entrepreneurial development. The University also supports entrepreneurs at every stage of their journey through industry networks.","That's fantastic! the University has a growing ecosystem for entrepreneurship, and there are several opportunities for BIT students interested in that field. Here's a breakdown of what the University offers, categorized for clarity:
 
 **1. Dedicated Entrepreneurship Programs & Initiatives:**
 
-*   **UQ Ventures:** This is UQ's flagship entrepreneurship program. It's a great starting point. They offer:
+*   **the University Ventures:** This is the University's flagship entrepreneurship program. It's a great starting point. They offer:
     *   **iLab:** A pre-accelerator program for early-stage startups. It's highly competitive but provides mentorship, workshops, and seed funding. (Highly recommended!)
     *   **Founders Program:** A more intensive accelerator program for startups with more traction.
     *   **Startup Weekend:** A 54-hour event where you form teams, develop a business idea, and pitch it to a panel of judges. A great way to test an idea quickly.
-    *   **Entrepreneurship Workshops & Events:** UQ Ventures regularly hosts workshops, speaker series, and networking events focused on various aspects of entrepreneurship.
-*   **UQ Business School Entrepreneurship:** The Business School has a strong focus on entrepreneurship, with courses and resources available.
+    *   **Entrepreneurship Workshops & Events:** the University Ventures regularly hosts workshops, speaker series, and networking events focused on various aspects of entrepreneurship.
+*   **the University Business School Entrepreneurship:** The Business School has a strong focus on entrepreneurship, with courses and resources available.
 *   **Innovation Showcase:** An annual event where student",4.666666666666667,5.0,4.333333333333333,4.666666666666667,0.9433333333333334
-2,What is the CRICOS code for the Bachelor of Information Technology?,The CRICOS code for the Bachelor of Information Technology is 001952K.,"The CRICOS code for the Bachelor of Information Technology at UQ is **093863M**.
+2,What is the CRICOS code for the Bachelor of Information Technology?,The CRICOS code for the Bachelor of Information Technology is 001952K.,"The CRICOS code for the Bachelor of Information Technology at the University is **093863M**.
 
 This code is important for international students as it verifies that the course is registered to operate in Australia.",0.0,5.0,5.0,3.0,0.41
-3,What healthcare facilities are available at the St Lucia campus for BIT students?,"The St Lucia campus has a UQ Health Care clinic, UQ Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the UQ SafeZone app connecting students to security officers or emergency services.","Okay, let's break down the healthcare facilities available at UQ's St Lucia campus that are relevant for BIT students. Here's a comprehensive overview:
+3,What healthcare facilities are available at the the main campus campus for BIT students?,"The the main campus campus has a University Health Care clinic, the University Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the University SafeZone app connecting students to security officers or emergency services.","Okay, let's break down the healthcare facilities available at the University's the main campus campus that are relevant for BIT students. Here's a comprehensive overview:
 
 **1. The University Medical and Counselling Centre (UMCC):** This is your primary resource.
 
-*   **Location:** Morris Centre, Building 20, St Lucia Campus.
+*   **Location:** Morris Centre, Building 20, the main campus Campus.
 *   **Services:**
     *   **General Medical Services:** Doctors are available for consultations, diagnosis, and treatment of a wide range of medical conditions. This includes things like colds, flu, minor injuries, and chronic conditions.
     *   **Nursing Services:** Registered nurses provide health assessments, wound care, vaccinations (some may incur a fee), and health education.
@@ -35,17 +35,17 @@ This code is important for international students as it verifies that the course
 *   **Cost:**  Generally, consultations",3.3333333333333335,3.6666666666666665,4.0,3.6666666666666665,0.7033333333333334
 4,What academic support services are available to BIT students who are falling behind?,"Peer Assisted Study Sessions (PASS) - facilitated by second- and third-year students who have achieved top grades in your course. They can provide advice on coursework and content, and suggest effective study habits that will help you make the most of your time.  
 Academic workshops - to gain new skills and prepare for exams by attending free workshops held by our Student Support and Wellbeing Services team.
-Student Advisers - Student Advice Team can help you with a wide range of professional and confidential services. This includes support for welfare and wellbeing, diversity and inclusion, career development, counselling, and more.","UQ offers a robust range of academic support services specifically designed to help students who are struggling. Here's a breakdown of what's available for BIT students (and all UQ students, really) who are falling behind:
+Student Advisers - Student Advice Team can help you with a wide range of professional and confidential services. This includes support for welfare and wellbeing, diversity and inclusion, career development, counselling, and more.","the University offers a robust range of academic support services specifically designed to help students who are struggling. Here's a breakdown of what's available for BIT students (and all the University students, really) who are falling behind:
 
 **1. Academic Skills Support:**
 
-*   **AskUQ:** This is your first point of contact. It's a central hub for all student enquiries and can direct you to the right support.  You can access it online, via phone, or in person. [https://ask.uq.edu.au/](https://ask.uq.edu.au/)
+*   **AskUQ:** This is your first point of contact. It's a central hub for all student enquiries and can direct you to the right support.  You can access it online, via phone, or in person. [https://ask.example.edu/](https://ask.example.edu/)
 *   **The Study Success Office:** This is a *key* resource. They offer:
-    *   **Workshops:** Covering topics like time management, exam preparation, note-taking, essay writing, and more.  Check their website for the current schedule. [https://students.uq.edu.au/study-success](https://students.uq.edu.au/study-success)
+    *   **Workshops:** Covering topics like time management, exam preparation, note-taking, essay writing, and more.  Check their website for the current schedule. [https://students.example.edu/study-success](https://students.example.edu/study-success)
     *   **One-on-One Consultations:**  You can book a session with a learning advisor to discuss your specific challenges and develop strategies.  This is *highly* recommended if you're feeling lost.",4.333333333333333,4.666666666666667,4.333333333333333,4.0,0.8766666666666667
-5,What IB score is needed for the IT dual degrees such as Commerce/IT or Business Management/IT?,"A minimum International Baccalaureate (IB) score of 32 is required for most IT dual degrees at UQ, including BCom/IT and BBusMgt/IT. You should also ensure your IB subjects meet the English and mathematics prerequisites for the specific program.","Okay, let's break down the IB score requirements for the dual degrees you mentioned (Commerce/IT and Business Management/IT) at UQ.
+5,What IB score is needed for the IT dual degrees such as Commerce/IT or Business Management/IT?,"A minimum International Baccalaureate (IB) score of 32 is required for most IT dual degrees at the University, including BCom/IT and BBusMgt/IT. You should also ensure your IB subjects meet the English and mathematics prerequisites for the specific program.","Okay, let's break down the IB score requirements for the dual degrees you mentioned (Commerce/IT and Business Management/IT) at the University.
 
-Here's the information, as of the latest available data (always double-check the UQ website for the most up-to-date figures):
+Here's the information, as of the latest available data (always double-check the University website for the most up-to-date figures):
 
 **General IB Requirements:**
 
@@ -56,46 +56,46 @@ Here's the information, as of the latest available data (always double-check the
 
 **Specific Dual Degree Considerations:**
 
-*   **Commerce/IT:**  The above minimums apply.  UQ looks at your overall profile, but achieving a score of 33 or higher significantly strengthens your application.
+*   **Commerce/IT:**  The above minimums apply.  the University looks at your overall profile, but achieving a score of 33 or higher significantly strengthens your application.
 *   **Business Management/IT:** The above minimums apply.  Similar to Commerce/IT, a score of 33 or higher is highly recommended for a competitive application.
 
 **Important Notes & Where to Find the Official Information:**
 
-*   **UQ's Entry Requirements",2.0,4.0,3.6666666666666665,3.0,0.5533333333333333
-6,I received an offer for the BIT from UQ. What do I need to do to accept it?,"Follow the instructions in your offer letter, which typically include: accepting the offer through the apply.uq.edu.au portal, paying any required tuition fee deposit, and arranging OSHC if you are an international student. Then apply for your student visa if required. Contact UQ Admissions if you are unsure about any step.","Okay, congratulations on your offer! Here's a breakdown of what you need to do to accept your offer for the Bachelor of Information Technology (BIT) at UQ. **Please read all the details on your offer letter and QTAC website as this is the most accurate and up-to-date information.**
+*   **the University's Entry Requirements",2.0,4.0,3.6666666666666665,3.0,0.5533333333333333
+6,I received an offer for the BIT from the University. What do I need to do to accept it?,"Follow the instructions in your offer letter, which typically include: accepting the offer through the apply.example.edu portal, paying any required tuition fee deposit, and arranging OSHC if you are an international student. Then apply for your student visa if required. Contact the University Admissions if you are unsure about any step.","Okay, congratulations on your offer! Here's a breakdown of what you need to do to accept your offer for the Bachelor of Information Technology (BIT) at the University. **Please read all the details on your offer letter and the state admissions centre website as this is the most accurate and up-to-date information.**
 
 Here's a general plan, broken down into steps:
 
 **1. Review Your Offer Letter Carefully:**
 
 *   **Read the conditions:** Your offer letter will outline any conditions attached to your offer (e.g., completing a bridging course, providing documentation). Make sure you understand and can meet these conditions.
-*   **Check the offer details:** Confirm the program name, campus (usually St Lucia), and any specific requirements.
+*   **Check the offer details:** Confirm the program name, campus (usually the main campus), and any specific requirements.
 *   **Deadline:** Note the deadline for accepting or declining your offer. **Missing this deadline could mean losing your place.**
 
-**2. Accept Your Offer Through QTAC:**
+**2. Accept Your Offer Through the state admissions centre:**
 
-*   **Log in to QTAC:** Go to qtac.edu.au and log in using your QTAC username and password.
+*   **Log in to the state admissions centre:** Go to qtac.edu.au and log in using your the state admissions centre username and password.
 *   **View Your Offers:** Navigate to the ""My Applications"" or ""Offers"" section.
 *   **Accept or Decline:** You'll see your offer for the",5.0,5.0,4.333333333333333,5.0,0.9866666666666667
-7,I have a Malaysian STPM result. Am I eligible to apply for the BIT at UQ?,The Malaysian STPM or Unified Examination Certificate (UEC) is accepted as a Queensland Year 12 equivalent.,"Yes, you are likely eligible to apply for the Bachelor of Information Technology (BIT) at UQ with STPM results! However, there are specific requirements you need to meet. Here's a breakdown of what you need to know and the steps to take:
+7,I have a Malaysian STPM result. Am I eligible to apply for the BIT at the University?,The Malaysian STPM or Unified Examination Certificate (UEC) is accepted as a the state Year 12 equivalent.,"Yes, you are likely eligible to apply for the Bachelor of Information Technology (BIT) at the University with STPM results! However, there are specific requirements you need to meet. Here's a breakdown of what you need to know and the steps to take:
 
 **1. Minimum STPM Score:**
 
-*   UQ generally requires a minimum STPM score of **3.00** overall, with a minimum grade of **C+** in Mathematics and Physics (if required for your chosen program - BIT generally does require Mathematics).
-*   Check the specific program entry requirements on the UQ website for the most up-to-date and accurate information: [https://www.uq.edu.au/study/degrees/bachelor-of-information-technology/admission-requirements](https://www.uq.edu.au/study/degrees/bachelor-of-information-technology/admission-requirements)
+*   the University generally requires a minimum STPM score of **3.00** overall, with a minimum grade of **C+** in Mathematics and Physics (if required for your chosen program - BIT generally does require Mathematics).
+*   Check the specific program entry requirements on the University website for the most up-to-date and accurate information: [https://www.example.edu/study/degrees/bachelor-of-information-technology/admission-requirements](https://www.example.edu/study/degrees/bachelor-of-information-technology/admission-requirements)
 
 **2. Subject Requirements (Crucially Important):**
 
-*   **Mathematics:**  A good grade in Mathematics is *essential* for the BIT.  Check the UQ website for the specific grade required (usually C+ or better).
+*   **Mathematics:**  A good grade in Mathematics is *essential* for the BIT.  Check the University website for the specific grade required (usually C+ or better).
 *   **Physics:** While not always mandatory, Physics is often highly recommended",3.6666666666666665,5.0,4.0,3.6666666666666665,0.8066666666666666
-8,Is there a Semester 2 intake for the Bachelors of Engineering (Honours) / IT dual degree?,Yes. The Bachelors of Engineering (Honours) / Information Technology is available for both Semester 1 and 2 intakes.,"No, the Bachelor of Engineering (Honours) / Information Technology dual degree at UQ has a **Semester 1 only intake**. You can only apply to start the program at the beginning of the academic year (Semester 1).
+8,Is there a Semester 2 intake for the Bachelors of Engineering (Honours) / IT dual degree?,Yes. The Bachelors of Engineering (Honours) / Information Technology is available for both Semester 1 and 2 intakes.,"No, the Bachelor of Engineering (Honours) / Information Technology dual degree at the University has a **Semester 1 only intake**. You can only apply to start the program at the beginning of the academic year (Semester 1).
 
 So, if you've missed the Semester 1 intake, you'll need to wait until the following year to apply.
 
 
 
-You can confirm this information on the UQ website: [https://study.uq.edu.au/program/bachelor-engineering-honours-information-technology](https://study.uq.edu.au/program/bachelor-engineering-honours-information-technology)",0.0,5.0,5.0,1.6666666666666667,0.38333333333333336
-9,"What is a Genuine Student (GS) Assessment, and do I need to complete one?",A Genuine Student Assessment is required by the Australian Government for international applicants. You may be asked to complete a GS Assessment and provide a GS Agent Checklist (if using an agent) as part of your UQ application.,"Okay, let's break down the Genuine Student (GS) Assessment and whether you need to complete one.
+You can confirm this information on the University website: [https://study.example.edu/program/bachelor-engineering-honours-information-technology](https://study.example.edu/program/bachelor-engineering-honours-information-technology)",0.0,5.0,5.0,1.6666666666666667,0.38333333333333336
+9,"What is a Genuine Student (GS) Assessment, and do I need to complete one?",A Genuine Student Assessment is required by the Australian Government for international applicants. You may be asked to complete a GS Assessment and provide a GS Agent Checklist (if using an agent) as part of your the University application.,"Okay, let's break down the Genuine Student (GS) Assessment and whether you need to complete one.
 
 **What is a Genuine Student (GS) Assessment?**
 
@@ -113,13 +113,13 @@ The assessment typically involves:
 **Do *You* Need to Complete One?**
 
 **As a domestic student, you do NOT need to complete a Genuine Student (GS) Assessment.** This assessment is *",5.0,4.666666666666667,4.0,5.0,0.9633333333333335
-10,What is the Jump Start Academic Preparation Program (JSAPP) at UQ?,"JSAPP is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","The Jump Start Academic Preparation Program (JSAPP) at UQ is a fantastic initiative designed to help new, commencing undergraduate students transition smoothly into university life and succeed in their studies. Here's a breakdown of what it is and what it offers:
+10,What is the Jump Start Academic Preparation Program (JSAPP) at the University?,"JSAPP is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","The Jump Start Academic Preparation Program (JSAPP) at the University is a fantastic initiative designed to help new, commencing undergraduate students transition smoothly into university life and succeed in their studies. Here's a breakdown of what it is and what it offers:
 
 **What it is:**
 
 *   **A free, week-long program:** It's held before the start of Semester 1 each year.
 *   **Targeted at new undergraduate students:** Primarily aimed at students who may be feeling a bit unsure about university study, or who are from backgrounds where they haven't had as much exposure to higher education.
-*   **Focus on academic skills and university life:** It's not about reviewing high school content, but about equipping you with the skills and knowledge you need to thrive at UQ.
+*   **Focus on academic skills and university life:** It's not about reviewing high school content, but about equipping you with the skills and knowledge you need to thrive at the University.
 
 **What it offers:**
 
@@ -129,9 +129,9 @@ The assessment typically involves:
     *   Critical thinking and reading
     *   Essay writing and referencing
     *   Exam preparation
-*   **Campus Tours:** Familiarize yourself with the St Lucia campus and other UQ locations.
+*   **Campus Tours:** Familiarize yourself with the the main campus campus and other the University locations.
 *   **Meet & Greet Sessions:** Connect with other",4.666666666666667,5.0,5.0,5.0,0.9633333333333333
-11,Does the BIT include an integrated honours year?,"No. The standalone Bachelor of Information Technology (3 years) does not include an integrated honours year. After completing the BIT with a sufficient GPA (5.0/7.0 minimum), you can apply separately for the Bachelor of Information Technology (Honours), a one-year program.","Yes, the Bachelor of Information Technology (BIT) at UQ *does* include an integrated Honours year. It's a four-year program, with the Honours year being the fourth year.
+11,Does the BIT include an integrated honours year?,"No. The standalone Bachelor of Information Technology (3 years) does not include an integrated honours year. After completing the BIT with a sufficient GPA (5.0/7.0 minimum), you can apply separately for the Bachelor of Information Technology (Honours), a one-year program.","Yes, the Bachelor of Information Technology (BIT) at the University *does* include an integrated Honours year. It's a four-year program, with the Honours year being the fourth year.
 
 Here's a breakdown:
 
@@ -142,14 +142,14 @@ The Honours year is a great opportunity to develop research skills and potential
 
 
 
-You can find more details on the UQ website: [https://study.uq.edu.au/programs/bachelor-information-technology-honours](https://study.uq.edu.au/programs/bachelor-information-technology-honours)",0.0,1.6666666666666667,2.6666666666666665,0.0,0.13666666666666666
-12,Can work experience be counted as prior learning credit when applying for the BIT as an international student?,"Credit for work experience alone is not typically granted for undergraduate programs at UQ. Credit is assessed based on formal prior learning that is equivalent in level, standard, and content to UQ courses.","This is a tricky one and requires careful investigation. Here's a breakdown of how work experience *might* be considered for prior learning credit as an international student at UQ for the BIT, and the important caveats:
+You can find more details on the University website: [https://study.example.edu/programs/bachelor-information-technology-honours](https://study.example.edu/programs/bachelor-information-technology-honours)",0.0,1.6666666666666667,2.6666666666666665,0.0,0.13666666666666666
+12,Can work experience be counted as prior learning credit when applying for the BIT as an international student?,"Credit for work experience alone is not typically granted for undergraduate programs at the University. Credit is assessed based on formal prior learning that is equivalent in level, standard, and content to the University courses.","This is a tricky one and requires careful investigation. Here's a breakdown of how work experience *might* be considered for prior learning credit as an international student at the University for the BIT, and the important caveats:
 
-**Generally, it's difficult, but not impossible.** UQ, like most Australian universities, prioritizes formal academic qualifications for international student admissions. Work experience alone rarely qualifies for significant credit.
+**Generally, it's difficult, but not impossible.** the University, like most Australian universities, prioritizes formal academic qualifications for international student admissions. Work experience alone rarely qualifies for significant credit.
 
 **Here's the process and what you need to know:**
 
-1. **UQ's Prior Learning Recognition (PLR) Policy:** UQ has a PLR policy, but it's primarily designed for *domestic* students who have completed relevant tertiary studies.  The policy can be found here: [https://ppl.uq.edu.au/prior-learning-recognition](https://ppl.uq.edu.au/prior-learning-recognition)  Read this carefully, as it outlines the general principles.
+1. **the University's Prior Learning Recognition (PLR) Policy:** the University has a PLR policy, but it's primarily designed for *domestic* students who have completed relevant tertiary studies.  The policy can be found here: [https://ppl.example.edu/prior-learning-recognition](https://ppl.example.edu/prior-learning-recognition)  Read this carefully, as it outlines the general principles.
 
 2. **Assessment is Case-by-Case:** Any potential PLR for international students is assessed on a case-by-case basis.  It's not automatic.
 
@@ -159,7 +159,7 @@ You can find more details on the UQ website: [https://study.uq.edu.au/programs/b
 
 **What is INFS2200?**
 
-INFS2200 is titled **Database Systems**. It's a core unit in the Bachelor of Information Technology and several other related degrees at UQ. The unit focuses on the principles and practices of database design and implementation. You'll learn about:
+INFS2200 is titled **Database Systems**. It's a core unit in the Bachelor of Information Technology and several other related degrees at the University. The unit focuses on the principles and practices of database design and implementation. You'll learn about:
 
 *   **Relational Database Management Systems (RDBMS):** This is the core focus, using SQL (Structured Query Language) to interact with databases.
 *   **Database Design:**  You'll learn how to model data effectively using techniques like Entity-Relationship (ER) diagrams.
@@ -174,29 +174,29 @@ The prerequisite for INFS2200 is **INFS1100 - Foundations of Information Technol
 **Important Notes:**
 
 *   **Assumed Knowledge:** While INFS1100 is the formal prerequisite,",3.0,4.333333333333333,3.6666666666666665,4.0,0.7
-14,Does Brisbane have a strong tech industry for IT graduates from UQ?,"Yes. Brisbane is one of Australia's fastest-growing capital cities (ABS 2023) and one of the top 30 best student cities in the world (QS 2025). It is a thriving centre in Asia-Pacific for technology, investment, and major events. With 82.5% of UQ IT graduates in full-time employment, the local and regional job market is strong.","Yes, Brisbane is experiencing a significant boom in its tech industry, and UQ IT graduates are well-positioned to take advantage of it. Here's a breakdown of why Brisbane has a strong tech scene and how UQ graduates fit in:
+14,Does the city have a strong tech industry for IT graduates from the University?,"Yes. the city is one of Australia's fastest-growing capital cities (ABS 2023) and one of the top 30 best student cities in the world (QS 2025). It is a thriving centre in Asia-Pacific for technology, investment, and major events. With 82.5% of the University IT graduates in full-time employment, the local and regional job market is strong.","Yes, the city is experiencing a significant boom in its tech industry, and the University IT graduates are well-positioned to take advantage of it. Here's a breakdown of why the city has a strong tech scene and how the University graduates fit in:
 
-**Why Brisbane's Tech Industry is Strong:**
+**Why the city's Tech Industry is Strong:**
 
-*   **Government Investment:** Both the Queensland and Federal governments are heavily investing in the tech sector, aiming to establish Brisbane as a leading tech hub in Australia. This includes funding for startups, research and development, and infrastructure.
-*   **Growing Startup Ecosystem:** Brisbane has a vibrant and rapidly growing startup scene, with numerous incubators, accelerators, and co-working spaces.
-*   **Major Tech Companies Expanding:** Many large tech companies are establishing or expanding their presence in Brisbane, including Amazon, Google, Microsoft, and IBM.
-*   **Defense and Aerospace:** Brisbane is a key location for the defense and aerospace industries, which rely heavily on technology and create demand for skilled IT professionals.
-*   **Renewable Energy:** Queensland's focus on renewable energy is driving innovation and creating opportunities in areas like smart grids, data analytics, and cybersecurity.
+*   **Government Investment:** Both the the state and Federal governments are heavily investing in the tech sector, aiming to establish the city as a leading tech hub in Australia. This includes funding for startups, research and development, and infrastructure.
+*   **Growing Startup Ecosystem:** the city has a vibrant and rapidly growing startup scene, with numerous incubators, accelerators, and co-working spaces.
+*   **Major Tech Companies Expanding:** Many large tech companies are establishing or expanding their presence in the city, including Amazon, Google, Microsoft, and IBM.
+*   **Defense and Aerospace:** the city is a key location for the defense and aerospace industries, which rely heavily on technology and create demand for skilled IT professionals.
+*   **Renewable Energy:** the state's focus on renewable energy is driving innovation and creating opportunities in areas like smart grids, data analytics, and cybersecurity.
 *   **2032 Olympics:** The upcoming 2032 Olympic Games are a",5.0,5.0,4.0,4.0,0.9600000000000002
-15,Can I do a study abroad or exchange semester as a BIT student at UQ?,Yes. UQ encourages students to participate in exchange programs through the UQ Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact UQ Abroad (uqabroad.uq.edu.au) early - applications typically open 9–12 months before the planned exchange semester.,"Yes, absolutely! As a Bachelor of Information Technology (BIT) student at UQ, you have excellent opportunities for study abroad or exchange. Here's a breakdown of what you need to know:
+15,Can I do a study abroad or exchange semester as a BIT student at the University?,Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (uqabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester.,"Yes, absolutely! As a Bachelor of Information Technology (BIT) student at the University, you have excellent opportunities for study abroad or exchange. Here's a breakdown of what you need to know:
 
-**1. UQ Global Experiences:**
+**1. the University Global Experiences:**
 
-*   **UQ Global Semesters/Years:** This is the main program. You can spend a semester or a full year studying at a partner university overseas. You'll earn UQ credit for the courses you take abroad, which count towards your BIT degree.
-*   **Short Programs:** UQ also offers shorter, intensive programs (typically 2-4 weeks) that often focus on specific topics or cultural immersion. While these might not directly contribute to your BIT degree in the same way as a full semester, they can be a valuable experience.
+*   **the University Global Semesters/Years:** This is the main program. You can spend a semester or a full year studying at a partner university overseas. You'll earn the University credit for the courses you take abroad, which count towards your BIT degree.
+*   **Short Programs:** the University also offers shorter, intensive programs (typically 2-4 weeks) that often focus on specific topics or cultural immersion. While these might not directly contribute to your BIT degree in the same way as a full semester, they can be a valuable experience.
 
 **2. Eligibility & Requirements:**
 
 *   **Academic Standing:** You generally need to maintain a satisfactory academic record (usually a credit average or better) to be eligible.
 *   **Completion of Year 1:**  It's common to require completion of at least one year of your degree before participating in a Global Semester/Year.
-*   **Course Alignment:** You'll need to choose courses overseas that are equivalent to UQ courses and",5.0,5.0,4.666666666666667,5.0,0.9933333333333334
-16,Does the BIT include courses on social media and mobile computing?,Yes. Social and Mobile Computing is listed as one of the key areas of study in the BIT curriculum.,"Yes, the Bachelor of Information Technology (BIT) at UQ does include courses related to social media and mobile computing, though the specific offerings and their titles can change. Here's a breakdown of how they're incorporated:
+*   **Course Alignment:** You'll need to choose courses overseas that are equivalent to the University courses and",5.0,5.0,4.666666666666667,5.0,0.9933333333333334
+16,Does the BIT include courses on social media and mobile computing?,Yes. Social and Mobile Computing is listed as one of the key areas of study in the BIT curriculum.,"Yes, the Bachelor of Information Technology (BIT) at the University does include courses related to social media and mobile computing, though the specific offerings and their titles can change. Here's a breakdown of how they're incorporated:
 
 *   **Social Media:** You'll find aspects of social media covered in courses like:
     *   **INFO2103 - Digital Technologies and Society:** This course explores the social, ethical, and legal implications of digital technologies, including social media.
@@ -206,19 +206,19 @@ The prerequisite for INFS2200 is **INFS1100 - Foundations of Information Technol
 *   **Mobile Computing:** Mobile computing is a significant area within the BIT program. Relevant courses include:
     *   **INFO1101 - Foundations of Programming:** This is a core course that provides the foundational programming skills needed for mobile app development.
     *   **INFO2106 - Human-Computer Interaction:** This course covers the design and evaluation of interactive systems, including mobile apps and devices",4.0,5.0,4.0,3.3333333333333335,0.8366666666666667
-17,I am an international student studying Year 12 in Australia. How do I apply for the BIT?,"If you are an international student currently studying Year 12 in Australia, you can apply through QTAC, the same as domestic students.","Okay, great! Being an international student studying Year 12 in Australia simplifies the application process for the Bachelor of Information Technology (BIT) at UQ. Here's a breakdown of the steps and key information:
+17,I am an international student studying Year 12 in Australia. How do I apply for the BIT?,"If you are an international student currently studying Year 12 in Australia, you can apply through the state admissions centre, the same as domestic students.","Okay, great! Being an international student studying Year 12 in Australia simplifies the application process for the Bachelor of Information Technology (BIT) at the University. Here's a breakdown of the steps and key information:
 
-**1. Application via QTAC:**
+**1. Application via the state admissions centre:**
 
-*   **QTAC is still the primary application portal:** Even as an international student studying in Australia, you apply through QTAC (Queensland Tertiary Admissions Centre) at [https://www.qtac.edu.au/](https://www.qtac.edu.au/).
-*   **QTAC Code:** The QTAC code for the Bachelor of Information Technology is **733001**. Make sure you use this code when applying.
+*   **the state admissions centre is still the primary application portal:** Even as an international student studying in Australia, you apply through the state admissions centre (the state Tertiary Admissions Centre) at [https://www.qtac.edu.au/](https://www.qtac.edu.au/).
+*   **the state admissions centre Code:** The the state admissions centre code for the Bachelor of Information Technology is **733001**. Make sure you use this code when applying.
 
-**2. QTAC Application Process:**
+**2. the state admissions centre Application Process:**
 
-*   **Create a QTAC Account:** If you don't already have one, create an account on the QTAC website.
+*   **Create a the state admissions centre Account:** If you don't already have one, create an account on the the state admissions centre website.
 *   **Complete the Application Form:** Fill out the application form accurately and completely. You'll need to provide personal details, academic information, and select your desired course (BIT - 733001).
-*   **Submit Your Year 12 Results:** QTAC will request your Year 12 results directly from your school",5.0,5.0,5.0,5.0,1.0
-18,What is INFS1200 and why is it important in the BIT?,"INFS1200 is Introduction to Information Systems - Information systems analysis, design and implementation, relational database technology, data modelling, data querying using SQL, building a small scale information systems using a relational database management system.","INFS1200 is ""Data Management and Analytics"". It's a *very* important foundational unit in the Bachelor of Information Technology (BIT) at UQ. Here's a breakdown of what it is and why it's crucial:
+*   **Submit Your Year 12 Results:** the state admissions centre will request your Year 12 results directly from your school",5.0,5.0,5.0,5.0,1.0
+18,What is INFS1200 and why is it important in the BIT?,"INFS1200 is Introduction to Information Systems - Information systems analysis, design and implementation, relational database technology, data modelling, data querying using SQL, building a small scale information systems using a relational database management system.","INFS1200 is ""Data Management and Analytics"". It's a *very* important foundational unit in the Bachelor of Information Technology (BIT) at the University. Here's a breakdown of what it is and why it's crucial:
 
 **What is INFS1200?**
 
@@ -232,27 +232,27 @@ The prerequisite for INFS2200 is **INFS1100 - Foundations of Information Technol
 **Why is it Important in the BIT?**
 
 *   **Foundation for Many Other Units:**  INFS1200 provides the groundwork for numerous other BIT units.  Many advanced courses in areas like software development, business intelligence, data science,",3.0,5.0,5.0,4.0,0.76
-19,Can I study the BIT part-time as a domestic student?,"Yes, the BIT can be studied part-time by domestic students.","Yes, you can study the Bachelor of Information Technology (BIT) part-time as a domestic student at UQ.
+19,Can I study the BIT part-time as a domestic student?,"Yes, the BIT can be studied part-time by domestic students.","Yes, you can study the Bachelor of Information Technology (BIT) part-time as a domestic student at the University.
 
 Here's a breakdown of what you need to know:
 
 *   **Standard Full-Time Load:** A full-time load is typically 4 units per semester.
 *   **Part-Time Load:** A part-time load is generally considered to be 2-3 units per semester.
 *   **Course Duration:** Studying part-time will extend the duration of your degree. The standard degree is 3 years full-time, so part-time study will likely take 6 years to complete.
-*   **How to Apply:** You apply through QTAC as usual, but you'll indicate your desired enrolment load as ""part-time"" during the application process.
-*   **Important Note:** While you *can* study part-time, some courses might have limited availability in certain semesters, which could impact your ability to follow the suggested sequence perfectly. It's always a good idea to check with UQ Student Services or the School of Information Technology and Electrical Engineering for the most up-to-date information and to discuss your study plan.
+*   **How to Apply:** You apply through the state admissions centre as usual, but you'll indicate your desired enrolment load as ""part-time"" during the application process.
+*   **Important Note:** While you *can* study part-time, some courses might have limited availability in certain semesters, which could impact your ability to follow the suggested sequence perfectly. It's always a good idea to check with the University Student Services or the School of Information Technology and Electrical Engineering for the most up-to-date information and to discuss your study plan.
 
 
 
 **Where to find more information:**
 
 *",5.0,5.0,4.333333333333333,5.0,0.9866666666666667
-20,I completed my BIT at UQ and want to apply for the BIT (Honours). Do I need to apply again?,Yes. The BIT (Honours) is a separate program and requires a new application. Apply online at apply.uq.edu.au using program code 2235.,"That's a great question! The answer is **yes, you generally need to apply for the BIT (Honours) even if you've already completed the Bachelor of Information Technology (BIT) at UQ.**
+20,I completed my BIT at the University and want to apply for the BIT (Honours). Do I need to apply again?,Yes. The BIT (Honours) is a separate program and requires a new application. Apply online at apply.example.edu using program code 9001.,"That's a great question! The answer is **yes, you generally need to apply for the BIT (Honours) even if you've already completed the Bachelor of Information Technology (BIT) at the University.**
 
 Here's a breakdown of what you need to know:
 
 *   **It's a separate program:** The Honours program is considered a separate academic program, even though it builds upon your existing degree.
-*   **Application Process:** You'll need to submit an application through the UQ Apply portal. This application will require you to:
+*   **Application Process:** You'll need to submit an application through the University Apply portal. This application will require you to:
     *   Provide your academic transcript (which will show your BIT results).
     *   Write a personal statement outlining your reasons for wanting to pursue Honours and your research interests.
     *   Potentially nominate a supervisor (more on this below).
@@ -260,7 +260,7 @@ Here's a breakdown of what you need to know:
     *   Achieving a satisfactory GPA in your BIT degree (usually a minimum of 3.0 out of 4.0).
     *   Meeting any specific prerequisites for the Honours program.
 *   **Supervisor:** A crucial part of the Honours application is finding a potential supervisor. You'll need to identify a",5.0,5.0,4.0,4.666666666666667,0.9733333333333334
-21,"What is the Student Services and Amenities Fee (SSAF), and do BIT students pay it?","The SSAF is used to fund non-academic services for students, including sports and recreation, employment and career advice, child care and food services. The maximum annual fee is $373 for 2026. This fee increases annually. The amount you have to pay will depend on whether you study full-time or part-time","Okay, let's break down the Student Services and Amenities Fee (SSAF) and how it applies to Bachelor of Information Technology (BIT) students at UQ.
+21,"What is the Student Services and Amenities Fee (SSAF), and do BIT students pay it?","The SSAF is used to fund non-academic services for students, including sports and recreation, employment and career advice, child care and food services. The maximum annual fee is $373 for 2026. This fee increases annually. The amount you have to pay will depend on whether you study full-time or part-time","Okay, let's break down the Student Services and Amenities Fee (SSAF) and how it applies to Bachelor of Information Technology (BIT) students at the University.
 
 **What is the SSAF?**
 
@@ -277,10 +277,10 @@ The SSAF typically supports a range of services, including:
 *   **Career Services:** Workshops, career fairs, and job search assistance.
 *   **IT Services & Amenities:** Access to computer labs, software, and other technology resources.
 
-**Do BIT Students at UQ Pay the SSAF?**
+**Do BIT Students at the University Pay the SSAF?**
 
 **Yes, BIT students at",4.333333333333333,4.333333333333333,3.3333333333333335,4.666666666666667,0.8533333333333333
-22,What is CSSE2002 and is it a prerequisite for advanced BIT courses?,CSSE2002 is Programming in the Large. Prerequisite are CSSE1001 or ENGG1001.,"CSSE2002 is ""Data Structures and Algorithms."" It's a core course in the Bachelor of Information Technology at UQ and a **very important prerequisite** for many advanced BIT courses.
+22,What is CSSE2002 and is it a prerequisite for advanced BIT courses?,CSSE2002 is Programming in the Large. Prerequisite are CSSE1001 or ENGG1001.,"CSSE2002 is ""Data Structures and Algorithms."" It's a core course in the Bachelor of Information Technology at the University and a **very important prerequisite** for many advanced BIT courses.
 
 Here's a breakdown:
 
@@ -294,13 +294,13 @@ Here's a breakdown:
     *   And many more specialized electives.
 
 **Therefore,",2.0,3.6666666666666665,4.0,2.0,0.5233333333333333
-23,Can I add a Concurrent Diploma in Languages alongside my BIT?,"Yes. UQ offers a Concurrent Diploma in Languages that can be studied alongside most bachelor's degrees, including BIT. You need to apply to get them added. If you a domestic student you can add them from https://study.uq.edu.au/study-options/programs/diploma-languages-1602 if not, you can lodge them through mySI-net before the due date.  Consult the academic calender for the due dates.","Yes, you absolutely can! UQ allows students in the Bachelor of Information Technology (BIT) to pursue a Concurrent Diploma in Languages. It's a popular and valuable combination.
+23,Can I add a Concurrent Diploma in Languages alongside my BIT?,"Yes. the University offers a Concurrent Diploma in Languages that can be studied alongside most bachelor's degrees, including BIT. You need to apply to get them added. If you a domestic student you can add them from https://study.example.edu/study-options/programs/diploma-languages-1602 if not, you can lodge them through mySI-net before the due date.  Consult the academic calender for the due dates.","Yes, you absolutely can! the University allows students in the Bachelor of Information Technology (BIT) to pursue a Concurrent Diploma in Languages. It's a popular and valuable combination.
 
 Here's a breakdown of what you need to know and the steps to take:
 
 **1. Eligible Languages:**
 
-*   You can choose from a range of languages offered as Concurrent Diplomas at UQ. These typically include: Chinese, French, German, Indonesian, Italian, Japanese, Korean, Latin, and Spanish. Check the UQ website for the most up-to-date list.
+*   You can choose from a range of languages offered as Concurrent Diplomas at the University. These typically include: Chinese, French, German, Indonesian, Italian, Japanese, Korean, Latin, and Spanish. Check the University website for the most up-to-date list.
 
 **2. Requirements & Credit:**
 
@@ -310,7 +310,7 @@ Here's a breakdown of what you need to know and the steps to take:
 *   **Integration:** The program is designed to integrate the language studies with your BIT coursework.
 
 **3. How to Apply & Enrol:**",5.0,5.0,4.0,5.0,0.9800000000000001
-24,What is DECO3801 and why is it important in the BIT degree?,"Design Computing Studio 3 - Build (DECO3801) is a capstone project course in the BIT. It requires students to work in multidisciplinary teams to design, prototype, and evaluate a computing product for a real client. It integrates skills from across the degree and is typically taken in the final year.","DECO3801 is ""Software Engineering Principles."" It's a *very* important course in the Bachelor of Information Technology (BIT) degree at UQ. Here's a breakdown of what it is and why it's significant:
+24,What is DECO3801 and why is it important in the BIT degree?,"Design Computing Studio 3 - Build (DECO3801) is a capstone project course in the BIT. It requires students to work in multidisciplinary teams to design, prototype, and evaluate a computing product for a real client. It integrates skills from across the degree and is typically taken in the final year.","DECO3801 is ""Software Engineering Principles."" It's a *very* important course in the Bachelor of Information Technology (BIT) degree at the University. Here's a breakdown of what it is and why it's significant:
 
 **What is DECO3801?**
 
@@ -324,36 +324,36 @@ Here's a breakdown of what you need to know and the steps to take:
     *   Project Management for Software Development
     *   Teamwork and Communication in Software Development
 *   **Practical Component:**  A significant portion of the course involves a team-based software development project. You'll work with others to design, implement, test, and document a real-world software application",0.0,2.0,3.3333333333333335,1.0,0.18666666666666668
-25,Is it possible to take a Summer Semester course as a BIT student?,"UQ offers a Summer Semester running from approximately December to January. Not all courses are offered in Summer Semester, and availability varies by year. Check course availability in Programs and Courses and confirm your timetable before enrolling in Summer Semester.","Yes, absolutely! As a Bachelor of Information Technology (BIT) student at UQ, you are eligible to take Summer Semester courses.
+25,Is it possible to take a Summer Semester course as a BIT student?,"the University offers a Summer Semester running from approximately December to January. Not all courses are offered in Summer Semester, and availability varies by year. Check course availability in Programs and Courses and confirm your timetable before enrolling in Summer Semester.","Yes, absolutely! As a Bachelor of Information Technology (BIT) student at the University, you are eligible to take Summer Semester courses.
 
 Here's what you need to know:
 
-*   **Availability:** Not all BIT courses are offered in Summer Semester. You'll need to check the UQ Handbook and the Summer Semester course offerings to see what's available.
+*   **Availability:** Not all BIT courses are offered in Summer Semester. You'll need to check the University Handbook and the Summer Semester course offerings to see what's available.
 *   **Credit Points:** Summer Semester courses are typically worth fewer credit points than Semester courses.
 *   **Prerequisites:** Ensure you meet the prerequisites for any Summer Semester courses you wish to take.
-*   **Enrolment:** You'll enrol in Summer Semester courses through my.UQ just like you would for regular semester courses.
+*   **Enrolment:** You'll enrol in Summer Semester courses through my.the University just like you would for regular semester courses.
 *   **Benefits:** Taking a Summer Semester course can help you get ahead in your degree, lighten your load during regular semesters, or explore a new area of interest.
 
 
 
 **Where to find information:**
 
-*   **UQ Handbook:** [https://handbook.uq.edu.au/](https://handbook.uq.edu.au/) - Search for your program and then look at the course offerings.
-*   **Summer Semester Course Search:** [https://summer.uq.edu.au/](https://",5.0,5.0,5.0,5.0,1.0
-26,What career services does UQ provide to help IT students find employment?,"UQ provides career services through the Enhance Your Employability program, including global study, internships, career workshops, research projects, and industry events. The EAIT faculty has industry connections through research partnerships and employer networks relevant to IT careers.","UQ's Career Services offers a robust suite of resources specifically beneficial for IT students looking for employment. Here's a breakdown of what they provide:
+*   **the University Handbook:** [https://handbook.example.edu/](https://handbook.example.edu/) - Search for your program and then look at the course offerings.
+*   **Summer Semester Course Search:** [https://summer.example.edu/](https://",5.0,5.0,5.0,5.0,1.0
+26,What career services does the University provide to help IT students find employment?,"the University provides career services through the Enhance Your Employability program, including global study, internships, career workshops, research projects, and industry events. The EAIT faculty has industry connections through research partnerships and employer networks relevant to IT careers.","the University's Career Services offers a robust suite of resources specifically beneficial for IT students looking for employment. Here's a breakdown of what they provide:
 
 **1. Career Advising & Coaching:**
 
 *   **One-on-One Appointments:** You can book appointments with career advisors to discuss your career goals, explore options, review your resume and cover letter, and practice interview skills.
-*   **Career Workshops:** UQ offers a wide range of workshops covering topics like resume writing, interview techniques, networking, LinkedIn profile optimization, and career planning. Many are tailored to specific industries, including IT.
+*   **Career Workshops:** the University offers a wide range of workshops covering topics like resume writing, interview techniques, networking, LinkedIn profile optimization, and career planning. Many are tailored to specific industries, including IT.
 *   **Online Resources:** A comprehensive online portal with articles, videos, and templates to guide you through the job search process.
 
 **2. Employer Engagement & Recruitment:**
 
-*   **UQ Careers Hub:** This is the central online platform where employers post graduate jobs, internships, and vacation placements.  It's *essential* to regularly check this.
-*   **Career Fairs & Networking Events:** UQ hosts several career fairs throughout the year, including those specifically targeting IT and engineering students. These are great opportunities to meet recruiters and learn about potential employers. They also host smaller networking events with specific companies.
+*   **the University Careers Hub:** This is the central online platform where employers post graduate jobs, internships, and vacation placements.  It's *essential* to regularly check this.
+*   **Career Fairs & Networking Events:** the University hosts several career fairs throughout the year, including those specifically targeting IT and engineering students. These are great opportunities to meet recruiters and learn about potential employers. They also host smaller networking events with specific companies.
 *   **Employer Presentations",5.0,5.0,4.666666666666667,4.666666666666667,0.9866666666666667
-27,Can I choose my BIT major after I start the degree?,"At UQ, you typically do not need to declare your major before starting. However, you should plan course selections with a specific major in mind from the beginning, because major courses have prerequisites and a set sequence. You can change the major after comencing the degree.","Yes, you absolutely can! UQ's Bachelor of Information Technology (BIT) offers a flexible structure that allows you to declare your major after you've started the degree.
+27,Can I choose my BIT major after I start the degree?,"At the University, you typically do not need to declare your major before starting. However, you should plan course selections with a specific major in mind from the beginning, because major courses have prerequisites and a set sequence. You can change the major after comencing the degree.","Yes, you absolutely can! the University's Bachelor of Information Technology (BIT) offers a flexible structure that allows you to declare your major after you've started the degree.
 
 Here's a breakdown of how it works:
 
@@ -368,10 +368,10 @@ Here's a breakdown of how it works:
 
 **Important Considerations:**
 
-*   **Prerequisites:** Some majors may have prerequisites that you'll need to complete before declaring them. Check the specific major's requirements on the UQ website.
+*   **Prerequisites:** Some majors may have prerequisites that you'll need to complete before declaring them. Check the specific major's requirements on the University website.
 *   **Course Sequencing:** Once you declare a major, you'll need to follow the recommended course sequence for that major.
 *   **Academic Advis",5.0,5.0,5.0,5.0,1.0
-28,What IT majors are available in the Bachelors of Commerce / IT dual degree?,"The Commerce component of the BCom/IT offers majors in Accounting, Business Analytics, Business Information Systems, and Finance.","Okay, let's break down the IT majors available within the Bachelor of Commerce/IT dual degree at UQ. It's a bit nuanced, as the major is technically a ""Specialisation"" within the IT component. Here's a breakdown of the options and key things to know:
+28,What IT majors are available in the Bachelors of Commerce / IT dual degree?,"The Commerce component of the BCom/IT offers majors in Accounting, Business Analytics, Business Information Systems, and Finance.","Okay, let's break down the IT majors available within the Bachelor of Commerce/IT dual degree at the University. It's a bit nuanced, as the major is technically a ""Specialisation"" within the IT component. Here's a breakdown of the options and key things to know:
 
 **Available IT Specialisations (Majors):**
 
@@ -383,30 +383,30 @@ Here's a breakdown of how it works:
 
 **Important Considerations & How to Choose:**
 
-*   **Course Requirements:** Each specialisation has specific required courses within the IT portion of the degree. You can find the detailed course lists on the UQ Handbook website (see link below",2.0,3.0,4.0,2.3333333333333335,0.4966666666666667
-29,Where can I find the official study plan for my BIT major?,Study plans - the suggested semester-by-semester course sequence - are available from the School of Electrical Engineering and Computer Science (EECS) website at eecs.uq.edu.au and through Programs and Courses.,"Okay, finding the official study plan is key! Here's where you can find it:
+*   **Course Requirements:** Each specialisation has specific required courses within the IT portion of the degree. You can find the detailed course lists on the University Handbook website (see link below",2.0,3.0,4.0,2.3333333333333335,0.4966666666666667
+29,Where can I find the official study plan for my BIT major?,Study plans - the suggested semester-by-semester course sequence - are available from the School of Electrical Engineering and Computer Science (EECS) website at eecs.example.edu and through Programs and Courses.,"Okay, finding the official study plan is key! Here's where you can find it:
 
-1. **UQ Programs Website:** This is the primary source. Go to the UQ Programs website: [https://programs.uq.edu.au/information-technology-bachelor-of-information-technology](https://programs.uq.edu.au/information-technology-bachelor-of-information-technology)
+1. **the University Programs Website:** This is the primary source. Go to the University Programs website: [https://programs.example.edu/information-technology-bachelor-of-information-technology](https://programs.example.edu/information-technology-bachelor-of-information-technology)
 
 2. **Navigate to ""Course Information"" or ""Study Plan"":**  On that page, look for a section specifically labeled ""Course Information,"" ""Study Plan,"" ""Program Structure,"" or something similar.  It's usually in the sidebar or further down the page.
 
 3. **Select Your Major and Start Year:**  The study plan will likely be broken down by major (e.g., Data Science, Software Engineering, Cybersecurity) and your *year of commencement* (the year you started your degree).  **This is crucial!**  The study plan changes slightly from year to year.  Make sure you're looking at the correct one for *your* start year.
 
 4. **Download the PDF:**  The study plan is usually presented as a PDF document. Download it for easy reference",5.0,5.0,5.0,5.0,1.0
-30,Can I transfer from the BIT at UQ to the Bachelor of Computer Science during my studies?,"A transfer may be possible, depending on which courses you have completed and whether they satisfy BCS entry and credit requirements. Contact the School of EECS or the EAIT faculty for formal academic advice before attempting a transfer, as the process is not automatic.","Yes, you absolutely can! Transferring between the Bachelor of Information Technology (BIT) and the Bachelor of Computer Science (BCompSc) at UQ is a common and supported pathway. Here's a breakdown of the process and what you need to know:
+30,Can I transfer from the BIT at the University to the Bachelor of Computer Science during my studies?,"A transfer may be possible, depending on which courses you have completed and whether they satisfy BCS entry and credit requirements. Contact the School of EECS or the EAIT faculty for formal academic advice before attempting a transfer, as the process is not automatic.","Yes, you absolutely can! Transferring between the Bachelor of Information Technology (BIT) and the Bachelor of Computer Science (BCompSc) at the University is a common and supported pathway. Here's a breakdown of the process and what you need to know:
 
 **1. Eligibility & Credit:**
 
-*   **Credit Transfer:** UQ will assess your completed BIT courses for credit towards the BCompSc. Many of the foundational courses will likely transfer, meaning you won't have to repeat them.
+*   **Credit Transfer:** the University will assess your completed BIT courses for credit towards the BCompSc. Many of the foundational courses will likely transfer, meaning you won't have to repeat them.
 *   **Course Requirements:** You'll need to meet the BCompSc's degree requirements, which may include specific major or elective courses you haven't taken yet.
 *   **Progression:** You need to be in good academic standing (generally, a satisfactory GPA) to be eligible for transfer.
 
 **2. The Transfer Process:**
 
-*   **UQ Transfer Portal:** The primary way to request a transfer is through the UQ Transfer Portal. You'll find it on the UQ website (search for ""UQ Transfer Portal"").
+*   **the University Transfer Portal:** The primary way to request a transfer is through the University Transfer Portal. You'll find it on the University website (search for ""the University Transfer Portal"").
 *   **Application Details:** The portal will ask for information about your current degree, the degree you want to transfer to (BCompSc), and your reasons for transferring.
 *",3.6666666666666665,5.0,4.0,3.3333333333333335,0.8
-31,What is CSSE1001 and what does it cover?,"CSSE1001 is Introduction to Software Engineering - through programming with particular focus on the fundamentals of computing and programming, using an exploratory problem-based approach. Building abstractions with procedures, data and objects; data modelling; designing, coding and debugging programs of increasing complexity","CSSE1001 is ""Design and Debugging"" - a foundational course for all Computer Science and Information Technology students at UQ. It's a very important course, and often considered challenging, but it sets you up for success in later studies.
+31,What is CSSE1001 and what does it cover?,"CSSE1001 is Introduction to Software Engineering - through programming with particular focus on the fundamentals of computing and programming, using an exploratory problem-based approach. Building abstractions with procedures, data and objects; data modelling; designing, coding and debugging programs of increasing complexity","CSSE1001 is ""Design and Debugging"" - a foundational course for all Computer Science and Information Technology students at the University. It's a very important course, and often considered challenging, but it sets you up for success in later studies.
 
 Here's a breakdown of what it covers:
 
@@ -415,7 +415,7 @@ Here's a breakdown of what it covers:
 *   **Debugging:** As the name suggests, a large part of the course is dedicated to debugging – finding and fixing errors in your code. You'll learn various debugging techniques and tools.
 *   **Software Development Lifecycle:** You'll be introduced to the basic stages of the software development lifecycle, from requirements gathering to testing and maintenance.
 *   **Version Control (Git):** You'll learn to use Git for version control",2.6666666666666665,4.0,4.0,3.0,0.6333333333333334
-32,Can I pursue further studies after completing the BIT?,"Yes. After the BIT you can apply for the Bachelor of IT (Honours) if you have a GPA of 5.0/7.0 or higher. You can also pursue postgraduate programs such as the Master of Information Technology, Master of Data Science, or Master of Cyber Security at UQ.","Absolutely! A Bachelor of Information Technology (BIT) from UQ is a fantastic foundation for further studies. Here's a breakdown of the options you have, categorized by level and with some popular choices:
+32,Can I pursue further studies after completing the BIT?,"Yes. After the BIT you can apply for the Bachelor of IT (Honours) if you have a GPA of 5.0/7.0 or higher. You can also pursue postgraduate programs such as the Master of Information Technology, Master of Data Science, or Master of Cyber Security at the University.","Absolutely! A Bachelor of Information Technology (BIT) from the University is a fantastic foundation for further studies. Here's a breakdown of the options you have, categorized by level and with some popular choices:
 
 **1. Postgraduate Degrees (Most Common):**
 
@@ -428,14 +428,14 @@ Here's a breakdown of what it covers:
     *   **Master of Business Information Systems:** Combines IT knowledge with business acumen.
     *   **Master of Artificial Intelligence:** Explores advanced AI techniques and applications.
     *   **Master of Robotics:** Focuses on the",5.0,5.0,4.0,4.666666666666667,0.9733333333333334
-33,I am applying for BIT from Vietnam with a Bang Tu Tai diploma. Am I eligible?,Graduates who have completed the Bang Tu Tai or Bang Tot Nghiep Pho Thong Trung Hoc (Upper Secondary School Graduation Diploma/High School Diploma) will be considered for most programs provided the required Year 12 grade is obtained,"Okay, let's break down your eligibility for the Bachelor of Information Technology (BIT) at UQ from Vietnam with a Bang Tu Tai diploma. Here's a detailed look at what you need to consider and the steps you should take:
+33,I am applying for BIT from Vietnam with a Bang Tu Tai diploma. Am I eligible?,Graduates who have completed the Bang Tu Tai or Bang Tot Nghiep Pho Thong Trung Hoc (Upper Secondary School Graduation Diploma/High School Diploma) will be considered for most programs provided the required Year 12 grade is obtained,"Okay, let's break down your eligibility for the Bachelor of Information Technology (BIT) at the University from Vietnam with a Bang Tu Tai diploma. Here's a detailed look at what you need to consider and the steps you should take:
 
 **1. Academic Requirements - Diploma Recognition & Credit:**
 
-*   **Diploma Assessment:** UQ will need to assess your Bang Tu Tai diploma to determine if it's equivalent to Australian Year 12. This is crucial. They'll look at the curriculum, subjects studied, and overall performance.
-*   **UQ's International Qualification Database:** The first place to check is UQ's International Qualification Database: [https://www.uq.edu.au/study/admission-requirements/international-qualifications](https://www.uq.edu.au/study/admission-requirements/international-qualifications)  Search for ""Vietnam"" and then look for ""Diploma."" This will give you a general idea of how your diploma is typically assessed.  *However, this is just a guide; your specific diploma will still need individual assessment.*
+*   **Diploma Assessment:** the University will need to assess your Bang Tu Tai diploma to determine if it's equivalent to Australian Year 12. This is crucial. They'll look at the curriculum, subjects studied, and overall performance.
+*   **the University's International Qualification Database:** The first place to check is the University's International Qualification Database: [https://www.example.edu/study/admission-requirements/international-qualifications](https://www.example.edu/study/admission-requirements/international-qualifications)  Search for ""Vietnam"" and then look for ""Diploma."" This will give you a general idea of how your diploma is typically assessed.  *However, this is just a guide; your specific diploma will still need individual assessment.*
 *   **Credit for Prior Learning (CPL):**  Because you've already completed a diploma, you *may* be eligible",4.666666666666667,5.0,3.6666666666666665,4.666666666666667,0.93
-34,What is the UQ fee refund policy if I withdraw from the BIT program?,"If you cancel your enrolment by the census date, fees can be refunded in full for continuing students; commencing students may incur an administrative charge. After the census date, refunds are only considered in special circumstances. Refer to the Student Refund Procedures at policies.uq.edu.au for full details.","UQ's fee refund policy for withdrawals from the Bachelor of Information Technology (or any program) is quite detailed and depends on *when* you withdraw. Here's a breakdown, but **please read the full policy on the UQ website (linked at the end) as this is a summary and doesn't cover every scenario:**
+34,What is the University fee refund policy if I withdraw from the BIT program?,"If you cancel your enrolment by the census date, fees can be refunded in full for continuing students; commencing students may incur an administrative charge. After the census date, refunds are only considered in special circumstances. Refer to the Student Refund Procedures at policies.example.edu for full details.","the University's fee refund policy for withdrawals from the Bachelor of Information Technology (or any program) is quite detailed and depends on *when* you withdraw. Here's a breakdown, but **please read the full policy on the University website (linked at the end) as this is a summary and doesn't cover every scenario:**
 
 **Key Dates & Refund Amounts (as of current information - always check the official policy for updates):**
 
@@ -453,37 +453,37 @@ Here's a breakdown of what you need to know:
 *   **What it is:** The Capstone Project provides an opportunity to apply the knowledge and skills you've gained throughout your degree to a real-world problem or challenge. You'll work on a substantial project, often in collaboration with industry partners.
 *   **Importance:** It's a crucial part of demonstrating your ability to integrate your learning and contribute to the field of Information Technology.
 
-You can find more details about the Capstone Project, including assessment requirements and project examples, on the UQ School of Information Technology website and in the unit outline for ITIR4101.
+You can find more details about the Capstone Project, including assessment requirements and project examples, on the University School of Information Technology website and in the unit outline for ITIR4101.
 
 
 
-**Important:** Always double-check the most current requirements on the official UQ website as program details can change.",2.0,5.0,4.0,2.0,0.5900000000000001
+**Important:** Always double-check the most current requirements on the official the University website as program details can change.",2.0,5.0,4.0,2.0,0.5900000000000001
 36,Is the Bachelors of Human Movement and Nutrition Sciences / IT available for Semester 2 intake?,Yes. The Bachelors of Human Movement and Nutrition Sciences / Information Technology is available for Semester 2.,"No, the Bachelor of Human Movement and Nutrition Sciences / IT (Bachelor of Science (Human Movement and Nutrition Sciences) (Honours) / Bachelor of Information Technology) is **not** available for Semester 2 intake. It's only offered for Semester 1 intake each year.
 
 You'll need to apply for Semester 1, 2026 if you're interested in this dual degree.
 
-You can double-check this information on the UQ website here: [https://www.uq.edu.au/study/degrees/bachelor-science-human-movement-nutrition-sciences-honours-bachelor-information-technology](https://www.uq.edu.au/study/degrees/bachelor-science-human-movement-nutrition-sciences-honours-bachelor-information-technology)",0.0,4.0,4.0,2.6666666666666665,0.3333333333333333
-37,Can I work in a part-time IT job while studying BIT on a student visa?,"Yes. On a student visa you can work up to 48 hours per fortnight during semester and full-time during holidays (from 1 July 2023). Part-time IT-related work such as casual software development, IT support, or data analysis is permitted within these hour limits. Ensure your employer is aware of your visa conditions.","Okay, this is a crucial question, and the rules around working while on a student visa have changed recently. Here's a breakdown of the current situation for international students studying a Bachelor of Information Technology (BIT) at UQ, and what you need to know:
+You can double-check this information on the University website here: [https://www.example.edu/study/degrees/bachelor-science-human-movement-nutrition-sciences-honours-bachelor-information-technology](https://www.example.edu/study/degrees/bachelor-science-human-movement-nutrition-sciences-honours-bachelor-information-technology)",0.0,4.0,4.0,2.6666666666666665,0.3333333333333333
+37,Can I work in a part-time IT job while studying BIT on a student visa?,"Yes. On a student visa you can work up to 48 hours per fortnight during semester and full-time during holidays (from 1 July 2023). Part-time IT-related work such as casual software development, IT support, or data analysis is permitted within these hour limits. Ensure your employer is aware of your visa conditions.","Okay, this is a crucial question, and the rules around working while on a student visa have changed recently. Here's a breakdown of the current situation for international students studying a Bachelor of Information Technology (BIT) at the University, and what you need to know:
 
 **Current Rules (as of late 2023/early 2024 - *always double-check with the official sources below*):**
 
 *   **Unlimited Work Hours During Study:** As of July 2023, international students on a student visa (subclass 500) are now permitted to work **unlimited hours** during their study period. This is a significant change from the previous 48-hour per fortnight limit.
 *   **Post-Study Work Visa (PSW):**  After you complete your BIT degree, you'll likely be eligible for a Post-Study Work Visa (subclass 485). The length of this visa depends on your degree's classification (Nominated or Non-Nominated).  A BIT degree is generally considered a *Nominated* degree, which means you'll need to be nominated by an Australian employer to get the longer visa duration (currently 5 years for BIT",2.0,3.0,3.3333333333333335,3.3333333333333335,0.5033333333333334
-38,What is the minimum ATAR required to apply for the Bachelor of Information Technology at UQ?,"The minimum without adjusted score for Semester 1, 2026 was 81.9, with a median of 87.4 and a highest of 95.45. Meeting the minimum does not guarantee admission. Entry scores are reviewed annually in April, so check study.uq.edu.au for the most current information.","The minimum ATAR required for the Bachelor of Information Technology at UQ is **77**.
+38,What is the minimum ATAR required to apply for the Bachelor of Information Technology at the University?,"The minimum without adjusted score for Semester 1, 2026 was 81.9, with a median of 87.4 and a highest of 95.45. Meeting the minimum does not guarantee admission. Entry scores are reviewed annually in April, so check study.example.edu for the most current information.","The minimum ATAR required for the Bachelor of Information Technology at the University is **77**.
 
 However, keep in mind:
 
 *   **This is the *minimum*:** Most successful applicants have an ATAR higher than this.
-*   **Adjusted ATAR:** UQ offers adjustments for various factors like rural location, Indigenous background, and hardship. This can lower the ATAR you need. Check the UQ website for details on available adjustments.
-*   **QTAC Cut-Offs:** The actual cut-off ATAR can vary slightly each year depending on the number of applicants and their ATARs. You can view previous years' cut-offs on the QTAC website.
-*   **Alternative Entry Pathways:** UQ also offers alternative entry pathways, such as the Access Pathways to University program, which may be an option if you don't meet the standard ATAR.
+*   **Adjusted ATAR:** the University offers adjustments for various factors like rural location, Indigenous background, and hardship. This can lower the ATAR you need. Check the University website for details on available adjustments.
+*   **the state admissions centre Cut-Offs:** The actual cut-off ATAR can vary slightly each year depending on the number of applicants and their ATARs. You can view previous years' cut-offs on the the state admissions centre website.
+*   **Alternative Entry Pathways:** the University also offers alternative entry pathways, such as the Access Pathways to University program, which may be an option if you don't meet the standard ATAR.
 
 
 
 **Where to find the most up-to-date information:**
 
-*   **UQ Course Information:** [https://www.uq.edu.au/study/degrees/bachelor-of-information-technology/admission-requirements](https://www.uq.edu.au/study/degrees/bachelor-of-information-",1.3333333333333333,4.0,4.0,2.3333333333333335,0.47333333333333333
-39,What library services are available to BIT students at St Lucia?,"The St Lucia campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.uq.edu.au.","UQ's St Lucia Library offers a fantastic range of services specifically beneficial to BIT students. Here's a breakdown:
+*   **the University Course Information:** [https://www.example.edu/study/degrees/bachelor-of-information-technology/admission-requirements](https://www.example.edu/study/degrees/bachelor-of-information-",1.3333333333333333,4.0,4.0,2.3333333333333335,0.47333333333333333
+39,What library services are available to BIT students at the main campus?,"The the main campus campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.example.edu.","the University's the main campus Library offers a fantastic range of services specifically beneficial to BIT students. Here's a breakdown:
 
 **1. Physical Resources & Spaces:**
 
@@ -501,12 +501,12 @@ However, keep in mind:
     *   ProQuest
     *   Scopus
 *   **Online Learning Resources:** Tutorials, guides, and videos on research skills,",5.0,5.0,4.333333333333333,4.666666666666667,0.9800000000000001
-40,"When is the international application deadline for Semester 1, 2026 entry into BIT?","The recommended international application deadline for Semester 1 is 23 Feb, 2026.","Okay, this is a tricky one because UQ doesn't publish deadlines *that* far in advance. However, based on past years' trends and current information, here's a reasonable estimate and what you should do:
+40,"When is the international application deadline for Semester 1, 2026 entry into BIT?","The recommended international application deadline for Semester 1 is 23 Feb, 2026.","Okay, this is a tricky one because the University doesn't publish deadlines *that* far in advance. However, based on past years' trends and current information, here's a reasonable estimate and what you should do:
 
 *   **Likely Deadline:** Historically, the international application deadline for Semester 1 intake has been around **October/November 2025**.  It's *very likely* to fall within this timeframe for Semester 1, 2026.
-*   **UQ's Recommendation:** UQ strongly recommends applying as early as possible. They process applications on a rolling basis, meaning places are offered as they receive them.  Applying early significantly increases your chances of securing a place.
-*   **Where to Find the Official Date:** The *definitive* deadline will be published on the UQ International Admissions website: [https://www.uq.edu.au/international/apply/key-dates](https://www.uq.edu.au/international/apply/key-dates) **Keep checking this page regularly starting in mid-2025.**
-*   **Sign up for Updates:** Consider subscribing to UQ's international student mailing list to receive updates and announcements directly",4.333333333333333,4.666666666666667,4.666666666666667,5.0,0.9033333333333333
+*   **the University's Recommendation:** the University strongly recommends applying as early as possible. They process applications on a rolling basis, meaning places are offered as they receive them.  Applying early significantly increases your chances of securing a place.
+*   **Where to Find the Official Date:** The *definitive* deadline will be published on the University International Admissions website: [https://www.example.edu/international/apply/key-dates](https://www.example.edu/international/apply/key-dates) **Keep checking this page regularly starting in mid-2025.**
+*   **Sign up for Updates:** Consider subscribing to the University's international student mailing list to receive updates and announcements directly",4.333333333333333,4.666666666666667,4.666666666666667,5.0,0.9033333333333333
 41,"I am a Software Information Systems student. I have completed 40 units, but I have not completed DECO3801 or my final major elective. Can I just take any four electives next year and graduate?","No. You should not plan graduation based only on total units. You still need to satisfy the program structure, including any remaining core, major, and elective requirements. Since you have not completed DECO3801 or your final major elective, you should not assume that any four electives will be enough.","Okay, that's a good situation to be in! Let's break down your next steps to graduation as a Software Information Systems student.
 
 Here's a plan, assuming you've completed all other requirements and have 40 units:
@@ -519,7 +519,7 @@ Here's a plan, assuming you've completed all other requirements and have 40 unit
 
 **2. Final Major Elective:**
 
-*   **Review Your Elective List:** Go back to the Software Information Systems program guide (available on the UQ website - search for ""UQ Software Information Systems Program Guide"").  This will list the approved major electives.
+*   **Review Your Elective List:** Go back to the Software Information Systems program guide (available on the University website - search for ""the University Software Information Systems Program Guide"").  This will list the approved major electives.
 *   **Choose One:** Select *one* elective from that list.
 *   **Check Prerequisites:**  Make sure you meet the prerequisites for your chosen elective.
 
@@ -536,22 +536,22 @@ Here's a plan, assuming you've completed all other requirements and have 40 unit
 **1. Academic Steps (Crucial - Do this first!)**
 
 *   **Contact Your Faculty/School:** This is the *most important* first step.  Reach out to your faculty's student advising or academic support team. Explain your situation – that you're experiencing burnout and need to take a semester off. They can advise you on:
-    *   **Leave of Absence Policy:** UQ has a formal Leave of Absence policy.  You need to understand the requirements and procedures.  They'll tell you exactly what paperwork is needed.
+    *   **Leave of Absence Policy:** the University has a formal Leave of Absence policy.  You need to understand the requirements and procedures.  They'll tell you exactly what paperwork is needed.
     *   **Impact on Your Degree:**  How will a leave of absence affect your degree progression? Will you need to re-enroll in certain courses later?
     *   **Course Credit:** Will your previous credits still be valid when you return?
     *   **Re-enrolment:**  What's",5.0,5.0,4.0,4.666666666666667,0.9733333333333334
-44,"I am an international student and want to withdraw from one course, which would reduce my load from four courses to three. Can this treatlike a domestic withdrawal?","No. This should not be treated the same as a domestic withdrawal. Reducing your study load may have visa or enrolment implications. Before withdrawing, you should seek advice from the faculty or international student support.","Okay, this is a really important question, and the answer is nuanced. Here's a breakdown of how international student withdrawals work at UQ, and how it relates to your situation:
+44,"I am an international student and want to withdraw from one course, which would reduce my load from four courses to three. Can this treatlike a domestic withdrawal?","No. This should not be treated the same as a domestic withdrawal. Reducing your study load may have visa or enrolment implications. Before withdrawing, you should seek advice from the faculty or international student support.","Okay, this is a really important question, and the answer is nuanced. Here's a breakdown of how international student withdrawals work at the University, and how it relates to your situation:
 
 **Understanding the Key Issue: Maintaining Enrolment Requirements**
 
-*   **International Student Visa Conditions:** Your student visa is tied to maintaining a full-time study load. For most international students, this means enrolling in a minimum number of credit points per semester.  UQ's standard full-time load is typically 24 credit points per semester.
+*   **International Student Visa Conditions:** Your student visa is tied to maintaining a full-time study load. For most international students, this means enrolling in a minimum number of credit points per semester.  the University's standard full-time load is typically 24 credit points per semester.
 *   **Withdrawal Impact:** Withdrawing from a course *can* reduce your study load below the required full-time level, which could put your visa at risk.
 
-**How UQ Handles International Student Withdrawals**
+**How the University Handles International Student Withdrawals**
 
-UQ has specific procedures for international students withdrawing from courses to protect their visa status. Here's what you need to do:
+the University has specific procedures for international students withdrawing from courses to protect their visa status. Here's what you need to do:
 
-1.  **Contact UQ International:** **This is the most crucial step.**  Do *not* just withdraw through StudentHub. You *must* contact UQ International *before* you withdraw.  They will assess your situation and advise you on the best course of action.  You can find their contact details on the UQ International website",5.0,5.0,4.666666666666667,5.0,0.9933333333333334
+1.  **Contact the University International:** **This is the most crucial step.**  Do *not* just withdraw through StudentHub. You *must* contact the University International *before* you withdraw.  They will assess your situation and advise you on the best course of action.  You can find their contact details on the University International website",5.0,5.0,4.666666666666667,5.0,0.9933333333333334
 45,"A long-term health condition is affecting my labs, projects, and assessments across several courses. Should the advisor handle this only as separate assignment extensions?","No. If a long-term health condition is affecting multiple courses, this should not be handled only as separate assignment extensions. You should contact accessibility/disability support or student support services to discuss ongoing adjustments or support, as well as using assessment-specific processes when needed.","No, handling your long-term health condition solely through individual assignment extensions is likely **not** the best approach. While extensions are a helpful short-term solution, a more comprehensive and supportive plan is needed for a long-term condition impacting your studies.
 
 Here's a breakdown of why and a recommended next-step plan:
@@ -561,13 +561,13 @@ Here's a breakdown of why and a recommended next-step plan:
 *   **Cumulative Impact:** Multiple extensions can disrupt your study flow and potentially lead to further stress and difficulties.
 *   **Doesn't Address Root Cause:** Extensions don't address the underlying challenges your health condition presents in completing the coursework.
 *   **Potential for Missed Deadlines:** Relying on extensions can be unpredictable, and you might still miss deadlines despite your best efforts.
-*   **Doesn't Leverage Support Services:** UQ has dedicated support services designed to help students with health conditions.
+*   **Doesn't Leverage Support Services:** the University has dedicated support services designed to help students with health conditions.
 
 **Recommended Next-Step Plan:**
 
-1.  **Contact UQ Student Services (Disability and Wellbeing):** This is the *most important* first step. They are the central point for students with health conditions.
-    *   **Website:** [https://students.uq.edu.au/wellbeing-support/disability-well",5.0,5.0,5.0,5.0,1.0
-46,Everything is falling apart. I might hurt myself if this keeps going.,"I am sorry you are feeling this way. Your safety is the priority right now. Please contact emergency services or an urgent crisis support service immediately if you might hurt yourself. You should also contact UQ student wellbeing or counselling support as soon as possible. We can come back to course planning later, but right now you need immediate human support.","Okay, it sounds like you're going through a really tough time, and it's brave of you to reach out. It's completely understandable to feel overwhelmed when things feel like they're falling apart, and the thought of hurting yourself is a serious concern. **Please know that you're not alone, and help is available.**
+1.  **Contact the University Student Services (Disability and Wellbeing):** This is the *most important* first step. They are the central point for students with health conditions.
+    *   **Website:** [https://students.example.edu/wellbeing-support/disability-well",5.0,5.0,5.0,5.0,1.0
+46,Everything is falling apart. I might hurt myself if this keeps going.,"I am sorry you are feeling this way. Your safety is the priority right now. Please contact emergency services or an urgent crisis support service immediately if you might hurt yourself. You should also contact the University student wellbeing or counselling support as soon as possible. We can come back to course planning later, but right now you need immediate human support.","Okay, it sounds like you're going through a really tough time, and it's brave of you to reach out. It's completely understandable to feel overwhelmed when things feel like they're falling apart, and the thought of hurting yourself is a serious concern. **Please know that you're not alone, and help is available.**
 
 Here's a breakdown of what you can do *right now*, followed by longer-term support options. **Please read the ""Immediate Help"" section first, as it's the most important.**
 
@@ -592,7 +592,7 @@ Here's a breakdown of what you can do *right now*, followed by longer-term suppo
 
 Your student visa (subclass 500) has strict enrolment requirements. You *must* maintain a certain level of study to remain compliant. Generally, this means:
 
-*   **Enrolled in a full-time study load:** The specific number of credit points required for full-time study varies depending on your course and year level.  UQ will tell you what your full-time load is.
+*   **Enrolled in a full-time study load:** The specific number of credit points required for full-time study varies depending on your course and year level.  the University will tell you what your full-time load is.
 *   **Making satisfactory progress:** You need to pass a certain percentage of your enrolled courses each semester.
 
 **How Dropping a Course Affects This**
@@ -608,7 +608,7 @@ Your student visa (subclass 500) has strict enrolment requirements. You *must* m
 *   **DECO1400: Design and Creativity** - This is a good choice for developing design thinking skills, which are valuable in software development.
 *   **General Elective** - This is fine, but you'll want to choose wisely (more on that below).
 
-**Comparison to Suggested First Semester Plan (as of current UQ handbooks - always double-check the 2026 handbook when it's released):**
+**Comparison to Suggested First Semester Plan (as of current the University handbooks - always double-check the 2026 handbook when it's released):**
 
 The typical suggested first semester plan for Software Information Systems includes CSSE1001 and INFS1200. DECO1400 is a common and recommended elective.
 

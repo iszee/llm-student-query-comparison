@@ -54,7 +54,7 @@ VARIANTS = [
 
 DIMENSIONS = [
     ("FACT",  "Factual accuracy",
-     "Does the answer contain only accurate, verifiable facts about the UQ BIT program? "
+     "Does the answer contain only accurate, verifiable facts about the University BIT program? "
      "(0 = completely inaccurate or misleading, 5 = fully accurate)"),
     ("REL",   "Relevance",
      "Does the answer directly address what the student asked? "
@@ -253,7 +253,7 @@ def generate_workbook(study_questions, path):
 
     # Row 1: Title
     ws_c.merge_cells("A1:B1")
-    ws_c["A1"] = "UQ BIT Information Assistant — Expert Quality Evaluation"
+    ws_c["A1"] = "the University BIT Information Assistant — Expert Quality Evaluation"
     ws_c["A1"].font = TITLE
     ws_c["A1"].alignment = CTR
     ws_c.row_dimensions[1].height = 35
@@ -262,7 +262,7 @@ def generate_workbook(study_questions, path):
     ws_c["A3"] = "PURPOSE"
     ws_c["A3"].font = BOLD
     ws_c["B3"] = (
-        "This questionnaire is part of a research study at the University of Queensland "
+        "This questionnaire is part of a research study at the University "
         "evaluating the quality of AI-generated responses to student queries about the "
         "Bachelor of Information Technology (BIT) program."
     )
@@ -275,7 +275,7 @@ def generate_workbook(study_questions, path):
     ws_c["B5"] = (
         "You will review 10 student questions (one per sheet Q01–Q10). "
         "For each question you will see the student question, a reference answer "
-        "from official UQ sources, and five AI-generated answers labelled A to E "
+        "from official the University sources, and five AI-generated answers labelled A to E "
         "(in random order).\n\n"
         "For each answer, rate it on four dimensions using the 0–5 scale "
         "in the yellow cells:\n"
@@ -298,7 +298,7 @@ def generate_workbook(study_questions, path):
     ws_c["B9"] = (
         "By filling in and returning this file you confirm that you are participating "
         "voluntarily and you consent to your anonymised responses being used in this "
-        "research study conducted at the University of Queensland."
+        "research study conducted at the University."
     )
     ws_c["B9"].alignment = WRAP_TOP
     ws_c.row_dimensions[9].height = 55
@@ -377,7 +377,7 @@ def generate_workbook(study_questions, path):
         ws.row_dimensions[2].height = max(45, min(150, q_lines * 14))
 
         # Row 3: Reference answer
-        ws["A3"] = "REFERENCE ANSWER\n(official UQ sources):"
+        ws["A3"] = "REFERENCE ANSWER\n(official the University sources):"
         ws["A3"].font = BOLD
         ws["A3"].fill = QFILL
         ws["A3"].alignment = WRAP_TOP

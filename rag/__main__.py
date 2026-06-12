@@ -1,7 +1,7 @@
 """
 __main__.py
 -----------
-CLI for the UQ BIT RAG index.
+CLI for the University BIT RAG index.
 
 Usage:
     python -m rag build                         # ingest PDFs + URLs, embed, index
@@ -51,7 +51,7 @@ def cmd_query(args: argparse.Namespace) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(
         prog="python -m rag",
-        description="RAG index management for the UQ BIT information assistant.",
+        description="RAG index management for the University BIT information assistant.",
     )
     sub = parser.add_subparsers(dest="command", required=True)
 

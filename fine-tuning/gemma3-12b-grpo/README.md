@@ -1,6 +1,6 @@
 # Gemma 3 12B — GRPO Fine-tuning
 
-Reinforcement learning fine-tuning of `google/gemma-3-12b-it` for the UQ BIT information assistant, using:
+Reinforcement learning fine-tuning of `google/gemma-3-12b-it` for the University BIT information assistant, using:
 
 - **GRPO** (Group Relative Policy Optimization) via TRL `GRPOTrainer`
 - **BF16 + LoRA** (full-precision BF16 base + LoRA via PEFT) — parameter-efficient training on a single H100 79 GB
@@ -147,7 +147,7 @@ Each optimizer step:
 
 ## Monitoring with Weights & Biases
 
-Training logs to the `uq-unibot / uni-bot` project on wandb.ai. Key metrics:
+Training logs to the `anon-org / anon-project` project on wandb.ai. Key metrics:
 
 | Metric | What to watch for |
 |--------|------------------|

@@ -1,7 +1,7 @@
 """
 build_index.py
 --------------
-One-shot ingestion pipeline for the UQ BIT RAG index.
+One-shot ingestion pipeline for the University BIT RAG index.
 
 Sources:
   - All PDFs in data-collection/sources/*.pdf   (drop files there to include them)

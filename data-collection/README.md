@@ -1,6 +1,6 @@
 # Data Collection
 
-This folder contains the question-and-answer datasets used in the LLM student query comparison research project. The datasets cover student queries about the University of Queensland (UQ) Bachelor of Information Technology (BIT) degree and its related dual degrees.
+This folder contains the question-and-answer datasets used in the LLM student query comparison research project. The datasets cover student queries about the University (the University) Bachelor of Information Technology (BIT) degree and its related dual degrees.
 
 ## Datasets
 
@@ -17,14 +17,14 @@ The 200 synthetic Q&A pairs in `generated/generated-qa-200.xlsx` were produced u
 
 ### 1. Source Gathering
 
-Claude Code identified and compiled all relevant UQ official program pages for BIT and dual degrees into `sources/program-pages.txt`. This covered 8 programs including the standalone BIT (2570), BIT (Honours) (2235), and dual degrees with Business Management, Commerce, Human Movement and Nutrition Sciences, Arts, Engineering, and Design.
+Claude Code identified and compiled all relevant the University official program pages for BIT and dual degrees into `sources/program-pages.txt`. This covered 8 programs including the standalone BIT (9004), BIT (Honours) (9001), and dual degrees with Business Management, Commerce, Human Movement and Nutrition Sciences, Arts, Engineering, and Design.
 
 ### 2. Source Reading
 
 Claude Code read three primary sources to ground all answers in verified information:
 
-- **`sources/international-guide-undergraduate-postgraduate.pdf`** - the UQ International Student Guide 2026, covering entry requirements, fees, English proficiency, visas, and campus life.
-- **`sources/program-pages.txt`** - UQ program page URLs for BIT and related dual degrees.
+- **`sources/international-guide-undergraduate-postgraduate.pdf`** - the University International Student Guide 2026, covering entry requirements, fees, English proficiency, visas, and campus life.
+- **`sources/program-pages.txt`** - the University program page URLs for BIT and related dual degrees.
 - **`manual/data-manual.xlsx`** - the existing human-authored dataset, used to understand the required answer format and avoid duplicating questions.
 
 ### 3. Question Design
@@ -57,6 +57,6 @@ python data-collection/generated/generate_qa.py
 
 ## Sources
 
-- UQ program pages: [study.uq.edu.au](https://study.uq.edu.au) and [programs-courses.uq.edu.au](https://programs-courses.uq.edu.au)
-- UQ International Student Guide 2026 (PDF)
+- the University program pages: [study.example.edu](https://study.example.edu) and [programs-courses.example.edu](https://programs-courses.example.edu)
+- the University International Student Guide 2026 (PDF)
 - Reddit/student forums (for question style reference)

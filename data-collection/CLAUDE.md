@@ -10,8 +10,8 @@ The initial synthetic Q&A dataset (`generated/generated-qa-200.xlsx`) was create
 
 Claude Code performed the following tasks:
 
-1. **Source identification** — searched UQ official program pages to compile all Bachelor of Information Technology and dual-degree program URLs, saved to `sources/program-pages.txt`.
-2. **Source reading** — read the UQ International Guide 2026 PDF and the manual dataset to extract verified facts.
+1. **Source identification** — searched the University official program pages to compile all Bachelor of Information Technology and dual-degree program URLs, saved to `sources/program-pages.txt`.
+2. **Source reading** — read the University International Guide 2026 PDF and the manual dataset to extract verified facts.
 3. **Q&A authoring** — hardcoded 200 synthetic Q&A pairs into `generated/generate_qa.py`.
 4. **Script generation** — wrote `generated/generate_qa.py`, producing formatted Excel output.
 5. **Dataset generation** — executed the script to produce `generated/generated-qa-200.xlsx`.
@@ -81,8 +81,8 @@ The RULES block in `generate_qa_extra.py` explicitly bans em dashes so new pairs
 
 ## Sources Used
 
-- UQ International Student Guide 2026 (`sources/international-guide-undergraduate-postgraduate.pdf`)
-- UQ program pages: study.uq.edu.au and programs-courses.uq.edu.au (see `sources/program-pages.txt`)
+- the University International Student Guide 2026 (`sources/international-guide-undergraduate-postgraduate.pdf`)
+- the University program pages: study.example.edu and programs-courses.example.edu (see `sources/program-pages.txt`)
 - Manual dataset (`manual/data-manual.xlsx`) — human baseline
 - Corrected dataset (`generated/corrected/corrected-qa.csv`) — validated ground truth for generation
 

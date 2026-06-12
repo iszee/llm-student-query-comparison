@@ -56,7 +56,7 @@ assert sum(n for _, n in TOPIC_PLAN) == 300
 RULES = """
 CRITICAL RULES - FOLLOW WITHOUT EXCEPTION:
 
-1. Only state facts explicitly found in the provided UQ International Guide 2026
+1. Only state facts explicitly found in the provided the University International Guide 2026
    or the validated Q&A examples. Never invent or extrapolate.
 
 2. Never guess or make up: ATAR scores, fee amounts, dates, URLs, course codes,
@@ -65,7 +65,7 @@ CRITICAL RULES - FOLLOW WITHOUT EXCEPTION:
 3. Never write "adjusted score" - write "minimum entry score" or state the number.
 
 4. Apply every correction below exactly as written:
-   - BIT (2570) minimum entry score for Semester 1, 2026: 81.9 (median 87.4, highest 95.45)
+   - BIT (9004) minimum entry score for Semester 1, 2026: 81.9 (median 87.4, highest 95.45)
    - BBusMgt/IT minimum entry score: 86.4 (NOT 84)
    - BCom/IT minimum entry score: 84.4 (NOT 84)
    - BE(Hons)/IT minimum entry score: 84
@@ -78,7 +78,7 @@ CRITICAL RULES - FOLLOW WITHOUT EXCEPTION:
    - Living costs off-campus: AUD $2,026-$4,151/month
    - On-campus residential college: AUD $2,635-$4,168/month (meals included)
    - ACS accreditation: Yes, the BIT IS accredited by the Australian Computer Society
-   - BIT (Honours) minimum GPA: 5.0 on UQ's 7-point scale
+   - BIT (Honours) minimum GPA: 5.0 on the University's 7-point scale
    - BIT (Honours) application deadlines:
        S1 international 30 Nov, S1 domestic 31 Jan
        S2 international 31 May, S2 domestic 30 Jun
@@ -88,10 +88,10 @@ CRITICAL RULES - FOLLOW WITHOUT EXCEPTION:
    - Student visa minimum living cost evidence: AUD $29,710
 
 5. Keep answers concise: 1-3 sentences. Use a short list only when it genuinely
-   helps (e.g. listing QTAC codes or prerequisite courses).
+   helps (e.g. listing the state admissions centre codes or prerequisite courses).
 
 6. If a specific fact is not confirmed in the source documents, direct the student
-   to study.uq.edu.au rather than guessing.
+   to study.example.edu rather than guessing.
 
 7. Vary question phrasing: direct, conversational, hypothetical ("What if I..."),
    conditional ("If I don't have..."), first-person ("I am applying..."),
@@ -168,7 +168,7 @@ def generate_batch(
         f"Generate exactly {n_pairs} new Q&A pairs about:\n"
         f"TOPIC: {topic_name}\n\n"
         "Cover different sub-aspects. Each question must sound like something a real "
-        "prospective or current UQ BIT student would type.\n\n"
+        "prospective or current the University BIT student would type.\n\n"
         "Output ONLY a valid JSON array - no markdown, no explanation:\n"
         '[{"q": "...", "a": "..."}, ...]'
     )
@@ -265,7 +265,7 @@ def main() -> None:
         print(f"ERROR: {CORRECTED_CSV} not found.")
         sys.exit(1)
 
-    print("=== UQ BIT Q&A Extra Generator ===")
+    print("=== the University BIT Q&A Extra Generator ===")
     print()
 
     # ── Step 1: Clean existing ────────────────────────────────────────────────

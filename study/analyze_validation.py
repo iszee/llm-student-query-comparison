@@ -3,7 +3,7 @@
 study/analyze_validation.py
 ============================
 Validates the GPT-4o LLM-as-judge against 3 human expert raters for the
-UQ BIT information assistant study. Addresses Limitation #1 in PAPER_CONTEXT.md.
+the University BIT information assistant study. Addresses Limitation #1 in PAPER_CONTEXT.md.
 
 Usage (from repo root):
     python study/analyze_validation.py
@@ -566,7 +566,7 @@ def write_report(path, tidy, key, pivots, composites, raters,
     ln()
     ln("## 1. Study Overview")
     ln()
-    ln("Three UQ academic experts rated 50 AI-generated answers (10 student questions "
+    ln("Three the University academic experts rated 50 AI-generated answers (10 student questions "
        "× 5 answers each) on four dimensions using a 0–5 integer scale. "
        "The same four dimensions and scale were used by the GPT-4o judge (G-Eval). "
        "This report quantifies (a) inter-rater reliability among the experts and "

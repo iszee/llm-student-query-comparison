@@ -1,10 +1,10 @@
 # LLM Student Query Comparison
 
-Research project at the University of Queensland comparing how large language models respond to student queries about UQ programs. The focus is benchmarking and evaluating LLM responses against official UQ program information and student guidance documents.
+Research project at the University comparing how large language models respond to student queries about the University programs. The focus is benchmarking and evaluating LLM responses against official the University program information and student guidance documents.
 
 ## Project Overview
 
-The project targets the **Bachelor of Information Technology (BIT)** program at UQ (program codes 2570 / 2453) and its associated dual degrees. It builds datasets of student Q&A pairs - both human-authored and synthetic - to serve as evaluation benchmarks and fine-tuning data for information-assistant models.
+The project targets the **Bachelor of Information Technology (BIT)** program at the University (program codes 9004 / 9002) and its associated dual degrees. It builds datasets of student Q&A pairs - both human-authored and synthetic - to serve as evaluation benchmarks and fine-tuning data for information-assistant models.
 
 ## Environment Setup
 
@@ -41,9 +41,9 @@ llm-student-query-comparison/
 │   │   └── corrected/
 │   │       └── corrected-qa.csv                      # 183 human-corrected pairs (ground truth)
 │   └── sources/
-│       ├── program-pages.txt                         # URLs to UQ BIT program pages
+│       ├── program-pages.txt                         # URLs to the University BIT program pages
 │       ├── redit-pages.txt                           # Reddit/forum discussion URLs (placeholder)
-│       └── international-guide-undergraduate-postgraduate.pdf  # UQ International Guide 2026
+│       └── international-guide-undergraduate-postgraduate.pdf  # the University International Guide 2026
 ├── fine-tuning/
 │   ├── gemma3-12b-grpo/                              # Gemma 3 12B GRPO + LoRA (see README inside)
 │   │   ├── config.py                                 # All hyperparameters
@@ -155,13 +155,13 @@ Prepared splits live in `data/` - see [`data/README.md`](data/README.md) for for
 | Mistral Nemo 12B | GRPO + LoRA (BF16) + G-Eval reward | `fine-tuning/mistral-nemo-12b-grpo/` |
 | Qwen3 14B | GRPO + LoRA (BF16) + G-Eval reward | `fine-tuning/qwen3-14B-grpo/` |
 
-Each model is evaluated across **16 configurations**: base + fine-tuned × 8 prompt variants (plain / system prompt / few-shot / both - each with and without RAG). G-Eval scores completions via **OpenAI GPT-4o-mini** on four dimensions (factual accuracy 55%, relevance 25%, conciseness 10%, no-hallucination 10%). W&B project: `uq-unibot / uni-bot`.
+Each model is evaluated across **16 configurations**: base + fine-tuned × 8 prompt variants (plain / system prompt / few-shot / both - each with and without RAG). G-Eval scores completions via **OpenAI GPT-4o-mini** on four dimensions (factual accuracy 55%, relevance 25%, conciseness 10%, no-hallucination 10%). W&B project: `anon-org / anon-project`.
 
 See the README inside each fine-tuning directory for setup and running instructions.
 
 ## RAG Evaluation Variant
 
-Each of the 4 prompt variants has a RAG-enabled twin that retrieves relevant passages from UQ source documents before generating a response. The RAG pipeline follows SOTA practices (early 2026):
+Each of the 4 prompt variants has a RAG-enabled twin that retrieves relevant passages from the University source documents before generating a response. The RAG pipeline follows SOTA practices (early 2026):
 
 | Step | Technique | Reference |
 |------|-----------|-----------|
@@ -217,6 +217,6 @@ If the index is not built, or RAG dependencies are not installed, the RAG varian
 
 | File | Description |
 |------|-------------|
-| `sources/program-pages.txt` | Official UQ program page URLs for BIT and 7 dual degrees |
-| `sources/international-guide-undergraduate-postgraduate.pdf` | UQ International Student Guide 2026 - primary factual reference |
-| `sources/domestic-guide-undergraduate.pdf` | UQ Domestic Undergraduate Student Guide 2026 |
+| `sources/program-pages.txt` | Official the University program page URLs for BIT and 7 dual degrees |
+| `sources/international-guide-undergraduate-postgraduate.pdf` | the University International Student Guide 2026 - primary factual reference |
+| `sources/domestic-guide-undergraduate.pdf` | the University Domestic Undergraduate Student Guide 2026 |

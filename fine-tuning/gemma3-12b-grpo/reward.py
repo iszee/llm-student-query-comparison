@@ -26,7 +26,7 @@ from config import Config
 
 GEVAL_TEMPLATE = """\
 You are an impartial evaluator assessing the quality of an AI assistant's answer \
-to a student question about the UQ Bachelor of Information Technology program.
+to a student question about the University Bachelor of Information Technology program.
 
 Score the model answer on FOUR criteria, each on an integer scale from 0 to 5.
 
@@ -35,7 +35,7 @@ Reference answer: {reference}
 Model answer:     {prediction}
 
 Criteria:
-1. Factual accuracy    — Is the model answer factually correct about the UQ BIT program?
+1. Factual accuracy    — Is the model answer factually correct about the University BIT program?
    The reference shows ONE acceptable answer — do NOT penalise correct information that is
    phrased differently from or goes beyond the reference. Only penalise claims that are
    factually wrong or directly contradict the reference/question.
@@ -163,24 +163,24 @@ if __name__ == "__main__":
 
     test_cases = [
         {
-            "question":   "What is the minimum ATAR for the BIT at UQ?",
-            "reference":  "The minimum entry score for the BIT (program 2570) is 81.9 "
+            "question":   "What is the minimum ATAR for the BIT at the University?",
+            "reference":  "The minimum entry score for the BIT (program 9004) is 81.9 "
                           "for Semester 1, 2026 entry.",
             "prediction": "The minimum ATAR for the Bachelor of Information Technology "
-                          "at UQ is 81.9 for Semester 1, 2026.",
+                          "at the University is 81.9 for Semester 1, 2026.",
             "expected":   "high (accurate, relevant, concise)",
         },
         {
-            "question":   "What is the minimum ATAR for the BIT at UQ?",
-            "reference":  "The minimum entry score for the BIT (program 2570) is 81.9 "
+            "question":   "What is the minimum ATAR for the BIT at the University?",
+            "reference":  "The minimum entry score for the BIT (program 9004) is 81.9 "
                           "for Semester 1, 2026 entry.",
             "prediction": "I'm not sure about the exact ATAR. You should probably check "
-                          "the UQ website or contact admissions.",
+                          "the University website or contact admissions.",
             "expected":   "mid (safe but uninformative)",
         },
         {
-            "question":   "What is the minimum ATAR for the BIT at UQ?",
-            "reference":  "The minimum entry score for the BIT (program 2570) is 81.9 "
+            "question":   "What is the minimum ATAR for the BIT at the University?",
+            "reference":  "The minimum entry score for the BIT (program 9004) is 81.9 "
                           "for Semester 1, 2026 entry.",
             "prediction": "The minimum ATAR is 95. You will also need to pass an "
                           "interview and submit a portfolio.",

@@ -1,7 +1,7 @@
 """
 train.py
 --------
-GRPO + LoRA fine-tuning of Qwen3 14B for the UQ BIT information assistant.
+GRPO + LoRA fine-tuning of Qwen3 14B for the University BIT information assistant.
 
 Algorithm: Group Relative Policy Optimization (GRPO) via TRL GRPOTrainer.
   - Samples G=4 completions per prompt
@@ -52,11 +52,11 @@ from reward import reward_fn
 # ── System prompt ─────────────────────────────────────────────────────────────
 
 SYSTEM_PROMPT = (
-    "You are a helpful information assistant for the UQ Bachelor of Information "
+    "You are a helpful information assistant for the University Bachelor of Information "
     "Technology program. Answer student questions accurately and concisely. "
     "Only provide information you are confident about. "
     "If you are not certain about a specific fact, say so and direct the student "
-    "to study.uq.edu.au rather than guessing."
+    "to study.example.edu rather than guessing."
 )
 
 

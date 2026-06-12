@@ -55,11 +55,11 @@ from reward import GEVAL_TEMPLATE, _get_client
 # ── System prompt ─────────────────────────────────────────────────────────────
 
 SYSTEM_PROMPT = (
-    "You are a helpful information assistant for the UQ Bachelor of Information "
+    "You are a helpful information assistant for the University Bachelor of Information "
     "Technology program. Answer student questions accurately and concisely. "
     "Only provide information you are confident about. "
     "If you are not certain about a specific fact, say so and direct the student "
-    "to study.uq.edu.au rather than guessing."
+    "to study.example.edu rather than guessing."
 )
 
 METRIC_COLS = [
@@ -137,7 +137,7 @@ def load_few_shot_turns(path: str) -> list[dict]:
 
 def _format_reference_block(chunks: list) -> str:
     """Format retrieved chunks as a numbered reference block prepended to the user message."""
-    lines = ["Reference material from UQ documents:"]
+    lines = ["Reference material from the University documents:"]
     for i, chunk in enumerate(chunks, 1):
         lines.append(f"[{i}] ({chunk.display_source}) {chunk.text}")
     lines.append("")

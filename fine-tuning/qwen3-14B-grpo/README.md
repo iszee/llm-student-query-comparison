@@ -1,6 +1,6 @@
 # Qwen3 14B — GRPO Fine-tuning
 
-Reinforcement learning fine-tuning of `Qwen/Qwen3-14B` for the UQ BIT information assistant, using:
+Reinforcement learning fine-tuning of `Qwen/Qwen3-14B` for the University BIT information assistant, using:
 
 - **GRPO** (Group Relative Policy Optimization) via TRL `GRPOTrainer`
 - **BF16 + LoRA** (full-precision BF16 base + LoRA via PEFT) — parameter-efficient training on a single H100 79 GB
