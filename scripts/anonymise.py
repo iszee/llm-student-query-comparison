@@ -111,17 +111,8 @@ RULES: list[tuple[str, str]] = [
     # ── UQ-specific postcode ──────────────────────────────────────────────────
     (r'\b4072\b', '0000'),
 
-    # ── Article / phrasing clean-up (run AFTER all replacements) ─────────────
-    # "The UQ" / "The St Lucia" → "The the University" / "The the main campus"
-    # Capital-T sentence-initial case — must precede the lowercase rule:
-    (r'\bThe the\b', 'The'),
-    # Mid-sentence lowercase: "the UQ" → "the the University" → "the University"
-    (r'\bthe the\b', 'the'),
-    # "a UQ" → "a the University" → "a University"
-    (r'\ba the University\b', 'a University'),
-    (r'\ban the University\b', 'a University'),
-    # "St Lucia campus" → "the main campus campus" → "the main campus"
-    (r'(?i)\bcampus campus\b', 'campus'),
+    # NOTE: Grammar cleanup block moved to END of list so it runs after ALL
+    # replacement rules (including Round 3 rules which can create new artifacts).
 
     # ── Program codes → stable anonymous pseudo-codes ─────────────────────────
     (r'\b2235\b', '9001'),   # BIT Honours
@@ -133,6 +124,98 @@ RULES: list[tuple[str, str]] = [
     (r'\b2573\b', '9007'),   # HMNS / IT
     (r'\b2574\b', '9008'),   # IT / Arts
     (r'\b2575\b', '9009'),   # Eng(Hons) / IT
+
+    # ── Round 3: CRICOS codes → stable pseudo-codes ───────────────────────────
+    # Real CRICOS codes resolve directly to the exact institution + program via
+    # the national registry.  Map each to a CRIC### pseudo that does NOT match
+    # the \b\d{6}[A-Z]\b shape, so the verify sweep catches any stragglers.
+    (r'\b001952K\b', 'CRIC001'),   # BIT (main)
+    (r'\b027273G\b', 'CRIC002'),   # BIT / Arts
+    (r'\b080731B\b', 'CRIC003'),   # BE(Hons) / IT
+    (r'\b082962D\b', 'CRIC004'),   # BIT Honours
+    (r'\b114806C\b', 'CRIC005'),   # BIT / Design
+    (r'\b000011K\b', 'CRIC006'),
+    (r'\b000194J\b', 'CRIC007'),
+    (r'\b005911G\b', 'CRIC008'),
+    (r'\b063374M\b', 'CRIC009'),
+    (r'\b072417B\b', 'CRIC010'),
+    (r'\b072856G\b', 'CRIC011'),
+    (r'\b072877G\b', 'CRIC012'),
+    (r'\b074021M\b', 'CRIC013'),
+    (r'\b074522G\b', 'CRIC014'),
+    (r'\b074601K\b', 'CRIC015'),
+    (r'\b093862J\b', 'CRIC016'),
+    (r'\b093863M\b', 'CRIC017'),
+    (r'\b093912F\b', 'CRIC018'),
+
+    # ── Round 3: Course codes → stable pseudo-prefixes (digits preserved) ──────
+    # Discipline-specific prefixes are googleable to the institution.
+    # Collapse onto neutral equivalents; keep the 4 digits so prereq chains
+    # and any cross-file joins stay internally consistent.
+    # CSSE (Computer Science/SE) → CORE  ((?i) so lowercase URL paths are caught)
+    (r'(?i)\bCSSE(\d{4})\b', r'CORE\1'),
+    # INFS (Information Systems) → INFO
+    (r'(?i)\bINFS(\d{4})\b', r'INFO\1'),
+    # DECO (Design Computing — very specific prefix) → DSGN
+    (r'(?i)\bDECO(\d{4})\b', r'DSGN\1'),
+    # COMP (appears in hallucinated model outputs for other unis) → CORE
+    (r'(?i)\bCOMP(\d{4})\b', r'CORE\1'),
+    # COMS → CORE
+    (r'(?i)\bCOMS(\d{4})\b', r'CORE\1'),
+    # CYBR / STAT → SUBJ (generic subject placeholder)
+    (r'(?i)\bCYBR(\d{4})\b', r'SUBJ\1'),
+    (r'(?i)\bSTAT(\d{4})\b', r'SUBJ\1'),
+    # MATH and ENGG are universal prefixes used across many universities; keep.
+
+    # ── Round 3: UQ student portal system (mySI-net) ──────────────────────────
+    (r'(?i)\bmySI-net\b', 'the student portal'),
+    (r'(?i)\bSI-net\b', 'the student portal'),
+
+    # ── Round 3: UQ school / faculty names and acronyms ──────────────────────
+    # Handle URL form first so the hostname is neutralised before the bare-token
+    # rule runs (otherwise eecs.example.edu → "Computing.example.edu").
+    (r'eecs\.example\.edu', 'cs.example.edu'),
+    (r'(?i)School of Electrical Engineering and Computer Science', 'the School of Computing'),
+    # Use 'Computing' (no leading 'the') to avoid "School of the School" artifact.
+    (r'(?i)\bEECS\b', 'Computing'),
+    # Handle compound EAIT phrases before the standalone acronym to avoid
+    # "the Faculty faculty" and "the the Faculty" artifacts.
+    (r'(?i)\bthe EAIT [Ff]aculty\b', 'the Faculty'),
+    (r'(?i)\bEAIT [Ff]aculty\b', 'the Faculty'),
+    (r'(?i)\bEAIT\b', 'the Faculty'),
+
+    # ── Round 3: Named residential colleges / student housing ─────────────────
+    (r'(?i)\bKev Carmody House\b', 'a new student residence'),
+    (r'(?i)\bDuchesne\b', 'a college'),
+    (r'(?i)\bCromwell\b', 'a college'),
+    (r"(?i)\bSt Leo'?s\b", 'a college'),
+
+    # ── Round 3: UQ career-development program brand ──────────────────────────
+    # Handle "… Employability program" before bare phrase to avoid doubled word.
+    (r'(?i)Enhance Your Employability\s+program\b', 'the career-development program'),
+    (r'(?i)Enhance Your Employability', 'the career-development program'),
+
+    # ── Grammar cleanup (MUST be last — runs after ALL replacement rules) ──────
+    # Replacements earlier in this list can introduce "the the", "campus campus",
+    # and similar artifacts.  These cleanup rules fix them in a final pass.
+    # Capital-T sentence-initial "The the …" must precede the lowercase rule:
+    (r'\bThe the\b', 'The'),
+    # Mid-sentence: "the the …"
+    (r'\bthe the\b', 'the'),
+    # "a UQ …" → "a the University" → "a University"
+    (r'\ba the University\b', 'a University'),
+    (r'\ban the University\b', 'a University'),
+    # "St Lucia campus" → "the main campus campus"
+    (r'(?i)\bcampus campus\b', 'campus'),
+    # Round-3 new artifacts:
+    # "Enhance Your Employability program" → "the career-development program program"
+    (r'(?i)\bprogram program\b', 'program'),
+    # "the EAIT faculty" (when 'the' wasn't part of the matched phrase)
+    (r'(?i)\bFaculty faculty\b', 'Faculty'),
+    # "(EECS)" gloss after full-name replacement leaves "(Computing)"
+    # after "School of Computing" → redundant but harmless; leave as-is.
+    # "the Faculty the Faculty" (double replacement edge case)
+    (r'(?i)\bthe Faculty the Faculty\b', 'the Faculty'),
 ]
 
 # Compile all patterns once at import time
@@ -340,6 +423,17 @@ VERIFY_PATTERNS = [
     r'\b(2235|2453|2555|2570|2571|2572|2573|2574|2575)\b',
     r'the the ',
     r'campus campus',
+    # Round 3 additions
+    r'\b\d{6}[A-Z]\b',                           # any remaining real CRICOS code shape
+    r'\b(CSSE|INFS|DECO|COMP|COMS|CYBR|STAT)\d{4}\b',  # original course-code prefixes
+    r'si-?net',                                   # mySI-net / SI-net
+    r'\bEAIT\b',
+    r'School of Electrical Engineering',
+    r'Kev Carmody',
+    r'Duchesne',
+    r'Cromwell',
+    r"St Leo'?s",
+    r'Enhance Your Employability',
 ]
 
 _VERIFY_COMBINED = re.compile(

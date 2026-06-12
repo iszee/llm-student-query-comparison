@@ -168,7 +168,7 @@ QA_PAIRS = [
     ),
     (
         "What is the CRICOS code for the Bachelor of Information Technology?",
-        "The CRICOS code for the Bachelor of Information Technology is 001952K. CRICOS registration confirms that a program is approved for international students on a student visa."
+        "The CRICOS code for the Bachelor of Information Technology is CRIC001. CRICOS registration confirms that a program is approved for international students on a student visa."
     ),
     (
         "Is there a Semester 2 intake for the Bachelors of Engineering (Honours) / IT dual degree?",
@@ -222,7 +222,7 @@ QA_PAIRS = [
     ),
     (
         "Can I change my BIT major after completing some courses?",
-        "You may be able to change your major, but you should not assume all completed courses will count towards the new major. Whether they count depends on how they fit the new major, BIT core requirements, or elective categories. Seek academic advice from the School of EECS before making the change."
+        "You may be able to change your major, but you should not assume all completed courses will count towards the new major. Whether they count depends on how they fit the new major, BIT core requirements, or elective categories. Seek academic advice from the School of the School before making the change."
     ),
     (
         "What BIT elective options are available if I want to explore topics outside my major?",
@@ -235,28 +235,28 @@ QA_PAIRS = [
 
     # ── E. SPECIFIC COURSES & STUDY PLANS (Q55–Q70) ──────────────────────────
     (
-        "What is CSSE1001 and what does it cover?",
-        "CSSE1001 is Introduction to Software Engineering, typically the first programming course in the BIT and Computer Science programs. It introduces fundamental programming concepts using Python and foundational software engineering practices. No prior programming experience is required as a prerequisite."
+        "What is CORE1001 and what does it cover?",
+        "CORE1001 is Introduction to Software Engineering, typically the first programming course in the BIT and Computer Science programs. It introduces fundamental programming concepts using Python and foundational software engineering practices. No prior programming experience is required as a prerequisite."
     ),
     (
-        "What is INFS1200 and why is it important in the BIT?",
-        "INFS1200 is Introduction to Information Systems, a foundational first-year course covering database concepts, information management, and the role of information systems in organisations. It is a prerequisite for several later courses in the Software Information Systems major, so completing it early is important."
+        "What is INFO1200 and why is it important in the BIT?",
+        "INFO1200 is Introduction to Information Systems, a foundational first-year course covering database concepts, information management, and the role of information systems in organisations. It is a prerequisite for several later courses in the Software Information Systems major, so completing it early is important."
     ),
     (
-        "What is DECO1400 and what does it focus on?",
-        "DECO1400 is Introduction to Web Design, a first-year course covering the fundamentals of web technologies, HTML, CSS, and user interface design. It is typically a foundational course for the User Experience Design major and the DECO-series courses."
+        "What is DSGN1400 and what does it focus on?",
+        "DSGN1400 is Introduction to Web Design, a first-year course covering the fundamentals of web technologies, HTML, CSS, and user interface design. It is typically a foundational course for the User Experience Design major and the DECO-series courses."
     ),
     (
         "What is MATH1061, and do BIT students need to take it?",
         "MATH1061 is Discrete Mathematics, covering logic, sets, combinatorics, graph theory, and Boolean algebra. It is a core mathematics course for BIT students, providing the mathematical foundation for algorithm analysis and theoretical computer science. Check your study plan to confirm the recommended semester."
     ),
     (
-        "What is DECO3801 and when should I take it?",
-        "DECO3801 is a capstone project course in the DECO series, typically taken in the final year of the BIT program. It involves a substantial team project combining design and technical skills. It is a core graduation requirement for BIT students following the DECO pathway."
+        "What is DSGN3801 and when should I take it?",
+        "DSGN3801 is a capstone project course in the DECO series, typically taken in the final year of the BIT program. It involves a substantial team project combining design and technical skills. It is a core graduation requirement for BIT students following the DECO pathway."
     ),
     (
         "Can I overload (take more than 8 units in a semester) in the BIT program?",
-        "Overloading beyond the standard 8-unit semester load requires approval. You should contact the School of EECS or the EAIT Faculty to request permission. Overloading without approval is not permitted and the extra courses may not count towards your program requirements."
+        "Overloading beyond the standard 8-unit semester load requires approval. You should contact the School of the School or the Faculty to request permission. Overloading without approval is not permitted and the extra courses may not count towards your program requirements."
     ),
     (
         "What is the difference between a core course, a program elective, and a general elective in the BIT?",
@@ -267,8 +267,8 @@ QA_PAIRS = [
         "Yes, the BIT typically allows some general elective units from other faculties. You should confirm the course is available to non-program students, that you meet any prerequisites, and that it counts as an elective in your BIT structure. Seek academic advice if unsure."
     ),
     (
-        "What is CSSE2002 and is it a prerequisite for advanced BIT courses?",
-        "CSSE2002 is Programming in the Large, a second-year course building on CSSE1001. It covers object-oriented design, software architecture, and large-scale software development. It is typically a prerequisite for several Year 2 and Year 3 CSSE courses in the BIT program."
+        "What is CORE2002 and is it a prerequisite for advanced BIT courses?",
+        "CORE2002 is Programming in the Large, a second-year course building on CORE1001. It covers object-oriented design, software architecture, and large-scale software development. It is typically a prerequisite for several Year 2 and Year 3 CSSE courses in the BIT program."
     ),
     (
         "Is it possible to take a Summer Semester course as a BIT student?",
@@ -276,23 +276,23 @@ QA_PAIRS = [
     ),
     (
         "What first-semester courses should I take as a Semester 2 commencing BIT student?",
-        "Semester 2 commencing students should follow the study plan specifically designed for their commencement semester - not the Semester 1 plan, which has a different course sequence. Use the study plan for your specific major and commencement semester available from EECS or Programs and Courses."
+        "Semester 2 commencing students should follow the study plan specifically designed for their commencement semester - not the Semester 1 plan, which has a different course sequence. Use the study plan for your specific major and commencement semester available from the School or Programs and Courses."
     ),
     (
-        "I passed CSSE1001 with a grade of 4 out of 7. Can I continue to second-year CSSE courses?",
-        "A grade of 4 is a pass on the University's 7-point scale. In most cases, you can progress to second-year CSSE courses if you have passed CSSE1001 and meet other listed prerequisites. Confirm whether the next course specifies a minimum grade requirement beyond a simple pass."
+        "I passed CORE1001 with a grade of 4 out of 7. Can I continue to second-year CSSE courses?",
+        "A grade of 4 is a pass on the University's 7-point scale. In most cases, you can progress to second-year CSSE courses if you have passed CORE1001 and meet other listed prerequisites. Confirm whether the next course specifies a minimum grade requirement beyond a simple pass."
     ),
     (
         "Do BIT students need to complete a capstone or final-year project to graduate?",
-        "Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DECO3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses."
+        "Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses."
     ),
     (
-        "What is INFS2200 and what are its prerequisites?",
-        "INFS2200 is Relational Database Systems, a second-year course covering database design, SQL, and relational theory. It typically has INFS1200 as a prerequisite. It is a key course for students in the Software Information Systems major."
+        "What is INFO2200 and what are its prerequisites?",
+        "INFO2200 is Relational Database Systems, a second-year course covering database design, SQL, and relational theory. It typically has INFO1200 as a prerequisite. It is a key course for students in the Software Information Systems major."
     ),
     (
         "Where can I find the official study plan for my BIT major?",
-        "Study plans - the suggested semester-by-semester course sequence - are available from the School of Electrical Engineering and Computer Science (EECS) website at eecs.example.edu and through Programs and Courses. Use the plan that matches your commencement year and semester."
+        "Study plans - the suggested semester-by-semester course sequence - are available from the School of Computing (the School) website at cs.example.edu and through Programs and Courses. Use the plan that matches your commencement year and semester."
     ),
     (
         "What is the role of DECO courses in the BIT program?",
@@ -370,7 +370,7 @@ QA_PAIRS = [
     ),
     (
         "Can international students apply for the Bachelors of Engineering (Honours) / IT dual degree?",
-        "Yes. International students can apply for the BE(Hons)/IT. The English requirement is 'Minimum' IELTS 6.5. Program code is 9009, CRICOS 080731B. International tuition fees are approximately AUD $58,056 per year for 2026."
+        "Yes. International students can apply for the BE(Hons)/IT. The English requirement is 'Minimum' IELTS 6.5. Program code is 9009, CRICOS CRIC003. International tuition fees are approximately AUD $58,056 per year for 2026."
     ),
     (
         "For a dual degree with IT, do I need to meet entry requirements for both component degrees separately?",
@@ -378,7 +378,7 @@ QA_PAIRS = [
     ),
     (
         "Can I transfer from a dual degree back to the standalone Bachelor of Information Technology?",
-        "A transfer may be possible, but it depends on which courses you have completed and how they satisfy the BIT program requirements. You should seek academic advice from the School of EECS or your faculty before making any change, as the process is not automatic."
+        "A transfer may be possible, but it depends on which courses you have completed and how they satisfy the BIT program requirements. You should seek academic advice from the School of the School or your faculty before making any change, as the process is not automatic."
     ),
     (
         "What is the total indicative fee for the BE(Hons)/IT dual degree for an international student?",
@@ -478,7 +478,7 @@ QA_PAIRS = [
     # ── H. CAMPUS LIFE, SUPPORT & ACCOMMODATION (Q114–Q128) ──────────────────
     (
         "What accommodation options are available at the University for BIT students?",
-        "the University offers on-campus accommodation through 10 residential colleges (including Cromwell, Duchesne, Emmanuel, Grace, International House, King's, St John's, St Leo's, The Women's College, and Union College), and Kev Carmody House, the University's newest 610-room student residence at the main campus. Off-campus options include purpose-built student accommodation and private housing supported by the University Accommodation team."
+        "the University offers on-campus accommodation through 10 residential colleges (including a college, a college, Emmanuel, Grace, International House, King's, St John's, a college, The Women's College, and Union College), and a new student residence, the University's newest 610-room student residence at the main campus. Off-campus options include purpose-built student accommodation and private housing supported by the University Accommodation team."
     ),
     (
         "Is O-Week attendance compulsory for international BIT students?",
@@ -518,7 +518,7 @@ QA_PAIRS = [
     ),
     (
         "Is there a Women in Computing program at the University for BIT students?",
-        "Yes. the University's Women in Computing Program (WiC) encourages girls and women to pursue technology careers and fosters a sense of belonging for Computer Science and IT students. More information is available at eait.example.edu/wic."
+        "Yes. the University's Women in Computing Program (WiC) encourages girls and women to pursue technology careers and fosters a sense of belonging for Computer Science and IT students. More information is available at the Faculty.example.edu/wic."
     ),
     (
         "What library services are available to BIT students at the main campus?",
@@ -568,7 +568,7 @@ QA_PAIRS = [
     ),
     (
         "Does the BIT include any work-integrated learning or internship opportunities?",
-        "the University supports work-integrated learning through enrichment programs, internships, global study, and industry events. Specific placement opportunities depend on your major and courses. Explore the University Enhance Your Employability program at study.example.edu/enhance-your-employability for available options."
+        "the University supports work-integrated learning through enrichment programs, internships, global study, and industry events. Specific placement opportunities depend on your major and courses. Explore the University the career-development program at study.example.edu/enhance-your-employability for available options."
     ),
     (
         "What industries do BIT graduates from the University typically work in?",
@@ -576,7 +576,7 @@ QA_PAIRS = [
     ),
     (
         "Is the University's BIT ranked in world subject rankings?",
-        "the University is ranked equal 40th globally (QS World University Rankings 2025). The BIT (Honours) program is ranked #1 in the state for computer science and information systems (QS World University Rankings 2026). the University's EECS faculty has won 12 national teaching awards in the last 10 years."
+        "the University is ranked equal 40th globally (QS World University Rankings 2025). The BIT (Honours) program is ranked #1 in the state for computer science and information systems (QS World University Rankings 2026). the University's the School faculty has won 12 national teaching awards in the last 10 years."
     ),
     (
         "Does the BIT prepare students for careers in artificial intelligence or machine learning?",
@@ -584,7 +584,7 @@ QA_PAIRS = [
     ),
     (
         "What career services does the University provide to help IT students find employment?",
-        "the University provides career services through the Enhance Your Employability program, including global study, internships, career workshops, research projects, and industry events. The EAIT faculty has industry connections through research partnerships and employer networks relevant to IT careers."
+        "the University provides career services through the career-development program, including global study, internships, career workshops, research projects, and industry events. The Faculty has industry connections through research partnerships and employer networks relevant to IT careers."
     ),
     (
         "Can I work in a part-time IT job while studying BIT on a student visa?",
@@ -718,7 +718,7 @@ QA_PAIRS = [
     ),
     (
         "Does the University offer global study opportunities for BIT students?",
-        "the University supports global study, internships, and volunteer opportunities through the Enhance Your Employability program. the University's 350,000 alumni across 190 countries and broad global partnerships create significant international opportunities. Enquire about specific exchange programs available to IT students at study.example.edu."
+        "the University supports global study, internships, and volunteer opportunities through the career-development program. the University's 350,000 alumni across 190 countries and broad global partnerships create significant international opportunities. Enquire about specific exchange programs available to IT students at study.example.edu."
     ),
     (
         "What is the University's overall world ranking relevant to IT students?",
@@ -726,11 +726,11 @@ QA_PAIRS = [
     ),
     (
         "Is the BIT program accredited by the Australian Computer Society (ACS)?",
-        "You should check the current accreditation status of the BIT on the program's page at study.example.edu or by contacting the School of EECS, as accreditation status and conditions can change. ACS accreditation affects eligibility for professional ACS membership after graduation."
+        "You should check the current accreditation status of the BIT on the program's page at study.example.edu or by contacting the School of the School, as accreditation status and conditions can change. ACS accreditation affects eligibility for professional ACS membership after graduation."
     ),
     (
         "Can I transfer from the BIT at the University to the Bachelor of Computer Science during my studies?",
-        "A transfer may be possible, depending on which courses you have completed and whether they satisfy BCS entry and credit requirements. Contact the School of EECS or the EAIT faculty for formal academic advice before attempting a transfer, as the process is not automatic."
+        "A transfer may be possible, depending on which courses you have completed and whether they satisfy BCS entry and credit requirements. Contact the School of the School or the Faculty for formal academic advice before attempting a transfer, as the process is not automatic."
     ),
     (
         "What is the University grading scale, and what does a grade of 4 mean?",
@@ -750,7 +750,7 @@ QA_PAIRS = [
     ),
     (
         "Is cyber security covered in the BIT curriculum?",
-        "Cyber security career pathways are listed for EECS graduates. While the BIT does not have a dedicated Cyber Security major (unlike the Bachelor of Computer Science), relevant content and electives may be available. For deeper specialisation, consider the BCS Cyber Security major or the postgraduate Master of Cyber Security (5257)."
+        "Cyber security career pathways are listed for the School graduates. While the BIT does not have a dedicated Cyber Security major (unlike the Bachelor of Computer Science), relevant content and electives may be available. For deeper specialisation, consider the BCS Cyber Security major or the postgraduate Master of Cyber Security (5257)."
     ),
     (
         "What is the University Student Union and what does it offer BIT students?",
@@ -770,7 +770,7 @@ QA_PAIRS = [
     ),
     (
         "What is the PASS program at the University, and how can it help BIT students?",
-        "Peer Assisted Study Sessions (PASS) are facilitated by second- and third-year students who achieved top grades in specific courses. They provide advice on course content and study habits. PASS is particularly useful for first-year BIT courses like CSSE1001 and INFS1200. Ask your faculty for details on PASS sessions for your courses."
+        "Peer Assisted Study Sessions (PASS) are facilitated by second- and third-year students who achieved top grades in specific courses. They provide advice on course content and study habits. PASS is particularly useful for first-year BIT courses like CORE1001 and INFO1200. Ask your faculty for details on PASS sessions for your courses."
     ),
     (
         "Can I study the BIT entirely online?",
@@ -786,7 +786,7 @@ QA_PAIRS = [
     ),
     (
         "What is the difference between BIT program codes 9002 and 9004?",
-        "Both codes appear in the University documentation as the Bachelor of Information Technology. Code 9002 (CRICOS 001952K) appears in the University International Guide 2026, while 9004 appears on the study.example.edu program page for 2026 entry. These may reflect a program update. Refer to study.example.edu for the current program code and confirm with admissions if uncertain."
+        "Both codes appear in the University documentation as the Bachelor of Information Technology. Code 9002 (CRICOS CRIC001) appears in the University International Guide 2026, while 9004 appears on the study.example.edu program page for 2026 entry. These may reflect a program update. Refer to study.example.edu for the current program code and confirm with admissions if uncertain."
     ),
     (
         "What are the Semester 1 and Semester 2 start dates at the University for 2026?",
@@ -801,7 +801,7 @@ QA_PAIRS = [
         "The Bachelor of Computer Science (2451) offers majors in Cyber Security, Data Science, Artificial Intelligence, Programming Languages, and Scientific Computing. This contrasts with the BIT, which offers Software Information Systems, User Experience Design, and Software Design/Solution Architecture. Choose between them based on whether you prefer IT business/design applications or core computing and algorithms."
     ),
     (
-        "Does the University provide tutoring support for BIT courses such as CSSE1001 or DECO1400?",
+        "Does the University provide tutoring support for BIT courses such as CORE1001 or DSGN1400?",
         "the University offers Peer Assisted Study Sessions (PASS) facilitated by high-achieving peers, consultation hours with lecturers and tutors, and online course forums. Attending weekly practicals and labs also provides hands-on guidance. Contact course staff early if you are struggling rather than waiting until assessment time."
     ),
     (
@@ -813,8 +813,8 @@ QA_PAIRS = [
         "Yes. The BIT (Honours) is a separate program and requires a new application. Apply online at apply.example.edu using program code 9001. For domestic students, the Semester 1 deadline is 31 January; for international students, 30 November of the previous year. You must meet the minimum GPA of 5.0/7.0 from your BIT."
     ),
     (
-        "What is DECO3801 and why is it important in the BIT degree?",
-        "DECO3801 (Design & Computation Studio 2 / Projects in Computing) is a capstone project course in the BIT. It requires students to work in multidisciplinary teams to design, prototype, and evaluate a computing product for a real client. It integrates skills from across the degree and is typically taken in the final year. It is a core requirement for BIT students and is not offered in Summer Semester."
+        "What is DSGN3801 and why is it important in the BIT degree?",
+        "DSGN3801 (Design & Computation Studio 2 / Projects in Computing) is a capstone project course in the BIT. It requires students to work in multidisciplinary teams to design, prototype, and evaluate a computing product for a real client. It integrates skills from across the degree and is typically taken in the final year. It is a core requirement for BIT students and is not offered in Summer Semester."
     ),
     (
         "Can I do a study abroad or exchange semester as a BIT student at the University?",
@@ -825,8 +825,8 @@ QA_PAIRS = [
         "the University's Student Integrity and Misconduct Policy covers all forms of academic dishonesty, including plagiarism, contract cheating, collusion, and misrepresentation. In BIT courses this includes submitting code written by others or using AI tools without declared authorisation. Each course statement specifies what is and is not permitted. Penalties range from a mark of zero to expulsion. Submit all work through the correct channels and use the University's academic integrity resources at academicintegrity.example.edu."
     ),
     (
-        "What are the prerequisites for INFS1200 Introduction to Information Systems?",
-        "INFS1200 has no listed prerequisites at the University and is designed as a first-year introductory course. It covers database concepts, entity-relationship modelling, SQL, and data management. It is a required course for most BIT study plans and should ideally be completed in your first year. Completing INFS1200 is a prerequisite for INFS2200 (Relational Database Systems) in second year."
+        "What are the prerequisites for INFO1200 Introduction to Information Systems?",
+        "INFO1200 has no listed prerequisites at the University and is designed as a first-year introductory course. It covers database concepts, entity-relationship modelling, SQL, and data management. It is a required course for most BIT study plans and should ideally be completed in your first year. Completing INFO1200 is a prerequisite for INFO2200 (Relational Database Systems) in second year."
     ),
     (
         "Is there a difference in tuition fees between BIT majors or dual degree programs?",

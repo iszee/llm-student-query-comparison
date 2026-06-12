@@ -18,7 +18,7 @@ idx,question,reference,generated_response,factual_accuracy,relevance,conciseness
     *   **Entrepreneurship Workshops & Events:** the University Ventures regularly hosts workshops, speaker series, and networking events focused on various aspects of entrepreneurship.
 *   **the University Business School Entrepreneurship:** The Business School has a strong focus on entrepreneurship, with courses and resources available.
 *   **Innovation Showcase:** An annual event where student",4.666666666666667,5.0,4.333333333333333,4.666666666666667,0.9433333333333334
-2,What is the CRICOS code for the Bachelor of Information Technology?,The CRICOS code for the Bachelor of Information Technology is 001952K.,"The CRICOS code for the Bachelor of Information Technology at the University is **093863M**.
+2,What is the CRICOS code for the Bachelor of Information Technology?,The CRICOS code for the Bachelor of Information Technology is CRIC001.,"The CRICOS code for the Bachelor of Information Technology at the University is **CRIC017**.
 
 This code is important for international students as it verifies that the course is registered to operate in Australia.",0.0,5.0,5.0,3.0,0.41
 3,What healthcare facilities are available at the main campus for BIT students?,"The main campus has a University Health Care clinic, the University Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the University SafeZone app connecting students to security officers or emergency services.","Okay, let's break down the healthcare facilities available at the University's the main campus that are relevant for BIT students. Here's a comprehensive overview:
@@ -155,11 +155,11 @@ You can find more details on the University website: [https://study.example.edu/
 
 3. **What Kind of Work Experience Might Be Considered?**
    * **Highly Relevant Roles:**  Experience",4.333333333333333,4.333333333333333,3.6666666666666665,4.666666666666667,0.86
-13,What is INFS2200 and what are its prerequisites?,INFS2200 is Relational Database Systems. Prerequisite is INFS1200.,"Okay, let's break down INFS2200.
+13,What is INFO2200 and what are its prerequisites?,INFO2200 is Relational Database Systems. Prerequisite is INFO1200.,"Okay, let's break down INFO2200.
 
-**What is INFS2200?**
+**What is INFO2200?**
 
-INFS2200 is titled **Database Systems**. It's a core unit in the Bachelor of Information Technology and several other related degrees at the University. The unit focuses on the principles and practices of database design and implementation. You'll learn about:
+INFO2200 is titled **Database Systems**. It's a core unit in the Bachelor of Information Technology and several other related degrees at the University. The unit focuses on the principles and practices of database design and implementation. You'll learn about:
 
 *   **Relational Database Management Systems (RDBMS):** This is the core focus, using SQL (Structured Query Language) to interact with databases.
 *   **Database Design:**  You'll learn how to model data effectively using techniques like Entity-Relationship (ER) diagrams.
@@ -169,11 +169,11 @@ INFS2200 is titled **Database Systems**. It's a core unit in the Bachelor of Inf
 
 **Prerequisites:**
 
-The prerequisite for INFS2200 is **INFS1100 - Foundations of Information Technology**.
+The prerequisite for INFO2200 is **INFO1100 - Foundations of Information Technology**.
 
 **Important Notes:**
 
-*   **Assumed Knowledge:** While INFS1100 is the formal prerequisite,",3.0,4.333333333333333,3.6666666666666665,4.0,0.7
+*   **Assumed Knowledge:** While INFO1100 is the formal prerequisite,",3.0,4.333333333333333,3.6666666666666665,4.0,0.7
 14,Does the city have a strong tech industry for IT graduates from the University?,"Yes. the city is one of Australia's fastest-growing capital cities (ABS 2023) and one of the top 30 best student cities in the world (QS 2025). It is a thriving centre in Asia-Pacific for technology, investment, and major events. With 82.5% of the University IT graduates in full-time employment, the local and regional job market is strong.","Yes, the city is experiencing a significant boom in its tech industry, and the University IT graduates are well-positioned to take advantage of it. Here's a breakdown of why the city has a strong tech scene and how the University graduates fit in:
 
 **Why the city's Tech Industry is Strong:**
@@ -218,9 +218,9 @@ The prerequisite for INFS2200 is **INFS1100 - Foundations of Information Technol
 *   **Create a the state admissions centre Account:** If you don't already have one, create an account on the state admissions centre website.
 *   **Complete the Application Form:** Fill out the application form accurately and completely. You'll need to provide personal details, academic information, and select your desired course (BIT - 733001).
 *   **Submit Your Year 12 Results:** the state admissions centre will request your Year 12 results directly from your school",5.0,5.0,5.0,5.0,1.0
-18,What is INFS1200 and why is it important in the BIT?,"INFS1200 is Introduction to Information Systems - Information systems analysis, design and implementation, relational database technology, data modelling, data querying using SQL, building a small scale information systems using a relational database management system.","INFS1200 is ""Data Management and Analytics"". It's a *very* important foundational unit in the Bachelor of Information Technology (BIT) at the University. Here's a breakdown of what it is and why it's crucial:
+18,What is INFO1200 and why is it important in the BIT?,"INFO1200 is Introduction to Information Systems - Information systems analysis, design and implementation, relational database technology, data modelling, data querying using SQL, building a small scale information systems using a relational database management system.","INFO1200 is ""Data Management and Analytics"". It's a *very* important foundational unit in the Bachelor of Information Technology (BIT) at the University. Here's a breakdown of what it is and why it's crucial:
 
-**What is INFS1200?**
+**What is INFO1200?**
 
 *   **Focus:** The unit introduces you to the core concepts of data management and analytics. You'll learn about:
     *   **Databases:** How data is structured, stored, and accessed (relational databases are a key focus).
@@ -231,7 +231,7 @@ The prerequisite for INFS2200 is **INFS1100 - Foundations of Information Technol
 
 **Why is it Important in the BIT?**
 
-*   **Foundation for Many Other Units:**  INFS1200 provides the groundwork for numerous other BIT units.  Many advanced courses in areas like software development, business intelligence, data science,",3.0,5.0,5.0,4.0,0.76
+*   **Foundation for Many Other Units:**  INFO1200 provides the groundwork for numerous other BIT units.  Many advanced courses in areas like software development, business intelligence, data science,",3.0,5.0,5.0,4.0,0.76
 19,Can I study the BIT part-time as a domestic student?,"Yes, the BIT can be studied part-time by domestic students.","Yes, you can study the Bachelor of Information Technology (BIT) part-time as a domestic student at the University.
 
 Here's a breakdown of what you need to know:
@@ -280,21 +280,21 @@ The SSAF typically supports a range of services, including:
 **Do BIT Students at the University Pay the SSAF?**
 
 **Yes, BIT students at",4.333333333333333,4.333333333333333,3.3333333333333335,4.666666666666667,0.8533333333333333
-22,What is CSSE2002 and is it a prerequisite for advanced BIT courses?,CSSE2002 is Programming in the Large. Prerequisite are CSSE1001 or ENGG1001.,"CSSE2002 is ""Data Structures and Algorithms."" It's a core course in the Bachelor of Information Technology at the University and a **very important prerequisite** for many advanced BIT courses.
+22,What is CORE2002 and is it a prerequisite for advanced BIT courses?,CORE2002 is Programming in the Large. Prerequisite are CORE1001 or ENGG1001.,"CORE2002 is ""Data Structures and Algorithms."" It's a core course in the Bachelor of Information Technology at the University and a **very important prerequisite** for many advanced BIT courses.
 
 Here's a breakdown:
 
 *   **What it is:** This course covers fundamental data structures (like arrays, linked lists, trees, graphs, hash tables) and algorithms (sorting, searching, graph algorithms). You'll learn how to analyze the efficiency of algorithms (Big O notation).
 *   **Why it's important:** Data structures and algorithms are the building blocks of almost all software. A strong understanding of these concepts is essential for writing efficient and effective code.
-*   **Prerequisites:** Typically, CSSE1001 (Introduction to Programming) is a prerequisite.
-*   **Advanced BIT Courses:** Many advanced courses in the BIT program *require* CSSE2002 as a prerequisite. Examples include (but aren't limited to):
-    *   CSSE3001 - Software Engineering
-    *   CSSE3010 - Database Systems
-    *   CSSE3020 - Computer Networks
+*   **Prerequisites:** Typically, CORE1001 (Introduction to Programming) is a prerequisite.
+*   **Advanced BIT Courses:** Many advanced courses in the BIT program *require* CORE2002 as a prerequisite. Examples include (but aren't limited to):
+    *   CORE3001 - Software Engineering
+    *   CORE3010 - Database Systems
+    *   CORE3020 - Computer Networks
     *   And many more specialized electives.
 
 **Therefore,",2.0,3.6666666666666665,4.0,2.0,0.5233333333333333
-23,Can I add a Concurrent Diploma in Languages alongside my BIT?,"Yes. the University offers a Concurrent Diploma in Languages that can be studied alongside most bachelor's degrees, including BIT. You need to apply to get them added. If you a domestic student you can add them from https://study.example.edu/study-options/programs/diploma-languages-1602 if not, you can lodge them through mySI-net before the due date.  Consult the academic calender for the due dates.","Yes, you absolutely can! the University allows students in the Bachelor of Information Technology (BIT) to pursue a Concurrent Diploma in Languages. It's a popular and valuable combination.
+23,Can I add a Concurrent Diploma in Languages alongside my BIT?,"Yes. the University offers a Concurrent Diploma in Languages that can be studied alongside most bachelor's degrees, including BIT. You need to apply to get them added. If you a domestic student you can add them from https://study.example.edu/study-options/programs/diploma-languages-1602 if not, you can lodge them through the student portal before the due date.  Consult the academic calender for the due dates.","Yes, you absolutely can! the University allows students in the Bachelor of Information Technology (BIT) to pursue a Concurrent Diploma in Languages. It's a popular and valuable combination.
 
 Here's a breakdown of what you need to know and the steps to take:
 
@@ -310,9 +310,9 @@ Here's a breakdown of what you need to know and the steps to take:
 *   **Integration:** The program is designed to integrate the language studies with your BIT coursework.
 
 **3. How to Apply & Enrol:**",5.0,5.0,4.0,5.0,0.9800000000000001
-24,What is DECO3801 and why is it important in the BIT degree?,"Design Computing Studio 3 - Build (DECO3801) is a capstone project course in the BIT. It requires students to work in multidisciplinary teams to design, prototype, and evaluate a computing product for a real client. It integrates skills from across the degree and is typically taken in the final year.","DECO3801 is ""Software Engineering Principles."" It's a *very* important course in the Bachelor of Information Technology (BIT) degree at the University. Here's a breakdown of what it is and why it's significant:
+24,What is DSGN3801 and why is it important in the BIT degree?,"Design Computing Studio 3 - Build (DSGN3801) is a capstone project course in the BIT. It requires students to work in multidisciplinary teams to design, prototype, and evaluate a computing product for a real client. It integrates skills from across the degree and is typically taken in the final year.","DSGN3801 is ""Software Engineering Principles."" It's a *very* important course in the Bachelor of Information Technology (BIT) degree at the University. Here's a breakdown of what it is and why it's significant:
 
-**What is DECO3801?**
+**What is DSGN3801?**
 
 *   **Focus:** The course covers the fundamental principles and practices of software engineering. It's not just about coding; it's about building *reliable, maintainable, and scalable* software systems.
 *   **Topics Covered:** Expect to learn about:
@@ -340,7 +340,7 @@ Here's what you need to know:
 
 *   **the University Handbook:** [https://handbook.example.edu/](https://handbook.example.edu/) - Search for your program and then look at the course offerings.
 *   **Summer Semester Course Search:** [https://summer.example.edu/](https://",5.0,5.0,5.0,5.0,1.0
-26,What career services does the University provide to help IT students find employment?,"the University provides career services through the Enhance Your Employability program, including global study, internships, career workshops, research projects, and industry events. The EAIT faculty has industry connections through research partnerships and employer networks relevant to IT careers.","the University's Career Services offers a robust suite of resources specifically beneficial for IT students looking for employment. Here's a breakdown of what they provide:
+26,What career services does the University provide to help IT students find employment?,"the University provides career services through the career-development program, including global study, internships, career workshops, research projects, and industry events. The Faculty has industry connections through research partnerships and employer networks relevant to IT careers.","the University's Career Services offers a robust suite of resources specifically beneficial for IT students looking for employment. Here's a breakdown of what they provide:
 
 **1. Career Advising & Coaching:**
 
@@ -384,7 +384,7 @@ Here's a breakdown of how it works:
 **Important Considerations & How to Choose:**
 
 *   **Course Requirements:** Each specialisation has specific required courses within the IT portion of the degree. You can find the detailed course lists on the University Handbook website (see link below",2.0,3.0,4.0,2.3333333333333335,0.4966666666666667
-29,Where can I find the official study plan for my BIT major?,Study plans - the suggested semester-by-semester course sequence - are available from the School of Electrical Engineering and Computer Science (EECS) website at eecs.example.edu and through Programs and Courses.,"Okay, finding the official study plan is key! Here's where you can find it:
+29,Where can I find the official study plan for my BIT major?,Study plans - the suggested semester-by-semester course sequence - are available from the School of Computing (the School) website at cs.example.edu and through Programs and Courses.,"Okay, finding the official study plan is key! Here's where you can find it:
 
 1. **the University Programs Website:** This is the primary source. Go to the University Programs website: [https://programs.example.edu/information-technology-bachelor-of-information-technology](https://programs.example.edu/information-technology-bachelor-of-information-technology)
 
@@ -393,7 +393,7 @@ Here's a breakdown of how it works:
 3. **Select Your Major and Start Year:**  The study plan will likely be broken down by major (e.g., Data Science, Software Engineering, Cybersecurity) and your *year of commencement* (the year you started your degree).  **This is crucial!**  The study plan changes slightly from year to year.  Make sure you're looking at the correct one for *your* start year.
 
 4. **Download the PDF:**  The study plan is usually presented as a PDF document. Download it for easy reference",5.0,5.0,5.0,5.0,1.0
-30,Can I transfer from the BIT at the University to the Bachelor of Computer Science during my studies?,"A transfer may be possible, depending on which courses you have completed and whether they satisfy BCS entry and credit requirements. Contact the School of EECS or the EAIT faculty for formal academic advice before attempting a transfer, as the process is not automatic.","Yes, you absolutely can! Transferring between the Bachelor of Information Technology (BIT) and the Bachelor of Computer Science (BCompSc) at the University is a common and supported pathway. Here's a breakdown of the process and what you need to know:
+30,Can I transfer from the BIT at the University to the Bachelor of Computer Science during my studies?,"A transfer may be possible, depending on which courses you have completed and whether they satisfy BCS entry and credit requirements. Contact the School of the School or the Faculty for formal academic advice before attempting a transfer, as the process is not automatic.","Yes, you absolutely can! Transferring between the Bachelor of Information Technology (BIT) and the Bachelor of Computer Science (BCompSc) at the University is a common and supported pathway. Here's a breakdown of the process and what you need to know:
 
 **1. Eligibility & Credit:**
 
@@ -406,7 +406,7 @@ Here's a breakdown of how it works:
 *   **the University Transfer Portal:** The primary way to request a transfer is through the University Transfer Portal. You'll find it on the University website (search for ""the University Transfer Portal"").
 *   **Application Details:** The portal will ask for information about your current degree, the degree you want to transfer to (BCompSc), and your reasons for transferring.
 *",3.6666666666666665,5.0,4.0,3.3333333333333335,0.8
-31,What is CSSE1001 and what does it cover?,"CSSE1001 is Introduction to Software Engineering - through programming with particular focus on the fundamentals of computing and programming, using an exploratory problem-based approach. Building abstractions with procedures, data and objects; data modelling; designing, coding and debugging programs of increasing complexity","CSSE1001 is ""Design and Debugging"" - a foundational course for all Computer Science and Information Technology students at the University. It's a very important course, and often considered challenging, but it sets you up for success in later studies.
+31,What is CORE1001 and what does it cover?,"CORE1001 is Introduction to Software Engineering - through programming with particular focus on the fundamentals of computing and programming, using an exploratory problem-based approach. Building abstractions with procedures, data and objects; data modelling; designing, coding and debugging programs of increasing complexity","CORE1001 is ""Design and Debugging"" - a foundational course for all Computer Science and Information Technology students at the University. It's a very important course, and often considered challenging, but it sets you up for success in later studies.
 
 Here's a breakdown of what it covers:
 
@@ -443,7 +443,7 @@ Here's a breakdown of what it covers:
 *   **Within the 'Change of Program/Withdrawal' Period (typically the first few weeks of the semester):** You'll receive a significant refund, but it's not a full refund. The exact percentage depends on the date of withdrawal.  Generally, you'll receive a higher percentage of your fees back earlier in this period.
 *   **After the 'Change of Program/Withdrawal' Period:** Refunds become significantly smaller and may be minimal.  You might only receive a refund for compulsory fees.
 *   **Withdrawal After the Census Date (usually around week 6 of semester):",3.3333333333333335,4.333333333333333,3.3333333333333335,3.3333333333333335,0.7166666666666668
-35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DECO3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","Yes, BIT students *do* need to complete a capstone project to graduate. It's a significant component of the degree.
+35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","Yes, BIT students *do* need to complete a capstone project to graduate. It's a significant component of the degree.
 
 Here's a breakdown of what you need to know:
 
@@ -507,15 +507,15 @@ However, keep in mind:
 *   **the University's Recommendation:** the University strongly recommends applying as early as possible. They process applications on a rolling basis, meaning places are offered as they receive them.  Applying early significantly increases your chances of securing a place.
 *   **Where to Find the Official Date:** The *definitive* deadline will be published on the University International Admissions website: [https://www.example.edu/international/apply/key-dates](https://www.example.edu/international/apply/key-dates) **Keep checking this page regularly starting in mid-2025.**
 *   **Sign up for Updates:** Consider subscribing to the University's international student mailing list to receive updates and announcements directly",4.333333333333333,4.666666666666667,4.666666666666667,5.0,0.9033333333333333
-41,"I am a Software Information Systems student. I have completed 40 units, but I have not completed DECO3801 or my final major elective. Can I just take any four electives next year and graduate?","No. You should not plan graduation based only on total units. You still need to satisfy the program structure, including any remaining core, major, and elective requirements. Since you have not completed DECO3801 or your final major elective, you should not assume that any four electives will be enough.","Okay, that's a good situation to be in! Let's break down your next steps to graduation as a Software Information Systems student.
+41,"I am a Software Information Systems student. I have completed 40 units, but I have not completed DSGN3801 or my final major elective. Can I just take any four electives next year and graduate?","No. You should not plan graduation based only on total units. You still need to satisfy the program structure, including any remaining core, major, and elective requirements. Since you have not completed DSGN3801 or your final major elective, you should not assume that any four electives will be enough.","Okay, that's a good situation to be in! Let's break down your next steps to graduation as a Software Information Systems student.
 
 Here's a plan, assuming you've completed all other requirements and have 40 units:
 
-**1. DECO3801 - Absolutely Essential:**
+**1. DSGN3801 - Absolutely Essential:**
 
-*   **This is a mandatory course for your degree.** You *must* complete DECO3801 before graduating. It's not an elective. You can't just substitute it with anything.
-*   **Check Prerequisites:** Ensure you still meet the prerequisites for DECO3801.
-*   **Enroll in DECO3801:** Prioritize enrolling in DECO3801 in the upcoming semester.
+*   **This is a mandatory course for your degree.** You *must* complete DSGN3801 before graduating. It's not an elective. You can't just substitute it with anything.
+*   **Check Prerequisites:** Ensure you still meet the prerequisites for DSGN3801.
+*   **Enroll in DSGN3801:** Prioritize enrolling in DSGN3801 in the upcoming semester.
 
 **2. Final Major Elective:**
 
@@ -599,18 +599,18 @@ Your student visa (subclass 500) has strict enrolment requirements. You *must* m
 
 *   **Reduced Study Load:** Dropping a course *reduces* your study load. If this reduction takes you below the full-time requirement for your visa, it *could* trigger a notification to the Department of Home Affairs (the government agency that manages visas).
 *   **Satisfactory Progress:** If you drop",4.666666666666667,5.0,4.666666666666667,4.666666666666667,0.95
-49,"am starting Semester 1, 2026 and want to follow the Software Information Systems major. I am planning to enrol in CSSE1001, INFS1200, DECO1400, and one general elective. Does this look consistent with the suggested first-semester plan?","Yes, that looks consistent with the Semester 1 commencement study plan for the Software Information Systems major. You should first check official course availability and then see if the timetable fit, and whether there are any personal circumstances that might affect your enrolment before finalising it.","Okay, let's break down your proposed Semester 1, 2026 plan for the Software Information Systems major and see how it aligns with the suggested first-semester plan.
+49,"am starting Semester 1, 2026 and want to follow the Software Information Systems major. I am planning to enrol in CORE1001, INFO1200, DSGN1400, and one general elective. Does this look consistent with the suggested first-semester plan?","Yes, that looks consistent with the Semester 1 commencement study plan for the Software Information Systems major. You should first check official course availability and then see if the timetable fit, and whether there are any personal circumstances that might affect your enrolment before finalising it.","Okay, let's break down your proposed Semester 1, 2026 plan for the Software Information Systems major and see how it aligns with the suggested first-semester plan.
 
 **Your Proposed Plan:**
 
-*   **CSSE1001: Introduction to Programming** - Excellent, this is a core foundational course.
-*   **INFS1200: Information Systems Foundations** - Also excellent, this is a core requirement for the Software Information Systems major and a good complement to CSSE1001.
-*   **DECO1400: Design and Creativity** - This is a good choice for developing design thinking skills, which are valuable in software development.
+*   **CORE1001: Introduction to Programming** - Excellent, this is a core foundational course.
+*   **INFO1200: Information Systems Foundations** - Also excellent, this is a core requirement for the Software Information Systems major and a good complement to CORE1001.
+*   **DSGN1400: Design and Creativity** - This is a good choice for developing design thinking skills, which are valuable in software development.
 *   **General Elective** - This is fine, but you'll want to choose wisely (more on that below).
 
 **Comparison to Suggested First Semester Plan (as of current the University handbooks - always double-check the 2026 handbook when it's released):**
 
-The typical suggested first semester plan for Software Information Systems includes CSSE1001 and INFS1200. DECO1400 is a common and recommended elective.
+The typical suggested first semester plan for Software Information Systems includes CORE1001 and INFO1200. DSGN1400 is a common and recommended elective.
 
 **Therefore, your plan is *very*",5.0,5.0,5.0,5.0,1.0
 MEAN,,,,3.6533333333333333,4.473333333333333,4.18,3.9999999999999996,0.7891333333333335

@@ -39,7 +39,7 @@ Questions were designed to reflect the kinds of queries real domestic and intern
 - Student visas and work rights
 - Course enrollment and study planning
 - Majors and elective choices
-- Core courses (CSSE1001, CSSE2002, INFS1200, INFS2200, DECO1400, DECO3801, MATH1061)
+- Core courses (CORE1001, CORE2002, INFO1200, INFO2200, DSGN1400, DSGN3801, MATH1061)
 - Grading, GPA, and academic standing
 - Student support and wellbeing
 - Credit, recognition of prior learning, and post-graduation pathways
