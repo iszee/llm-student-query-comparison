@@ -232,3 +232,4 @@ env_mistral/
 # RAG index artifacts (built locally via `python -m rag build`)
 rag/index/
 /paper/
+/scripts/
