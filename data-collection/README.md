@@ -1,5 +1,7 @@
 # Data Collection
 
+> **Anonymisation notice:** All files in this directory have been de-identified for double-blind review. The institution name, URLs, program codes, CRICOS codes, course-code prefixes, named programs, campus names, and source PDFs have been replaced with generic placeholders. See the root `README.md` for the full substitution table. The source PDFs (`international-guide-undergraduate-postgraduate.pdf`, `domestic-guide-undergraduate.pdf`) have been removed; drop your institution's equivalents into `sources/` to rebuild the RAG index.
+
 This folder contains the question-and-answer datasets used in the LLM student query comparison research project. The datasets cover student queries about the University (the University) Bachelor of Information Technology (BIT) degree and its related dual degrees.
 
 ## Datasets

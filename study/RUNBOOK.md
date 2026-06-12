@@ -1,5 +1,7 @@
 # Expert Validation Study — Runbook
 
+> **Anonymisation notice:** All files in this directory have been de-identified for double-blind review. Expert rater identities (names and email addresses) have been replaced with `rater1`–`rater3` / `rater1@example.edu`–`rater3@example.edu` in all workbooks, CSVs, and documentation. Institution-specific content in questionnaire items has been scrubbed per the substitution table in the root `README.md`.
+
 ## Files in this directory
 
 | File | Purpose |

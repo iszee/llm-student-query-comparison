@@ -1,5 +1,7 @@
 # RAG Module
 
+> **Anonymisation notice:** This module has been de-identified for double-blind review. All institution-specific references in source code and documentation have been replaced with generic placeholders. The two source PDFs (official student guides) have been **removed** from `data-collection/sources/` — drop your institution's equivalent PDFs into that directory and re-run `python -m rag build --force` to reconstruct the index. Program page URLs in `sources/program-pages.txt` have been anonymised to `*.example.edu` and will not resolve; substitute your institution's real URLs to re-ingest live content.
+
 Retrieval-Augmented Generation for the University BIT evaluation pipeline.
 
 The module builds a hybrid search index over the University source documents and exposes a `Retriever` class that the evaluation scripts use to inject relevant passages into model prompts.
@@ -28,11 +30,7 @@ An `OPENAI_API_KEY` is required for the Contextual Retrieval step (GPT-4o-mini w
 
 The index is built from two sources:
 
-**PDFs** - all `*.pdf` files in `data-collection/sources/`:
-- `international-guide-undergraduate-postgraduate.pdf` - the University International Student Guide 2026
-- `domestic-guide-undergraduate.pdf` - the University Domestic Undergraduate Guide 2026
-
-Adding a new PDF is automatic: drop it into `data-collection/sources/` and re-run `python -m rag build --force`.
+**PDFs** - all `*.pdf` files in `data-collection/sources/`. The original official student guide PDFs have been removed for anonymity. To rebuild the index, drop your institution's equivalent PDFs into `data-collection/sources/` and re-run `python -m rag build --force`.
 
 **Program pages** - all URLs listed in `data-collection/sources/program-pages.txt` (8 the University BIT program pages).
 

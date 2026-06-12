@@ -1,7 +1,7 @@
 idx,question,reference,generated_response,factual_accuracy,relevance,conciseness,no_hallucination,composite_score
-0,I need academic English support as a BIT student. What resources are available?,"the University offers a free English for Academic Communication (EAC) program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services.","According to the provided the University documents, here's the academic English support available:
+0,I need academic English support as a BIT student. What resources are available?,"the University offers a free an academic English program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services.","According to the provided the University documents, here's the academic English support available:
 
-*   **English for Academic Communication (EAC) workshops:** These are free workshops offered during semester by the University College. They cover a range of skills and topics. [uqcollege.example.edu/english-studies/english-academic-communication-eac]
+*   **an academic English program workshops:** These are free workshops offered during semester by the University College. They cover a range of skills and topics. [unicollege.example.edu/english-studies/english-academic-communication-eac]
 *   **Academic English support:** A variety of academic English study options are available. [my.example.edu/information-and-services/student-support/study-skills-and-learning-advice/study-skills-and-learning-advice-overview/academic-english-support]
 
 
@@ -42,7 +42,7 @@ Student Advisers - Student Advice Team can help you with a wide range of profess
 A Genuine Student (GS) Assessment is something you *may* be asked to complete and submit as part of the application process. It is mentioned in relation to international student applications.
 
 Whether you need to complete one depends on your individual circumstances. If you are working with a GS Agent, you will also need to provide a GS Agent Checklist.",5.0,5.0,5.0,5.0,1.0
-10,What is the Jump Start Academic Preparation Program (JSAPP) at the University?,"JSAPP is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","According to the provided the University documents, the Jump Start Academic Preparation Program (JSAPP) is held before semester starts and helps students transition to university life. You can find more information at my.example.edu/information-and-services/ student-support/study-skills-and- learning-advice/study-skills-and learning-advice-overview/jumpstart-uni- preparation-program.",5.0,5.0,4.0,5.0,0.9800000000000001
+10,What is the an academic preparation program at the University?,"the program is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","According to the provided the University documents, the an academic preparation program is held before semester starts and helps students transition to university life. You can find more information at my.example.edu/information-and-services/ student-support/study-skills-and- learning-advice/study-skills-and learning-advice-overview/jumpstart-uni- preparation-program.",5.0,5.0,4.0,5.0,0.9800000000000001
 11,Does the BIT include an integrated honours year?,"No. The standalone Bachelor of Information Technology (3 years) does not include an integrated honours year. After completing the BIT with a sufficient GPA (5.0/7.0 minimum), you can apply separately for the Bachelor of Information Technology (Honours), a one-year program.","Whether the Bachelor of Information Technology (BIT) program includes an integrated honours year depends on the specific university offering the program. Here's a breakdown of how it generally works across different institutions in Australia, where the BIT is commonly offered:
 
 **Generally, the answer is: It's often *optional* or a *separate pathway*, rather than fully integrated.**
@@ -69,7 +69,7 @@ Here's a detailed explanation, covering the key aspects and potential hurdles:
 
 **What is INFO2200?**
 
-INFO2200 is a course titled **""Data Management and Databases.""** It's a core course within the Information Management (INFS) program at CU Boulder's Leeds School of Business.
+INFO2200 is a course titled **""Data Management and Databases.""** It's a core course within the Information Management (INFO) program at CU Boulder's Leeds School of Business.
 
 Here's a more detailed description of what the course covers:
 
@@ -87,7 +87,7 @@ Here's a more detailed description of what the course covers:
 
 
 These testimonials imply that the University IT graduates find opportunities in the tech sector, but don't confirm the strength of the industry in the city specifically.",4.666666666666667,2.6666666666666665,4.333333333333333,5.0,0.8333333333333334
-15,Can I do a study abroad or exchange semester as a BIT student at the University?,Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (uqabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester.,"The provided document mentions ""semester-based exchange"" as a global experience offered by the University. It states that your studies will count towards your degree ""just as if you undertook them at the University."" However, it **does not specify** whether this applies to students of a particular degree like BIT (Bachelor of Information Technology).
+15,Can I do a study abroad or exchange semester as a BIT student at the University?,Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (studyabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester.,"The provided document mentions ""semester-based exchange"" as a global experience offered by the University. It states that your studies will count towards your degree ""just as if you undertook them at the University."" However, it **does not specify** whether this applies to students of a particular degree like BIT (Bachelor of Information Technology).
 
 Therefore, based on the provided reference material, it is **not possible to definitively say** if a BIT student can do a study abroad or exchange semester.",1.3333333333333333,2.6666666666666665,4.0,4.666666666666667,0.4533333333333333
 16,Does the BIT include courses on social media and mobile computing?,Yes. Social and Mobile Computing is listed as one of the key areas of study in the BIT curriculum.,"Yes, the Birla Institute of Technology & Science (BITS), Pilani, and its associated campuses (Birla Institute of Technology Mesra, Birla Institute of Technology Dubai) **does** include courses related to social media and mobile computing within its various programs. However, the extent and specific course titles vary depending on the program and campus.
@@ -147,7 +147,7 @@ The documents do not specify whether students enrolled in a Bachelor of Informat
 
 **What is CORE2002?**
 
-CORE2002 is a subject called **""Software Engineering Principles and Practice.""** It's a core subject within the CSSE (Computer Science and Software Engineering) stream of the BIT program.
+CORE2002 is a subject called **""Software Engineering Principles and Practice.""** It's a core subject within the CORE (Computer Science and Software Engineering) stream of the BIT program.
 
 Here's a more detailed look at what it covers:
 
@@ -259,7 +259,7 @@ The documents do not specify the BIT program, so the policy applies generally.
 
 
 You can find more details in the Student Refund Procedures: [policies.example.edu/document/ view-current.php?id=226](policies.example.edu/document/view-current.php?id=226)",5.0,5.0,5.0,5.0,1.0
-35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","Yes, generally, students pursuing a Bachelor of Information Technology (BIT) degrees **do** need to complete a capstone project or final-year project to graduate. However, the specifics can vary depending on the university or institution offering the program.
+35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DSGN pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","Yes, generally, students pursuing a Bachelor of Information Technology (BIT) degrees **do** need to complete a capstone project or final-year project to graduate. However, the specifics can vary depending on the university or institution offering the program.
 
 Here's a breakdown of what you can expect and the common variations:
 
@@ -332,7 +332,7 @@ Here's a breakdown of what I want to communicate, and how I can help, followed b
 **2. Understanding What You're Experiencing:**
 
 *   **""Everything falling apart"" is a powerful statement.** It suggests a significant loss of control and stability in your life.",0.0,0.0,0.0,3.3333333333333335,0.06666666666666668
-47,I am a student in a DECO project course. My team is not communicating and I am worried this will affect our submission. What should I do?,"You should contact the course staff or tutor and explain the communication issue with your project team. Keep a clear record of communication and what you have contributed. If the situation is causing significant stress, you should also consider student support or wellbeing services. All Deco courses have their own ways of handling such issues.","Okay, this is a *very* common problem in group projects, and it's good you're addressing it now. Let's break down what you can do, from immediate actions to longer-term strategies. I'll organize this into categories: **Immediate Actions, Communication Strategies, Escalation (if needed), and Documentation.**  I'll also add a section on **Self-Care** because dealing with this can be stressful.
+47,I am a student in a DSGN project course. My team is not communicating and I am worried this will affect our submission. What should I do?,"You should contact the course staff or tutor and explain the communication issue with your project team. Keep a clear record of communication and what you have contributed. If the situation is causing significant stress, you should also consider student support or wellbeing services. All DSGN courses have their own ways of handling such issues.","Okay, this is a *very* common problem in group projects, and it's good you're addressing it now. Let's break down what you can do, from immediate actions to longer-term strategies. I'll organize this into categories: **Immediate Actions, Communication Strategies, Escalation (if needed), and Documentation.**  I'll also add a section on **Self-Care** because dealing with this can be stressful.
 
 **1. Immediate Actions (Do These ASAP)**
 

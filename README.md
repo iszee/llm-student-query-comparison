@@ -2,6 +2,36 @@
 
 Research project at the University comparing how large language models respond to student queries about the University programs. The focus is benchmarking and evaluating LLM responses against official the University program information and student guidance documents.
 
+## Anonymisation Notice
+
+This repository has been de-identified for **double-blind artifact review**. The following substitutions have been applied uniformly across all files (datasets, evaluation results, source code, and documentation):
+
+| Category | Replaced with |
+|----------|--------------|
+| Institution name (full and abbreviated) | "the University" |
+| Institution URLs and email domain | `*.example.edu` / `anon@example.edu` |
+| City name | "the city" |
+| Main campus name | "the main campus" |
+| State name and abbreviation | "the state" |
+| State-level admissions centre acronym | "the state admissions centre" |
+| State senior secondary certificate acronym | "the senior secondary certificate" |
+| Institution student portal system name | "the student portal" |
+| Institution faculty acronym | "the Faculty" |
+| Institution school name and acronym | "the School of Computing" |
+| Program codes | Pseudo-codes 9001–9009 (stable remapping; cross-references preserved) |
+| CRICOS program codes | Pseudo-codes CRIC001–CRIC018 |
+| Course-code prefixes (discipline-specific) | Neutral equivalents (4-digit suffixes unchanged) |
+| Named institution-specific bridging/prep programs | Generic descriptions ("an academic preparation program", etc.) |
+| Named on-campus residential colleges | "a college" / "a new student residence" |
+| Expert rater names and email addresses | rater1–rater3 / rater1@example.edu–rater3@example.edu |
+| Institution phone numbers | (07) XXXX XXXX |
+| W&B organisation / project identifiers | "anon-org" / "anon-project" |
+| Source PDFs (official student guides) | Removed (see Source Documents below) |
+
+**What is NOT anonymised:** Model names (Gemma 3, Mistral Nemo, Qwen3), evaluation methodology (G-Eval, GPT-4o-mini), "Australia"/"Australian", standard Australian terminology (ATAR, HECS-HELP, OSHC), the degree name "Bachelor of Information Technology (BIT)" (generic across many universities), and comparator university names that appear in model-generated outputs — these are recorded hallucinations that are part of the experimental data and must not be altered.
+
+---
+
 ## Project Overview
 
 The project targets the **Bachelor of Information Technology (BIT)** program at the University (program codes 9004 / 9002) and its associated dual degrees. It builds datasets of student Q&A pairs - both human-authored and synthetic - to serve as evaluation benchmarks and fine-tuning data for information-assistant models.
@@ -217,6 +247,6 @@ If the index is not built, or RAG dependencies are not installed, the RAG varian
 
 | File | Description |
 |------|-------------|
-| `sources/program-pages.txt` | Official the University program page URLs for BIT and 7 dual degrees |
-| `sources/international-guide-undergraduate-postgraduate.pdf` | the University International Student Guide 2026 - primary factual reference |
-| `sources/domestic-guide-undergraduate.pdf` | the University Domestic Undergraduate Student Guide 2026 |
+| `sources/program-pages.txt` | Official program page URLs for BIT and 7 dual degrees (URLs anonymised to `*.example.edu`) |
+| *(removed)* `international-guide-undergraduate-postgraduate.pdf` | Official International Student Guide 2026 — removed for anonymity. Drop your institution's equivalent into `data-collection/sources/` to rebuild the RAG index. |
+| *(removed)* `domestic-guide-undergraduate.pdf` | Official Domestic Undergraduate Guide 2026 — removed for anonymity. Drop your institution's equivalent into `data-collection/sources/` to rebuild the RAG index. |

@@ -1,5 +1,7 @@
 # data/
 
+> **Anonymisation notice:** All files in this directory have been de-identified for double-blind review. The institution name, URLs, discipline-specific course-code prefixes, program codes (pseudo-codes 9001–9009), CRICOS codes (CRIC001–CRIC018), and all other institution-specific identifiers have been replaced with generic placeholders throughout the Q&A text in `train.jsonl`, `test.jsonl`, and `few_shot_examples.json`. See the root `README.md` for the full substitution table.
+
 Fine-tuning data for the University BIT information assistant. All files here are ready to use with any HuggingFace-compatible trainer.
 
 ## Files

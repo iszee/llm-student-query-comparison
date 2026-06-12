@@ -1,5 +1,5 @@
 idx,question,reference,generated_response,factual_accuracy,relevance,conciseness,no_hallucination,composite_score
-0,I need academic English support as a BIT student. What resources are available?,"the University offers a free English for Academic Communication (EAC) program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services.","Okay, being a BIT (Bachelor of Information Technology) student often means a lot of technical writing, presentations, and potentially research papers. Academic English support is crucial for success. Here's a breakdown of resources available, categorized by type (University, Online, and General) and with specific suggestions tailored to a BIT student's needs.  I'll also include some notes on *how* to best utilize them.
+0,I need academic English support as a BIT student. What resources are available?,"the University offers a free an academic English program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services.","Okay, being a BIT (Bachelor of Information Technology) student often means a lot of technical writing, presentations, and potentially research papers. Academic English support is crucial for success. Here's a breakdown of resources available, categorized by type (University, Online, and General) and with specific suggestions tailored to a BIT student's needs.  I'll also include some notes on *how* to best utilize them.
 
 **I. University/College Resources (Your First & Best Bet - Start Here!)**
 
@@ -14,7 +14,7 @@ idx,question,reference,generated_response,factual_accuracy,relevance,conciseness
 *   **What it is:** This is *the* central point for entrepreneurship at the University. They offer a range of programs, resources, and support.
 *   **Key Programs & Services:**
     *   **the University Accelerator Program:** A flagship program (usually 12-16 weeks) providing intensive mentoring, workshops, funding opportunities (up to $20,000), and access to a co-working space.  Highly competitive, but worth applying.  They often have specific streams (e.g., deep tech, social impact).  *Crucially, it's open to students from *any* faculty, not just business.*
-        *   [the University Accelerator Program](https://uqventures.example.edu/accelerator)",5.0,5.0,4.0,5.0,0.9800000000000001
+        *   [the University Accelerator Program](https://univentures.example.edu/accelerator)",5.0,5.0,4.0,5.0,0.9800000000000001
 2,What is the CRICOS code for the Bachelor of Information Technology?,The CRICOS code for the Bachelor of Information Technology is CRIC001.,"The CRICOS code for a Bachelor of Information Technology can vary depending on the specific university and program. Here's a breakdown and how to find the correct one:
 
 **Why it varies:**
@@ -110,9 +110,9 @@ The Australian government has been concerned about a rise in visa fraud and stud
 The GS Assessment is *not* a standardized test like IELTS or TOEFL. It's a combination of factors and assessments, and it's primarily handled by the university you're applying to. Here's a breakdown of the components:
 
 1. **University Assessment (Primary Focus):",4.666666666666667,4.0,3.0,4.666666666666667,0.8666666666666668
-10,What is the Jump Start Academic Preparation Program (JSAPP) at the University?,"JSAPP is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","The Jump Start Academic Preparation Program (JSAPP) at the University (the University) is a **pre-sessional English and academic skills program designed to help international students transition successfully to university study in Australia.** It's essentially a bridge program to help students meet the English language and academic requirements for direct entry into the University degrees.
+10,What is the an academic preparation program at the University?,"the program is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","The an academic preparation program at the University (the University) is a **pre-sessional English and academic skills program designed to help international students transition successfully to university study in Australia.** It's essentially a bridge program to help students meet the English language and academic requirements for direct entry into the University degrees.
 
-Here's a breakdown of key aspects of JSAPP:
+Here's a breakdown of key aspects of the program:
 
 **1. Purpose & Who It's For:**
 
@@ -123,7 +123,7 @@ Here's a breakdown of key aspects of JSAPP:
 
 **2. Program Structure & Levels:**
 
-*   **Multiple Levels:** JSAPP offers different levels based on your initial English proficiency.  These levels are determined",2.0,2.6666666666666665,3.3333333333333335,2.0,0.4600000000000001
+*   **Multiple Levels:** the program offers different levels based on your initial English proficiency.  These levels are determined",2.0,2.6666666666666665,3.3333333333333335,2.0,0.4600000000000001
 11,Does the BIT include an integrated honours year?,"No. The standalone Bachelor of Information Technology (3 years) does not include an integrated honours year. After completing the BIT with a sufficient GPA (5.0/7.0 minimum), you can apply separately for the Bachelor of Information Technology (Honours), a one-year program.","Whether the Bachelor of Information Technology (BIT) program includes an integrated honours year depends on the specific university offering the program. **It's not a universal feature.**
 
 Here's a breakdown of how it typically works and examples:
@@ -151,7 +151,7 @@ Here's a detailed explanation, covering the key aspects and potential hurdles:
 
 **What is INFO2200?**
 
-INFO2200 is a course titled **""Data Management and Databases.""** It's a core course within the Information Management (INFS) program at CU Boulder's Leeds School of Business.
+INFO2200 is a course titled **""Data Management and Databases.""** It's a core course within the Information Management (INFO) program at CU Boulder's Leeds School of Business.
 
 Here's a more detailed description of what the course covers:
 
@@ -170,7 +170,7 @@ Here's a more detailed look, divided into sections:
     *   **Government Investment:** Both the state and Federal governments are actively investing in the tech sector, with initiatives to attract companies and foster innovation.
     *   **Olympic Games 2032:** The upcoming Olympics are a *huge* catalyst.  There's massive demand for tech solutions across infrastructure, security, transport, event management, and more. This is creating a lot of short-term and long-term opportunities.
     *   **Relocation & Talent Attraction:**  Companies are relocating or expanding in the city due to lower costs (office space, salaries compared to Sydney/Melbourne), a better lifestyle, and a growing",4.666666666666667,5.0,4.0,4.333333333333333,0.93
-15,Can I do a study abroad or exchange semester as a BIT student at the University?,Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (uqabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester.,"Yes, absolutely! As a Bachelor of Information Technology (BIT) student at the University (the University), you have several opportunities to participate in a study abroad or exchange semester. Here's a breakdown of the options and key things to know:
+15,Can I do a study abroad or exchange semester as a BIT student at the University?,Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (studyabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester.,"Yes, absolutely! As a Bachelor of Information Technology (BIT) student at the University (the University), you have several opportunities to participate in a study abroad or exchange semester. Here's a breakdown of the options and key things to know:
 
 **1. the University Global Experiences Program (GEP):**
 
@@ -263,7 +263,7 @@ Here's a more detailed look at what it typically covers:
 
 **What is CORE2002?**
 
-CORE2002 is a subject called **""Software Engineering Principles and Practice.""** It's a core subject within the CSSE (Computer Science and Software Engineering) stream of the BIT program.
+CORE2002 is a subject called **""Software Engineering Principles and Practice.""** It's a core subject within the CORE (Computer Science and Software Engineering) stream of the BIT program.
 
 Here's a more detailed look at what it covers:
 
@@ -401,7 +401,7 @@ Here's a breakdown, divided into stages of the semester and the likely refund am
 
 *   **the University's Fee Refund and Credit Policy:** This is the overarching document.  [https://students.example.edu/fees/refunds-and-credits](https://students.example.edu/fees/refunds-and-credits)
 *   **the University's Late Withdrawal Information:** This provides details on deadlines and potential penalties. [https://students.example.edu/fees/late-withdrawals](https://students.example.edu/fees/late-withdrawals)",4.666666666666667,4.666666666666667,3.3333333333333335,5.0,0.9133333333333333
-35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","Yes, most Bachelor of Information Technology (BIT) programs require students to complete a capstone project or a significant final-year project to graduate. However, the specifics can vary depending on the university and the particular BIT program.
+35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DSGN pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","Yes, most Bachelor of Information Technology (BIT) programs require students to complete a capstone project or a significant final-year project to graduate. However, the specifics can vary depending on the university and the particular BIT program.
 
 Here's a breakdown of what you can generally expect and factors that influence the requirement:
 
@@ -456,7 +456,7 @@ However, it's *crucially important* to understand this is just the *minimum*. He
     *   [the University Library Locations](https://library.example.edu/locations)
 *   **the University Library Search:** This is your starting point for *everything*. It searches across all library resources (books, journals, databases, etc.).
     *   [the University Library Search](https://library.example.edu/search)
-*   **UQLink:** Your the University login gives you access to a vast range of online resources.",4.333333333333333,4.333333333333333,3.6666666666666665,4.333333333333333,0.8533333333333333
+*   **UniLink:** Your the University login gives you access to a vast range of online resources.",4.333333333333333,4.333333333333333,3.6666666666666665,4.333333333333333,0.8533333333333333
 40,"When is the international application deadline for Semester 1, 2026 entry into BIT?","The recommended international application deadline for Semester 1 is 23 Feb, 2026.","Okay, let's break down the international application deadlines for Semester 1, 2026 entry into the Bachelor of Innovation and Technology (BIT) program at Delft University of Technology (TU Delft).
 
 **Here's the information, as of today (May 16, 2024), based on TU Delft's official website and past trends:**
@@ -523,7 +523,7 @@ Here's a breakdown of what I want to say, and how I can help, followed by resour
 *   There are people who care and want to help you through this.
 
 **3. Safety is",0.0,0.0,1.6666666666666667,4.333333333333333,0.12000000000000002
-47,I am a student in a DECO project course. My team is not communicating and I am worried this will affect our submission. What should I do?,"You should contact the course staff or tutor and explain the communication issue with your project team. Keep a clear record of communication and what you have contributed. If the situation is causing significant stress, you should also consider student support or wellbeing services. All Deco courses have their own ways of handling such issues.","Okay, this is a *very* common problem in group projects, and it's good you're addressing it now. Let's break down what you can do, from immediate actions to longer-term strategies. I'll organize this into categories: **Immediate Actions, Communication Strategies, Escalation (if needed), and Documentation.**  I'll also include some considerations specific to a DECO (Design, Engineering, and Commerce) project, which often have a strong deliverable focus.
+47,I am a student in a DSGN project course. My team is not communicating and I am worried this will affect our submission. What should I do?,"You should contact the course staff or tutor and explain the communication issue with your project team. Keep a clear record of communication and what you have contributed. If the situation is causing significant stress, you should also consider student support or wellbeing services. All DSGN courses have their own ways of handling such issues.","Okay, this is a *very* common problem in group projects, and it's good you're addressing it now. Let's break down what you can do, from immediate actions to longer-term strategies. I'll organize this into categories: **Immediate Actions, Communication Strategies, Escalation (if needed), and Documentation.**  I'll also include some considerations specific to a DSGN (Design, Engineering, and Commerce) project, which often have a strong deliverable focus.
 
 **1. Immediate Actions (Do These ASAP)**
 

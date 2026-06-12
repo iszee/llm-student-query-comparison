@@ -1,5 +1,7 @@
 # Qwen3 14B — GRPO Fine-tuning
 
+> **Anonymisation notice:** All files in this directory have been de-identified for double-blind review, including the evaluation result CSVs in `results/`. Institution name, URLs, course codes, program codes, phone numbers, and all other institution-specific identifiers in model-generated completions have been replaced with generic placeholders. W&B tracking identifiers have been anonymised to `anon-org / anon-project`. See the root `README.md` for the full substitution table.
+
 Reinforcement learning fine-tuning of `Qwen/Qwen3-14B` for the University BIT information assistant, using:
 
 - **GRPO** (Group Relative Policy Optimization) via TRL `GRPOTrainer`

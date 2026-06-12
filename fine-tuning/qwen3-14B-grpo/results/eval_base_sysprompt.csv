@@ -1,5 +1,5 @@
 idx,question,reference,generated_response,factual_accuracy,relevance,conciseness,no_hallucination,composite_score
-0,I need academic English support as a BIT student. What resources are available?,"the University offers a free English for Academic Communication (EAC) program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services.","<think>
+0,I need academic English support as a BIT student. What resources are available?,"the University offers a free an academic English program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services.","<think>
 Okay, the user is a BIT student needing academic English support. Let me recall the resources available at the University.
 
 First, the Academic English Support (AES) program comes to mind. They offer workshops and one-on-one consultations. That's a key resource. I should mention that.
@@ -113,10 +113,10 @@ Now, the user is a student in the University Bachelor of Information Technology 
 Wait, but the user might be an international student who is applying for a visa or has recently arrived. They might be confused about whether they need to do this assessment. Also, I should consider if there are any specific conditions for the University students. 
 
 I should confirm that the GS Assessment is part of the visa application process for international students. If the student is applying for a student visa, they would",4.666666666666667,3.6666666666666665,3.0,4.666666666666667,0.85
-10,What is the Jump Start Academic Preparation Program (JSAPP) at the University?,"JSAPP is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","<think>
-Okay, the user is asking about the Jump Start Academic Preparation Program (JSAPP) at the University. Let me recall what I know about this.
+10,What is the an academic preparation program at the University?,"the program is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services.","<think>
+Okay, the user is asking about the an academic preparation program at the University. Let me recall what I know about this.
 
-First, I remember that JSAPP is designed for students who might need extra support before starting their degree. It's probably an academic preparation program. I think it's for students who didn't meet the entry requirements or have a non-traditional background. 
+First, I remember that the program is designed for students who might need extra support before starting their degree. It's probably an academic preparation program. I think it's for students who didn't meet the entry requirements or have a non-traditional background. 
 
 Wait, the program might help them get up to speed with the academic skills needed for university. It could include things like study skills, time management, and subject-specific content. I should check if it's a pre-term program or runs alongside the first semester. 
 
@@ -125,7 +125,7 @@ Also, I need to mention that it's part of the University's support services. May
 I should make sure not to include any incorrect details. If I'm unsure about specific aspects like duration or eligibility criteria, I should advise the student to check the official the University website. Let me structure the answer clearly, highlighting the purpose, target audience, and how to get more info.
 </think>
 
-The **Jump Start Academic Preparation Program (JSAPP)** at",2.0,2.3333333333333335,2.6666666666666665,2.6666666666666665,0.44333333333333336
+The **an academic preparation program** at",2.0,2.3333333333333335,2.6666666666666665,2.6666666666666665,0.44333333333333336
 11,Does the BIT include an integrated honours year?,"No. The standalone Bachelor of Information Technology (3 years) does not include an integrated honours year. After completing the BIT with a sufficient GPA (5.0/7.0 minimum), you can apply separately for the Bachelor of Information Technology (Honours), a one-year program.","<think>
 Okay, the user is asking if the Bachelor of Information Technology (BIT) at the University includes an integrated honours year. Let me recall what I know about the University's BIT program.
 
@@ -164,7 +164,7 @@ the University's IT program is well-regarded, so graduates would have good emplo
 Also, the presence of other universities and research institutions in the city might contribute to a vibrant tech ecosystem. Maybe mention the startup scene and innovation hubs. However, I should be careful not to overstate the strength compared to cities like Sydney or Melbourne, which are more established tech hubs. But the city is growing, so it's a good place for IT graduates.
 
 I need to make sure I don't provide incorrect information. If I'm unsure about specific companies or",3.3333333333333335,3.6666666666666665,2.3333333333333335,3.0,0.6566666666666666
-15,Can I do a study abroad or exchange semester as a BIT student at the University?,Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (uqabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester.,"<think>
+15,Can I do a study abroad or exchange semester as a BIT student at the University?,Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (studyabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester.,"<think>
 Okay, the user is asking if they can do a study abroad or exchange semester as a BIT student at the University. Let me recall the information I have.
 
 First, I know that the University offers exchange programs through the Global Mobility program. BIT students might be eligible, but I need to check if there are any specific requirements. The BIT program has a set of core courses, so the student would need to ensure that the courses taken abroad align with their degree requirements. 
@@ -359,7 +359,7 @@ I should check if there are different policies for domestic and international st
 Wait, the user specifically mentioned the BIT program. Does the BIT program have any special considerations? Probably not, since the refund policy is generally university-wide, not program-specific. But I should confirm that.
 
 I need to make sure I'm not giving outdated information. The refund deadlines might change each semester, so it's important to direct the student to the official the University website for the most current details. Also, there might be exceptions or special circumstances, like",2.0,2.6666666666666665,2.0,2.6666666666666665,0.44666666666666666
-35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","<think>
+35,Do BIT students need to complete a capstone or final-year project to graduate?,"Yes. The BIT typically requires a capstone project in the final year. For students following the DSGN pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses.","<think>
 Okay, the user is asking if BIT students at the University need to complete a capstone or final-year project to graduate. Let me recall the structure of the Bachelor of Information Technology program.
 
 First, I know that the University's BIT program is structured over three years, with each year having specific core and elective units. The final year, which is the third year, includes some advanced units. I remember that in the third year, there's a unit called ""IT Project"" which is a capstone project. This unit is part of the core requirements for the degree.
@@ -477,8 +477,8 @@ I need to avoid any assumptions about their situation and not offer advice that 
 </think>
 
 I'm really sorry you're feeling this way. Please know that you're not alone, and there are people who care",0.0,0.0,2.0,4.666666666666667,0.13333333333333336
-47,I am a student in a DECO project course. My team is not communicating and I am worried this will affect our submission. What should I do?,"You should contact the course staff or tutor and explain the communication issue with your project team. Keep a clear record of communication and what you have contributed. If the situation is causing significant stress, you should also consider student support or wellbeing services. All Deco courses have their own ways of handling such issues.","<think>
-Okay, the user is a student in a DECO project course, and their team isn't communicating, which is worrying them about their submission. Let me think about how to approach this.
+47,I am a student in a DSGN project course. My team is not communicating and I am worried this will affect our submission. What should I do?,"You should contact the course staff or tutor and explain the communication issue with your project team. Keep a clear record of communication and what you have contributed. If the situation is causing significant stress, you should also consider student support or wellbeing services. All DSGN courses have their own ways of handling such issues.","<think>
+Okay, the user is a student in a DSGN project course, and their team isn't communicating, which is worrying them about their submission. Let me think about how to approach this.
 
 First, I need to acknowledge their concern. It's important to validate their feelings. Then, suggest practical steps they can take. Maybe start with initiating a team meeting. They might be hesitant to bring it up, but it's necessary. They should set a clear agenda to focus on the project and communication issues.
 

@@ -244,7 +244,7 @@ QA_PAIRS = [
     ),
     (
         "What is DSGN1400 and what does it focus on?",
-        "DSGN1400 is Introduction to Web Design, a first-year course covering the fundamentals of web technologies, HTML, CSS, and user interface design. It is typically a foundational course for the User Experience Design major and the DECO-series courses."
+        "DSGN1400 is Introduction to Web Design, a first-year course covering the fundamentals of web technologies, HTML, CSS, and user interface design. It is typically a foundational course for the User Experience Design major and the DSGN-series courses."
     ),
     (
         "What is MATH1061, and do BIT students need to take it?",
@@ -252,7 +252,7 @@ QA_PAIRS = [
     ),
     (
         "What is DSGN3801 and when should I take it?",
-        "DSGN3801 is a capstone project course in the DECO series, typically taken in the final year of the BIT program. It involves a substantial team project combining design and technical skills. It is a core graduation requirement for BIT students following the DECO pathway."
+        "DSGN3801 is a capstone project course in the DSGN series, typically taken in the final year of the BIT program. It involves a substantial team project combining design and technical skills. It is a core graduation requirement for BIT students following the DSGN pathway."
     ),
     (
         "Can I overload (take more than 8 units in a semester) in the BIT program?",
@@ -268,7 +268,7 @@ QA_PAIRS = [
     ),
     (
         "What is CORE2002 and is it a prerequisite for advanced BIT courses?",
-        "CORE2002 is Programming in the Large, a second-year course building on CORE1001. It covers object-oriented design, software architecture, and large-scale software development. It is typically a prerequisite for several Year 2 and Year 3 CSSE courses in the BIT program."
+        "CORE2002 is Programming in the Large, a second-year course building on CORE1001. It covers object-oriented design, software architecture, and large-scale software development. It is typically a prerequisite for several Year 2 and Year 3 CORE courses in the BIT program."
     ),
     (
         "Is it possible to take a Summer Semester course as a BIT student?",
@@ -279,12 +279,12 @@ QA_PAIRS = [
         "Semester 2 commencing students should follow the study plan specifically designed for their commencement semester - not the Semester 1 plan, which has a different course sequence. Use the study plan for your specific major and commencement semester available from the School or Programs and Courses."
     ),
     (
-        "I passed CORE1001 with a grade of 4 out of 7. Can I continue to second-year CSSE courses?",
-        "A grade of 4 is a pass on the University's 7-point scale. In most cases, you can progress to second-year CSSE courses if you have passed CORE1001 and meet other listed prerequisites. Confirm whether the next course specifies a minimum grade requirement beyond a simple pass."
+        "I passed CORE1001 with a grade of 4 out of 7. Can I continue to second-year CORE courses?",
+        "A grade of 4 is a pass on the University's 7-point scale. In most cases, you can progress to second-year CORE courses if you have passed CORE1001 and meet other listed prerequisites. Confirm whether the next course specifies a minimum grade requirement beyond a simple pass."
     ),
     (
         "Do BIT students need to complete a capstone or final-year project to graduate?",
-        "Yes. The BIT typically requires a capstone project in the final year. For students following the DECO pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses."
+        "Yes. The BIT typically requires a capstone project in the final year. For students following the DSGN pathway, this is usually DSGN3801. The specific capstone requirement depends on your major and commencement year. Check your program requirements on Programs and Courses."
     ),
     (
         "What is INFO2200 and what are its prerequisites?",
@@ -295,8 +295,8 @@ QA_PAIRS = [
         "Study plans - the suggested semester-by-semester course sequence - are available from the School of Computing (the School) website at cs.example.edu and through Programs and Courses. Use the plan that matches your commencement year and semester."
     ),
     (
-        "What is the role of DECO courses in the BIT program?",
-        "DECO (Design and Computing) courses form the design stream of the BIT. They cover web design, interaction design, team-based design projects, and human-centred computing. DECO courses are particularly central to the User Experience Design major but also appear in the core curriculum for other majors."
+        "What is the role of DSGN courses in the BIT program?",
+        "DSGN (Design and Computing) courses form the design stream of the BIT. They cover web design, interaction design, team-based design projects, and human-centred computing. DSGN courses are particularly central to the User Experience Design major but also appear in the core curriculum for other majors."
     ),
 
     # ── F. DUAL DEGREES - SPECIFIC PROGRAMS (Q71–Q95) ────────────────────────
@@ -493,8 +493,8 @@ QA_PAIRS = [
         "Yes. the University provides a complimentary airport shuttle service for new international students arriving at the city International Airport during peak arrival times. The International Student Welcome Crew will greet you and transport you to key locations around the city. More information is available at my.example.edu."
     ),
     (
-        "What is the Jump Start Academic Preparation Program (JSAPP) at the University?",
-        "JSAPP is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services."
+        "What is the an academic preparation program at the University?",
+        "the program is a program held before semester starts, designed to help new students - particularly international students - transition into university academic life. It covers study skills, university systems, and academic expectations. It is held before semester starts and is available through Student Support and Wellbeing Services."
     ),
     (
         "What academic support services are available to BIT students who are falling behind?",
@@ -502,7 +502,7 @@ QA_PAIRS = [
     ),
     (
         "Are there student clubs relevant to IT or computing students at the University?",
-        "Yes. the University has over 220 clubs and societies, including technology, coding, gaming, and entrepreneurship clubs relevant to IT and computing students. Explore available clubs at the Student Union.com.au/clubs-and-societies."
+        "Yes. the University has over 220 clubs and societies, including technology, coding, gaming, and entrepreneurship clubs relevant to IT and computing students. Explore available clubs at studentunion.example.edu/clubs-and-societies."
     ),
     (
         "What support does the University offer for BIT students with a disability or mental health condition?",
@@ -510,7 +510,7 @@ QA_PAIRS = [
     ),
     (
         "I need academic English support as a BIT student. What resources are available?",
-        "the University offers a free English for Academic Communication (EAC) program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services or check uqcollege.edu.au for available options."
+        "the University offers a free an academic English program through the University College, delivered as workshops during semester. Academic English support covers a range of skills and topics. Contact Student Support and Wellbeing Services or check unicollege.edu.au for available options."
     ),
     (
         "What is the University Mentoring program, and how can BIT students access it?",
@@ -518,7 +518,7 @@ QA_PAIRS = [
     ),
     (
         "Is there a Women in Computing program at the University for BIT students?",
-        "Yes. the University's Women in Computing Program (WiC) encourages girls and women to pursue technology careers and fosters a sense of belonging for Computer Science and IT students. More information is available at the Faculty.example.edu/wic."
+        "Yes. the University's Women in Computing Program (WiC) encourages girls and women to pursue technology careers and fosters a sense of belonging for Computer Science and IT students. More information is available at dept.example.edu/wic."
     ),
     (
         "What library services are available to BIT students at the main campus?",
@@ -526,7 +526,7 @@ QA_PAIRS = [
     ),
     (
         "Does the University offer a student legal service?",
-        "Yes. The University Student Union (the Student Union) can assist with legal or migration support. Contact the Student Union.com.au for details on available legal advice services for enrolled students."
+        "Yes. The University Student Union (the Student Union) can assist with legal or migration support. Contact studentunion.example.edu for details on available legal advice services for enrolled students."
     ),
     (
         "What is the University SafeZone app and when should I use it?",
@@ -754,7 +754,7 @@ QA_PAIRS = [
     ),
     (
         "What is the University Student Union and what does it offer BIT students?",
-        "The University Student Union (the Student Union) is the student representative body offering legal and migration support, clubs and societies, events, and student advocacy. BIT students can join IT and computing clubs through the Student Union and access legal advice at the Student Union.com.au."
+        "The University Student Union (the Student Union) is the student representative body offering legal and migration support, clubs and societies, events, and student advocacy. BIT students can join IT and computing clubs through the Student Union and access legal advice at studentunion.example.edu."
     ),
     (
         "What are the key semester dates for 2026 at the University?",
@@ -818,7 +818,7 @@ QA_PAIRS = [
     ),
     (
         "Can I do a study abroad or exchange semester as a BIT student at the University?",
-        "Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (uqabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester."
+        "Yes. the University encourages students to participate in exchange programs through the University Abroad office. As a BIT student you can apply for semester-long exchanges at partner universities worldwide. Credit for courses taken abroad is assessed by the BIT program coordinator. Contact the University Abroad (studyabroad.example.edu) early - applications typically open 9–12 months before the planned exchange semester."
     ),
     (
         "How does academic integrity work at the University and what counts as misconduct in BIT courses?",
