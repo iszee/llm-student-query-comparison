@@ -21,11 +21,11 @@ idx,question,reference,generated_response,factual_accuracy,relevance,conciseness
 2,What is the CRICOS code for the Bachelor of Information Technology?,The CRICOS code for the Bachelor of Information Technology is 001952K.,"The CRICOS code for the Bachelor of Information Technology at the University is **093863M**.
 
 This code is important for international students as it verifies that the course is registered to operate in Australia.",0.0,5.0,5.0,3.0,0.41
-3,What healthcare facilities are available at the the main campus campus for BIT students?,"The the main campus campus has a University Health Care clinic, the University Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the University SafeZone app connecting students to security officers or emergency services.","Okay, let's break down the healthcare facilities available at the University's the main campus campus that are relevant for BIT students. Here's a comprehensive overview:
+3,What healthcare facilities are available at the main campus for BIT students?,"The main campus has a University Health Care clinic, the University Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the University SafeZone app connecting students to security officers or emergency services.","Okay, let's break down the healthcare facilities available at the University's the main campus that are relevant for BIT students. Here's a comprehensive overview:
 
 **1. The University Medical and Counselling Centre (UMCC):** This is your primary resource.
 
-*   **Location:** Morris Centre, Building 20, the main campus Campus.
+*   **Location:** Morris Centre, Building 20, the main campus.
 *   **Services:**
     *   **General Medical Services:** Doctors are available for consultations, diagnosis, and treatment of a wide range of medical conditions. This includes things like colds, flu, minor injuries, and chronic conditions.
     *   **Nursing Services:** Registered nurses provide health assessments, wound care, vaccinations (some may incur a fee), and health education.
@@ -74,7 +74,7 @@ Here's a general plan, broken down into steps:
 
 **2. Accept Your Offer Through the state admissions centre:**
 
-*   **Log in to the state admissions centre:** Go to qtac.edu.au and log in using your the state admissions centre username and password.
+*   **Log in to the state admissions centre:** Go to admissions.example.edu and log in using your the state admissions centre username and password.
 *   **View Your Offers:** Navigate to the ""My Applications"" or ""Offers"" section.
 *   **Accept or Decline:** You'll see your offer for the",5.0,5.0,4.333333333333333,5.0,0.9866666666666667
 7,I have a Malaysian STPM result. Am I eligible to apply for the BIT at the University?,The Malaysian STPM or Unified Examination Certificate (UEC) is accepted as a the state Year 12 equivalent.,"Yes, you are likely eligible to apply for the Bachelor of Information Technology (BIT) at the University with STPM results! However, there are specific requirements you need to meet. Here's a breakdown of what you need to know and the steps to take:
@@ -129,7 +129,7 @@ The assessment typically involves:
     *   Critical thinking and reading
     *   Essay writing and referencing
     *   Exam preparation
-*   **Campus Tours:** Familiarize yourself with the the main campus campus and other the University locations.
+*   **Campus Tours:** Familiarize yourself with the main campus and other the University locations.
 *   **Meet & Greet Sessions:** Connect with other",4.666666666666667,5.0,5.0,5.0,0.9633333333333333
 11,Does the BIT include an integrated honours year?,"No. The standalone Bachelor of Information Technology (3 years) does not include an integrated honours year. After completing the BIT with a sufficient GPA (5.0/7.0 minimum), you can apply separately for the Bachelor of Information Technology (Honours), a one-year program.","Yes, the Bachelor of Information Technology (BIT) at the University *does* include an integrated Honours year. It's a four-year program, with the Honours year being the fourth year.
 
@@ -178,7 +178,7 @@ The prerequisite for INFS2200 is **INFS1100 - Foundations of Information Technol
 
 **Why the city's Tech Industry is Strong:**
 
-*   **Government Investment:** Both the the state and Federal governments are heavily investing in the tech sector, aiming to establish the city as a leading tech hub in Australia. This includes funding for startups, research and development, and infrastructure.
+*   **Government Investment:** Both the state and Federal governments are heavily investing in the tech sector, aiming to establish the city as a leading tech hub in Australia. This includes funding for startups, research and development, and infrastructure.
 *   **Growing Startup Ecosystem:** the city has a vibrant and rapidly growing startup scene, with numerous incubators, accelerators, and co-working spaces.
 *   **Major Tech Companies Expanding:** Many large tech companies are establishing or expanding their presence in the city, including Amazon, Google, Microsoft, and IBM.
 *   **Defense and Aerospace:** the city is a key location for the defense and aerospace industries, which rely heavily on technology and create demand for skilled IT professionals.
@@ -210,12 +210,12 @@ The prerequisite for INFS2200 is **INFS1100 - Foundations of Information Technol
 
 **1. Application via the state admissions centre:**
 
-*   **the state admissions centre is still the primary application portal:** Even as an international student studying in Australia, you apply through the state admissions centre (the state Tertiary Admissions Centre) at [https://www.qtac.edu.au/](https://www.qtac.edu.au/).
-*   **the state admissions centre Code:** The the state admissions centre code for the Bachelor of Information Technology is **733001**. Make sure you use this code when applying.
+*   **the state admissions centre is still the primary application portal:** Even as an international student studying in Australia, you apply through the state admissions centre (the state Tertiary Admissions Centre) at [https://www.admissions.example.edu/](https://www.admissions.example.edu/).
+*   **the state admissions centre Code:** The state admissions centre code for the Bachelor of Information Technology is **733001**. Make sure you use this code when applying.
 
 **2. the state admissions centre Application Process:**
 
-*   **Create a the state admissions centre Account:** If you don't already have one, create an account on the the state admissions centre website.
+*   **Create a the state admissions centre Account:** If you don't already have one, create an account on the state admissions centre website.
 *   **Complete the Application Form:** Fill out the application form accurately and completely. You'll need to provide personal details, academic information, and select your desired course (BIT - 733001).
 *   **Submit Your Year 12 Results:** the state admissions centre will request your Year 12 results directly from your school",5.0,5.0,5.0,5.0,1.0
 18,What is INFS1200 and why is it important in the BIT?,"INFS1200 is Introduction to Information Systems - Information systems analysis, design and implementation, relational database technology, data modelling, data querying using SQL, building a small scale information systems using a relational database management system.","INFS1200 is ""Data Management and Analytics"". It's a *very* important foundational unit in the Bachelor of Information Technology (BIT) at the University. Here's a breakdown of what it is and why it's crucial:
@@ -475,7 +475,7 @@ However, keep in mind:
 
 *   **This is the *minimum*:** Most successful applicants have an ATAR higher than this.
 *   **Adjusted ATAR:** the University offers adjustments for various factors like rural location, Indigenous background, and hardship. This can lower the ATAR you need. Check the University website for details on available adjustments.
-*   **the state admissions centre Cut-Offs:** The actual cut-off ATAR can vary slightly each year depending on the number of applicants and their ATARs. You can view previous years' cut-offs on the the state admissions centre website.
+*   **the state admissions centre Cut-Offs:** The actual cut-off ATAR can vary slightly each year depending on the number of applicants and their ATARs. You can view previous years' cut-offs on the state admissions centre website.
 *   **Alternative Entry Pathways:** the University also offers alternative entry pathways, such as the Access Pathways to University program, which may be an option if you don't meet the standard ATAR.
 
 
@@ -483,7 +483,7 @@ However, keep in mind:
 **Where to find the most up-to-date information:**
 
 *   **the University Course Information:** [https://www.example.edu/study/degrees/bachelor-of-information-technology/admission-requirements](https://www.example.edu/study/degrees/bachelor-of-information-",1.3333333333333333,4.0,4.0,2.3333333333333335,0.47333333333333333
-39,What library services are available to BIT students at the main campus?,"The the main campus campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.example.edu.","the University's the main campus Library offers a fantastic range of services specifically beneficial to BIT students. Here's a breakdown:
+39,What library services are available to BIT students at the main campus?,"The main campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.example.edu.","the University's the main campus Library offers a fantastic range of services specifically beneficial to BIT students. Here's a breakdown:
 
 **1. Physical Resources & Spaces:**
 

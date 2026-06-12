@@ -41,18 +41,22 @@ RULES: list[tuple[str, str]] = [
     (r'programs-courses\.uq\.edu\.au', 'programs-courses.example.edu'),
     # Any remaining @uq.edu.au address (local part may contain dots)
     (r'[A-Za-z0-9._%+\-]+@uq\.edu\.au', 'anon@example.edu'),
-    (r'\buq\.edu\.au\b', 'example.edu'),
+    (r'(?i)\buq\.edu\.au\b', 'example.edu'),
+    # qtac.edu.au URL (before bare qtac rule)
+    (r'(?i)qtac\.edu\.au', 'admissions.example.edu'),
+    # lowercase 'uq' embedded in URL path slugs (e.g. find-approved-uq-agent)
+    (r'(?i)-uq-', '-university-'),
 
     # ── Rater bare local-parts and first names ────────────────────────────────
     (r'\bc\.wijenayake\b', 'rater1'),
     (r'\bt\.halloluwa\b', 'rater2'),
     (r'\bu\.rathnayakemudiyanselage\b', 'rater3'),
     # Surnames (distinctively associated with the three raters)
-    (r'\bWijenayake\b', 'Rater1'),
-    (r'\bHalloluwa\b', 'Rater2'),
-    (r'\bRathnayakemudiyanselage\b', 'Rater3'),
-    (r'\bRathnayake\b', 'Rater3'),
-    (r'\bMudiyanselage\b', 'Rater3'),
+    (r'(?i)\bWijenayake\b', 'Rater1'),
+    (r'(?i)\bHalloluwa\b', 'Rater2'),
+    (r'(?i)\bRathnayakemudiyanselage\b', 'Rater3'),
+    (r'(?i)\bRathnayake\b', 'Rater3'),
+    (r'(?i)\bMudiyanselage\b', 'Rater3'),
     # First names (capitalized and lower)
     (r'\bChamith\b', 'Rater 1'),
     (r'\bchamith\b', 'rater1'),
@@ -72,32 +76,54 @@ RULES: list[tuple[str, str]] = [
     (r'\buni-bot\b', 'anon-project'),
     (r'\bunibot\b', 'anonbot'),
 
-    # ── Institutional name (longest/most specific first) ──────────────────────
-    # Capture "The/the University of Queensland" → "the University"
-    (r'[Tt]he University of Queensland', 'the University'),
-    (r'University of Queensland', 'the University'),
-    # Standalone UQ abbreviation (case-sensitive — "uq" in URLs already handled)
-    (r"\bUQ's\b", "the University's"),
-    (r'\bUQ\b', 'the University'),
+    # ── Institutional name (case-insensitive; longest/most specific first) ────
+    (r'(?i)the University of Queensland', 'the University'),
+    (r'(?i)University of Queensland', 'the University'),
+    (r"(?i)\bUQ's\b", "the University's"),
+    # Standalone UQ — case-insensitive so "uq" in any remaining slug is caught
+    (r'(?i)\bUQ\b', 'the University'),
 
-    # ── Geographic / jurisdictional ───────────────────────────────────────────
-    (r'\bBrisbane\b', 'the city'),
-    # Also catch lowercase 'brisbane' inside compound domain names / URLs
-    (r'brisbane', 'thecity'),
-    (r'\bSt\.? Lucia\b', 'the main campus'),
-    (r'\bQueensland\b', 'the state'),
-    (r'\bQTAC\b', 'the state admissions centre'),
-    (r'\bQCE\b', 'the senior secondary certificate'),
+    # ── Geographic / jurisdictional (all case-insensitive) ────────────────────
+    (r'(?i)\bBrisbane\b', 'the city'),
+    # Catch 'brisbane' inside compound domain names / URL slugs
+    (r'(?i)brisbane', 'thecity'),
+    (r'(?i)St\.? Lucia\b', 'the main campus'),
+    (r'(?i)\bQueensland\b', 'the state'),
+    # Qld / QLD abbreviation (before bare QTAC rule)
+    (r'(?i)\bQld\b', 'the state'),
+    (r'(?i)\bQTAC\b', 'the state admissions centre'),
+    (r'(?i)\bQCE\b', 'the senior secondary certificate'),
 
-    # ── Article clean-up (must run AFTER institutional replacement) ───────────
-    # "the UQ" → "the the University" → "the University"
-    (r'\bthe the University\b', 'the University'),
+    # ── UQ campuses (other than St Lucia / main campus) ───────────────────────
+    (r'(?i)\bGatton\b', 'the regional campus'),
+    (r'(?i)\bHerston\b', 'another campus'),
+
+    # ── UQ buildings / landmarks ──────────────────────────────────────────────
+    (r'(?i)JD Story Building', 'the Administration Building'),
+    (r'(?i)JD Story', 'the Administration Building'),
+    (r'(?i)Forgan Smith\b', 'the main building'),
+    (r'(?i)Sir Llew Edwards\b', 'a campus building'),
+    (r'(?i)Sir Llew\b', 'a campus building'),
+
+    # ── UQ Student Union acronym ──────────────────────────────────────────────
+    (r'(?i)\bUQU\b', 'the Student Union'),
+
+    # ── UQ-specific postcode ──────────────────────────────────────────────────
+    (r'\b4072\b', '0000'),
+
+    # ── Article / phrasing clean-up (run AFTER all replacements) ─────────────
+    # "The UQ" / "The St Lucia" → "The the University" / "The the main campus"
+    # Capital-T sentence-initial case — must precede the lowercase rule:
+    (r'\bThe the\b', 'The'),
+    # Mid-sentence lowercase: "the UQ" → "the the University" → "the University"
+    (r'\bthe the\b', 'the'),
     # "a UQ" → "a the University" → "a University"
     (r'\ba the University\b', 'a University'),
     (r'\ban the University\b', 'a University'),
+    # "St Lucia campus" → "the main campus campus" → "the main campus"
+    (r'(?i)\bcampus campus\b', 'campus'),
 
     # ── Program codes → stable anonymous pseudo-codes ─────────────────────────
-    # Order: longest ambiguous ones first; these are 4-digit numbers
     (r'\b2235\b', '9001'),   # BIT Honours
     (r'\b2453\b', '9002'),   # BIT (alternate code)
     (r'\b2555\b', '9003'),   # BIT / Design
@@ -284,54 +310,110 @@ def remove_pdfs(*, apply: bool, verbose: bool) -> int:
 
 
 # ── Verification ──────────────────────────────────────────────────────────────
-
+# All patterns matched case-insensitively.
 VERIFY_PATTERNS = [
-    r'[Qq]ueensland',
-    r'\buq\.edu\.au\b',
-    r'\bUQ\b',
-    r'[Pp]asindu',
-    r'[Mm]arasinghe',
+    r'queensland',
+    r'uq\.edu\.au',
+    r'qtac',
+    r'\bqld\b',
+    r'gatton',
+    r'herston',
+    r'\b4072\b',
+    r'\buqu\b',
+    r'jd story',
+    r'forgan smith',
+    r'sir llew',
+    r'pasindu',
+    r'marasinghe',
     r'mottretor',
-    r'[Cc]hamith',
-    r'[Tt]hilina',
-    r'[Uu]pul',
-    r'[Ww]ijenayake',
-    r'[Hh]alloluwa',
-    r'[Rr]athnayake',
+    r'chamith',
+    r'thilina',
+    r'\bupul\b',
+    r'wijenayake',
+    r'halloluwa',
+    r'rathnayake',
     r'uq-unibot',
     r'uni-bot',
-    r'[Bb]risbane',
-    r'St\.? Lucia',
-    r'\bQTAC\b',
+    r'brisbane',
+    r'st\.? ?lucia',
+    r'(?<![A-Za-z0-9])uq(?![A-Za-z0-9])',  # standalone uq any case
     r'\b(2235|2453|2555|2570|2571|2572|2573|2574|2575)\b',
+    r'the the ',
+    r'campus campus',
 ]
+
+_VERIFY_COMBINED = re.compile(
+    '|'.join(VERIFY_PATTERNS),
+    flags=re.IGNORECASE | re.MULTILINE,
+)
+
+
+def _verify_text(text: str) -> list[tuple[int, str]]:
+    """Return (lineno, line) pairs where _VERIFY_COMBINED matched."""
+    return [
+        (i + 1, line)
+        for i, line in enumerate(text.splitlines())
+        if _VERIFY_COMBINED.search(line)
+    ]
 
 
 def run_verification() -> bool:
-    """Grep across tracked text files for residual identifying terms. Returns True if clean."""
-    print('\n=== Verification grep ===')
+    """Grep tracked text files AND xlsx XML internals for residual identifiers."""
+    import zipfile as _zipfile
     any_hit = False
-    text_files = tracked_text_files()
-    combined = re.compile('|'.join(VERIFY_PATTERNS))
-    for p in text_files:
+
+    print('\n=== Verification: text files ===')
+    for p in tracked_text_files():
         try:
             text = p.read_text(encoding='utf-8', errors='replace')
         except OSError:
             continue
-        hits = [(i + 1, line) for i, line in enumerate(text.splitlines())
-                if combined.search(line)]
+        hits = _verify_text(text)
         if hits:
             any_hit = True
             print(f'\n  {p.relative_to(ROOT)}:')
             for lineno, line in hits[:5]:
                 print(f'    L{lineno}: {line.strip()[:120]}')
             if len(hits) > 5:
-                print(f'    … and {len(hits) - 5} more lines')
+                print(f'    ... and {len(hits) - 5} more lines')
+    print('[OK] Text files clean.' if not any_hit else '')
 
+    print('\n=== Verification: xlsx internals ===')
+    xlsx_hit = False
+    for xlsx in sorted(ROOT.rglob('*.xlsx')):
+        if _skip_path(xlsx):
+            continue
+        file_hits: dict[str, list] = {}
+        try:
+            with _zipfile.ZipFile(xlsx) as zf:
+                for member in zf.namelist():
+                    if not member.endswith('.xml'):
+                        continue
+                    try:
+                        content = zf.read(member).decode('utf-8', errors='replace')
+                    except Exception:
+                        continue
+                    h = _verify_text(content)
+                    if h:
+                        file_hits[member] = h
+        except Exception as exc:
+            print(f'  [ERROR reading {xlsx.name}] {exc}')
+            continue
+        if file_hits:
+            xlsx_hit = True
+            print(f'\n  {xlsx.relative_to(ROOT)}:')
+            for member, hits in file_hits.items():
+                for lineno, line in hits[:3]:
+                    print(f'    [{member}] L{lineno}: {line.strip()[:110]}')
+    if xlsx_hit:
+        any_hit = True
+    print('[OK] XLSX internals clean.' if not xlsx_hit else '')
+
+    print()
     if any_hit:
-        print('\n[WARN] Residual identifiers found - review the hits above.')
+        print('[WARN] Overall: residual identifiers found - review above.')
     else:
-        print('[OK] No residual identifiers found in tracked text files.')
+        print('[OK] Overall: no residual identifiers found.')
     return not any_hit
 
 

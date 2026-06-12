@@ -32,7 +32,7 @@ QA_PAIRS = [
     ),
     (
         "As a domestic student, how do I apply for the BIT at the University - through the state admissions centre or directly?",
-        "Domestic undergraduate students apply through the state admissions centre (the state Tertiary Admissions Centre). The the state admissions centre code for the Bachelor of Information Technology is 733001. Interstate students also apply through the state admissions centre."
+        "Domestic undergraduate students apply through the state admissions centre (the state Tertiary Admissions Centre). The state admissions centre code for the Bachelor of Information Technology is 733001. Interstate students also apply through the state admissions centre."
     ),
     (
         "I completed Year 12 in another Australian state. Can I apply for BIT at the University?",
@@ -58,7 +58,7 @@ QA_PAIRS = [
     ),
     (
         "I have a Chinese GaoKao result. Can I use it to apply for BIT at the University?",
-        "For Chinese students, successful completion of the first year of a bachelor's degree at a Chinese university is typically the the state Year 12 equivalent accepted by the University. You should contact the University International Admissions at anon@example.edu to confirm your specific eligibility."
+        "For Chinese students, successful completion of the first year of a bachelor's degree at a Chinese university is typically the state Year 12 equivalent accepted by the University. You should contact the University International Admissions at anon@example.edu to confirm your specific eligibility."
     ),
     (
         "I completed the All India Senior School Certificate (CBSE). Can I apply for BIT?",
@@ -102,7 +102,7 @@ QA_PAIRS = [
     ),
     (
         "I have Singapore GCE A Levels. What are the entry requirements for the BIT at the University?",
-        "Singapore-Cambridge GCE A Levels are accepted as the the state Year 12 equivalent. For English proficiency, you need a grade of C or better in the General Paper or Knowledge and Inquiry subject, or grade C in H2 English Language and Linguistics or Literature in English. You also need to satisfy the mathematics prerequisite and meet the minimum entry score."
+        "Singapore-Cambridge GCE A Levels are accepted as the state Year 12 equivalent. For English proficiency, you need a grade of C or better in the General Paper or Knowledge and Inquiry subject, or grade C in H2 English Language and Linguistics or Literature in English. You also need to satisfy the mathematics prerequisite and meet the minimum entry score."
     ),
     (
         "What pathway is available at the University if I do not meet the BIT entry requirements?",
@@ -112,7 +112,7 @@ QA_PAIRS = [
     # ── C. PROGRAM STRUCTURE & DURATION (Q25–Q40) ────────────────────────────
     (
         "How long does the Bachelor of Information Technology take to complete full-time?",
-        "The Bachelor of Information Technology is a 3-year full-time program, or part-time equivalent. It is offered at the the main campus campus with intakes in Semester 1 (23 February 2026) and Semester 2 (27 July 2026)."
+        "The Bachelor of Information Technology is a 3-year full-time program, or part-time equivalent. It is offered at the main campus with intakes in Semester 1 (23 February 2026) and Semester 2 (27 July 2026)."
     ),
     (
         "How many units do I need to complete to graduate from the BIT?",
@@ -124,7 +124,7 @@ QA_PAIRS = [
     ),
     (
         "Is the Bachelor of Information Technology available for Semester 2 intake?",
-        "Yes. The BIT is available for both Semester 1 (commencing 23 February 2026) and Semester 2 (commencing 27 July 2026) intakes at the the main campus campus."
+        "Yes. The BIT is available for both Semester 1 (commencing 23 February 2026) and Semester 2 (commencing 27 July 2026) intakes at the main campus."
     ),
     (
         "How long does the Bachelors of Engineering (Honours) / IT dual degree take to complete?",
@@ -132,11 +132,11 @@ QA_PAIRS = [
     ),
     (
         "How long does the Bachelors of Information Technology / Arts take to complete?",
-        "The Bachelors of Information Technology / Arts is a 4-year full-time program, available for both Semester 1 and Semester 2 intakes at the the main campus campus."
+        "The Bachelors of Information Technology / Arts is a 4-year full-time program, available for both Semester 1 and Semester 2 intakes at the main campus."
     ),
     (
         "How long does the Bachelors of Business Management / IT take to complete?",
-        "The Bachelors of Business Management / Information Technology is a 4-year full-time program, with intakes in both Semester 1 and Semester 2 at the the main campus campus."
+        "The Bachelors of Business Management / Information Technology is a 4-year full-time program, with intakes in both Semester 1 and Semester 2 at the main campus."
     ),
     (
         "Can I add a Concurrent Diploma in Languages alongside my BIT?",
@@ -144,7 +144,7 @@ QA_PAIRS = [
     ),
     (
         "Which campus is the Bachelor of Information Technology delivered at?",
-        "The BIT and all its dual degree combinations are delivered at the the main campus campus, the University's main campus located 7km from the city's city centre."
+        "The BIT and all its dual degree combinations are delivered at the main campus, the University's main campus located 7km from the city's city centre."
     ),
     (
         "Does the BIT include an integrated honours year?",
@@ -206,7 +206,7 @@ QA_PAIRS = [
     ),
     (
         "Is there a Computer Systems minor in the BIT?",
-        "The the University International Guide 2026 lists Computer Systems as a minor option in the BIT program. A minor is a smaller specialisation within your degree. Check Programs and Courses for the specific course requirements and whether this minor is available in your commencement year."
+        "The University International Guide 2026 lists Computer Systems as a minor option in the BIT program. A minor is a smaller specialisation within your degree. Check Programs and Courses for the specific course requirements and whether this minor is available in your commencement year."
     ),
     (
         "Is Artificial Intelligence a major in the Bachelor of Information Technology?",
@@ -317,28 +317,28 @@ QA_PAIRS = [
         "Electrical Engineering has strong technical overlap with IT topics such as digital systems and communications. Software Engineering, if available as a specialisation, is directly aligned. Review the specific major descriptions in Programs and Courses alongside your career goals to make the best choice."
     ),
     (
-        "What is the the state admissions centre code for the Bachelors of Engineering (Honours) / Information Technology?",
-        "The the state admissions centre code for the Bachelors of Engineering (Honours) / Information Technology is 717701."
+        "What is the state admissions centre code for the Bachelors of Engineering (Honours) / Information Technology?",
+        "The state admissions centre code for the Bachelors of Engineering (Honours) / Information Technology is 717701."
     ),
     (
-        "What is the the state admissions centre code for the Bachelors of Business Management / Information Technology?",
-        "The the state admissions centre code for the Bachelors of Business Management / Information Technology is 710401."
+        "What is the state admissions centre code for the Bachelors of Business Management / Information Technology?",
+        "The state admissions centre code for the Bachelors of Business Management / Information Technology is 710401."
     ),
     (
-        "What is the the state admissions centre code for the Bachelors of Commerce / Information Technology?",
-        "The the state admissions centre code for the Bachelors of Commerce / Information Technology is 711621."
+        "What is the state admissions centre code for the Bachelors of Commerce / Information Technology?",
+        "The state admissions centre code for the Bachelors of Commerce / Information Technology is 711621."
     ),
     (
-        "What is the the state admissions centre code for the Bachelors of Information Technology / Arts?",
-        "The the state admissions centre code for the Bachelors of Information Technology / Arts is 733201."
+        "What is the state admissions centre code for the Bachelors of Information Technology / Arts?",
+        "The state admissions centre code for the Bachelors of Information Technology / Arts is 733201."
     ),
     (
-        "What is the the state admissions centre code for the Bachelors of Information Technology / Design?",
-        "The the state admissions centre code for the Bachelors of Information Technology / Design is 733310."
+        "What is the state admissions centre code for the Bachelors of Information Technology / Design?",
+        "The state admissions centre code for the Bachelors of Information Technology / Design is 733310."
     ),
     (
-        "What is the the state admissions centre code for the Bachelors of Human Movement and Nutrition Sciences / Information Technology?",
-        "The the state admissions centre code for the Bachelors of Human Movement and Nutrition Sciences / Information Technology is 720802."
+        "What is the state admissions centre code for the Bachelors of Human Movement and Nutrition Sciences / Information Technology?",
+        "The state admissions centre code for the Bachelors of Human Movement and Nutrition Sciences / Information Technology is 720802."
     ),
     (
         "Should I choose BCom/IT or BBusMgt/IT if I am interested in technology and business?",
@@ -366,7 +366,7 @@ QA_PAIRS = [
     ),
     (
         "Is the Bachelors of Human Movement and Nutrition Sciences / IT available for Semester 2 intake?",
-        "Yes. The Bachelors of Human Movement and Nutrition Sciences / Information Technology is available for both Semester 1 (23 February 2026) and Semester 2 (27 July 2026) at the the main campus campus."
+        "Yes. The Bachelors of Human Movement and Nutrition Sciences / Information Technology is available for both Semester 1 (23 February 2026) and Semester 2 (27 July 2026) at the main campus."
     ),
     (
         "Can international students apply for the Bachelors of Engineering (Honours) / IT dual degree?",
@@ -485,8 +485,8 @@ QA_PAIRS = [
         "Yes. O-Week orientation is compulsory for all international students. During O-Week you find out how to enrol, receive your student ID card, and learn about campus services and facilities. It is held the week before semester starts. For 2026, Semester 1 O-Week runs from 16–20 February."
     ),
     (
-        "What healthcare facilities are available at the the main campus campus for BIT students?",
-        "The the main campus campus has a University Health Care clinic, the University Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the University SafeZone app connecting students to security officers or emergency services."
+        "What healthcare facilities are available at the main campus for BIT students?",
+        "The main campus has a University Health Care clinic, the University Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the University SafeZone app connecting students to security officers or emergency services."
     ),
     (
         "Does the University offer a free airport pickup service for new international students?",
@@ -502,7 +502,7 @@ QA_PAIRS = [
     ),
     (
         "Are there student clubs relevant to IT or computing students at the University?",
-        "Yes. the University has over 220 clubs and societies, including technology, coding, gaming, and entrepreneurship clubs relevant to IT and computing students. Explore available clubs at uqu.com.au/clubs-and-societies."
+        "Yes. the University has over 220 clubs and societies, including technology, coding, gaming, and entrepreneurship clubs relevant to IT and computing students. Explore available clubs at the Student Union.com.au/clubs-and-societies."
     ),
     (
         "What support does the University offer for BIT students with a disability or mental health condition?",
@@ -522,18 +522,18 @@ QA_PAIRS = [
     ),
     (
         "What library services are available to BIT students at the main campus?",
-        "The the main campus campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.example.edu."
+        "The main campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.example.edu."
     ),
     (
         "Does the University offer a student legal service?",
-        "Yes. The the University Student Union (UQU) can assist with legal or migration support. Contact uqu.com.au for details on available legal advice services for enrolled students."
+        "Yes. The University Student Union (the Student Union) can assist with legal or migration support. Contact the Student Union.com.au for details on available legal advice services for enrolled students."
     ),
     (
         "What is the University SafeZone app and when should I use it?",
-        "The the University SafeZone app connects students directly with the University security officers or emergency services from your mobile phone. It also provides a safety escort feature if you want someone to accompany you to public transport or your car. The Safety Bus also runs around the the main campus campus from 6pm."
+        "The University SafeZone app connects students directly with the University security officers or emergency services from your mobile phone. It also provides a safety escort feature if you want someone to accompany you to public transport or your car. The Safety Bus also runs around the main campus from 6pm."
     ),
     (
-        "What public transport options are available for getting to the the main campus campus?",
+        "What public transport options are available for getting to the main campus?",
         "the main campus is served by 10+ direct bus routes with buses arriving every 2 minutes at the University Lakes bus stop. There are 5 train stations within 4km, and a ferry service with 15-minute intervals. The campus is 7km from the city's city centre. Student concession transport cards reduce public transport costs."
     ),
 
@@ -618,7 +618,7 @@ QA_PAIRS = [
     ),
     (
         "Is the Bachelor of Information Technology (Honours) available in Semester 2?",
-        "Yes. The BIT (Honours) is available for both Semester 1 (23 February 2026) and Semester 2 (27 July 2026) intakes at the the main campus campus."
+        "Yes. The BIT (Honours) is available for both Semester 1 (23 February 2026) and Semester 2 (27 July 2026) intakes at the main campus."
     ),
     (
         "What is the annual tuition fee for the BIT (Honours) for international students?",
@@ -634,7 +634,7 @@ QA_PAIRS = [
     ),
     (
         "Is the BIT (Honours) program ranked in any world rankings?",
-        "Yes. The the University BIT (Honours) program is ranked #1 in the state for computer science and information systems, according to the QS World University Rankings 2026."
+        "Yes. The University BIT (Honours) program is ranked #1 in the state for computer science and information systems, according to the QS World University Rankings 2026."
     ),
     (
         "After completing BIT (Honours), what further study options are available?",
@@ -644,7 +644,7 @@ QA_PAIRS = [
     # ── K. APPLICATION PROCESS (Q154–Q163) ───────────────────────────────────
     (
         "How do domestic students apply for the BIT at the University?",
-        "Domestic students apply through the state admissions centre (the state Tertiary Admissions Centre) at qtac.edu.au. The the state admissions centre code for the Bachelor of Information Technology is 733001. Interstate students also apply through the state admissions centre."
+        "Domestic students apply through the state admissions centre (the state Tertiary Admissions Centre) at admissions.example.edu. The state admissions centre code for the Bachelor of Information Technology is 733001. Interstate students also apply through the state admissions centre."
     ),
     (
         "How do international students apply for the BIT at the University?",
@@ -672,7 +672,7 @@ QA_PAIRS = [
     ),
     (
         "Can I submit my the University international application by post or in person instead of online?",
-        "Yes. If you cannot apply online, submit in person or by mail to: Future Students and Admissions, Level 2, JD Story Building, the main campus, the University, the city, QLD 4072, Australia. You can also email anon@example.edu to request an application form."
+        "Yes. If you cannot apply online, submit in person or by mail to: Future Students and Admissions, Level 2, the Administration Building, the main campus, the University, the city, the state 0000, Australia. You can also email anon@example.edu to request an application form."
     ),
     (
         "How do I check the status of my the University BIT application?",
@@ -754,7 +754,7 @@ QA_PAIRS = [
     ),
     (
         "What is the University Student Union and what does it offer BIT students?",
-        "The the University Student Union (UQU) is the student representative body offering legal and migration support, clubs and societies, events, and student advocacy. BIT students can join IT and computing clubs through UQU and access legal advice at uqu.com.au."
+        "The University Student Union (the Student Union) is the student representative body offering legal and migration support, clubs and societies, events, and student advocacy. BIT students can join IT and computing clubs through the Student Union and access legal advice at the Student Union.com.au."
     ),
     (
         "What are the key semester dates for 2026 at the University?",

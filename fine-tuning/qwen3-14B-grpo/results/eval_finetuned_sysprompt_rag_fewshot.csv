@@ -35,13 +35,13 @@ Reference [4] lists the Bachelors of Information Technology / Arts with CRICOS C
 Reference [5] is for the Bachelors of Engineering (Honours)/Information Technology with CRICOS 080731B. Not relevant here.
 
 So",5.0,5.0,4.0,5.0,0.9800000000000001
-3,What healthcare facilities are available at the the main campus campus for BIT students?,"The the main campus campus has a University Health Care clinic, the University Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the University SafeZone app connecting students to security officers or emergency services.","<think>
-Okay, the user is asking about healthcare facilities available at the the main campus campus for BIT students. Let me check the provided reference material.
+3,What healthcare facilities are available at the main campus for BIT students?,"The main campus has a University Health Care clinic, the University Dental clinic, and Campus Pharmacy on campus. There is also a safety escort service, a Safety Bus running from 6pm, and the University SafeZone app connecting students to security officers or emergency services.","<think>
+Okay, the user is asking about healthcare facilities available at the main campus for BIT students. Let me check the provided reference material.
 
-Looking at the document, under the Healthcare section, it mentions the University Health Care, which is a general practice specializing in physical and mental wellbeing. The locations listed include the University the main campus Medical Centre, Cornwall Street Medical Centre, and the University Gatton Medical Centre. Since the question is specifically about the main campus, the University the main campus Medical Centre is the relevant one here. The answer should include that facility and mention the services they offer, like general practice, sexual health, travel medicine, immunizations, and skin checks. Also, the website uqhealthcare.org.au is provided for more info. I need to make sure not to include other campuses like Gatton unless specified, but the user is focused on the main campus. The answer should be concise and directly reference the provided document.
+Looking at the document, under the Healthcare section, it mentions the University Health Care, which is a general practice specializing in physical and mental wellbeing. The locations listed include the University the main campus Medical Centre, Cornwall Street Medical Centre, and the University the regional campus Medical Centre. Since the question is specifically about the main campus, the University the main campus Medical Centre is the relevant one here. The answer should include that facility and mention the services they offer, like general practice, sexual health, travel medicine, immunizations, and skin checks. Also, the website uqhealthcare.org.au is provided for more info. I need to make sure not to include other campuses like the regional campus unless specified, but the user is focused on the main campus. The answer should be concise and directly reference the provided document.
 </think>
 
-At the University the main campus campus, BIT students have access to **the University Health Care**, a general practice specializing in the physical and mental wellbeing of students and staff. Services include sexual health, travel medicine, immunisations, skin checks, and general medical care. The the University the main campus Medical Centre is located on campus,",4.0,4.666666666666667,5.0,5.0,0.8733333333333334
+At the University the main campus, BIT students have access to **the University Health Care**, a general practice specializing in the physical and mental wellbeing of students and staff. Services include sexual health, travel medicine, immunisations, skin checks, and general medical care. The University the main campus Medical Centre is located on campus,",4.0,4.666666666666667,5.0,5.0,0.8733333333333334
 4,What academic support services are available to BIT students who are falling behind?,"Peer Assisted Study Sessions (PASS) - facilitated by second- and third-year students who have achieved top grades in your course. They can provide advice on coursework and content, and suggest effective study habits that will help you make the most of your time.  
 Academic workshops - to gain new skills and prepare for exams by attending free workshops held by our Student Support and Wellbeing Services team.
 Student Advisers - Student Advice Team can help you with a wide range of professional and confidential services. This includes support for welfare and wellbeing, diversity and inclusion, career development, counselling, and more.","<think>
@@ -67,7 +67,7 @@ So the IB score required for both these dual degrees is 32.00. The user might be
 6,I received an offer for the BIT from the University. What do I need to do to accept it?,"Follow the instructions in your offer letter, which typically include: accepting the offer through the apply.example.edu portal, paying any required tuition fee deposit, and arranging OSHC if you are an international student. Then apply for your student visa if required. Contact the University Admissions if you are unsure about any step.","<think>
 Okay, the user has received an offer for the Bachelor of Information Technology (BIT) at the University and wants to know what to do next to accept it. Let me check the references provided to find the correct information.
 
-Looking at reference [1], which is the domestic undergraduate guide, page 25 mentions steps 09: Respond to your offer. It says to accept outright, conditionally, or defer. The link provided is to qtac.edu.au. Also, reference [4] mentions that if you're a domestic student, you apply through the state admissions centre with code 733001. For international students, they might apply directly or through an agent, but the main point here is responding to the offer.
+Looking at reference [1], which is the domestic undergraduate guide, page 25 mentions steps 09: Respond to your offer. It says to accept outright, conditionally, or defer. The link provided is to admissions.example.edu. Also, reference [4] mentions that if you're a domestic student, you apply through the state admissions centre with code 733001. For international students, they might apply directly or through an agent, but the main point here is responding to the offer.
 
 In reference [5], under the international guide, it says that applicants can view their application status through the online portal and that deferrals need to be contacted to the International Admissions office. However, the user is domestic since they mentioned BIT, which in reference [4] has a the state admissions centre code for domestic students. 
 
@@ -75,7 +75,7 @@ So, the main steps would be: accept the offer through the state admissions centr
 7,I have a Malaysian STPM result. Am I eligible to apply for the BIT at the University?,The Malaysian STPM or Unified Examination Certificate (UEC) is accepted as a the state Year 12 equivalent.,"<think>
 Okay, the user is asking if they can apply for the Bachelor of Information Technology (BIT) at the University with a Malaysian STPM result. Let me check the references provided.
 
-Looking at reference [1], under the ""LOCATION QUEENSLAND YEAR 12 EQUIVALENT"" section, Malaysia is listed with ""Malaysian STPM, Unified Examination (UEC), or Malaysian Matriculation"" as the equivalent. So that's a yes, STPM is accepted.
+Looking at reference [1], under the ""LOCATION the state YEAR 12 EQUIVALENT"" section, Malaysia is listed with ""Malaysian STPM, Unified Examination (UEC), or Malaysian Matriculation"" as the equivalent. So that's a yes, STPM is accepted.
 
 Next, the admission requirements in [1] mention needing a the state Year 12 equivalent, which STPM satisfies. Also, they need to meet the minimum entry score, which varies each year. The user would need to check the current entry score for BIT, which might be found on study.example.edu.
 
@@ -83,7 +83,7 @@ Additionally, English language requirements are mentioned in [2]. Since the user
 8,Is there a Semester 2 intake for the Bachelors of Engineering (Honours) / IT dual degree?,Yes. The Bachelors of Engineering (Honours) / Information Technology is available for both Semester 1 and 2 intakes.,"<think>
 Okay, let's see. The user is asking if there's a Semester 2 intake for the Bachelors of Engineering (Honours)/Information Technology dual degree.
 
-Looking at the references provided, specifically reference [1], which is the program page for the dual degree. Under the ""Start Semester"" section, it lists both Semester 1 (23 Feb, 2026) and Semester 2 (27 Jul, 2026). The the state admissions centre Code is 717701 and the Program Code is 9009. The CRICOS Code is also mentioned. 
+Looking at the references provided, specifically reference [1], which is the program page for the dual degree. Under the ""Start Semester"" section, it lists both Semester 1 (23 Feb, 2026) and Semester 2 (27 Jul, 2026). The state admissions centre Code is 717701 and the Program Code is 9009. The CRICOS Code is also mentioned. 
 
 So, the answer is yes, there is a Semester 2 intake. The dates are given as 27 July 2026 for Semester 2. The user might be checking if they can start in Semester 2, so confirming the intake and the date is important. Also, the program is available for both domestic and international students, as indicated by the fees and CRICOS code. 
 
@@ -144,7 +144,7 @@ Okay, the user is asking if the city has a strong tech industry for IT graduates
 
 Looking at reference [1], there's a mention of events like the Engineering, Design and Computing Careers Evening in the city and the main campus. Also, there are stories about graduates finding internships and tech roles, which suggests that there are opportunities. However, the references don't explicitly discuss the strength of the tech industry in the city. 
 
-Reference [2] talks about a graduate who developed applications and worked on team projects, but again, no direct info on the city's tech scene. The the University Open Day and events are listed, but that's more about campus activities than industry strength.
+Reference [2] talks about a graduate who developed applications and worked on team projects, but again, no direct info on the city's tech scene. The University Open Day and events are listed, but that's more about campus activities than industry strength.
 
 Since the references don't provide specific data or statements about the city's tech industry strength, I should inform the user that the documents don't cover that and suggest they check other sources like study.example.edu or industry reports.
 </think>
@@ -174,7 +174,7 @@ The Bachelor of Information Technology (BIT) at the University includes foundati
 17,I am an international student studying Year 12 in Australia. How do I apply for the BIT?,"If you are an international student currently studying Year 12 in Australia, you can apply through the state admissions centre, the same as domestic students.","<think>
 Okay, the user is an international student studying Year 12 in Australia and wants to apply for the Bachelor of Information Technology (BIT) at the University. Let me check the references provided to find the correct application process.
 
-Looking at reference [1], it mentions that if you're an international student studying Australian Year 12 (in Australia or another country) or the International Baccalaureate in Australia, you should submit your application to the state admissions centre. The the state admissions centre code for BIT is 733001. 
+Looking at reference [1], it mentions that if you're an international student studying Australian Year 12 (in Australia or another country) or the International Baccalaureate in Australia, you should submit your application to the state admissions centre. The state admissions centre code for BIT is 733001. 
 
 Reference [3] also talks about international students studying Year 12 in Australia and directs them to apply through the state admissions centre, mentioning possible eligibility for Adjustment (Bonus Points). It also provides contact information for further assistance.
 
@@ -252,7 +252,7 @@ I should check if the BIT program allows students to take Summer courses. From w
 26,What career services does the University provide to help IT students find employment?,"the University provides career services through the Enhance Your Employability program, including global study, internships, career workshops, research projects, and industry events. The EAIT faculty has industry connections through research partnerships and employer networks relevant to IT careers.","<think>
 Okay, the user is asking about the career services the University provides specifically for IT students. Let me check the references given.
 
-Looking at reference [1], there's a section about employability development mentioning global study, internships, research projects, career workshops, and industry events. Also, Student Central is mentioned for help with employability development. There are academic workshops on skills like writing assignments, presentation skills, time management, etc. The Student Advisers can help with career development. The Student Union (UQU) offers legal or migration support. PASS sessions with higher-year students for study advice. Academic English support through EAC workshops. Information sessions for transitioning to study in Australia. Ally Network for LGBTQIA+ support. And services for students with disabilities.
+Looking at reference [1], there's a section about employability development mentioning global study, internships, research projects, career workshops, and industry events. Also, Student Central is mentioned for help with employability development. There are academic workshops on skills like writing assignments, presentation skills, time management, etc. The Student Advisers can help with career development. The Student Union (the Student Union) offers legal or migration support. PASS sessions with higher-year students for study advice. Academic English support through EAC workshops. Information sessions for transitioning to study in Australia. Ally Network for LGBTQIA+ support. And services for students with disabilities.
 
 Reference [2] has student testimonials but not specific career services. However, the first part mentions that the IT program is accredited by the Australian Computer Society, which might be relevant for career recognition. Also, there's mention of internships in the quotes from graduates like Elouise Gaffney, who got internships through the skills learned.
 
@@ -314,7 +314,7 @@ Wait, the user is a BIT graduate, so they might be looking for direct pathways. 
 33,I am applying for BIT from Vietnam with a Bang Tu Tai diploma. Am I eligible?,Graduates who have completed the Bang Tu Tai or Bang Tot Nghiep Pho Thong Trung Hoc (Upper Secondary School Graduation Diploma/High School Diploma) will be considered for most programs provided the required Year 12 grade is obtained,"<think>
 Okay, the user is asking if they can apply for the Bachelor of Information Technology (BIT) at the University with a Bang Tu Tai diploma from Vietnam. Let me check the reference material provided.
 
-Looking at the section for Vietnam under ""LOCATION QUEENSLAND YEAR 12 EQUIVALENT,"" it says: ""Graduates who have completed the Bang Tu Tai or Bang Tot Nghiep Pho Thong Trung Hoc (Upper Secondary School Graduation Diploma/High School Diploma) will be considered for most programs provided the required Year 12 grade is obtained.""
+Looking at the section for Vietnam under ""LOCATION the state YEAR 12 EQUIVALENT,"" it says: ""Graduates who have completed the Bang Tu Tai or Bang Tot Nghiep Pho Thong Trung Hoc (Upper Secondary School Graduation Diploma/High School Diploma) will be considered for most programs provided the required Year 12 grade is obtained.""
 
 So, the answer is yes, they are eligible as long as they meet the required Year 12 grade. Also, they need to check the admission requirements like the minimum entry score, prerequisites, and English language proficiency. The user should contact the University International Admissions if they have more questions.
 </think>
@@ -350,7 +350,7 @@ Looking at the provided references, specifically reference [1] and [2], I need t
 
 Additionally, in reference [1], there's a mention of closing dates for applying: for Semester 2, the closing date is May 31 of the year of commencement. This implies that Semester 2 is indeed an option. 
 
-So, combining the information from both references, the answer is yes, the program is available for Semester 2 intake. The user should also note the application deadlines and check the the state admissions centre website for specific dates.
+So, combining the information from both references, the answer is yes, the program is available for Semester 2 intake. The user should also note the application deadlines and check the state admissions centre website for specific dates.
 </think>
 
 Yes, the **Bachelors of Human Movement and Nutrition Sciences / Information Technology** is available for **Semester 2 intake**. According to the program details (reference [2]), the start dates include **Semester 2 (2",5.0,5.0,3.6666666666666665,5.0,0.9733333333333334
@@ -370,7 +370,7 @@ Okay, let's see. The user is asking for the minimum ATAR required to apply for t
 Looking at the references provided, there are two documents. The first one is from study.example.edu, which mentions the entry score range for Semester 1, 2026. It says ""Without adjustments"" the lowest score was 81.9. The second document is the domestic guide, which states the Minimum Selection Threshold for 2025 as 84.00 ATAR.
 
 Wait, there's a discrepancy here. The first reference mentions 81.9 as the lowest without adjustments, but the domestic guide says 84.00. Which one is correct? The user is asking for the minimum ATAR, so I need to check which one is the official minimum. The domestic guide might be more specific for domestic students, while the study.example.edu page might include international students or adjusted scores. Also, the domestic guide mentions ""Minimum Selection Threshold 2025 ATAR / IBAS Duration..."" with 84.00. Since the user is likely a domestic student, the 84.00 from the domestic guide is probably",2.3333333333333335,2.6666666666666665,2.0,3.3333333333333335,0.49666666666666676
-39,What library services are available to BIT students at the main campus?,"The the main campus campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.example.edu.","<think>
+39,What library services are available to BIT students at the main campus?,"The main campus library provides academic information resources, welcoming study spaces, a world-class collection, and knowledgeable staff to assist with research and study questions. Online resources and study rooms are also available. More information is at library.example.edu.","<think>
 Okay, the user is asking about library services available to BIT students at the University the main campus. Let me check the provided reference material.
 
 Looking at the document, under the ""Library"" section, it mentions that the Library is a gateway to academic information, with staff and resources to help find answers. It also notes safe and welcoming learning spaces, a world-class collection, and approachable staff. The URL provided is library.example.edu.
@@ -378,7 +378,7 @@ Looking at the document, under the ""Library"" section, it mentions that the Lib
 The question is specifically about BIT students, but the reference doesn't mention any specific services tailored to BIT. However, the general library services listed would apply to all students, including BIT. So the answer should include the general services mentioned, and note that BIT students can access those. Since there's no specific info on BIT-related services in the reference, I shouldn't make that up. Just stick to what's provided.
 </think>
 
-The the University Library at the main campus offers BIT students access to a world-class collection of academic resources, safe and welcoming learning spaces, and approachable staff to support their studies. Services include assistance with research, access to books, journals, and digital resources, as well as study spaces and academic support. For more details, visit [library.example.edu](https://library.example.edu",5.0,5.0,5.0,5.0,1.0
+The University Library at the main campus offers BIT students access to a world-class collection of academic resources, safe and welcoming learning spaces, and approachable staff to support their studies. Services include assistance with research, access to books, journals, and digital resources, as well as study spaces and academic support. For more details, visit [library.example.edu](https://library.example.edu",5.0,5.0,5.0,5.0,1.0
 40,"When is the international application deadline for Semester 1, 2026 entry into BIT?","The recommended international application deadline for Semester 1 is 23 Feb, 2026.","<think>
 Okay, let's see. The user is asking about the international application deadline for Semester 1, 2026 entry into the Bachelor of Information Technology (BIT) at the University.
 
@@ -440,7 +440,7 @@ Okay, the user is in a really tough spot. They mentioned that everything is fall
 
 I should check if they're in immediate danger. If they're considering self-harm, I need to encourage them to reach out to someone right away. Since I can't provide medical advice, my role is to guide them to the right resources.
 
-I remember that the University has support services. The the University Wellbeing Service is a key resource. I should mention their 24/7 crisis line and the option to contact a counselor. Also, the University Student Support Service might have academic accommodations if they're struggling with studies.
+I remember that the University has support services. The University Wellbeing Service is a key resource. I should mention their 24/7 crisis line and the option to contact a counselor. Also, the University Student Support Service might have academic accommodations if they're struggling with studies.
 
 I need to make sure they know they're not alone and that help is available. It's important to avoid any language that might minimize their feelings. Reassure them that reaching out is a sign of strength, not weakness.
 

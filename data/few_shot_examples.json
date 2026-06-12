@@ -24,7 +24,7 @@
     },
     {
       "role": "assistant",
-      "content": "The the University SafeZone app connects students directly with the University security officers or emergency services from your mobile phone. It also provides a safety escort feature if you want someone to accompany you to public transport or your car. The Safety Bus also runs around the the main campus campus."
+      "content": "The University SafeZone app connects students directly with the University security officers or emergency services from your mobile phone. It also provides a safety escort feature if you want someone to accompany you to public transport or your car. The Safety Bus also runs around the main campus."
     },
     {
       "role": "user",
@@ -32,7 +32,7 @@
     },
     {
       "role": "assistant",
-      "content": "Domestic students apply through the state admissions centre (the state Tertiary Admissions Centre) at qtac.edu.au. The the state admissions centre code for the Bachelor of Information Technology is 733001. Interstate students also apply through the state admissions centre."
+      "content": "Domestic students apply through the state admissions centre (the state Tertiary Admissions Centre) at admissions.example.edu. The state admissions centre code for the Bachelor of Information Technology is 733001. Interstate students also apply through the state admissions centre."
     },
     {
       "role": "user",
