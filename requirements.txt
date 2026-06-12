@@ -24,3 +24,9 @@ beautifulsoup4>=4.12.0        # HTML cleaning
 faiss-cpu>=1.8.0              # dense vector index (FAISS IndexFlatIP)
 rank_bm25>=0.2.2              # sparse BM25 retrieval
 sentence-transformers>=3.0.0  # BGE-M3 embedder + bge-reranker-v2-m3 cross-encoder
+
+# Human validation study (study/analyze_validation.py)
+pingouin>=0.5.4               # ICC(2,k), intraclass correlation
+krippendorff>=0.6.0           # Krippendorff's alpha (ordinal)
+matplotlib>=3.8.0             # figures
+seaborn>=0.13.0               # heatmaps and plots
